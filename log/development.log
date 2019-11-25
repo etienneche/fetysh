@@ -24,3 +24,28 @@ Migrating to DeviseCreateUsers (20191125142756)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2958374475459655245)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-11-25 14:42:29 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 385)
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 655)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 199)
+Completed 500 Internal Server Error in 1550ms (ActiveRecord: 0.0ms | Allocations: 160063)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+and restart your server):
+    13:     <%= render 'shared/navbar' %>
+    14:     <%= render 'shared/flashes' %>
+    15:     <%= yield %>
+    16:     <%= javascript_include_tag 'application' %>
+    17:     <%= javascript_pack_tag 'application' %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:16
