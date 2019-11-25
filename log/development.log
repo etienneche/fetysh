@@ -49,3 +49,77 @@ and restart your server):
     19: </html>
   
 app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2019-11-25 14:54:25 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 212)
+  Rendered shared/_navbar.html.erb (Duration: 2.7ms | Allocations: 653)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 199)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.0ms | Allocations: 65167)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+and restart your server):
+    13:     <%= render 'shared/navbar' %>
+    14:     <%= render 'shared/flashes' %>
+    15:     <%= yield %>
+    16:     <%= javascript_include_tag 'application' %>
+    17:     <%= javascript_pack_tag 'application' %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2019-11-25 14:55:13 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 187)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms | Allocations: 38305)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+and restart your server):
+    13:     <%= render 'shared/navbar' %>
+    14:     <%= render 'shared/flashes' %>
+    15:     <%= yield %>
+    16:     <%= javascript_include_tag 'application' %>
+    17:     <%= javascript_pack_tag 'application' %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2019-11-25 14:55:46 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 212)
+  Rendered shared/_navbar.html.erb (Duration: 3.4ms | Allocations: 653)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 199)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/martin/code/TheSleeplessOne/fetysh/public/packs
+[Webpacker] Hash: e3128af20ae85497fdaa
+Version: webpack 4.41.2
+Time: 851ms
+Built at: 11/25/2019 2:55:50 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1a62a4814a25238fb785.js    495 KiB  application  [emitted] [immutable]  application
+js/application-1a62a4814a25238fb785.js.map    622 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-1a62a4814a25238fb785.js js/application-1a62a4814a25238fb785.js.map
+[./app/javascript/packs/application.js] 19 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 3764ms (Views: 3760.9ms | ActiveRecord: 0.0ms | Allocations: 54917)
+
+
