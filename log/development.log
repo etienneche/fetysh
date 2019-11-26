@@ -5156,3 +5156,51 @@ Completed 200 OK in 65ms (Views: 52.3ms | ActiveRecord: 1.3ms | Allocations: 128
 =======
 >>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
 >>>>>>> f67f650baf528f5f407228a736036e8c38a18959
+Started GET "/" for ::1 at 2019-11-26 16:04:34 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ArgumentError (Before process_action callback :authenticate_user! has not been defined):
+  
+app/controllers/pages_controller.rb:2:in `<class:PagesController>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2019-11-26 16:04:54 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1349.4ms | Allocations: 125804)
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 524)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/martin/code/TheSleeplessOne/fetysh/public/packs
+[Webpacker] Hash: e3128af20ae85497fdaa
+Version: webpack 4.41.2
+Time: 711ms
+Built at: 11/26/2019 4:04:57 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1a62a4814a25238fb785.js    495 KiB  application  [emitted] [immutable]  application
+js/application-1a62a4814a25238fb785.js.map    622 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-1a62a4814a25238fb785.js js/application-1a62a4814a25238fb785.js.map
+[./app/javascript/packs/application.js] 19 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 3522ms (Views: 3521.8ms | ActiveRecord: 0.0ms | Allocations: 143185)
+
+
+Started GET "/" for ::1 at 2019-11-26 16:05:04 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 781)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 12276)
+
+
+Started GET "/" for ::1 at 2019-11-26 16:05:08 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 12267)
+
+
