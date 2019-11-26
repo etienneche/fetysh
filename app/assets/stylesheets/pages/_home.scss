@@ -15,9 +15,8 @@
   left:0;
   bottom:0;
   z-index:1;
-  background:rgba(145,7,34,0.3);
-  filter: saturate(2);
-  filter: contrast(15);
+  background:rgba(191,17,6,0.6);
+  filter: contrast(1.5);
 }
 
 #home-top-video {
@@ -83,4 +82,25 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  height: 90vh;
+  width: 500px;
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://images.unsplash.com/photo-1522322904670-5cf2a8529d21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+}
+
+.sticky-element:hover {
+  box-shadow:inset 0 0 0 2000px rgba(191,17,6,0.6);
+  filter: contrast(1.5);
+}
+
+.image-title-white {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+.card {
+  position:relative;
 }
