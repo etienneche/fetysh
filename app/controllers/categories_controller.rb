@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
+    raise
     @category = Category.new(category_params)
     @category.user = current_user
 
