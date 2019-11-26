@@ -465,3 +465,112 @@ Completed 200 OK in 161ms (Views: 157.7ms | ActiveRecord: 0.0ms | Allocations: 5
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2958374475459655245)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-11-26 11:25:25 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 214)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms | Allocations: 22530)
+
+
+  
+ActionView::Template::Error (Error: Undefined variable: "$my-blue".
+        on line 14:14 of app/assets/stylesheets/config/_bootstrap_variables.scss
+        from line 4:9 of app/assets/stylesheets/application.scss
+>> $primary:    $my-blue;
+
+   -------------^
+):
+     6:     <title>TODO</title>
+     7:     <%= csrf_meta_tags %>
+     8:     <%= action_cable_meta_tag %>
+     9:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+    11:     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    12:   </head>
+  
+app/assets/stylesheets/config/_bootstrap_variables.scss:14
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2019-11-26 11:25:26 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms | Allocations: 18502)
+
+
+  
+ActionView::Template::Error (Error: Undefined variable: "$my-blue".
+        on line 14:14 of app/assets/stylesheets/config/_bootstrap_variables.scss
+        from line 4:9 of app/assets/stylesheets/application.scss
+>> $primary:    $my-blue;
+
+   -------------^
+):
+     6:     <title>TODO</title>
+     7:     <%= csrf_meta_tags %>
+     8:     <%= action_cable_meta_tag %>
+     9:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+    11:     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    12:   </head>
+  
+app/assets/stylesheets/config/_bootstrap_variables.scss:14
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2019-11-26 11:26:12 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms | Allocations: 18497)
+
+
+  
+ActionView::Template::Error (Error: Undefined variable: "$my-blue".
+        on line 14:14 of app/assets/stylesheets/config/_bootstrap_variables.scss
+        from line 4:9 of app/assets/stylesheets/application.scss
+>> $primary:    $my-blue;
+
+   -------------^
+):
+     6:     <title>TODO</title>
+     7:     <%= csrf_meta_tags %>
+     8:     <%= action_cable_meta_tag %>
+     9:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+    11:     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    12:   </head>
+  
+app/assets/stylesheets/config/_bootstrap_variables.scss:14
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2019-11-26 11:26:35 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms | Allocations: 18497)
+
+
+  
+ActionView::Template::Error (Error: Undefined variable: "$my-green".
+        on line 15:14 of app/assets/stylesheets/config/_bootstrap_variables.scss
+        from line 4:9 of app/assets/stylesheets/application.scss
+>> $success:    $my-green;
+
+   -------------^
+):
+     6:     <title>TODO</title>
+     7:     <%= csrf_meta_tags %>
+     8:     <%= action_cable_meta_tag %>
+     9:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+    11:     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    12:   </head>
+  
+app/assets/stylesheets/config/_bootstrap_variables.scss:15
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2019-11-26 11:28:01 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1256ms (Views: 1244.3ms | ActiveRecord: 0.0ms | Allocations: 123878)
+
+
