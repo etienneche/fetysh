@@ -5156,6 +5156,22 @@ Completed 200 OK in 65ms (Views: 52.3ms | ActiveRecord: 1.3ms | Allocations: 128
 =======
 >>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
 >>>>>>> f67f650baf528f5f407228a736036e8c38a18959
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 16:04:19 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2328.7ms | Allocations: 123414)
+  Rendered shared/_navbar.html.erb (Duration: 5.2ms | Allocations: 523)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/andresilveira/code/TheSleeplessOn/fetysh/public/packs
+[Webpacker] warning ../../../package.json: No license field
+
+[Webpacker] Hash: e3128af20ae85497fdaa
+Version: webpack 4.41.2
+Time: 1323ms
+Built at: 11/26/2019 4:04:25 PM
+=======
 Started GET "/" for ::1 at 2019-11-26 16:04:34 +0000
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   
@@ -5174,6 +5190,7 @@ Processing by PagesController#home as HTML
 Version: webpack 4.41.2
 Time: 711ms
 Built at: 11/26/2019 4:04:57 PM
+>>>>>>> master
                                      Asset       Size       Chunks                         Chunk Names
     js/application-1a62a4814a25238fb785.js    495 KiB  application  [emitted] [immutable]  application
 js/application-1a62a4814a25238fb785.js.map    622 KiB  application  [emitted] [dev]        application
@@ -5183,6 +5200,342 @@ Entrypoint application = js/application-1a62a4814a25238fb785.js js/application-1
 [./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
     + 3 hidden modules
 
+<<<<<<< HEAD
+Completed 200 OK in 6061ms (Views: 6055.5ms | ActiveRecord: 0.0ms | Allocations: 142413)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-26 16:04:35 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 644)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1946.1ms | Allocations: 792797)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2023ms (Views: 1972.6ms | ActiveRecord: 8.3ms | Allocations: 814715)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-26 16:04:56 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.8ms | Allocations: 7082)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.0ms | Allocations: 19512)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-11-26 16:05:03 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"OzKFP5ffYIXtXLBIqanJYv7/Dx4MaAsXdGQcr4si7Py5cd37LD3LfmRAqpRsaqDVAWOB/if2XTHNBLKZOzau2A==", "user"=>{"email"=>"luana.almeida.work@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (41.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "luana.almeida.work@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (41.8ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_created_at", "2019-11-26 16:05:03.583593"], ["updated_at", "2019-11-26 16:05:03.584052"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 245ms (ActiveRecord: 84.5ms | Allocations: 12233)
+
+
+Started GET "/" for ::1 at 2019-11-26 16:05:03 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 781)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:5
+  Rendered shared/_navbar.html.erb (Duration: 3.1ms | Allocations: 1130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.2ms | Allocations: 13304)
+
+
+Started GET "/articles/new" for ::1 at 2019-11-26 16:05:31 +0000
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 89)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 227)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 35.2ms | ActiveRecord: 3.9ms | Allocations: 22014)
+
+
+Started GET "/articles/new" for ::1 at 2019-11-26 16:11:37 +0000
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 7480)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 37.5ms | ActiveRecord: 0.7ms | Allocations: 22232)
+
+
+Started POST "/articles" for ::1 at 2019-11-26 16:11:48 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"gdXO3CyFwVYyRv7+ocHK3gOUvqHDptfw0MomTPEho9Cc+mXsf0f2eSbx64c2uZ/y2irGlFI1lIAGAEjKWMZEkg==", "article"=>{"title"=>"New article", "content"=>"blablabla"}, "commit"=>"Create a Article"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 2591)
+
+
+  
+NoMethodError (undefined method `Article' for nil:NilClass):
+  
+app/controllers/articles_controller.rb:20:in `create'
+Started POST "/articles" for ::1 at 2019-11-26 16:12:22 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"gdXO3CyFwVYyRv7+ocHK3gOUvqHDptfw0MomTPEho9Cc+mXsf0f2eSbx64c2uZ/y2irGlFI1lIAGAEjKWMZEkg==", "article"=>{"title"=>"New article", "content"=>"blablabla"}, "commit"=>"Create a Article"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 2459)
+
+
+  
+NoMethodError (undefined method `Article' for nil:NilClass):
+  
+app/controllers/articles_controller.rb:20:in `create'
+Started POST "/articles" for ::1 at 2019-11-26 16:13:09 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"gdXO3CyFwVYyRv7+ocHK3gOUvqHDptfw0MomTPEho9Cc+mXsf0f2eSbx64c2uZ/y2irGlFI1lIAGAEjKWMZEkg==", "article"=>{"title"=>"New article", "content"=>"blablabla"}, "commit"=>"Create a Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4992)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 29.2ms | ActiveRecord: 12.5ms | Allocations: 38960)
+
+
+  [1m[36mArticle Load (43.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Started POST "/articles" for ::1 at 2019-11-26 16:14:51 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"gdXO3CyFwVYyRv7+ocHK3gOUvqHDptfw0MomTPEho9Cc+mXsf0f2eSbx64c2uZ/y2irGlFI1lIAGAEjKWMZEkg==", "article"=>{"title"=>"Test", "content"=>"blablabla"}, "commit"=>"Create a Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (40.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (2.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Orgasm"], ["created_at", "2019-11-26 16:28:42.527444"], ["updated_at", "2019-11-26 16:28:42.527444"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 500 Internal Server Error in 914787ms (ActiveRecord: 7.7ms | Allocations: 204773)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/articles_controller.rb:23:in `create'
+Started POST "/articles" for ::1 at 2019-11-26 16:30:26 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"gdXO3CyFwVYyRv7+ocHK3gOUvqHDptfw0MomTPEho9Cc+mXsf0f2eSbx64c2uZ/y2irGlFI1lIAGAEjKWMZEkg==", "article"=>{"title"=>"Test", "content"=>"blablabla"}, "commit"=>"Create a Article"}
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 83074ms (ActiveRecord: 26.2ms | Allocations: 4156630)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/articles_controller.rb:23:in `create'
+Started GET "/articles/new" for ::1 at 2019-11-26 16:31:52 +0000
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (309.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1847.9ms | Allocations: 19756176)
+  Rendered shared/_navbar.html.erb (Duration: 26.5ms | Allocations: 212387)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4678ms (Views: 3539.5ms | ActiveRecord: 493.4ms | Allocations: 47808467)
+
+
+Started GET "/articles/new" for ::1 at 2019-11-26 16:32:54 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 273.6ms | Allocations: 190940)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 560)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 444ms (Views: 395.0ms | ActiveRecord: 9.0ms | Allocations: 254098)
+
+
+Started GET "/articles/new" for ::1 at 2019-11-26 16:33:05 +0000
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 30.4ms | Allocations: 7382)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 0.4ms | Allocations: 22161)
+
+
+Started POST "/articles" for ::1 at 2019-11-26 16:33:19 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"2hXNwLuBSwgTwUmvCXi9Qa31M7TSsra4+yJ+ST0XQd3HOmbw6EN8Jwd2XNaeAOhtdEtLgUMh9cgt6BDPlPCmnw==", "article"=>{"title"=>"New article", "content"=>"blablabla", "category_id"=>"1"}, "commit"=>"Create a Article"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :category_id[0m
+Completed 500 Internal Server Error in 157736ms (ActiveRecord: 2.2ms | Allocations: 145932)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/articles_controller.rb:23:in `create'
+Started GET "/articles/new" for ::1 at 2019-11-26 16:36:28 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 173.1ms | Allocations: 190939)
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 560)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 385ms (Views: 336.6ms | ActiveRecord: 7.9ms | Allocations: 254195)
+
+
+Started POST "/articles" for ::1 at 2019-11-26 16:36:37 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"ouirLdLTDjPs16eOqbPbaQ3LT36nEw3HeIpO2M5CqoC/xwAdgRE5HPhgsvc+y45F1HU3SzaATreuQCBeZ6VNwg==", "article"=>{"title"=>"New article", "content"=>"blablabbla", "category_id"=>"1"}, "commit"=>"Create an Article"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :category_id[0m
+Completed 500 Internal Server Error in 94521ms (ActiveRecord: 1.9ms | Allocations: 22687)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/articles_controller.rb:23:in `create'
+Started POST "/articles" for ::1 at 2019-11-26 16:41:32 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"ouirLdLTDjPs16eOqbPbaQ3LT36nEw3HeIpO2M5CqoC/xwAdgRE5HPhgsvc+y45F1HU3SzaATreuQCBeZ6VNwg==", "article"=>{"title"=>"New article", "content"=>"blablabbla", "category_id"=>"1"}, "commit"=>"Create an Article"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :category_id[0m
+Completed 500 Internal Server Error in 70371ms (ActiveRecord: 0.9ms | Allocations: 910919)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/articles_controller.rb:23:in `create'
+Started POST "/articles" for ::1 at 2019-11-26 16:42:58 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"ouirLdLTDjPs16eOqbPbaQ3LT36nEw3HeIpO2M5CqoC/xwAdgRE5HPhgsvc+y45F1HU3SzaATreuQCBeZ6VNwg==", "article"=>{"title"=>"New article", "content"=>"blablabbla", "category_id"=>"1"}, "commit"=>"Create an Article"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :category_id[0m
+Completed 404 Not Found in 514ms (ActiveRecord: 24.5ms | Allocations: 4726234)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category without an ID):
+  
+app/controllers/articles_controller.rb:22:in `create'
+Started POST "/articles" for ::1 at 2019-11-26 16:43:39 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"ouirLdLTDjPs16eOqbPbaQ3LT36nEw3HeIpO2M5CqoC/xwAdgRE5HPhgsvc+y45F1HU3SzaATreuQCBeZ6VNwg==", "article"=>{"title"=>"New article", "content"=>"blablabbla", "category_id"=>"1"}, "commit"=>"Create an Article"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 568ms (ActiveRecord: 46.6ms | Allocations: 4720629)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category without an ID):
+  
+app/controllers/articles_controller.rb:22:in `create'
+Started PUT "/__web_console/repl_sessions/449e58d6634724751c28b2e861cd8c5b" for ::1 at 2019-11-26 16:44:01 +0000
+Started PUT "/__web_console/repl_sessions/449e58d6634724751c28b2e861cd8c5b" for ::1 at 2019-11-26 16:44:04 +0000
+Started PUT "/__web_console/repl_sessions/449e58d6634724751c28b2e861cd8c5b" for ::1 at 2019-11-26 16:44:24 +0000
+Started PUT "/__web_console/repl_sessions/449e58d6634724751c28b2e861cd8c5b" for ::1 at 2019-11-26 16:44:58 +0000
+Started PUT "/__web_console/repl_sessions/449e58d6634724751c28b2e861cd8c5b" for ::1 at 2019-11-26 16:45:18 +0000
+Started POST "/articles" for ::1 at 2019-11-26 16:46:01 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"ouirLdLTDjPs16eOqbPbaQ3LT36nEw3HeIpO2M5CqoC/xwAdgRE5HPhgsvc+y45F1HU3SzaATreuQCBeZ6VNwg==", "article"=>{"title"=>"New article", "content"=>"blablabbla", "category_id"=>"1"}, "commit"=>"Create an Article"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 149567ms (ActiveRecord: 21.7ms | Allocations: 4114144)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/articles_controller.rb:22:in `create'
+Started GET "/articles/new" for ::1 at 2019-11-26 16:49:29 +0000
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/new.html.erb:15
+  Rendered articles/new.html.erb within layouts/application (Duration: 2235.7ms | Allocations: 22808254)
+  Rendered shared/_navbar.html.erb (Duration: 18.7ms | Allocations: 150694)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3211ms (Views: 2644.8ms | ActiveRecord: 35.7ms | Allocations: 31896058)
+
+
+Started POST "/articles" for ::1 at 2019-11-26 16:50:15 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"v8I+MvJX1K99jLZBKHeV1NcIXzj2smbaveHkUlpZUOKi7ZUCoZXjgGk7ozi/D8D4DrYnDWchJaprK4rU8763oA==", "article"=>{"title"=>"", "content"=>"", "category_id"=>"1"}, "commit"=>"Create an Article"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 108ms (ActiveRecord: 0.9ms | Allocations: 871155)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category without an ID):
+  
+app/controllers/articles_controller.rb:24:in `create'
+Started PUT "/__web_console/repl_sessions/0238bf72fda61328674b7d57de8ca8be" for ::1 at 2019-11-26 16:50:30 +0000
+Started PUT "/__web_console/repl_sessions/0238bf72fda61328674b7d57de8ca8be" for ::1 at 2019-11-26 16:50:31 +0000
+Started GET "/articles/new" for ::1 at 2019-11-26 16:51:07 +0000
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/new.html.erb:15
+  Rendered articles/new.html.erb within layouts/application (Duration: 2153.6ms | Allocations: 22775170)
+  Rendered shared/_navbar.html.erb (Duration: 6.3ms | Allocations: 106432)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3092ms (Views: 2535.4ms | ActiveRecord: 26.2ms | Allocations: 31572761)
+
+
+Started POST "/articles" for ::1 at 2019-11-26 16:51:22 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Va32e8nzoWi7bypq7+v5FxJAJWMhJc/6eaEEkU/0yBpIgl1LmjGWR6/YPxN4k6w7y/5dVrC2jIqva2oX5hMvWA==", "article"=>{"title"=>"sadssdads", "content"=>"aweeawewaae", "category_id"=>"1"}, "commit"=>"Create an Article"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:25:in `create'
+  [1m[36mArticle Create (47.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "category_id", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "sadssdads"], ["category_id", 1], ["content", "aweeawewaae"], ["user_id", 1], ["created_at", "2019-11-26 16:52:03.660759"], ["updated_at", "2019-11-26 16:52:03.660759"]]
+  ↳ app/controllers/articles_controller.rb:25:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:25:in `create'
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 41534ms (ActiveRecord: 49.9ms | Allocations: 858180)
+
+
+Started GET "/articles/1" for ::1 at 2019-11-26 16:52:03 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:55:in `set_article'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 4664)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/articles_controller.rb:11:in `show'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Started GET "/articles/new" for ::1 at 2019-11-26 17:02:13 +0000
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/new.html.erb:15
+  Rendered articles/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 10470)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 523)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 41.8ms | ActiveRecord: 1.2ms | Allocations: 41547)
+
+
+=======
 Completed 200 OK in 3522ms (Views: 3521.8ms | ActiveRecord: 0.0ms | Allocations: 143185)
 
 
@@ -9287,3 +9640,4 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+>>>>>>> master
