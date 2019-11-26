@@ -30,6 +30,7 @@ class ReviewsController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+  end
 end
 
 

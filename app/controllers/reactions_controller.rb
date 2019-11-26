@@ -1,16 +1,34 @@
 class ReactionsController < ApplicationController
   before_action :set_reaction, only: [:create]
 
-  def create
-    @reaction = Reaction.new(reaction_params)
+  # def create
+  #   @reaction = Reaction.new(reaction_params)
+  #   @reaction.user = current_user
+  #   @reaction.article = @article
+
+  #   if @reaction.save
+  #     redirect_to article_path(@article)
+  #   else
+  #     redirect_to article_path(@article)
+  #   end
+  # end
+
+  def love
+    @reaction = Reaction.new(reaction: "love")
     @reaction.user = current_user
     @reaction.article = @article
+  end
 
-    if @reaction.save
-      redirect_to article_path(@article)
-    else
-      redirect_to article_path(@article)
-    end
+  def save
+    @reaction = Reaction.new(reaction: "save")
+    @reaction.user = current_user
+    @reaction.article = @article
+  end
+
+  def dislike
+    @reaction = Reaction.new(reaction: "dislike")
+    @reaction.user = current_user
+    @reaction.article = @article
   end
 
   def new
