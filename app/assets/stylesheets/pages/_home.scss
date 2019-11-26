@@ -1,1 +1,86 @@
-// Specific CSS for your home-page
+#outer {
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+#home-top-video:before {
+  content:"";
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  z-index:1;
+  background:rgba(145,7,34,0.3);
+  filter: saturate(2);
+  filter: contrast(15);
+}
+
+#home-top-video {
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+#home-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index:1;
+}
+
+.logo-font{
+  font-family: Roboto;
+  font-size: 110px;
+  font-weight: 400;
+}
+
+#intro-black {
+  background: #1c1718;
+  color: white;
+  height: 300px;
+}
+
+.full-section {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-top: 1px solid rgb(0, 0, 0);
+  background-color: #fff
+}
+
+
+.section-landing {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.category-heading {
+  border-top-width: 10px;
+  margin-bottom: 64px;
+  font-size: 64px;
+  line-height: 64px;
+  border-top: 8px solid rgb(0, 0, 0);
+  display: inline;
+}
+
+.stickyscroll{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 1000px;
+}
+
+.sticky-element {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}

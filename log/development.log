@@ -574,6 +574,1847 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 1256ms (Views: 1244.3ms | ActiveRecord: 0.0ms | Allocations: 123878)
 
 
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 11:43:18 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 214)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 90.8ms | ActiveRecord: 0.0ms | Allocations: 43897)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:52:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 12395)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:53:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 12391)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:53:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 12388)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:54:54 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1185ms (Views: 1184.3ms | ActiveRecord: 0.0ms | Allocations: 83525)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:55:40 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 898ms (Views: 897.6ms | ActiveRecord: 0.0ms | Allocations: 84521)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:55:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 12624)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:56:03 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 12618)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:56:21 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms | Allocations: 12622)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:58:03 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 876ms (Views: 875.4ms | ActiveRecord: 0.0ms | Allocations: 87734)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:59:05 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 891ms (Views: 890.8ms | ActiveRecord: 0.0ms | Allocations: 91393)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:59:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 904ms (Views: 903.2ms | ActiveRecord: 0.0ms | Allocations: 92248)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:59:34 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 12988)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:59:45 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 903ms (Views: 902.9ms | ActiveRecord: 0.0ms | Allocations: 91804)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:06:09 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 919ms (Views: 919.1ms | ActiveRecord: 0.0ms | Allocations: 91796)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:06:30 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 12983)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:06:37 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 12988)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:14:37 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 13.2ms | Allocations: 6748)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 7859)
+
+
+  
+ActionView::Template::Error (The asset "video.mp4" is not present in the asset pipeline.):
+    1: <div class="home-video-wrapper">
+    2:   <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+    3:  </div>
+    4: 
+    5: <!--
+  
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2019-11-26 12:16:10 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3993)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 4253)
+
+
+  
+ActionView::Template::Error (The asset "video.mp4" is not present in the asset pipeline.):
+    1: <div class="home-video-wrapper">
+    2:   <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+    3:  </div>
+    4: 
+    5: <!--
+  
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2019-11-26 12:16:36 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1594)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2700)
+
+
+  
+ActionView::Template::Error (The asset "videos/video.mp4" is not present in the asset pipeline.):
+    1: <div class="home-video-wrapper">
+    2:   <%= video_tag "videos/video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+    3:  </div>
+    4: 
+    5: <!--
+  
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2019-11-26 12:17:30 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 4106)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 5212)
+
+
+  
+ActionView::Template::Error (The asset "video.mp4" is not present in the asset pipeline.):
+    1: <div class="home-video-wrapper">
+    2:   <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+    3:  </div>
+    4: 
+    5: <!--
+  
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2019-11-26 12:17:57 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 4107)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 5213)
+
+
+  
+ActionView::Template::Error (The asset "video" is not present in the asset pipeline.):
+    1: <div class="home-video-wrapper">
+    2:   <%= video_tag "video", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+    3:  </div>
+    4: 
+    5: <!--
+  
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2019-11-26 12:18:26 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 4109)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 5215)
+
+
+  
+ActionView::Template::Error (The asset "bg_video.mp4" is not present in the asset pipeline.):
+    1: <div class="home-video-wrapper">
+    2:   <%= video_tag "bg_video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+    3:  </div>
+    4: 
+    5: <!--
+  
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2019-11-26 12:19:04 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+Started GET "/" for ::1 at 2019-11-26 12:19:05 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1430.8ms | Allocations: 206032)
+Completed 500 Internal Server Error in 1436ms (ActiveRecord: 0.0ms | Allocations: 207917)
+
+
+  
+ActionView::Template::Error (Asset `bg_video.mp4` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link bg_video.mp4
+and restart your server):
+    1: <div class="home-video-wrapper">
+    2:   <%= video_tag "bg_video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+    3:  </div>
+    4: 
+    5: <!--
+  
+app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 767.8ms | Allocations: 558622)
+Completed 500 Internal Server Error in 768ms (ActiveRecord: 0.0ms | Allocations: 558886)
+
+
+  
+ActionView::Template::Error (Asset `bg_video.mp4` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link bg_video.mp4
+and restart your server):
+    1: <div class="home-video-wrapper">
+    2:   <%= video_tag "bg_video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
+    3:  </div>
+    4: 
+    5: <!--
+  
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2019-11-26 12:19:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 30.7ms | Allocations: 34701)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 47681)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:19:50 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 886ms (Views: 885.7ms | ActiveRecord: 0.0ms | Allocations: 95772)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:20:37 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 934ms (Views: 933.2ms | ActiveRecord: 0.0ms | Allocations: 96311)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:21:46 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 894ms (Views: 893.8ms | ActiveRecord: 0.0ms | Allocations: 95655)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:22:12 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 899ms (Views: 899.1ms | ActiveRecord: 0.0ms | Allocations: 96514)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:23:22 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 12680)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:24:25 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 895ms (Views: 894.3ms | ActiveRecord: 0.0ms | Allocations: 95616)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:24:38 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 895ms (Views: 894.3ms | ActiveRecord: 0.0ms | Allocations: 95218)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:25:07 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 901ms (Views: 901.0ms | ActiveRecord: 0.0ms | Allocations: 95635)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:25:16 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 902ms (Views: 901.8ms | ActiveRecord: 0.0ms | Allocations: 95664)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:27:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 13950)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:29:44 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 900)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 914ms (Views: 913.5ms | ActiveRecord: 0.0ms | Allocations: 97307)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:34:51 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 903)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 911ms (Views: 909.9ms | ActiveRecord: 0.0ms | Allocations: 96922)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:34:57 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 12679)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:35:39 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 13897)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:36:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 882ms (Views: 881.8ms | ActiveRecord: 0.0ms | Allocations: 96523)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:36:22 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 914ms (Views: 914.2ms | ActiveRecord: 0.0ms | Allocations: 95217)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:37:17 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 906ms (Views: 905.8ms | ActiveRecord: 0.0ms | Allocations: 95664)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:37:25 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 914ms (Views: 914.0ms | ActiveRecord: 0.0ms | Allocations: 95225)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:37:32 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 918ms (Views: 917.2ms | ActiveRecord: 0.0ms | Allocations: 95672)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:37:47 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 12714)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:39:06 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 911ms (Views: 910.9ms | ActiveRecord: 0.0ms | Allocations: 96085)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:39:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 903ms (Views: 902.6ms | ActiveRecord: 0.0ms | Allocations: 96083)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:40:04 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 12716)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:40:10 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 912ms (Views: 911.8ms | ActiveRecord: 0.0ms | Allocations: 95665)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:40:15 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 938ms (Views: 937.6ms | ActiveRecord: 0.0ms | Allocations: 95672)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:40:20 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 915ms (Views: 914.7ms | ActiveRecord: 0.0ms | Allocations: 95673)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:40:26 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 919ms (Views: 918.6ms | ActiveRecord: 0.0ms | Allocations: 95665)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:41:08 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 897ms (Views: 897.0ms | ActiveRecord: 0.0ms | Allocations: 95669)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:41:16 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 927ms (Views: 926.9ms | ActiveRecord: 0.0ms | Allocations: 95636)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:41:26 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 908ms (Views: 907.3ms | ActiveRecord: 0.0ms | Allocations: 96085)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:42:42 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 924ms (Views: 924.1ms | ActiveRecord: 0.0ms | Allocations: 95229)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:42:49 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 954ms (Views: 953.8ms | ActiveRecord: 0.0ms | Allocations: 95636)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:42:56 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 12676)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:42:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 12673)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:44:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 896)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 13892)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:44:44 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 908ms (Views: 907.1ms | ActiveRecord: 0.0ms | Allocations: 97298)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:44:55 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 900ms (Views: 899.4ms | ActiveRecord: 0.0ms | Allocations: 96974)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:44:59 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 12674)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:45:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 912ms (Views: 911.9ms | ActiveRecord: 0.0ms | Allocations: 96501)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:45:45 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 13888)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:45:57 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 911ms (Views: 910.2ms | ActiveRecord: 0.0ms | Allocations: 96090)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:46:12 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 917ms (Views: 916.9ms | ActiveRecord: 0.0ms | Allocations: 95666)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:46:24 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 917ms (Views: 916.2ms | ActiveRecord: 0.0ms | Allocations: 95232)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:46:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 929ms (Views: 928.9ms | ActiveRecord: 0.0ms | Allocations: 96089)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:46:57 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 904ms (Views: 904.0ms | ActiveRecord: 0.0ms | Allocations: 96080)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:47:04 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 13178)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:47:31 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 15.2ms | Allocations: 897)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 13904)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:47:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 12674)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:48:49 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 933ms (Views: 932.7ms | ActiveRecord: 0.0ms | Allocations: 96874)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:49:05 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 894)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 13889)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:58:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 894)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 919ms (Views: 918.3ms | ActiveRecord: 0.0ms | Allocations: 96957)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:59:06 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 894)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 922ms (Views: 921.5ms | ActiveRecord: 0.0ms | Allocations: 97375)
+
+
+Started GET "/" for ::1 at 2019-11-26 12:59:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 12675)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:00:06 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 891ms (Views: 890.5ms | ActiveRecord: 0.0ms | Allocations: 95711)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:00:16 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 917ms (Views: 917.0ms | ActiveRecord: 0.0ms | Allocations: 95710)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:00:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 897ms (Views: 896.2ms | ActiveRecord: 0.0ms | Allocations: 97007)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:00:40 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 909ms (Views: 908.6ms | ActiveRecord: 0.0ms | Allocations: 96595)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:00:45 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 12674)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:01:34 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 939ms (Views: 938.2ms | ActiveRecord: 0.0ms | Allocations: 96125)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:02:00 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 907ms (Views: 906.2ms | ActiveRecord: 0.0ms | Allocations: 96536)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:02:04 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 12673)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:02:35 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 895ms (Views: 894.8ms | ActiveRecord: 0.0ms | Allocations: 96564)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:02:43 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 12708)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:02:44 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 12673)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:03:28 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 883ms (Views: 882.8ms | ActiveRecord: 0.0ms | Allocations: 96975)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:03:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 12675)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:04:23 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 12714)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:04:26 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 12675)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:04:36 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 931ms (Views: 930.8ms | ActiveRecord: 0.0ms | Allocations: 96122)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:04:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 875ms (Views: 874.4ms | ActiveRecord: 0.0ms | Allocations: 96120)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:04:43 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 12672)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:04:44 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 12675)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:05:05 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 911ms (Views: 910.4ms | ActiveRecord: 0.0ms | Allocations: 97007)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:08:36 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 893)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 877ms (Views: 876.2ms | ActiveRecord: 0.0ms | Allocations: 97336)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:09:34 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 13925)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:09:43 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 12681)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:09:45 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 12674)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:09:54 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 13884)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:10:21 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 12676)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:10:23 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 12678)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:13:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 13886)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:13:45 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 13880)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:13:55 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 13886)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:13:57 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 12678)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:13:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 12674)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:14:55 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 909ms (Views: 909.2ms | ActiveRecord: 0.0ms | Allocations: 95713)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:15:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 974ms (Views: 974.1ms | ActiveRecord: 0.0ms | Allocations: 96557)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:15:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 907ms (Views: 906.8ms | ActiveRecord: 0.0ms | Allocations: 96533)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:15:36 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 12670)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:15:54 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 928ms (Views: 927.3ms | ActiveRecord: 0.0ms | Allocations: 96117)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:16:05 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 895ms (Views: 894.6ms | ActiveRecord: 0.0ms | Allocations: 95705)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:16:55 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 896)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 13895)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:16:56 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 27.8ms | ActiveRecord: 0.0ms | Allocations: 12679)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:18:25 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 13880)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:18:46 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 872ms (Views: 871.8ms | ActiveRecord: 0.0ms | Allocations: 95700)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:18:59 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 908ms (Views: 907.6ms | ActiveRecord: 0.0ms | Allocations: 95701)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:19:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 890ms (Views: 889.3ms | ActiveRecord: 0.0ms | Allocations: 96537)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:21:05 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 974ms (Views: 973.9ms | ActiveRecord: 0.0ms | Allocations: 96144)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:21:22 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 917ms (Views: 916.6ms | ActiveRecord: 0.0ms | Allocations: 96975)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:21:32 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 919ms (Views: 918.3ms | ActiveRecord: 0.0ms | Allocations: 95267)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:21:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 13185)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:21:52 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 917ms (Views: 916.2ms | ActiveRecord: 0.0ms | Allocations: 96093)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:22:27 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 896ms (Views: 895.3ms | ActiveRecord: 0.0ms | Allocations: 96561)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:24:34 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 12669)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:24:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 911ms (Views: 911.0ms | ActiveRecord: 0.0ms | Allocations: 96152)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:25:02 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 940ms (Views: 939.7ms | ActiveRecord: 0.0ms | Allocations: 97422)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:26:49 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 895)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 13892)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:29:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 892)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 949ms (Views: 948.8ms | ActiveRecord: 0.0ms | Allocations: 97352)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:29:57 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 930ms (Views: 929.7ms | ActiveRecord: 0.0ms | Allocations: 96576)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:30:03 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 943ms (Views: 942.5ms | ActiveRecord: 0.0ms | Allocations: 96609)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:30:16 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 13901)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:30:24 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 12672)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:30:26 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 12675)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:39:48 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 896)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 896ms (Views: 895.3ms | ActiveRecord: 0.0ms | Allocations: 98083)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:40:00 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 888ms (Views: 887.7ms | ActiveRecord: 0.0ms | Allocations: 96692)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:40:49 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1207)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 14279)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:40:59 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1203)
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms | Allocations: 14275)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:41:08 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 14190)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:43:34 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1201)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 14178)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:44:15 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 2.7ms | Allocations: 672)
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 14620)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:44:30 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 625)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1735)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 14560)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:44:32 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 305)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 12892)
+
+
+Started GET "/" for ::1 at 2019-11-26 13:44:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 14194)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:09:04 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 14181)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:09:51 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1209)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 920ms (Views: 919.1ms | ActiveRecord: 0.0ms | Allocations: 97695)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:10:56 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1209)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 889ms (Views: 888.8ms | ActiveRecord: 0.0ms | Allocations: 97671)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:11:13 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 14193)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:11:42 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 891ms (Views: 890.2ms | ActiveRecord: 0.0ms | Allocations: 96642)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:12:08 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 900ms (Views: 899.8ms | ActiveRecord: 0.0ms | Allocations: 96677)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:12:22 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 953ms (Views: 952.8ms | ActiveRecord: 0.0ms | Allocations: 97095)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:12:55 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 904ms (Views: 903.5ms | ActiveRecord: 0.0ms | Allocations: 95828)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:14:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 14196)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:14:25 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1205)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 14185)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:15:17 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1216)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 14202)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:21:30 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 892)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 13871)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:23:35 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 13868)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:23:54 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 895)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 483)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 14577)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:24:18 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 929ms (Views: 929.2ms | ActiveRecord: 0.0ms | Allocations: 95897)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:24:39 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 895)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 14699)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:25:10 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 890)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 469)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 14565)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:25:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 890)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 14552)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:30:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 899)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 877ms (Views: 876.8ms | ActiveRecord: 0.0ms | Allocations: 97625)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:31:55 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 894)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 14563)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:35:00 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 928ms (Views: 927.4ms | ActiveRecord: 0.0ms | Allocations: 96852)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:35:39 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 899)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms | Allocations: 14566)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:36:28 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 781)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 891ms (Views: 890.3ms | ActiveRecord: 0.0ms | Allocations: 96839)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:37:06 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 897ms (Views: 896.7ms | ActiveRecord: 0.0ms | Allocations: 95951)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:39:13 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 911ms (Views: 910.6ms | ActiveRecord: 0.0ms | Allocations: 96809)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:39:20 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 900ms (Views: 899.3ms | ActiveRecord: 0.0ms | Allocations: 95957)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:40:27 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 899)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 893ms (Views: 892.2ms | ActiveRecord: 0.0ms | Allocations: 98953)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:41:00 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 897ms (Views: 897.1ms | ActiveRecord: 0.0ms | Allocations: 96376)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:41:17 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 906ms (Views: 905.9ms | ActiveRecord: 0.0ms | Allocations: 95926)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:42:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 901ms (Views: 900.6ms | ActiveRecord: 0.0ms | Allocations: 96827)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:43:25 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 882ms (Views: 881.7ms | ActiveRecord: 0.0ms | Allocations: 95969)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:44:14 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 950ms (Views: 949.8ms | ActiveRecord: 0.0ms | Allocations: 96420)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:44:48 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 901)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 14577)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:46:23 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 897)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 14562)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:56:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 906)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 951ms (Views: 949.9ms | ActiveRecord: 0.0ms | Allocations: 99401)
+
+
+Started GET "/" for ::1 at 2019-11-26 14:58:51 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 909)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 14577)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:00:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 905)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 14568)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:00:49 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 916)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 14585)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:04:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 895)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 909ms (Views: 908.3ms | ActiveRecord: 0.0ms | Allocations: 98489)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:05:03 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 942ms (Views: 941.3ms | ActiveRecord: 0.0ms | Allocations: 95979)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:09:30 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 906)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 892ms (Views: 891.6ms | ActiveRecord: 0.0ms | Allocations: 98996)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:10:13 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 901)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 14567)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:10:16 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 12879)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:10:28 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 906)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 14580)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:11:02 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 906)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 14576)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:11:18 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 901)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 14561)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:11:20 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 12887)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:11:43 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 906)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 14568)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:13:59 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 901)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 14562)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:14:01 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 12880)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:14:24 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 900ms (Views: 899.4ms | ActiveRecord: 0.0ms | Allocations: 95956)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:15:40 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 908)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms | Allocations: 14585)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:15:47 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 12880)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:15:48 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 12882)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:16:39 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 906)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 896ms (Views: 895.2ms | ActiveRecord: 0.0ms | Allocations: 98114)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:17:25 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 904)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 14574)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:18:46 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 911)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 14579)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:20:02 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 909)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 14568)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:20:20 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 909)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 14576)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:21:17 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 904)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 887ms (Views: 886.0ms | ActiveRecord: 0.0ms | Allocations: 98960)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:21:35 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 909)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 14573)
+
+
+Started GET "/" for ::1 at 2019-11-26 15:22:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 913)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 14571)
+
+
+Started GET "/..." for ::1 at 2019-11-26 15:22:58 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/" for ::1 at 2019-11-26 12:06:54 +0000
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PagesController#home as HTML
@@ -2332,6 +4173,7 @@ actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> f67f650baf528f5f407228a736036e8c38a18959
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -2361,6 +4203,22 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 15:23:22 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 913)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 14589)
+
+
+Started GET "/..." for ::1 at 2019-11-26 15:23:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/articles/1" for ::1 at 2019-11-26 12:45:55 +0000
 Processing by ArticlesController#show as HTML
   Parameters: {"id"=>"1"}
@@ -2428,6 +4286,7 @@ actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> f67f650baf528f5f407228a736036e8c38a18959
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -2457,6 +4316,22 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 15:23:44 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 885ms (Views: 884.6ms | ActiveRecord: 0.0ms | Allocations: 96860)
+
+
+Started GET "/..." for ::1 at 2019-11-26 15:23:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/articles/new" for ::1 at 2019-11-26 12:54:00 +0000
 Processing by ArticlesController#new as HTML
   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -2511,6 +4386,7 @@ actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> f67f650baf528f5f407228a736036e8c38a18959
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -2540,6 +4416,22 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 15:24:06 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 923)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 14592)
+
+
+Started GET "/..." for ::1 at 2019-11-26 15:24:06 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/articles/new" for ::1 at 2019-11-26 12:54:02 +0000
 Processing by ArticlesController#new as HTML
   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -2594,6 +4486,7 @@ actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> f67f650baf528f5f407228a736036e8c38a18959
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -2623,6 +4516,22 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 15:24:24 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 933)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 14606)
+
+
+Started GET "/..." for ::1 at 2019-11-26 15:24:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/articles/new" for ::1 at 2019-11-26 12:54:03 +0000
 Processing by ArticlesController#new as HTML
   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -2677,6 +4586,7 @@ actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> f67f650baf528f5f407228a736036e8c38a18959
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -2706,6 +4616,22 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 15:24:36 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 922)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 14595)
+
+
+Started GET "/..." for ::1 at 2019-11-26 15:24:36 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/articles/new" for ::1 at 2019-11-26 12:54:09 +0000
 Processing by ArticlesController#new as HTML
   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -2760,6 +4686,7 @@ actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> f67f650baf528f5f407228a736036e8c38a18959
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -2789,6 +4716,22 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 15:26:13 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 925)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 14592)
+
+
+Started GET "/..." for ::1 at 2019-11-26 15:26:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/articles/1" for ::1 at 2019-11-26 12:54:41 +0000
 Processing by ArticlesController#show as HTML
   Parameters: {"id"=>"1"}
@@ -2893,6 +4836,7 @@ actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> f67f650baf528f5f407228a736036e8c38a18959
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -2922,6 +4866,8 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+=======
 Started GET "/articles/new" for ::1 at 2019-11-26 13:03:03 +0000
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by ArticlesController#new as HTML
@@ -3209,3 +5155,4 @@ Completed 200 OK in 65ms (Views: 52.3ms | ActiveRecord: 1.3ms | Allocations: 128
 
 =======
 >>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
+>>>>>>> f67f650baf528f5f407228a736036e8c38a18959
