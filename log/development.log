@@ -686,6 +686,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2019-11-26 12:24:06 +0000
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PagesController#home as HTML
@@ -814,6 +815,25 @@ rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
 rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
 activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+=======
+Started GET "/" for ::1 at 2019-11-26 12:28:41 +0000
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "fetysh_development" does not exist
+):
+  
+activerecord (6.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.1) lib/active_record/migration.rb:562:in `call'
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
 actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
 activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
 actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -849,6 +869,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/articles" for ::1 at 2019-11-26 12:30:27 +0000
 Processing by ArticlesController#index as HTML
   [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -899,6 +920,25 @@ rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
 rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
 activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+=======
+Started GET "/" for ::1 at 2019-11-26 12:29:51 +0000
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "fetysh_development" does not exist
+):
+  
+activerecord (6.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.1) lib/active_record/migration.rb:562:in `call'
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
 actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
 activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
 actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -934,6 +974,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2019-11-26 12:31:17 +0000
 Processing by PagesController#home as HTML
   Rendering pages/home.html.erb within layouts/application
@@ -992,6 +1033,22 @@ rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
 rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
 activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+=======
+  [1m[35m (460.5ms)[0m  [1m[35mCREATE DATABASE "fetysh_development" ENCODING = 'unicode'[0m
+  [1m[35m (394.6ms)[0m  [1m[35mCREATE DATABASE "fetysh_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2019-11-26 12:32:08 +0000
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.1) lib/active_record/migration.rb:564:in `call'
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
 actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
 activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
 actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -1027,6 +1084,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/__web_console/repl_sessions/8d48504892b828352d785f535b9ee793/trace" for ::1 at 2019-11-26 12:33:08 +0000
 Started GET "/articles/new" for ::1 at 2019-11-26 12:35:01 +0000
 Processing by ArticlesController#new as HTML
@@ -1036,6 +1094,151 @@ Completed 406 Not Acceptable in 64ms (ActiveRecord: 20.9ms | Allocations: 9477)
 
   
 ActionController::MissingExactTemplate (ArticlesController#new is missing a template for request formats: text/html):
+=======
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (27.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2958374475459655245)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20191125142756)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125142756"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20191126102310)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191126102310"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSubcategories (20191126102338)
+  [1m[35m (28.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "subcategories" ("id" bigserial primary key, "name" character varying, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_3937626525"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_subcategories_on_category_id" ON "subcategories"  ("category_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191126102338"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserCategories (20191126102421)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "user_categories" ("id" bigserial primary key, "user_id" bigint NOT NULL, "subcategory_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1cc6b36bdf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_60f46c2d75"
+FOREIGN KEY ("subcategory_id")
+  REFERENCES "subcategories" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_user_categories_on_user_id" ON "user_categories"  ("user_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_user_categories_on_subcategory_id" ON "user_categories"  ("subcategory_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191126102421"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateArticles (20191126102537)
+  [1m[35m (40.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "title" character varying, "category_id" bigint NOT NULL, "content" text, "source" character varying, "user_id" bigint NOT NULL, "img_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_af09d53ead"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+, CONSTRAINT "fk_rails_3d31dad1cc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_category_id" ON "articles"  ("category_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_user_id" ON "articles"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191126102537"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReactions (20191126102626)
+  [1m[35m (40.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (30.0ms)[0m  [1m[35mCREATE TABLE "reactions" ("id" bigserial primary key, "user_id" bigint NOT NULL, "article_id" bigint NOT NULL, "reaction" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9f02fc96a0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_87507a9604"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_reactions_on_user_id" ON "reactions"  ("user_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_reactions_on_article_id" ON "reactions"  ("article_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191126102626"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20191126102659)
+  [1m[35m (41.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_id" bigint NOT NULL, "article_id" bigint NOT NULL, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_74a66bd6c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_bdbf711db8"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_user_id" ON "reviews"  ("user_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_article_id" ON "reviews"  ("article_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191126102659"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20191126104329)
+  [1m[35m (45.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "sex_orientation" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "photo" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "premium" boolean DEFAULT FALSE[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191126104329"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (24.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-26 12:32:21.510639"], ["updated_at", "2019-11-26 12:32:21.510639"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2958374475459655245)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-11-26 12:32:31 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5713ms (Views: 5705.3ms | ActiveRecord: 0.0ms | Allocations: 182130)
+
+
+Started GET "/articles" for ::1 at 2019-11-26 12:32:43 +0000
+Processing by ArticlesController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 381)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-26 12:32:44 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 643)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 88.3ms | Allocations: 23618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 140ms (Views: 103.6ms | ActiveRecord: 7.4ms | Allocations: 45846)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-26 12:32:50 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 7103)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 19909)
+
+
+Started POST "/users" for ::1 at 2019-11-26 12:33:19 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"wNJHd3YkB8Sev4hF9E++lx5febiMSAlr/lU3F9bc1h+wU3oPGfR06pc8vEpgpTtQ81lRIDHU+gymKbf9B9WevQ==", "user"=>{"email"=>"luana.almeida.work@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (44.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "luana.almeida.work@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "luana.almeida.work@gmail.com"], ["encrypted_password", "$2a$11$JEdXRok0s5CFTi7Lhkj3AOReCtS5IZpj9M.fSf3nyQiCaol2xMt1C"], ["created_at", "2019-11-26 12:33:19.320141"], ["updated_at", "2019-11-26 12:33:19.320141"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 202ms (ActiveRecord: 46.2ms | Allocations: 10478)
+
+
+Started GET "/articles" for ::1 at 2019-11-26 12:33:19 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (40.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 59ms (ActiveRecord: 41.1ms | Allocations: 6454)
+
+
+  
+ActionController::MissingExactTemplate (ArticlesController#index is missing a template for request formats: text/html):
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
   
 actionpack (6.0.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
 actionpack (6.0.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
@@ -1111,6 +1314,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/articles/new" for ::1 at 2019-11-26 12:35:30 +0000
 Processing by ArticlesController#new as HTML
   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -1119,6 +1323,16 @@ Completed 406 Not Acceptable in 36ms (ActiveRecord: 1.4ms | Allocations: 3877)
 
   
 ActionController::MissingExactTemplate (ArticlesController#new is missing a template for request formats: text/html):
+=======
+Started GET "/articles" for ::1 at 2019-11-26 12:37:47 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 6ms (ActiveRecord: 0.6ms | Allocations: 2101)
+
+
+  
+ActionController::MissingExactTemplate (ArticlesController#index is missing a template for request formats: text/html):
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
   
 actionpack (6.0.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
 actionpack (6.0.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
@@ -1194,6 +1408,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/articles/new" for ::1 at 2019-11-26 12:35:33 +0000
 Processing by ArticlesController#new as HTML
   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -1202,6 +1417,17 @@ Completed 406 Not Acceptable in 25ms (ActiveRecord: 1.6ms | Allocations: 2118)
 
   
 ActionController::MissingExactTemplate (ArticlesController#new is missing a template for request formats: text/html):
+=======
+Started GET "/articles" for ::1 at 2019-11-26 14:37:59 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 40ms (ActiveRecord: 6.2ms | Allocations: 15729)
+
+
+  
+ActionController::MissingExactTemplate (ArticlesController#index is missing a template for request formats: text/html):
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
   
 actionpack (6.0.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
 actionpack (6.0.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
@@ -1277,6 +1503,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/articles/new" for ::1 at 2019-11-26 12:35:57 +0000
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by ArticlesController#new as HTML
@@ -1286,6 +1513,16 @@ Completed 406 Not Acceptable in 53ms (ActiveRecord: 11.0ms | Allocations: 21294)
 
   
 ActionController::MissingExactTemplate (ArticlesController#new is missing a template for request formats: text/html):
+=======
+Started GET "/articles" for ::1 at 2019-11-26 14:38:03 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.7ms | Allocations: 2110)
+
+
+  
+ActionController::MissingExactTemplate (ArticlesController#index is missing a template for request formats: text/html):
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
   
 actionpack (6.0.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
 actionpack (6.0.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
@@ -1361,6 +1598,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/articles/new" for ::1 at 2019-11-26 12:35:59 +0000
 Processing by ArticlesController#new as HTML
   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -1369,6 +1607,24 @@ Completed 406 Not Acceptable in 16ms (ActiveRecord: 1.5ms | Allocations: 2126)
 
   
 ActionController::MissingExactTemplate (ArticlesController#new is missing a template for request formats: text/html):
+=======
+Started GET "/" for ::1 at 2019-11-26 14:38:07 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 166ms (Views: 165.2ms | ActiveRecord: 0.0ms | Allocations: 42889)
+
+
+Started GET "/articles" for ::1 at 2019-11-26 14:38:16 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 8ms (ActiveRecord: 0.5ms | Allocations: 2118)
+
+
+  
+ActionController::MissingExactTemplate (ArticlesController#index is missing a template for request formats: text/html):
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
   
 actionpack (6.0.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
 actionpack (6.0.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
@@ -1444,6 +1700,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/articles/new" for ::1 at 2019-11-26 12:35:59 +0000
 Processing by ArticlesController#new as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -2950,3 +3207,5 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 65ms (Views: 52.3ms | ActiveRecord: 1.3ms | Allocations: 12842)
 
 
+=======
+>>>>>>> cbc6b0957c2ec32b627d8f2e11d607a1e3241d07
