@@ -1,0 +1,31 @@
+<h1> Title Index</h1>
+<div class="maxi-container">
+  <% i = 1 %>
+  <% @articles.each do |article| %>
+  <div class="d-flex container-main-articles">
+
+    <div class="head">
+
+      <h2><%= article.title %></h2>
+      <h6>category</h6>
+      <p>
+        <%= article.content %>
+      </p>
+      <p class="by-author">By Etienne la baleine</p>
+      <%= link_to "Read more..",category_article_path(article.category,article) %>
+
+    </div>
+<% if i.even? %>
+   <div class="image-article-right">
+  <% else %>
+  <div class="image-article">
+<% end %>
+
+      <img src="https://images.unsplash.com/photo-1440367850806-da68da359421?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="">
+    </div>
+  </div>
+  <% i = i + 1 %>
+    <% end %>
+
+
+</div>

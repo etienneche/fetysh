@@ -1,0 +1,46 @@
+// Import page-specific CSS files here.
+@import "home";
+@import "new";
+@import "show";
+
+// INDEX PAGE WITH ALL ARTICLES //
+
+body {
+  background-color: white;
+}
+h6 {
+  color: #910722;
+}
+a {
+  text-decoration: none;
+  color: #910722;
+}
+h1 {
+  font-size: 50px;
+  text-decoration: overline;
+  display: flex;
+  justify-content: center;
+}
+.maxi-container {
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.container-main-articles {
+  margin-top: 5px;
+  position: relative;
+  padding: 5px;
+}
+.head {
+  position: absolute;
+  margin-rigth: -20px;
+  background-color: white;
+  padding: 50px;
+  margin-top: 30px;
+  margin-left: 263px;
+  width: 600px
+}
+.articles {
+  width: 650px;
+  margin: 0 auto;
+}
+
