@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :articles do
-    resources :reviews
-    resources :reactions
+  resources :categories do
+    resources :articles do
+      resources :reviews
+      resources :reactions
+    end
+    resources :events
   end
-
-  resources :categories
 end
