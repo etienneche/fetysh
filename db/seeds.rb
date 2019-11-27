@@ -32,7 +32,8 @@ puts 'Create 10 new articles'
     title: Faker::Restaurant.name,
     content: Faker::Lorem.paragraph,
     user_id: 1,
-    category_id: 1
+    category_id: 1,
+    img_url: 'https://source.unsplash.com/featured/?sex'
   )
 end
 
