@@ -1,0 +1,53 @@
+#box-simple-form {
+  margin-top: 70px;
+}
+#simple-form-new {
+  width: 700px;
+  border:0px solid transparent;
+}
+#box-simple-form {
+  margin: 0 auto;
+}
+.form-control {
+   border:1px solid #91072240;
+}
+#article_content {
+  border:1px solid #91072240;
+  margin-bottom: 20px;
+}
+/* TYPE WRITTER */
+
+.typewriter h2 {
+  color: #910722;
+  padding-bottom: 50px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+  typing 3.5s steps(30, end),
+  blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+/* BUTTON SIMPLE FORM */
+#btn-new-form {
+  border: 1px solid #91072240;
+}
+#btn-new-form:hover {
+  background-color: #91072250;
+}
+
+/*border: 1px solid ;*/
