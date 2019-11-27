@@ -16,16 +16,15 @@
 
     </div>
 <% if i.even? %>
-   <div class="image-article-right">
+  <div class="image-article-right">
   <% else %>
-  <div class="image-article">
+    <div class="image-article">
 <% end %>
+     <img src="<%= article.img_url %>" alt="">
 
-      <img src="https://images.unsplash.com/photo-1440367850806-da68da359421?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="">
     </div>
   </div>
   <% i = i + 1 %>
     <% end %>
-
-
+  </div>
 </div>
