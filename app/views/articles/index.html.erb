@@ -11,7 +11,9 @@
       <p>
         <%= article.content %>
       </p>
-      <p class="by-author">By Etienne la baleine</p>
+      <%= link_to user_path(article.user) do %>
+      <p class="by-author">By <%=  %></p>
+      <% end %>
       <%= link_to "Read more..",category_article_path(article.category,article) %>
 
     </div>
