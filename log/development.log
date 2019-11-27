@@ -10546,3 +10546,264 @@ Started POST "/__web_console/repl_sessions/9dac545157b04464882cee13444f5fe2/trac
 =======
 >>>>>>> master
 >>>>>>> master
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (5.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Orgasm"], ["created_at", "2019-11-26 18:17:49.452897"], ["updated_at", "2019-11-26 18:17:49.452897"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/articles/" for ::1 at 2019-11-26 18:19:03 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 371)
+  Rendered shared/_navbar.html.erb (Duration: 3.9ms | Allocations: 529)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3082ms (Views: 3072.9ms | ActiveRecord: 0.0ms | Allocations: 162380)
+
+
+Started GET "/articles/1" for ::1 at 2019-11-26 18:19:09 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:54:in `set_article'
+Completed 404 Not Found in 21ms (ActiveRecord: 11.4ms | Allocations: 2461)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=1):
+  
+app/controllers/articles_controller.rb:54:in `set_article'
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/articles/" for ::1 at 2019-11-26 18:21:55 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 113)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 95.7ms | ActiveRecord: 0.0ms | Allocations: 13542)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:26:59 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 112)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2128ms (Views: 2125.8ms | ActiveRecord: 0.0ms | Allocations: 93042)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:27:36 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 110)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms | Allocations: 13520)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:33:26 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 111)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 13524)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:35:11 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 110)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2453ms (Views: 2449.7ms | ActiveRecord: 0.0ms | Allocations: 93137)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:41:45 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2331ms (Views: 2329.9ms | ActiveRecord: 0.0ms | Allocations: 91619)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:42:31 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 142)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 49.2ms | ActiveRecord: 0.0ms | Allocations: 13560)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:42:35 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms | Allocations: 11871)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:49:19 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2029ms (Views: 2028.1ms | ActiveRecord: 0.0ms | Allocations: 92044)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:50:01 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1791ms (Views: 1790.7ms | ActiveRecord: 0.0ms | Allocations: 91629)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:50:14 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1826ms (Views: 1825.1ms | ActiveRecord: 0.0ms | Allocations: 91625)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:52:09 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2169ms (Views: 2168.2ms | ActiveRecord: 0.0ms | Allocations: 91639)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:52:30 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 144)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 66.0ms | ActiveRecord: 0.0ms | Allocations: 13562)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:52:48 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1936ms (Views: 1932.1ms | ActiveRecord: 0.0ms | Allocations: 91643)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:54:36 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 146)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1972ms (Views: 1968.9ms | ActiveRecord: 0.0ms | Allocations: 93357)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 18:59:12 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 143)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2133ms (Views: 2132.0ms | ActiveRecord: 0.0ms | Allocations: 93798)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:01:18 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 143)
+  Rendered shared/_navbar.html.erb (Duration: 3.4ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 89.2ms | ActiveRecord: 0.0ms | Allocations: 13560)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:03:07 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2672ms (Views: 2671.8ms | ActiveRecord: 0.0ms | Allocations: 92064)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:05:16 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2392ms (Views: 2390.9ms | ActiveRecord: 0.0ms | Allocations: 92062)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:11:45 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 152)
+  Rendered shared/_navbar.html.erb (Duration: 4.8ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3623ms (Views: 3621.6ms | ActiveRecord: 0.0ms | Allocations: 93820)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:16:42 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 173)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2454ms (Views: 2431.8ms | ActiveRecord: 0.0ms | Allocations: 93561)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:18:05 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 189)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 115ms (Views: 106.8ms | ActiveRecord: 0.0ms | Allocations: 13608)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:19:42 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2405ms (Views: 2403.1ms | ActiveRecord: 0.0ms | Allocations: 91832)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:20:49 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.0ms | Allocations: 11855)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:22:24 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 104.9ms | ActiveRecord: 0.0ms | Allocations: 11858)
+
+
+Started GET "/articles/" for ::1 at 2019-11-26 19:24:10 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1976ms (Views: 1974.2ms | ActiveRecord: 0.0ms | Allocations: 92234)
+
+
