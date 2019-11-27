@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   def show
     @user = current_user
     @reviews = Review.all.where("article_id = ?", @article.id)
-    @reactions = Reaction.all.where("reaction_id = ?", @reaction.id)
+
     @review = Review.new
   end
 
@@ -18,7 +18,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
@@ -53,8 +52,5 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
-
 end
-
-
 

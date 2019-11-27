@@ -37,3 +37,11 @@ puts 'Create 10 new articles'
 end
 
 puts 'Done'
+
+puts 'Create 1 Reaction'
+
+Reaction.create!(
+  user_id: 1,
+  article_id: 21,
+  reaction: 'love'
+)
