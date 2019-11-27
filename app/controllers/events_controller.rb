@@ -1,29 +1,33 @@
 class EventsController < ApplicationController
+  before_action :set_event, only: [:show, :edit, :destroy, :update]
 
-def index
+  def index
+    @events = Event.all
+  end
 
-end
+  def show
+  end
 
-def show
+  def new
+    @event = Event.new
+  end
 
-end
+  def create
+  end
 
-def new
+  def edit
+  end
 
-end
+  def update
+  end
 
-def create
+  def destroy
+    @event.destroy
+  end
 
-end
+  private
 
-def edit
-
-end
-
-def update
-end
-
-def destroy
-end
-
+  def set_event
+    @event = Event.find(params[:id])
+  end
 end
