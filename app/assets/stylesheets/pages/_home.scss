@@ -104,3 +104,22 @@
 .card {
   position:relative;
 }
+
+.btn-transp {
+  color:white;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.btn-transp:hover{
+  background-color:white;
+  color: rgb(191,17,6);
+  text-decoration:none;
+}
+
+.landing-title{
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 90px;
+}
