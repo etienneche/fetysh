@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_114429) do
+ActiveRecord::Schema.define(version: 2019_11_27_115928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,21 @@ ActiveRecord::Schema.define(version: 2019_11_27_114429) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "address"
+    t.bigint "user_id", null: false
+    t.string "title"
+    t.date "date"
+    t.decimal "price"
+    t.string "img_url"
+    t.bigint "category_id", null: false
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_events_on_category_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "reactions", force: :cascade do |t|
@@ -82,6 +97,8 @@ ActiveRecord::Schema.define(version: 2019_11_27_114429) do
 
   add_foreign_key "articles", "categories"
   add_foreign_key "articles", "users"
+  add_foreign_key "events", "categories"
+  add_foreign_key "events", "users"
   add_foreign_key "reactions", "articles"
   add_foreign_key "reactions", "users"
   add_foreign_key "reviews", "articles"
