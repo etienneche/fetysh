@@ -1,0 +1,112 @@
+body {
+  font-family: "Cabin", "Helvetica", "sans-serif";
+}
+
+ul {
+  list-style: none;
+}
+
+.profile-card{
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 10%;
+}
+.profile-card h3{
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.list-group {
+  justify-content: center;
+}
+
+.list-group li {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 25px 10px;
+}
+
+.list-group li span{
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.stats-circle {
+  width: 100px;
+  height :100px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.stats-circle p {
+  color: white;
+  padding-top: 30px;
+}
+
+.reactions-history {
+  padding: 10% 5%;
+}
+
+.tabs p {
+  cursor: pointer;
+  display: inline;
+  margin-right: 30px;
+}
+
+.tabs p:hover {
+  color: #910722;
+}
+
+.tabs p:last-child {
+  margin-right: 0;
+}
+
+.tabs p i {
+  margin: 0 8px;
+}
+
+// Cards
+
+.card-product {
+  overflow: hidden;
+  margin: 20px 0;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+
+
+.card-product img {
+  height: 100%;
+  width: 130px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
