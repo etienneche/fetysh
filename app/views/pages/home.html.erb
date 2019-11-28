@@ -7,13 +7,13 @@
 <div class="full-section d-block p-4">
   <div class="container">
     <div class="section-landing">
-      <h2 class="category-heading"><%= Category.find(1).name %></h2>
+      <h2 class="category-heading"><%= Category.first.name %></h2>
     </div>
 
     <!-- ARTICLES -->
 
     <div class="stickyscroll">
-      <% @articles.where("category_id = 1").sample(1).each do |article| %>
+      <% @articles.where("category_id = ?", Category.first.id).sample(1).each do |article| %>
       <%= link_to category_article_path(article.category_id, article.id) do %>
       <div class="sticky-element align-items-center justify-content-center" style="background-image: url(<%= article.img_url %>)">
         <h3 class="image-title-white"><%= article.title %></h3>
@@ -21,7 +21,7 @@
       <% end  %>
       <% end  %>
       <div class="col">
-        <% @articles.where("category_id = 1").sample(2).each do |article| %>
+        <% @articles.where("category_id = ?", Category.first.id).sample(2).each do |article| %>
         <%= link_to category_article_path(article.category_id, article.id) do %>
         <div>
           <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="col">
-        <% @articles.where("category_id = 1").sample(2).each do |article| %>
+        <% @articles.where("category_id = ?", Category.first.id).sample(2).each do |article| %>
         <%= link_to category_article_path(article.category_id, article.id) do %>
         <div>
           <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>

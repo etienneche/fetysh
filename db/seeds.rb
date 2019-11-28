@@ -1,8 +1,9 @@
-puts 'Delete all articles_path'
+puts 'Delete everything'
 Reaction.destroy_all
 Event.destroy_all
 Article.destroy_all
 User.destroy_all
+Category.destroy_all
 
 puts 'Done'
 
@@ -54,7 +55,7 @@ puts 'Create 10 new articles'
 10.times do
   Article.create!(
     title: Faker::Restaurant.name,
-    content: Faker::Lorem.paragraph,
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ipsam, ipsa modi, asperiores est quam aliquam pariatur ut laudantium error velit rem ipsum ullam enim, commodi voluptatibus, illum cupiditate magnam.",
     user_id: User.first.id,
     source: 'O.school',
     category_id: Category.first.id,

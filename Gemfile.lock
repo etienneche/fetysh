@@ -90,6 +90,7 @@ GEM
     ffi (1.11.3)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
+    friendly_id (4.0.10)
     geocoder (1.5.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -234,6 +235,7 @@ DEPENDENCIES
   dotenv-rails
   faker
   font-awesome-sass (~> 5.6.1)
+  friendly_id (~> 4.0.0.beta8)
   geocoder
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
