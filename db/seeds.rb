@@ -14,7 +14,7 @@ User.create!(
   )
 
 
-puts 'Create 5 categories'
+puts 'Create 8 categories'
 Category.create!(
   name: 'Masturbation'
   )
@@ -33,6 +33,18 @@ Category.create!(
 
 Category.create!(
   name: 'Sex Toys'
+  )
+
+Category.create!(
+  name: 'Anal'
+  )
+
+Category.create!(
+  name: 'Squirting'
+  )
+
+Category.create!(
+  name: 'Role Play'
   )
 
 puts 'Done'

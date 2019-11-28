@@ -1,12 +1,20 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.categories-nav{
+  padding-left: 50px;
+  padding-right: 50px;
+  border-bottom: 1px solid #f2f2f2;
+  border-top: 1px solid #f2f2f2;
+  height: 40px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+
+.categories-nav-el {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2d2e2f;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.categories-nav-el:hover{
+  color: rgba(191,17,6,0.6);
 }

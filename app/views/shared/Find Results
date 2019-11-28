@@ -1,0 +1,2363 @@
+Searching 192 files for "ul"
+
+/Users/martin/code/TheSleeplessOne/fetysh/.gitignore:
+   10  public/packs
+   11  public/packs-test
+   12: node_modules
+   13  yarn-error.log
+   14  .byebug_history
+
+/Users/martin/code/TheSleeplessOne/fetysh/babel.config.js:
+    1: module.exports = function(api) {
+    2    var validEnv = ['development', 'test', 'production']
+    3    var currentEnv = api.env()
+    .
+   32            useBuiltIns: 'entry',
+   33            corejs: 3,
+   34:           modules: false,
+   35            exclude: ['transform-typeof-symbol']
+   36          }
+
+/Users/martin/code/TheSleeplessOne/fetysh/postcss.config.js:
+    1: module.exports = {
+    2    plugins: [
+    3      require('postcss-import'),
+
+/Users/martin/code/TheSleeplessOne/fetysh/yarn.lock:
+   50    version "7.7.4"
+   51    resolved "https://registry.yarnpkg.com/@babel/helper-builder-binary-assignment-operator-visitor/-/helper-builder-binary-assignment-operator-visitor-7.7.4.tgz#5f73f2b28580e224b5b9bd03146a4015d6217f5f"
+   52:   integrity sha512-Biq/d/WtvfftWZ9Uf39hbPBYDUo986m5Bb4zhkeYDGUllF43D+nUe5M6Vuo6/8JDK/0YX/uBdeoQpyaNhNugZQ==
+   53    dependencies:
+   54      "@babel/helper-explode-assignable-expression" "^7.7.4"
+   ..
+  131      "@babel/types" "^7.7.4"
+  132
+  133: "@babel/helper-module-imports@^7.7.4":
+  134    version "7.7.4"
+  135:   resolved "https://registry.yarnpkg.com/@babel/helper-module-imports/-/helper-module-imports-7.7.4.tgz#e5a92529f8888bf319a6376abfbd1cebc491ad91"
+  136    integrity sha512-dGcrX6K9l8258WFjyDLJwuVKxR4XZfU0/vTUgOQYWEnRD8mgr+p4d6fCUMq/ys0h4CCt/S5JhbvtyErjWouAUQ==
+  137    dependencies:
+  138      "@babel/types" "^7.7.4"
+  139
+  140: "@babel/helper-module-transforms@^7.7.4":
+  141    version "7.7.4"
+  142:   resolved "https://registry.yarnpkg.com/@babel/helper-module-transforms/-/helper-module-transforms-7.7.4.tgz#8d7cdb1e1f8ea3d8c38b067345924ac4f8e0879a"
+  143    integrity sha512-ehGBu4mXrhs0FxAqN8tWkzF8GSIGAiEumu4ONZ/hD9M88uHcD+Yu2ttKfOCgwzoesJOJrtQh7trI5YPbRtMmnA==
+  144    dependencies:
+  145:     "@babel/helper-module-imports" "^7.7.4"
+  146      "@babel/helper-simple-access" "^7.7.4"
+  147      "@babel/helper-split-export-declaration" "^7.7.4"
+  ...
+  193    version "7.7.4"
+  194    resolved "https://registry.yarnpkg.com/@babel/helper-simple-access/-/helper-simple-access-7.7.4.tgz#a169a0adb1b5f418cfc19f22586b2ebf58a9a294"
+  195:   integrity sha512-zK7THeEXfan7UlWsG2A6CI/L9jVnI5+xxKZOdej39Y0YtDYKx9raHk5F2EtK9K8DHRTihYwg20ADt9S36GR78A==
+  196    dependencies:
+  197      "@babel/template" "^7.7.4"
+  ...
+  340    version "7.7.4"
+  341    resolved "https://registry.yarnpkg.com/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.7.4.tgz#76309bd578addd8aee3b379d809c802305a98a12"
+  342:   integrity sha512-zUXy3e8jBNPiffmqkHRNDdZM2r8DWhCB7HhcoyZjiK1TxYEluLHAvQuYnTT+ARqRpabWqy/NHkO6e3MsYB5YfA==
+  343    dependencies:
+  344      "@babel/helper-plugin-utils" "^7.0.0"
+  ...
+  349    integrity sha512-zpUTZphp5nHokuy8yLlyafxCJ0rSlFoSHypTUWgpdwoDXWQcseaect7cJ8Ppk6nunOM6+5rPMkod4OYKPR5MUg==
+  350    dependencies:
+  351:     "@babel/helper-module-imports" "^7.7.4"
+  352      "@babel/helper-plugin-utils" "^7.0.0"
+  353      "@babel/helper-remap-async-to-generator" "^7.7.4"
+  ...
+  392    version "7.7.4"
+  393    resolved "https://registry.yarnpkg.com/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.7.4.tgz#2b713729e5054a1135097b6a67da1b6fe8789267"
+  394:   integrity sha512-4jFMXI1Cu2aXbcXXl8Lr6YubCn6Oc7k9lLsu8v61TZh+1jny2BWmdtvY9zSUlLdGUvcy9DMAWyZEOqjsbeg/wA==
+  395    dependencies:
+  396      "@babel/helper-plugin-utils" "^7.0.0"
+  ...
+  429    version "7.7.4"
+  430    resolved "https://registry.yarnpkg.com/@babel/plugin-transform-function-name/-/plugin-transform-function-name-7.7.4.tgz#75a6d3303d50db638ff8b5385d12451c865025b1"
+  431:   integrity sha512-E/x09TvjHNhsULs2IusN+aJNRV5zKwxu1cpirZyRPw+FyyIKEHPXTsadj48bVpc1R5Qq1B5ZkzumuFLytnbT6g==
+  432    dependencies:
+  433      "@babel/helper-function-name" "^7.7.4"
+  ...
+  448      "@babel/helper-plugin-utils" "^7.0.0"
+  449
+  450: "@babel/plugin-transform-modules-amd@^7.7.4":
+  451    version "7.7.4"
+  452:   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.7.4.tgz#276b3845ca2b228f2995e453adc2e6f54d72fb71"
+  453    integrity sha512-/542/5LNA18YDtg1F+QHvvUSlxdvjZoD/aldQwkq+E3WCkbEjNSN9zdrOXaSlfg3IfGi22ijzecklF/A7kVZFQ==
+  454    dependencies:
+  455:     "@babel/helper-module-transforms" "^7.7.4"
+  456      "@babel/helper-plugin-utils" "^7.0.0"
+  457      babel-plugin-dynamic-import-node "^2.3.0"
+  458
+  459: "@babel/plugin-transform-modules-commonjs@^7.7.4":
+  460    version "7.7.4"
+  461:   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.7.4.tgz#bee4386e550446343dd52a571eda47851ff857a3"
+  462    integrity sha512-k8iVS7Jhc367IcNF53KCwIXtKAH7czev866ThsTgy8CwlXjnKZna2VHwChglzLleYrcHz1eQEIJlGRQxB53nqA==
+  463    dependencies:
+  464:     "@babel/helper-module-transforms" "^7.7.4"
+  465      "@babel/helper-plugin-utils" "^7.0.0"
+  466      "@babel/helper-simple-access" "^7.7.4"
+  467      babel-plugin-dynamic-import-node "^2.3.0"
+  468
+  469: "@babel/plugin-transform-modules-systemjs@^7.7.4":
+  470    version "7.7.4"
+  471:   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-systemjs/-/plugin-transform-modules-systemjs-7.7.4.tgz#cd98152339d3e763dfe838b7d4273edaf520bb30"
+  472    integrity sha512-y2c96hmcsUi6LrMqvmNDPBBiGCiQu0aYqpHatVVu6kD4mFEXKjyNxd/drc18XXAf9dv7UXjrZwBVmTTGaGP8iw==
+  473    dependencies:
+  ...
+  476      babel-plugin-dynamic-import-node "^2.3.0"
+  477
+  478: "@babel/plugin-transform-modules-umd@^7.7.4":
+  479    version "7.7.4"
+  480:   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-umd/-/plugin-transform-modules-umd-7.7.4.tgz#1027c355a118de0aae9fee00ad7813c584d9061f"
+  481    integrity sha512-u2B8TIi0qZI4j8q4C51ktfO7E3cQ0qnaXFI1/OXITordD40tt17g/sXqgNNCcMTcBFKrUPcGDx+TBJuZxLx7tw==
+  482    dependencies:
+  483:     "@babel/helper-module-transforms" "^7.7.4"
+  484      "@babel/helper-plugin-utils" "^7.0.0"
+  485
+  ...
+  541    integrity sha512-O8kSkS5fP74Ad/8pfsCMGa8sBRdLxYoSReaARRNSz3FbFQj3z/QUvoUmJ28gn9BO93YfnXc3j+Xyaqe8cKDNBQ==
+  542    dependencies:
+  543:     "@babel/helper-module-imports" "^7.7.4"
+  544      "@babel/helper-plugin-utils" "^7.0.0"
+  545      resolve "^1.8.1"
+  ...
+  596    integrity sha512-Dg+ciGJjwvC1NIe/DGblMbcGq1HOtKbw8RLl4nIjlfcILKEOkWT/vRqPpumswABEBVudii6dnVwrBtzD7ibm4g==
+  597    dependencies:
+  598:     "@babel/helper-module-imports" "^7.7.4"
+  599      "@babel/helper-plugin-utils" "^7.0.0"
+  600      "@babel/plugin-proposal-async-generator-functions" "^7.7.4"
+  ...
+  624      "@babel/plugin-transform-literals" "^7.7.4"
+  625      "@babel/plugin-transform-member-expression-literals" "^7.7.4"
+  626:     "@babel/plugin-transform-modules-amd" "^7.7.4"
+  627:     "@babel/plugin-transform-modules-commonjs" "^7.7.4"
+  628:     "@babel/plugin-transform-modules-systemjs" "^7.7.4"
+  629:     "@babel/plugin-transform-modules-umd" "^7.7.4"
+  630      "@babel/plugin-transform-named-capturing-groups-regex" "^7.7.4"
+  631      "@babel/plugin-transform-new-target" "^7.7.4"
+  ...
+  658    version "7.7.4"
+  659    resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.7.4.tgz#428a7d9eecffe27deac0a98e23bf8e3675d2a77b"
+  660:   integrity sha512-qUzihgVPguAzXCK7WXw8pqs6cEwi54s3E+HrejlkuWO6ivMKx9hZl3Y2fSXp9i5HgyWmj7RKP+ulaYnKM4yYxw==
+  661    dependencies:
+  662      "@babel/code-frame" "^7.0.0"
+  ...
+  750    version "3.1.0"
+  751    resolved "https://registry.yarnpkg.com/@mapbox/whoots-js/-/whoots-js-3.1.0.tgz#497c67a1cef50d1a2459ba60f315e448d2ad87fe"
+  752:   integrity sha512-Es6WcD0nO5l+2BOQS4uLfNPYQaNDfbot3X1XUoloz+x0mPDS3eeORZJl06HXjwBG1fOGwCRnzK88LMdxKRrd6Q==
+  753
+  754  "@rails/actioncable@^6.0.0":
+  ...
+  828    version "7.1.1"
+  829    resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.1.1.tgz#aa59a1c6e3fbc421e07ccd31a944c30eba521575"
+  830:   integrity sha512-1Bh06cbWJUHMC97acuD6UMG29nMt0Aqz1vF3guLfG+kHHJhy3AyohZFFxYk2f7Q1SQIrNwvncxAE0N/9s70F2w==
+  831    dependencies:
+  832      "@types/events" "*"
+  ...
+  837    version "3.0.3"
+  838    resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
+  839:   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
+  840
+  841  "@types/node@*":
+  ...
+  859    integrity sha512-aJMfngIZ65+t71C3y2nBBg5FFG0Okt9m0XEgWZ7Ywgn1oMAT8cNwx00Uv1cQyHtidq0Xn94R4TAywO+LCQ+ZAQ==
+  860    dependencies:
+  861:     "@webassemblyjs/helper-module-context" "1.8.5"
+  862      "@webassemblyjs/helper-wasm-bytecode" "1.8.5"
+  863      "@webassemblyjs/wast-parser" "1.8.5"
+  ...
+  890    integrity sha512-kRuX/saORcg8se/ft6Q2UbRpZwP4y7YrWsLXPbbmtepKr22i8Z4O3V5QE9DbZK908dh5Xya4Un57SDIKwB9eow==
+  891
+  892: "@webassemblyjs/helper-module-context@1.8.5":
+  893    version "1.8.5"
+  894:   resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-module-context/-/helper-module-context-1.8.5.tgz#def4b9927b0101dc8cbbd8d1edb5b7b9c82eb245"
+  895    integrity sha512-/O1B236mN7UNEU4t9X7Pj38i4VoU8CcMHyy3l2cV/kIF4U5KoHXDVqcDuOs1ltkac90IM4vZdHc52t1x8Yfs3g==
+  896    dependencies:
+  ...
+  916    version "1.8.5"
+  917    resolved "https://registry.yarnpkg.com/@webassemblyjs/ieee754/-/ieee754-1.8.5.tgz#712329dbef240f36bf57bd2f7b8fb9bf4154421e"
+  918:   integrity sha512-aaCvQYrvKbY/n6wKHb/ylAJr27GglahUO89CcGXMItrOBqRarUMxWLJgxm9PJNuKULwN5n1csT9bYoMeZOGF3g==
+  919    dependencies:
+  920      "@xtuc/ieee754" "^1.2.0"
+  ...
+ 1026    version "6.4.0"
+ 1027    resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.0.tgz#b659d2ffbafa24baf5db1cdbb2c94a983ecd2784"
+ 1028:   integrity sha512-gac8OEcQ2Li1dxIEWGZzsp2BitJxwkwcOm0zHAJLcPJaVvm58FRnk6RkuLRpU1EujipU2ZFODv2P9DLMfnV8mw==
+ 1029
+ 1030  aggregate-error@^3.0.0:
+ ....
+ 1324    version "0.6.1"
+ 1325    resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
+ 1326:   integrity sha1-3DQxT05nkxgJP8dgJyUl+UvyXBY=
+ 1327
+ 1328  bcrypt-pbkdf@^1.0.0:
+ ....
+ 1385      dns-equal "^1.0.0"
+ 1386      dns-txt "^2.0.2"
+ 1387:     multicast-dns "^6.0.1"
+ 1388:     multicast-dns-service-types "^1.1.0"
+ 1389
+ 1390  boolbase@^1.0.0, boolbase@~1.0.0:
+ ....
+ 1489    version "4.7.3"
+ 1490    resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.7.3.tgz#02341f162b6bcc1e1028e30624815d4924442dc3"
+ 1491:   integrity sha512-jWvmhqYpx+9EZm/FxcZSbUZyDEvDTLDi3nSAKbzEkyWvtI0mNSmUosey+5awDW1RUlrgXbQb5A6qY1xQH9U6MQ==
+ 1492    dependencies:
+ 1493      caniuse-lite "^1.0.30001010"
+ ....
+ 1508    version "1.0.3"
+ 1509    resolved "https://registry.yarnpkg.com/buffer-xor/-/buffer-xor-1.0.3.tgz#26e61ed1422fb70dd42e6e36729ed51d855fe8d9"
+ 1510:   integrity sha1-JuYe0UIvtw3ULm42cp7VHYVf6Nk=
+ 1511
+ 1512  buffer@^4.3.0:
+ ....
+ 1532    version "3.1.0"
+ 1533    resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
+ 1534:   integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
+ 1535
+ 1536  cacache@^11.2.0:
+ ....
+ 1543      figgy-pudding "^3.5.1"
+ 1544      glob "^7.1.4"
+ 1545:     graceful-fs "^4.1.15"
+ 1546      lru-cache "^5.1.1"
+ 1547      mississippi "^3.0.0"
+ ....
+ 1563      figgy-pudding "^3.5.1"
+ 1564      glob "^7.1.4"
+ 1565:     graceful-fs "^4.1.15"
+ 1566      infer-owner "^1.0.3"
+ 1567      lru-cache "^5.1.1"
+ ....
+ 1584      fs-minipass "^2.0.0"
+ 1585      glob "^7.1.4"
+ 1586:     graceful-fs "^4.2.2"
+ 1587      infer-owner "^1.0.4"
+ 1588      lru-cache "^5.1.1"
+ ....
+ 1841    version "1.1.4"
+ 1842    resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
+ 1843:   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+ 1844
+ 1845  color-string@^1.5.2:
+ ....
+ 1931    version "1.6.0"
+ 1932    resolved "https://registry.yarnpkg.com/connect-history-api-fallback/-/connect-history-api-fallback-1.6.0.tgz#8b32089359308d111115d81cad3fceab888f97bc"
+ 1933:   integrity sha512-e54B99q/OUoH64zYYRf3HBP5z24G38h5D3qXu23JGRoigpX5Ss4r9ZnDk3g0Z8uQC2x2lPaJ+UlWBc1ZWBWdLg==
+ 1934
+ 1935  console-browserify@^1.1.0:
+ ....
+ 2139      normalize-path "^3.0.0"
+ 2140      postcss "^7.0.17"
+ 2141:     postcss-modules-extract-imports "^2.0.0"
+ 2142:     postcss-modules-local-by-default "^3.0.2"
+ 2143:     postcss-modules-scope "^2.1.0"
+ 2144:     postcss-modules-values "^3.0.0"
+ 2145      postcss-value-parser "^4.0.0"
+ 2146      schema-utils "^2.0.0"
+ ....
+ 2206    integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
+ 2207
+ 2208: cssnano-preset-default@^4.0.7:
+ 2209    version "4.0.7"
+ 2210:   resolved "https://registry.yarnpkg.com/cssnano-preset-default/-/cssnano-preset-default-4.0.7.tgz#51ec662ccfca0f88b396dcd9679cdb931be17f76"
+ 2211:   integrity sha512-x0YHHx2h6p0fCl1zY9L9roD7rnlltugGu7zXSKQx6k2rYw0Hi3IqxcoAGF7u9Q5w1nt7vK0ulxV8Lo+EvllGsA==
+ 2212    dependencies:
+ 2213      css-declaration-sorter "^4.0.1"
+ ....
+ 2222      postcss-discard-overridden "^4.0.1"
+ 2223      postcss-merge-longhand "^4.0.11"
+ 2224:     postcss-merge-rules "^4.0.3"
+ 2225      postcss-minify-font-values "^4.0.2"
+ 2226      postcss-minify-gradients "^4.0.2"
+ ....
+ 2250    version "4.0.0"
+ 2251    resolved "https://registry.yarnpkg.com/cssnano-util-get-match/-/cssnano-util-get-match-4.0.0.tgz#c0e4ca07f5386bb17ec5e52250b4f5961365156d"
+ 2252:   integrity sha1-wOTKB/U4a7F+xeUiULT1lhNlFW0=
+ 2253
+ 2254  cssnano-util-raw-cache@^4.0.1:
+ ....
+ 2267    version "4.1.10"
+ 2268    resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-4.1.10.tgz#0ac41f0b13d13d465487e111b778d42da631b8b2"
+ 2269:   integrity sha512-5wny+F6H4/8RgNlaqab4ktc3e0/blKutmq8yNlBFXA//nSFFAqAngjNVRzUvCgYROULmZZUoosL/KSoZo5aUaQ==
+ 2270    dependencies:
+ 2271      cosmiconfig "^5.0.0"
+ 2272:     cssnano-preset-default "^4.0.7"
+ 2273      is-resolvable "^1.0.0"
+ 2274      postcss "^7.0.0"
+ ....
+ 2348    integrity sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==
+ 2349
+ 2350: default-gateway@^4.2.0:
+ 2351    version "4.2.0"
+ 2352:   resolved "https://registry.yarnpkg.com/default-gateway/-/default-gateway-4.2.0.tgz#167104c7500c2115f6dd69b0a536bb8ed720552b"
+ 2353    integrity sha512-h6sMrVB1VMWVrW13mSc6ia/DwYYw5MN6+exNu1OaJeFac5aSAvwM7lZ0NVfTABuSkQelr4h5oebg3KB1XPdjgA==
+ 2354    dependencies:
+ ....
+ 2416    version "1.0.1"
+ 2417    resolved "https://registry.yarnpkg.com/des.js/-/des.js-1.0.1.tgz#5382142e1bdc53f85d86d53e5f4aa7deb91e0843"
+ 2418:   integrity sha512-Q0I4pfFrv2VPd34/vfLrFOoRmlYj3OV50i7fskps1jZWK1kApMWWT9G6RRUeYedLcBDIhnSDaUvJMb3AhUlaEA==
+ 2419    dependencies:
+ 2420      inherits "^2.0.1"
+ ....
+ 2581    integrity sha512-F/7vkyTtyc/llOIn8oWclcB25KdRaiPBpZYDgJHgh/UHtpgT2p2eldQgtQnLtUvfMKPKxbRaQM/hHkvLHt1Vng==
+ 2582    dependencies:
+ 2583:     graceful-fs "^4.1.2"
+ 2584      memory-fs "^0.4.0"
+ 2585      tapable "^1.0.0"
+ ....
+ 2590    integrity sha512-98p2zE+rL7/g/DzMHMTF4zZlCgeVdJ7yr6xzEpJRYwFYrGi9ANdn5DnJURg6RpBkyk60XYDnWIv51VfIhfNGuA==
+ 2591    dependencies:
+ 2592:     graceful-fs "^4.1.2"
+ 2593      memory-fs "^0.5.0"
+ 2594      tapable "^1.0.0"
+ ....
+ 3025    integrity sha1-tH31NJPvkR33VzHnCp3tAYnbQMk=
+ 3026    dependencies:
+ 3027:     graceful-fs "^4.1.2"
+ 3028      iferr "^0.1.5"
+ 3029      imurmurhash "^0.1.4"
+ ....
+ 3048    integrity sha512-WvJ193OHa0GHPEL+AycEJgxvBEwyfRkN1vhjca23OaPVMCaLCXTd5qAu82AjTcgP1UJmytkOKb63Ypde7raDIg==
+ 3049    dependencies:
+ 3050:     graceful-fs "^4.1.2"
+ 3051      inherits "~2.0.0"
+ 3052      mkdirp ">=0.5 0"
+ ....
+ 3077    integrity sha512-BRdNm8hbWzFzWHERTrejLqwHDfS4GibPoq5wjTPIoJHoBtKGPg3xAFfxmM+9ztbXelxcf2hwQcaz1PtmFeue8g==
+ 3078    dependencies:
+ 3079:     globule "^1.0.0"
+ 3080
+ 3081  geojson-vt@^3.2.1:
+ ....
+ 3092    version "2.0.5"
+ 3093    resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
+ 3094:   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
+ 3095
+ 3096  get-stdin@^4.0.1:
+ ....
+ 3134    version "7.1.6"
+ 3135    resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
+ 3136:   integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
+ 3137    dependencies:
+ 3138      fs.realpath "^1.0.0"
+ ....
+ 3143      path-is-absolute "^1.0.0"
+ 3144
+ 3145: global-modules@2.0.0:
+ 3146    version "2.0.0"
+ 3147:   resolved "https://registry.yarnpkg.com/global-modules/-/global-modules-2.0.0.tgz#997605ad2345f27f51539bea26574421215c7780"
+ 3148    integrity sha512-NGbfmJBp9x8IxyJSd1P+otYK8vonoJactOogrVfFRIAEY1ukil8RSKDz2Yo7wh1oihl51l/r6W4epkeKJHqL8A==
+ 3149    dependencies:
+ 3150      global-prefix "^3.0.0"
+ 3151
+ 3152: global-modules@^1.0.0:
+ 3153    version "1.0.0"
+ 3154:   resolved "https://registry.yarnpkg.com/global-modules/-/global-modules-1.0.0.tgz#6d770f0eb523ac78164d72b5e71a8877265cc3ea"
+ 3155    integrity sha512-sKzpEkf11GpOFuw0Zzjzmt4B4UZwjOcG757PPvrfhxcLFbq0wpsgpOqxpxtxFiCG4DtG93M6XRVbF2oGdev7bg==
+ 3156    dependencies:
+ ....
+ 3195      pinkie-promise "^2.0.0"
+ 3196
+ 3197: globule@^1.0.0:
+ 3198    version "1.2.1"
+ 3199:   resolved "https://registry.yarnpkg.com/globule/-/globule-1.2.1.tgz#5dffb1b191f22d20797a9369b49eab4e9839696d"
+ 3200    integrity sha512-g7QtgWF4uYSL5/dn71WxubOrS7JVGCnFPEnoeChJmBnyR9Mw8nGoEwOgJL/RC2Te0WhbsEUCejfH8SZNJ+adYQ==
+ 3201    dependencies:
+ ....
+ 3204      minimatch "~3.0.2"
+ 3205
+ 3206: graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.2.2:
+ 3207    version "4.2.3"
+ 3208:   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
+ 3209    integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
+ 3210
+ ....
+ 3466    version "3.0.3"
+ 3467    resolved "https://registry.yarnpkg.com/ignore-walk/-/ignore-walk-3.0.3.tgz#017e2447184bfeade7c238e4aefdd1e8f95b1e37"
+ 3468:   integrity sha512-m7o6xuOaT1aqheYHKf8W6J5pYH85ZI9w077erOzLje3JsB1gkafkAhHHY19dqjulgIZHFm32Cp5uNZgcQqdJKw==
+ 3469    dependencies:
+ 3470      minimatch "^3.0.4"
+ ....
+ 3490    integrity sha512-6e1q1cnWP2RXD9/keSkxHScg508CdXqXWgWBaETNhyuBFz+kUZlKboh+ISK+bU++DmbHimVBrOz/zzPe0sZ3sQ==
+ 3491    dependencies:
+ 3492:     parent-module "^1.0.0"
+ 3493      resolve-from "^4.0.0"
+ 3494
+ ....
+ 3566    version "1.3.5"
+ 3567    resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
+ 3568:   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+ 3569
+ 3570  internal-ip@^4.3.0:
+ ....
+ 3573    integrity sha512-S1zBo1D6zcsyuC6PMmY5+55YMILQ9av8lotMx447Bq6SAgo/sDK6y6uUKmuYhW7eacnIhFfsPmCNYdDzsnnDCg==
+ 3574    dependencies:
+ 3575:     default-gateway "^4.2.0"
+ 3576      ipaddr.js "^1.9.0"
+ 3577
+ ....
+ 3708    version "0.1.6"
+ 3709    resolved "https://registry.yarnpkg.com/is-descriptor/-/is-descriptor-0.1.6.tgz#366d8240dde487ca51823b1ab9f07a10a78251ca"
+ 3710:   integrity sha512-avDYr0SB3DwO9zsMov0gKCESFYqCnE4hq/4z3TdUlukEy5t9C0YRq7HLrsN52NAcqXKaepeCD0n+B0arnVG3Hg==
+ 3711    dependencies:
+ 3712      is-accessor-descriptor "^0.1.6"
+ ....
+ 3736    version "1.0.1"
+ 3737    resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-1.0.1.tgz#a7470f9e426733d81bd81e1155264e3a3507cab4"
+ 3738:   integrity sha512-arnXMxT1hhoKo9k1LZdmlNyJdDDfy2v0fXjFlmok4+i8ul/6WlbVge9bhM74OpNPQPMGUToDtz+KXa1PneJxOA==
+ 3739    dependencies:
+ 3740      is-plain-object "^2.0.4"
+ ....
+ 3752      number-is-nan "^1.0.0"
+ 3753
+ 3754: is-fullwidth-code-point@^1.0.0:
+ 3755    version "1.0.0"
+ 3756:   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz#ef9e31386f031a7f0d643af82fde50c457ef00cb"
+ 3757    integrity sha1-754xOG8DGn8NZDr4L95QxFfvAMs=
+ 3758    dependencies:
+ 3759      number-is-nan "^1.0.0"
+ 3760
+ 3761: is-fullwidth-code-point@^2.0.0:
+ 3762    version "2.0.0"
+ 3763:   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
+ 3764    integrity sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=
+ 3765
+ ....
+ 3824    version "1.0.4"
+ 3825    resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
+ 3826:   integrity sha1-VRdIm1RwkbCTDglWVM7SXul+lJE=
+ 3827    dependencies:
+ 3828      has "^1.0.1"
+ ....
+ 3848    version "1.0.3"
+ 3849    resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.3.tgz#38e1014b9e6329be0de9d24a414fd7441ec61937"
+ 3850:   integrity sha512-OwijhaRSgqvhm/0ZdAcXNZt9lYdKFpcRDT5ULUuYXPoT794UNOdU+gpT6Rzo7b4V2HUl/op6GqY894AZwv9faQ==
+ 3851    dependencies:
+ 3852      has-symbols "^1.0.1"
+ ....
+ 4007    version "1.0.1"
+ 4008    resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
+ 4009:   integrity sha512-LzqtLKlUwirEUyl/nicirVmNiPvYs7l5n8wOPP7fyJVpUPkvCnW/vuiXGpylGUlnPDnB7311rARzAt3Mhswpjg==
+ 4010
+ 4011  kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
+ ....
+ 4036    version "3.0.0"
+ 4037    resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
+ 4038:   integrity sha512-7KI2l2GIZa9p2spzPIVZBYyNKkN+e/SQPpnjlTiPhdbDW3F86tdKKELxKpzJ5sgU19wQWsACULZmpTPYHeWO5w==
+ 4039    dependencies:
+ 4040      lodash "^4.17.5"
+ ....
+ 4065    integrity sha1-lWkFcI1YtLq0wiYbBPWfMcmTdMA=
+ 4066    dependencies:
+ 4067:     graceful-fs "^4.1.2"
+ 4068      parse-json "^2.2.0"
+ 4069      pify "^2.0.0"
+ ....
+ 4358    version "1.42.0"
+ 4359    resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.42.0.tgz#3e252907b4c7adb906597b4b65636272cf9e7bac"
+ 4360:   integrity sha512-UbfJCR4UAVRNgMpfImz05smAXK7+c+ZntjaA26ANtkXLlOe947Aag5zdIcKQULAiF9Cq4WxBi9jUs5zkA84bYQ==
+ 4361
+ 4362  mime-types@^2.1.12, mime-types@~2.1.17, mime-types@~2.1.19, mime-types@~2.1.24:
+ ....
+ 4525    integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+ 4526
+ 4527: multicast-dns-service-types@^1.1.0:
+ 4528    version "1.1.0"
+ 4529:   resolved "https://registry.yarnpkg.com/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz#899f11d9686e5e05cb91b35d5f0e63b773cfc901"
+ 4530    integrity sha1-iZ8R2WhuXgXLkbNdXw5jt3PPyQE=
+ 4531
+ 4532: multicast-dns@^6.0.1:
+ 4533    version "6.2.3"
+ 4534:   resolved "https://registry.yarnpkg.com/multicast-dns/-/multicast-dns-6.2.3.tgz#a0ec7bd9055c4282f790c3c82f4e28db3b31b229"
+ 4535    integrity sha512-ji6J5enbMyGRHIAkAOu3WdV8nggqviKCEKtXcOqfphZZtQrmHKycfynJ2V7eVPUA4NhJ6V7Wf4TmGbTwKE9B6g==
+ 4536    dependencies:
+ ....
+ 4601      fstream "^1.0.0"
+ 4602      glob "^7.0.3"
+ 4603:     graceful-fs "^4.1.2"
+ 4604      mkdirp "^0.5.0"
+ 4605      nopt "2 || 3"
+ ....
+ 4977    version "3.0.0"
+ 4978    resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-3.0.0.tgz#322d69a05c0264b25997d9f40cd8a891ab0064a4"
+ 4979:   integrity sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==
+ 4980    dependencies:
+ 4981      p-limit "^2.0.0"
+ ....
+ 5026      readable-stream "^2.1.5"
+ 5027
+ 5028: parent-module@^1.0.0:
+ 5029    version "1.0.1"
+ 5030:   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
+ 5031    integrity sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==
+ 5032    dependencies:
+ ....
+ 5147    integrity sha1-WcRPfuSR2nBNpBXaWkBwuk+P5EE=
+ 5148    dependencies:
+ 5149:     graceful-fs "^4.1.2"
+ 5150      pify "^2.0.0"
+ 5151      pinkie-promise "^2.0.0"
+ ....
+ 5347    version "5.0.0"
+ 5348    resolved "https://registry.yarnpkg.com/postcss-dir-pseudo-class/-/postcss-dir-pseudo-class-5.0.0.tgz#6e3a4177d0edb3abcc85fdb6fbb1c26dabaeaba2"
+ 5349:   integrity sha512-3pm4oq8HYWMZePJY+5ANriPs3P07q+LW6FAdTlkFH2XqDdP4HeeJYMOzn0HYLhRSjBO3fhiqSwwU9xEULSrPgw==
+ 5350    dependencies:
+ 5351      postcss "^7.0.2"
+ ....
+ 5413    version "3.0.0"
+ 5414    resolved "https://registry.yarnpkg.com/postcss-focus-within/-/postcss-focus-within-3.0.0.tgz#763b8788596cee9b874c999201cdde80659ef680"
+ 5415:   integrity sha512-W0APui8jQeBKbCGZudW37EeMCjDeVxKgiYfIIEo8Bdh5SpB9sxds/Iq8SEuzS0Q4YFOlG7EPFulbbxujpkrV2w==
+ 5416    dependencies:
+ 5417      postcss "^7.0.2"
+ ....
+ 5508      stylehacks "^4.0.0"
+ 5509
+ 5510: postcss-merge-rules@^4.0.3:
+ 5511    version "4.0.3"
+ 5512:   resolved "https://registry.yarnpkg.com/postcss-merge-rules/-/postcss-merge-rules-4.0.3.tgz#362bea4ff5a1f98e4075a713c6cb25aefef9a650"
+ 5513    integrity sha512-U7e3r1SbvYzO0Jr3UT/zKBVgYYyhAz0aitvGIYOYK5CPmkNih+WDSsS5tvPrJ8YMQYlEMvsZIiqmn7HdFUaeEQ==
+ 5514    dependencies:
+ ....
+ 5560      postcss-selector-parser "^3.0.0"
+ 5561
+ 5562: postcss-modules-extract-imports@^2.0.0:
+ 5563    version "2.0.0"
+ 5564:   resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-2.0.0.tgz#818719a1ae1da325f9832446b01136eeb493cd7e"
+ 5565    integrity sha512-LaYLDNS4SG8Q5WAWqIJgdHPJrDDr/Lv775rMBFUbgjTz6j34lUznACHcdRWroPvXANP2Vj7yNK57vp9eFqzLWQ==
+ 5566    dependencies:
+ 5567      postcss "^7.0.5"
+ 5568
+ 5569: postcss-modules-local-by-default@^3.0.2:
+ 5570    version "3.0.2"
+ 5571:   resolved "https://registry.yarnpkg.com/postcss-modules-local-by-default/-/postcss-modules-local-by-default-3.0.2.tgz#e8a6561be914aaf3c052876377524ca90dbb7915"
+ 5572    integrity sha512-jM/V8eqM4oJ/22j0gx4jrp63GSvDH6v86OqyTHHUvk4/k1vceipZsaymiZ5PvocqZOl5SFHiFJqjs3la0wnfIQ==
+ 5573    dependencies:
+ ....
+ 5577      postcss-value-parser "^4.0.0"
+ 5578
+ 5579: postcss-modules-scope@^2.1.0:
+ 5580    version "2.1.0"
+ 5581:   resolved "https://registry.yarnpkg.com/postcss-modules-scope/-/postcss-modules-scope-2.1.0.tgz#ad3f5bf7856114f6fcab901b0502e2a2bc39d4eb"
+ 5582    integrity sha512-91Rjps0JnmtUB0cujlc8KIKCsJXWjzuxGeT/+Q2i2HXKZ7nBUeF9YQTZZTNvHVoNYj1AthsjnGLtqDUE0Op79A==
+ 5583    dependencies:
+ ....
+ 5585      postcss-selector-parser "^6.0.0"
+ 5586
+ 5587: postcss-modules-values@^3.0.0:
+ 5588    version "3.0.0"
+ 5589:   resolved "https://registry.yarnpkg.com/postcss-modules-values/-/postcss-modules-values-3.0.0.tgz#5b5000d6ebae29b4255301b4a3a54574423e7f10"
+ 5590    integrity sha512-1//E5jCBrZ9DmRX+zCtmQtRSV6PV42Ix7Bzj9GbwJceduuf7IqP8MgeTXuRDHOWj2m0VzZD5+roFWDuU8RQjcg==
+ 5591    dependencies:
+ ....
+ 5715    version "6.7.0"
+ 5716    resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.7.0.tgz#c34ddacf8f902383b35ad1e030f178f4cdf118a5"
+ 5717:   integrity sha512-eU4/K5xzSFwUFJ8hTdTQzo2RBLbDVt83QZrAvI07TULOkmyQlnYlpwep+2yIK+K+0KlZO4BvFcleOCCcUtwchg==
+ 5718    dependencies:
+ 5719      autoprefixer "^9.6.1"
+ ....
+ 5766    version "4.0.3"
+ 5767    resolved "https://registry.yarnpkg.com/postcss-reduce-initial/-/postcss-reduce-initial-4.0.3.tgz#7fd42ebea5e9c814609639e2c2e84ae270ba48df"
+ 5768:   integrity sha512-gKWmR5aUulSjbzOfD9AlJiHCGH6AEVLaM0AV+aSioxUDd16qXP1PCh8d1/BGVvpdWn8k/HiK7n6TjeoXN1F7DA==
+ 5769    dependencies:
+ 5770      browserslist "^4.0.0"
+ ....
+ 5862    version "3.3.1"
+ 5863    resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
+ 5864:   integrity sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==
+ 5865
+ 5866  postcss-value-parser@^4.0.0, postcss-value-parser@^4.0.2:
+ ....
+ 5900    version "0.1.8"
+ 5901    resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
+ 5902:   integrity sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==
+ 5903
+ 5904  process-nextick-args@~2.0.0:
+ ....
+ 6050    version "1.0.4"
+ 6051    resolved "https://registry.yarnpkg.com/randomfill/-/randomfill-1.0.4.tgz#c92196fc86ab42be983f1bf31778224931d61458"
+ 6052:   integrity sha512-87lcbR8+MhcWcUiQ+9e+Rwx8MyR2P7qnt15ynUlbm3TU/fjbgz4GsvfSUDTemtCCtVCqb4ZcEFlyPNTh9bBTLw==
+ 6053    dependencies:
+ 6054      randombytes "^2.0.5"
+ ....
+ 6131    integrity sha512-1JU/8q+VgFZyxwrJ+SVIOsh+KywWGpds3NTqikiKpDMZWScmAYyKIgqkO+ARvNWJfXeXR1zxz7aHF4u4CyH6vQ==
+ 6132    dependencies:
+ 6133:     graceful-fs "^4.1.11"
+ 6134      micromatch "^3.1.10"
+ 6135      readable-stream "^2.0.2"
+ ....
+ 6192    version "4.6.0"
+ 6193    resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-4.6.0.tgz#2037c18b327cfce8a6fea2a4ec441f2432afb8b6"
+ 6194:   integrity sha512-YlVaefl8P5BnFYOITTNzDvan1ulLOiXJzCNZxduTIosN17b87h3bvG9yHMoHaRuo88H4mQ06Aodj5VtYGGGiTg==
+ 6195    dependencies:
+ 6196      regenerate "^1.4.0"
+ ....
+ 6274    version "2.0.0"
+ 6275    resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-2.0.0.tgz#d0b329ecc7cc0f61649f62215be69af54aa8989b"
+ 6276:   integrity sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==
+ 6277
+ 6278  requires-port@^1.0.0:
+ ....
+ 6294    dependencies:
+ 6295      expand-tilde "^2.0.0"
+ 6296:     global-modules "^1.0.0"
+ 6297
+ 6298  resolve-from@^3.0.0:
+ ....
+ 6328    version "0.1.15"
+ 6329    resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
+ 6330:   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
+ 6331
+ 6332  retry@^0.12.0:
+ ....
+ 6432    version "2.6.0"
+ 6433    resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.0.tgz#68a259aabbef9d08d1252c2e63c398e476308e80"
+ 6434:   integrity sha512-UlPB1ME4i/71cih/Rv92gK8043CrJTc2mjkyxDp4pdJ7ZfzY0g0hdGjjDB23jX3X+NXSneCdQbScGhn6K2tbpQ==
+ 6435    dependencies:
+ 6436      ajv "^6.10.2"
+ ....
+ 6542    version "1.0.5"
+ 6543    resolved "https://registry.yarnpkg.com/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
+ 6544:   integrity sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=
+ 6545
+ 6546  setprototypeof@1.1.0:
+ ....
+ 6811    version "0.1.8"
+ 6812    resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
+ 6813:   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
+ 6814
+ 6815  static-extend@^0.1.1:
+ ....
+ 6829    version "1.4.1"
+ 6830    resolved "https://registry.yarnpkg.com/stdout-stream/-/stdout-stream-1.4.1.tgz#5ac174cdd5cd726104aa0c0b2bd83815d8d535de"
+ 6831:   integrity sha512-j4emi03KXqJWcIeF8eIXkjMFN1Cmb8gUlDYGeBALLPo5qdyTfA9bOtl8m33lRoC+vFMkP3gl0WsDr6+gzxbbTA==
+ 6832    dependencies:
+ 6833      readable-stream "^2.0.1"
+ ....
+ 6876    dependencies:
+ 6877      code-point-at "^1.0.0"
+ 6878:     is-fullwidth-code-point "^1.0.0"
+ 6879      strip-ansi "^3.0.0"
+ 6880
+ ....
+ 6884    integrity sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw==
+ 6885    dependencies:
+ 6886:     is-fullwidth-code-point "^2.0.0"
+ 6887      strip-ansi "^4.0.0"
+ 6888
+ ....
+ 6893    dependencies:
+ 6894      emoji-regex "^7.0.1"
+ 6895:     is-fullwidth-code-point "^2.0.0"
+ 6896      strip-ansi "^5.1.0"
+ 6897
+ ....
+ 7092    version "4.4.0"
+ 7093    resolved "https://registry.yarnpkg.com/terser/-/terser-4.4.0.tgz#22c46b4817cf4c9565434bfe6ad47336af259ac3"
+ 7094:   integrity sha512-oDG16n2WKm27JO8h4y/w3iqBGAOSCtq7k8dRmrn4Wf9NouL0b2WpMHGChFGZq4nFAQy1FsNJrVQHfurXOSTmOA==
+ 7095    dependencies:
+ 7096      commander "^2.20.0"
+ ....
+ 7119    version "2.0.11"
+ 7120    resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.11.tgz#800b1f3eee272e5bc53ee465a04d0e804c31211f"
+ 7121:   integrity sha512-60aV6sgJ5YEbzUdn9c8kYGIqOubPoUdqQCul3SBAsRCZ40s6Y5cMcrW4dt3/k/EsbLVJNl9n6Vz3fTc+k2GeKQ==
+ 7122    dependencies:
+ 7123      setimmediate "^1.0.4"
+ ....
+ 7161    version "3.0.2"
+ 7162    resolved "https://registry.yarnpkg.com/to-regex/-/to-regex-3.0.2.tgz#13cfdd9b336552f30b51f33a8ae1b42a7a7599ce"
+ 7163:   integrity sha512-FWtleNAtZ/Ki2qtqej2CXTOayOH9bHDQF+Q48VpWyDXjbYxA4Yz8iDB31zXOBUlOHHKidDbqGVrTUvQMPmBGBw==
+ 7164    dependencies:
+ 7165      define-property "^2.0.2"
+ ....
+ 7171    version "1.0.0"
+ 7172    resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
+ 7173:   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
+ 7174
+ 7175  tough-cookie@~2.4.3:
+ ....
+ 7251    version "1.0.4"
+ 7252    resolved "https://registry.yarnpkg.com/unicode-match-property-ecmascript/-/unicode-match-property-ecmascript-1.0.4.tgz#8ed2a32569961bce9227d09cd3ffbb8fed5f020c"
+ 7253:   integrity sha512-L4Qoh15vTfntsn4P1zqnHulG0LdXgjSO035fEpdtp6YxXhMT51Q6vgM5lYdG/5X3MjS+k/Y9Xw4SFCY9IkR0rg==
+ 7254    dependencies:
+ 7255      unicode-canonical-property-names-ecmascript "^1.0.4"
+ ....
+ 7442    version "1.6.0"
+ 7443    resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.6.0.tgz#4bc12c2ebe8aa277a71f1d3f14d685c7b446cd00"
+ 7444:   integrity sha512-i6dHe3EyLjMmDlU1/bGQpEw25XSjkJULPuAVKCbNRefQVq48yXKUpwg538F7AZTf9kyr57zj++pQFltUa5H7yA==
+ 7445    dependencies:
+ 7446      chokidar "^2.0.2"
+ 7447:     graceful-fs "^4.1.2"
+ 7448      neo-async "^2.5.0"
+ 7449
+ ....
+ 7451    version "1.7.3"
+ 7452    resolved "https://registry.yarnpkg.com/wbuf/-/wbuf-1.7.3.tgz#c1d8d149316d3ea852848895cb6a0bfe887b87df"
+ 7453:   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
+ 7454    dependencies:
+ 7455      minimalistic-assert "^1.0.0"
+ ....
+ 7458    version "3.1.1"
+ 7459    resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-3.1.1.tgz#39bbc3bf2ee57fcd8ba07cda51c9ba4a3c6ae1de"
+ 7460:   integrity sha512-JV9V2QKc5wEWQptdIjvXDUL1ucbPLH2f27toAY3SNdGZp+xSaStAgpoMcvMZmqtFrBc9a5pTS1058vxyMPOzRQ==
+ 7461    dependencies:
+ 7462      chalk "^2.0"
+ ....
+ 7477      enhanced-resolve "4.1.0"
+ 7478      findup-sync "3.0.0"
+ 7479:     global-modules "2.0.0"
+ 7480      import-local "2.0.0"
+ 7481      interpret "1.2.0"
+ ....
+ 7557    dependencies:
+ 7558      "@webassemblyjs/ast" "1.8.5"
+ 7559:     "@webassemblyjs/helper-module-context" "1.8.5"
+ 7560      "@webassemblyjs/wasm-edit" "1.8.5"
+ 7561      "@webassemblyjs/wasm-parser" "1.8.5"
+ ....
+ 7599    integrity sha1-NP3FVZF7blfPKigu0ENxDASc3HY=
+ 7600
+ 7601: which-module@^1.0.0:
+ 7602    version "1.0.0"
+ 7603:   resolved "https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
+ 7604    integrity sha1-u6Y8qGGUiZT/MHc2CJ47lgJsKk8=
+ 7605
+ 7606: which-module@^2.0.0:
+ 7607    version "2.0.0"
+ 7608:   resolved "https://registry.yarnpkg.com/which-module/-/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
+ 7609    integrity sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho=
+ 7610
+ ....
+ 7733      set-blocking "^2.0.0"
+ 7734      string-width "^2.0.0"
+ 7735:     which-module "^2.0.0"
+ 7736      y18n "^3.2.1 || ^4.0.0"
+ 7737      yargs-parser "^11.1.1"
+ ....
+ 7750      set-blocking "^2.0.0"
+ 7751      string-width "^3.0.0"
+ 7752:     which-module "^2.0.0"
+ 7753      y18n "^4.0.0"
+ 7754      yargs-parser "^13.1.0"
+ ....
+ 7769      set-blocking "^2.0.0"
+ 7770      string-width "^1.0.2"
+ 7771:     which-module "^1.0.0"
+ 7772      y18n "^3.2.1"
+ 7773      yargs-parser "^5.0.0"
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/assets/stylesheets/actiontext.scss:
+    1  //
+    2: // Provides a drop-in pointer for the default Trix stylesheet that will format the toolbar and
+    3  // the trix-editor content (whether displayed or under editing). Feel free to incorporate this
+    4  // inclusion directly in any other asset bundle and remove this file.
+    .
+    8  // We need to override trix.css’s image gallery styles to accommodate the
+    9  // <action-text-attachment> element we wrap around attachments. Otherwise,
+   10: // images in galleries will be squished by the max-width: 33%; rule.
+   11  .trix-content {
+   12    .attachment-gallery {
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/assets/stylesheets/README.md:
+   66      $: 'jquery',
+   67      jQuery: 'jquery',
+   68:     Popper: ['popper.js', 'default']
+   69    })
+   70  )
+   71
+   72: module.exports = environment
+   73  ```
+   74
+   ..
+   91  ## Adding new `.scss` files
+   92
+   93: Look at your main `application.scss` file to see how SCSS files are imported. There should **not** be a `*= require_tree .` line in the file.
+   94
+   95  ```scss
+   ..
+  102
+  103  // External libraries
+  104: @import "bootstrap/scss/bootstrap"; // from the node_modules
+  105  @import "font-awesome-sprockets";
+  106  @import "font-awesome";
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/assets/stylesheets/components/_edit.scss:
+    3  }
+    4
+    5: ul {
+    6    list-style: none;
+    7    display: inline;
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/assets/stylesheets/config/_bootstrap_variables.scss:
+    1: // This is where you override default Bootstrap variables
+    2  // 1. All Bootstrap variables are here => https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
+    3: // 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
+    4  // 3. You can override them below!
+    5
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/assets/stylesheets/pages/_home.scss:
+   51  }
+   52
+   53: .full-section {
+   54    border-bottom: 1px solid rgb(0, 0, 0);
+   55    border-top: 1px solid rgb(0, 0, 0);
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/assets/stylesheets/pages/_show.scss:
+    1
+    2: ul {
+    3    list-style: none;
+    4    margin-left: -50px;
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/channels/application_cable/channel.rb:
+    1: module ApplicationCable
+    2    class Channel < ActionCable::Channel::Base
+    3    end
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/channels/application_cable/connection.rb:
+    1: module ApplicationCable
+    2    class Connection < ActionCable::Connection::Base
+    3    end
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/controllers/articles_controller.rb:
+   22      @article.user = current_user
+   23      if @article.save
+   24:       redirect_to article_path(@article), notice: 'The article was successfully created.'
+   25      else
+   26        render :new
+   ..
+   33    def update
+   34      if @article.update(article_params)
+   35:       redirect_to article_path(@article), notice: 'The article was successfully updated.'
+   36      else
+   37        render :exit
+   ..
+   41    def destroy
+   42      @article.destroy
+   43:     redirect_to reviews_path, notice: 'The article was successfully destroyed.'
+   44    end
+   45
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/controllers/categories_controller.rb:
+   32    def update
+   33      if @category.update(category_params)
+   34:       redirect_to category_path(@category), notice: 'Fetysh category was successfully updated.'
+   35      else
+   36        render :edit
+   ..
+   40    def destroy
+   41      @category.destroy
+   42:     redirect_to categories_path, notice: 'Fetysh category was successfully destroyed.'
+   43    end
+   44
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/helpers/application_helper.rb:
+    1: module ApplicationHelper
+    2  end
+    3
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/javascript/channels/consumer.js:
+    4  import { createConsumer } from "@rails/actioncable"
+    5
+    6: export default createConsumer()
+    7
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/mailers/application_mailer.rb:
+    1  class ApplicationMailer < ActionMailer::Base
+    2:   default from: 'from@example.com'
+    3    layout 'mailer'
+    4  end
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/models/user.rb:
+    1  class User < ApplicationRecord
+    2:   # Include default devise modules. Others available are:
+    3    # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+    4    devise :database_authenticatable, :registerable,
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/articles/show.html.erb:
+    9
+   10
+   11:       <ul class="list-group-show list-group-horizontal">
+   12          <li class="">170 <span>Loved articles</span></li>
+   13          <li class="">200 <span>Want to try</span></li>
+   14          <li class="">320 <span>Saved articles</span></li>
+   15:       </ul>
+   16        <div class="tabs">
+   17          <p>Loved Articles <i class="fas fa-heart"></i></p>
+   ..
+   32
+   33      <p class="content-article-justify">
+   34:       Romy Schneider, Mireille Darc, Françoise Hardy... Ces party girls donnaient le ton dans les années 70 avec des silhouettes grand soir qui nous inspirent toujours aujourd'hui. Exemple probant : la toute dernière collection de Claudie Pierlot pour illuminer les fêtes. Baptisée "Neon Fantasy", cette capsule imaginée par le label parisien est ponctuée de teintes néon tel que le fuchsia, d'imprimés psychédéliques et d'un motif léopard. Dès la nuit tombée, le vestiaire se pare de noir et se sublime de sequins brodés sur de parfaites robes de soirée, d'un revers métallisé pour la veste de costume et d’un jupon de dentelle sur l'emblématique petite robe noire.
+   35
+   36:       Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.Romy Schneider, Mireille Darc, Françoise Hardy... Ces party girls donnaient le ton dans les années 70 avec des silhouettes grand soir qui nous inspirent toujours aujourd'hui. Exemple probant : la toute dernière collection de Claudie Pierlot pour illuminer les fêtes. Baptisée "Neon Fantasy", cette capsule imaginée par le label parisien est ponctuée de teintes néon tel que le fuchsia, d'imprimés psychédéliques et d'un motif léopard. Dès la nuit tombée, le vestiaire se pare de noir et se sublime de sequins brodés sur de parfaites robes de soirée, d'un revers métallisé pour la veste de costume et d’un jupon de dentelle sur l'emblématique petite robe noire.
+   37
+   38:       Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.
+   39      </p>
+   40    </div>
+   ..
+   67        <div class="col-4" id="sticky-write-new">
+   68         <div class="sticky-new">
+   69:          <h6>Would you like to became
+   70            <br>an author?</h6>
+   71            <%= link_to 'Write your 1st Article.>', new_article_path
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/devise/confirmations/new.html.erb:
+    3  <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+    4    <%= f.error_notification %>
+    5:   <%= f.full_error :confirmation_token %>
+    6
+    7    <div class="form-inputs">
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/devise/mailer/unlock_instructions.html.erb:
+    1  <p>Hello <%= @resource.email %>!</p>
+    2
+    3: <p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+    4
+    5  <p>Click the link below to unlock your account:</p>
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/devise/passwords/edit.html.erb:
+    5
+    6    <%= f.input :reset_password_token, as: :hidden %>
+    7:   <%= f.full_error :reset_password_token %>
+    8
+    9    <div class="form-inputs">
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/devise/registrations/edit.html.erb:
+    8          <button type="button" class="btn btn-sm btn-outline-secondary">Edit profile</button>
+    9          <div>
+   10:           <ul class="list-group list-group-horizontal">
+   11              <li class="">170 <span>Loved articles</span></li>
+   12              <li class="">200 <span>Want to try</span></li>
+   13              <li class="">320 <span>Saved articles</span></li>
+   14:           </ul>
+   15          </div>
+   16        </div>
+   ..
+   24        <h4>My Taste Profile</h4>
+   25
+   26:       <ul class="list-group list-group-horizontal">
+   27
+   28          <li>
+   ..
+   55            </div>
+   56          </li>
+   57:       </ul>
+   58
+   59
+   60        <div class="reactions-history">
+   61          <div class="tabs">
+   62:           <ul>
+   63              <li  id="link1"><p>Loved Articles<i class="fas fa-heart"></i></p></li>
+   64              <li  id="link2"><p>Want to try <i class="fas fa-bookmark"></i></p></li>
+   65:           </ul>
+   66
+   67          </div>
+   ..
+   76                   <h6>#orgasm</h6>
+   77                   <h2>Orgasm Troubleshooting</h2>
+   78:                  <p>Difficulty having orgasms? Coming too quickly? A lot of people....</p>
+   79                 </div>
+   80               </div>
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/devise/shared/_error_messages.html.erb:
+    7         %>
+    8      </h2>
+    9:     <ul>
+   10:       <% resource.errors.full_messages.each do |message| %>
+   11          <li><%= message %></li>
+   12        <% end %>
+   13:     </ul>
+   14    </div>
+   15  <% end %>
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/devise/unlocks/new.html.erb:
+    3  <%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+    4    <%= f.error_notification %>
+    5:   <%= f.full_error :unlock_token %>
+    6
+    7    <div class="form-inputs">
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/pages/home.html.erb:
+    5  </div>
+    6
+    7: <div class="full-section d-block p-4">
+    8    <div class="container">
+    9      <div class="section-landing">
+
+/Users/martin/code/TheSleeplessOne/fetysh/app/views/shared/_navbar.html.erb:
+    5    </button>
+    6    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    7:     <ul class="navbar-nav">
+    8        <li class="nav-item active">
+    9          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+   ..
+   16        </li>
+   17        <li class="nav-item dropdown">
+   18:         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   19            Dropdown link
+   20          </a>
+   21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+   22            <a class="dropdown-item" href="#">Action</a>
+   23            <a class="dropdown-item" href="#">Another action</a>
+   ..
+   25          </div>
+   26        </li>
+   27:     </ul>
+   28    </div>
+   29  </nav>
+
+/Users/martin/code/TheSleeplessOne/fetysh/bin/bundle:
+   11  require "rubygems"
+   12
+   13: m = Module.new do
+   14:   module_function
+   15
+   16    def invoked_as_script?
+   ..
+   64      @bundler_version ||= begin
+   65        env_var_version || cli_arg_version ||
+   66:         lockfile_version || "#{Gem::Requirement.default}.a"
+   67      end
+   68    end
+
+/Users/martin/code/TheSleeplessOne/fetysh/bin/spring:
+    8    require 'bundler'
+    9
+   10:   lockfile = Bundler::LockfileParser.new(Bundler.default_lockfile.read)
+   11    spring = lockfile.specs.detect { |spec| spec.name == 'spring' }
+   12    if spring
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/application.rb:
+    7  Bundler.require(*Rails.groups)
+    8
+    9: module Fetysh
+   10    class Application < Rails::Application
+   11      config.generators do |generate|
+   ..
+   14            generate.test_framework  :test_unit, fixture: false
+   15          end
+   16:     # Initialize configuration defaults for originally generated Rails version.
+   17:     config.load_defaults 6.0
+   18
+   19      # Settings in config/environments/* take precedence over those specified here.
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/database.yml:
+   15  # gem 'pg'
+   16  #
+   17: default: &default
+   18    adapter: postgresql
+   19    encoding: unicode
+   ..
+   23
+   24  development:
+   25:   <<: *default
+   26    database: fetysh_development
+   27
+   28    # The specified database role being used to connect to postgres.
+   29    # To create additional roles in postgres see `$ createuser --help`.
+   30:   # When left blank, postgres will use the default role. This is
+   31    # the same name as the operating system user that initialized the database.
+   32    #username: fetysh
+   ..
+   35    #password:
+   36
+   37:   # Connect on a TCP socket. Omitted by default since the client uses a
+   38    # domain socket that doesn't need configuration. Windows does not have
+   39    # domain sockets, so uncomment these lines.
+   40    #host: localhost
+   41
+   42:   # The TCP port the server listens on. Defaults to 5432.
+   43    # If your server runs on a different port number, change accordingly.
+   44    #port: 5432
+   45
+   46:   # Schema search path. The server defaults to $user,public
+   47    #schema_search_path: myapp,sharedapp,public
+   48
+   ..
+   50    #   debug5, debug4, debug3, debug2, debug1,
+   51    #   log, notice, warning, error, fatal, and panic
+   52:   # Defaults to warning.
+   53    #min_messages: notice
+   54
+   ..
+   57  # Do not set this db to the same as development or production.
+   58  test:
+   59:   <<: *default
+   60    database: fetysh_test
+   61
+   ..
+   66  # Instead, provide the password as a unix environment variable when you boot
+   67  # the app. Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
+   68: # for a full rundown on how to provide these environment variables in a
+   69  # production deployment.
+   70  #
+   71: # On Heroku and other platform providers, you may have a full connection URL
+   72  # available as an environment variable. For example:
+   73  #
+   ..
+   80  #
+   81  production:
+   82:   <<: *default
+   83    database: fetysh_production
+   84    username: fetysh
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/puma.rb:
+    1  # Puma can serve each request in a thread from an internal thread pool.
+    2  # The `threads` method setting takes two numbers: a minimum and maximum.
+    3: # Any libraries that use thread pools should be configured to match
+    4: # the maximum value specified for Puma. Default is set to 5 threads for minimum
+    5: # and maximum; this matches the default thread size of Active Record.
+    6  #
+    7  max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+    .
+    9  threads min_threads_count, max_threads_count
+   10
+   11: # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
+   12  #
+   13  port        ENV.fetch("PORT") { 3000 }
+   ..
+   22  # Specifies the number of `workers` to boot in clustered mode.
+   23  # Workers are forked web server processes. If using threads and workers together
+   24: # the concurrency of the application would be max `threads` * `workers`.
+   25  # Workers do not work on JRuby or Windows (both of which do not support
+   26  # processes).
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/webpacker.yml:
+    1  # Note: You must restart bin/webpack-dev-server for changes to take effect
+    2
+    3: default: &default
+    4    source_path: app/javascript
+    5    source_entry_path: packs
+    .
+   10    webpack_compile_output: true
+   11
+   12:   # Additional paths webpack should lookup modules
+   13    # ['app/assets', 'engine/foo/app/assets']
+   14    resolved_paths: []
+   ..
+   40      - .scss
+   41      - .css
+   42:     - .module.sass
+   43:     - .module.scss
+   44:     - .module.css
+   45      - .png
+   46      - .svg
+   ..
+   50
+   51  development:
+   52:   <<: *default
+   53    compile: true
+   54
+   55:   # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules
+   56    check_yarn_integrity: true
+   57
+   ..
+   63      public: localhost:3035
+   64      hmr: false
+   65:     # Inline should be set to true if using HMR
+   66      inline: true
+   67      overlay: true
+   ..
+   74        'Access-Control-Allow-Origin': '*'
+   75      watch_options:
+   76:       ignored: '**/node_modules/**'
+   77
+   78
+   79  test:
+   80:   <<: *default
+   81    compile: true
+   82
+   ..
+   85
+   86  production:
+   87:   <<: *default
+   88
+   89    # Production depends on precompilation of packs prior to booting for performance.
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/environments/development.rb:
+    1  Rails.application.configure do
+    2:   config.action_mailer.default_url_options = { host: "http://localhost:3000" }
+    3    # Settings specified here will take precedence over those in config/application.rb.
+    4
+    .
+   11    config.eager_load = false
+   12
+   13:   # Show full error reports.
+   14    config.consider_all_requests_local = true
+   15
+   16:   # Enable/disable caching. By default caching is disabled.
+   17    # Run rails dev:cache to toggle caching.
+   18    if Rails.root.join('tmp', 'caching-dev.txt').exist?
+   ..
+   27      config.action_controller.perform_caching = false
+   28
+   29:     config.cache_store = :null_store
+   30    end
+   31
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/environments/production.rb:
+    1  Rails.application.configure do
+    2:   config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
+    3    # Settings specified here will take precedence over those in config/application.rb.
+    4
+    .
+   12    config.eager_load = true
+   13
+   14:   # Full error reports are disabled and caching is turned on.
+   15    config.consider_all_requests_local       = false
+   16    config.action_controller.perform_caching = true
+   ..
+   20    # config.require_master_key = true
+   21
+   22:   # Disable serving static files from the `/public` folder by default since
+   23    # Apache or NGINX already handles this.
+   24    config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+   ..
+   69
+   70    # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+   71:   # the I18n.default_locale when a translation cannot be found).
+   72    config.i18n.fallbacks = true
+   73
+   ..
+   75    config.active_support.deprecation = :notify
+   76
+   77:   # Use default logging formatter so that PID and timestamp are not suppressed.
+   78    config.log_formatter = ::Logger::Formatter.new
+   79
+   ..
+  104    # replica.
+  105    #
+  106:   # By default Rails will store a last write timestamp in the session. The
+  107    # DatabaseSelector middleware is designed as such you can define your own
+  108    # strategy for connection switching and pass that into the middleware through
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/environments/test.rb:
+   20    }
+   21
+   22:   # Show full error reports and disable caching.
+   23    config.consider_all_requests_local       = true
+   24    config.action_controller.perform_caching = false
+   25:   config.cache_store = :null_store
+   26
+   27    # Raise exceptions instead of rendering exception templates.
+   ..
+   37
+   38    # Tell Action Mailer not to deliver emails to the real world.
+   39:   # The :test delivery method accumulates sent emails in the
+   40    # ActionMailer::Base.deliveries array.
+   41    config.action_mailer.delivery_method = :test
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/application_controller_renderer.rb:
+    2
+    3  # ActiveSupport::Reloader.to_prepare do
+    4: #   ApplicationController.renderer.defaults.merge!(
+    5  #     http_host: 'example.org',
+    6  #     https: false
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/assets.rb:
+    6  # Add additional assets to the asset load path.
+    7  # Rails.application.config.assets.paths << Emoji.images_path
+    8: # Add Yarn node_modules folder to the asset load path.
+    9: Rails.application.config.assets.paths << Rails.root.join('node_modules')
+   10
+   11  # Precompile additional assets.
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/content_security_policy.rb:
+    6
+    7  # Rails.application.config.content_security_policy do |policy|
+    8: #   policy.default_src :self, :https
+    9  #   policy.font_src    :self, :https, :data
+   10  #   policy.img_src     :self, :https, :data
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/devise.rb:
+    8    # confirmation, reset password and unlock tokens in the database.
+    9    # Devise will use the `secret_key_base` as its `secret_key`
+   10:   # by default. You can change it below and use your own secret key.
+   11    # config.secret_key = '42717b1b7eecc49b504cba9725a05e6abdd068ce9d5b4faee4d5e4923fcba1be4ecaf35be2b259a09fd42a951767172359c42ce19438551b0e90fc8a4f0caf7a'
+   12
+   ..
+   18    # Configure the e-mail address which will be shown in Devise::Mailer,
+   19    # note that it will be overwritten if you use your own mailer class
+   20:   # with default "from" parameter.
+   21    config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+   22
+   ..
+   28
+   29    # ==> ORM configuration
+   30:   # Load and configure the ORM. Supports :active_record (default) and
+   31:   # :mongoid (bson_ext recommended) by default. Other ORMs may be
+   32    # available as additional gems.
+   33    require 'devise/orm/active_record'
+   34
+   35    # ==> Configuration for any authentication mechanism
+   36:   # Configure which keys are used when authenticating a user. The default is
+   37    # just :email. You can configure it to use [:username, :subdomain], so for
+   38    # authenticating a user, both parameters are required. Remember that those
+   39    # parameters are used only when authenticating and not when retrieving from
+   40:   # session. If you need permissions, you should implement that in a before filter.
+   41    # You can also supply a hash where the value is a boolean determining whether
+   42:   # or not authentication should be aborted when the value is not present.
+   43    # config.authentication_keys = [:email]
+   44
+   45    # Configure parameters from the request object used for authentication. Each entry
+   46:   # given should be a request method and it will automatically be passed to the
+   47    # find_for_authentication method and considered in your model lookup. For instance,
+   48    # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
+   ..
+   50    # config.request_keys = []
+   51
+   52:   # Configure which authentication keys should be case-insensitive.
+   53    # These keys will be downcased upon creating or modifying a user and when used
+   54:   # to authenticate or find a user. Default is :email.
+   55    config.case_insensitive_keys = [:email]
+   56
+   57:   # Configure which authentication keys should have whitespace stripped.
+   58    # These keys will have whitespace before and after removed upon creating or
+   59:   # modifying a user and when used to authenticate or find a user. Default is :email.
+   60    config.strip_whitespace_keys = [:email]
+   61
+   62:   # Tell if authentication through request.params is enabled. True by default.
+   63    # It can be set to an array that will enable params authentication only for the
+   64    # given strategies, for example, `config.params_authenticatable = [:database]` will
+   ..
+   66    # config.params_authenticatable = true
+   67
+   68:   # Tell if authentication through HTTP Auth is enabled. False by default.
+   69    # It can be set to an array that will enable http authentication only for the
+   70    # given strategies, for example, `config.http_authenticatable = [:database]` will
+   ..
+   73    # config.http_authenticatable = false
+   74
+   75:   # If 401 status code should be returned for AJAX requests. True by default.
+   76    # config.http_authenticatable_on_xhr = true
+   77
+   78:   # The realm used in Http Basic Authentication. 'Application' by default.
+   79    # config.http_authentication_realm = 'Application'
+   80
+   ..
+   84    # config.paranoid = true
+   85
+   86:   # By default Devise will store the user in session. You can skip storage for
+   87:   # particular strategies by setting this option.
+   88    # Notice that if you are skipping storage for all authentication paths, you
+   89    # may want to disable generating routes to Devise's sessions controller by
+   ..
+   91    config.skip_session_storage = [:http_auth]
+   92
+   93:   # By default, Devise cleans up the CSRF token on authentication to
+   94    # avoid CSRF token fixation attacks. This means that, when using AJAX
+   95    # requests for sign in and sign up, you need to get a new CSRF token
+   ..
+  104
+  105    # ==> Configuration for :database_authenticatable
+  106:   # For bcrypt, this is the cost for hashing the password and defaults to 11. If
+  107    # using other algorithms, it sets how many times you want the password to be hashed.
+  108    #
+  109    # Limiting the stretches to just one in testing will increase the performance of
+  110    # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use
+  111:   # a value less than 10 in other environments. Note that, for bcrypt (the default
+  112    # algorithm), the cost increases exponentially with the number of stretches (e.g.
+  113:   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
+  114    config.stretches = Rails.env.test? ? 1 : 11
+  115
+  ...
+  130    # You can also set it to nil, which will allow the user to access the website
+  131    # without confirming their account.
+  132:   # Default is 0.days, meaning the user cannot access the website without
+  133    # confirming their account.
+  134    # config.allow_unconfirmed_access_for = 2.days
+  ...
+  138    # their account within 3 days after the mail was sent, but on the fourth day
+  139    # their account can't be confirmed with the token any more.
+  140:   # Default is nil, meaning there is no restriction on how long a user can take
+  141    # before confirming their account.
+  142    # config.confirm_within = 3.days
+  ...
+  145    # initial account confirmation) to be applied. Requires additional unconfirmed_email
+  146    # db field (see migrations). Until confirmed, new email is stored in
+  147:   # unconfirmed_email column, and copied to email column on successful confirmation.
+  148    config.reconfirmable = true
+  149
+  ...
+  176    # ==> Configuration for :timeoutable
+  177    # The time you want to timeout the user session without activity. After this
+  178:   # time the user will be asked for credentials again. Default is 30 minutes.
+  179    # config.timeout_in = 30.minutes
+  180
+  ...
+  182    # Defines which strategy will be used to lock an account.
+  183    # :failed_attempts = Locks an account after a number of failed attempts to sign in.
+  184:   # :none            = No lock strategy. You should handle locking by yourself.
+  185    # config.lock_strategy = :failed_attempts
+  186
+  ...
+  192    # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
+  193    # :both  = Enables both strategies
+  194:   # :none  = No unlock strategy. You should handle unlocking by yourself.
+  195    # config.unlock_strategy = :both
+  196
+  ...
+  216
+  217    # When set to false, does not sign a user in automatically after their password is
+  218:   # reset. Defaults to true, so a user is signed in automatically after a reset.
+  219    # config.sign_in_after_reset_password = true
+  220
+  221    # ==> Configuration for :encryptable
+  222:   # Allow you to use another hashing or encryption algorithm besides bcrypt (default).
+  223    # You can use :sha1, :sha512 or algorithms from others authentication tools as
+  224:   # :clearance_sha1, :authlogic_sha512 (then you should set stretches above to 20
+  225:   # for default behavior) and :restful_authentication_sha1 (then you should set
+  226    # stretches to 10, and copy REST_AUTH_SITE_KEY to pepper).
+  227    #
+  ...
+  231    # ==> Scopes configuration
+  232    # Turn scoped views on. Before rendering "sessions/new", it will first check for
+  233:   # "users/sessions/new". It's turned off by default because it's slower if you
+  234:   # are using only default views.
+  235    # config.scoped_views = false
+  236
+  237:   # Configure the default scope given to Warden. By default it's the first
+  238    # devise role declared in your routes (usually :user).
+  239:   # config.default_scope = :user
+  240
+  241    # Set this configuration to false if you want /users/sign_out to sign out
+  242:   # only the current scope. By default, Devise signs out all scopes.
+  243    # config.sign_out_all_scopes = true
+  244
+  245    # ==> Navigation configuration
+  246:   # Lists the formats that should be treated as navigational. Formats like
+  247:   # :html, should redirect to the sign in page when the user does not have
+  248:   # access, but formats like :xml or :json, should return 401.
+  249    #
+  250    # If you have any extra navigational formats, like :iphone or :mobile, you
+  251:   # should add them to the navigational formats lists.
+  252    #
+  253    # The "*/*" below is required to match Internet Explorer requests.
+  254    # config.navigational_formats = ['*/*', :html]
+  255
+  256:   # The default HTTP method used to sign out a resource. Default is :delete.
+  257    config.sign_out_via = :delete
+  258
+  ...
+  268    # config.warden do |manager|
+  269    #   manager.intercept_401 = false
+  270:   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
+  271    # end
+  272
+  ...
+  278    #     mount MyEngine, at: '/my_engine'
+  279    #
+  280:   # The router that invoked `devise_for`, in the example above, would be:
+  281    # config.router_name = :my_engine
+  282    #
+  283    # When using OmniAuth, Devise cannot automatically set OmniAuth path,
+  284:   # so you need to do it manually. For the users scope, it would be:
+  285    # config.omniauth_path_prefix = '/my_engine/users/auth'
+  286
+  ...
+  295
+  296    # When set to false, does not sign a user in automatically after their password is
+  297:   # changed. Defaults to true, so a user is signed in automatically after changing a password.
+  298    # config.sign_in_after_change_password = true
+  299  end
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/geocoder.rb:
+   12    # cache_prefix: 'geocoder:',  # prefix (string) to use for all cache keys
+   13
+   14:   # Exceptions that should not be rescued by default
+   15    # (if you want to implement custom error handling);
+   16    # supports SocketError and Timeout::Error
+   17    # always_raise: [],
+   18
+   19:   # Calculation options
+   20    units: :km,             # :km for kilometers or :mi for miles
+   21    # distances: :linear          # :spherical or :linear
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/inflections.rb:
+    1  # Be sure to restart your server when you modify this file.
+    2
+    3: # Add new inflection rules using the following format. Inflections
+    4: # are locale specific, and you may define rules for as many different
+    5: # locales as you wish. All of these examples are active by default:
+    6  # ActiveSupport::Inflector.inflections(:en) do |inflect|
+    7  #   inflect.plural /^(ox)$/i, '\1en'
+    8: #   inflect.singular /^(ox)en/i, '\1'
+    9: #   inflect.irregular 'person', 'people'
+   10  #   inflect.uncountable %w( fish sheep )
+   11  # end
+   12
+   13: # These inflection rules are supported but not enabled by default:
+   14  # ActiveSupport::Inflector.inflections(:en) do |inflect|
+   15: #   inflect.acronym 'RESTful'
+   16  # end
+   17
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/simple_form.rb:
+   14    # stack. The options given below are used to wrap the
+   15    # whole input.
+   16:   config.wrappers :default, class: :input,
+   17      hint_class: :field_with_hint, error_class: :field_with_errors, valid_class: :field_without_errors do |b|
+   18:     ## Extensions enabled by default
+   19      # Any of these extensions can be disabled for a
+   20      # given input by passing: `f.input EXTENSION_NAME => false`.
+   ..
+   26      b.use :html5
+   27
+   28:     # Calculates placeholders automatically from I18n
+   29      # You can also pass a string as f.input placeholder: "Placeholder"
+   30      b.use :placeholder
+   ..
+   34      # to the input. If so, they will retrieve the values from the model
+   35      # if any exists. If you want to enable any of those
+   36:     # extensions by default, you can change `b.optional` to `b.use`.
+   37
+   38:     # Calculates maxlength from length validations for string inputs
+   39      # and/or database column lengths
+   40      b.optional :maxlength
+   41
+   42:     # Calculate minlength from length validations for string inputs
+   43      b.optional :minlength
+   44
+   45:     # Calculates pattern from format validations for string inputs
+   46      b.optional :pattern
+   47
+   48:     # Calculates min and max from length validations for numeric inputs
+   49      b.optional :min_max
+   50
+   51:     # Calculates readonly automatically from readonly attributes
+   52      b.optional :readonly
+   53
+   ..
+   58      b.use :error, wrap_with: { tag: :span, class: :error }
+   59
+   60:     ## full_messages_for
+   61:     # If you want to display the full error message for the attribute, you can
+   62:     # use the component :full_error, like:
+   63      #
+   64:     # b.use :full_error, wrap_with: { tag: :span, class: :error }
+   65    end
+   66
+   67:   # The default wrapper to be used by the FormBuilder.
+   68:   config.default_wrapper = :default
+   69
+   70    # Define the way to render check boxes / radio buttons with labels.
+   71:   # Defaults to :nested for bootstrap config.
+   72    #   inline: input + label
+   73    #   nested: label > input
+   74    config.boolean_style = :nested
+   75
+   76:   # Default class for buttons
+   77    config.button_class = 'btn'
+   78
+   ..
+   82    # config.error_method = :first
+   83
+   84:   # Default tag used for error notification helper.
+   85    config.error_notification_tag = :div
+   86
+   ..
+   88    config.error_notification_class = 'error_notification'
+   89
+   90:   # Series of attempts to detect a default label method for collection.
+   91    # config.collection_label_methods = [ :to_label, :name, :title, :to_s ]
+   92
+   93:   # Series of attempts to detect a default value method for collection.
+   94    # config.collection_value_methods = [ :id, :to_s ]
+   95
+   96:   # You can wrap a collection of radio/check boxes in a pre-defined tag, defaulting to none.
+   97    # config.collection_wrapper_tag = nil
+   98
+   99:   # You can define the class to use on all collection wrappers. Defaulting to none.
+  100    # config.collection_wrapper_class = nil
+  101
+  102    # You can wrap each item in a collection of radio/check boxes with a tag,
+  103:   # defaulting to :span.
+  104    # config.item_wrapper_tag = :span
+  105
+  106:   # You can define a class to use in all item wrappers. Defaulting to none.
+  107    # config.item_wrapper_class = nil
+  108
+  109:   # How the label text should be generated altogether with the required text.
+  110    # config.label_text = lambda { |label, required, explicit_label| "#{required} #{label}" }
+  111
+  112:   # You can define the class to use on all labels. Default is nil.
+  113    # config.label_class = nil
+  114
+  115:   # You can define the default class to be used on forms. Can be overriden
+  116:   # with `html: { :class }`. Defaulting to none.
+  117:   # config.default_form_class = nil
+  118
+  119:   # You can define which elements should obtain additional classes
+  120    # config.generate_additional_classes_for = [:wrapper, :label, :input]
+  121
+  122:   # Whether attributes are required by default (or not). Default is true.
+  123:   # config.required_by_default = true
+  124
+  125    # Tell browsers whether to use the native HTML5 validations (novalidate form option).
+  126:   # These validations are enabled in SimpleForm's internal config but disabled by default
+  127    # in this configuration, which is recommended due to some quirks from different browsers.
+  128    # To stop SimpleForm from generating the novalidate option, enabling the HTML5 validations,
+  ...
+  130    config.browser_validations = false
+  131
+  132:   # Custom mappings for input types. This should be a hash containing a regexp
+  133    # to match as key, and the input type that will be used when the field name
+  134    # matches the regexp as value.
+  135    # config.input_mappings = { /count/ => :integer }
+  136
+  137:   # Custom wrappers for input types. This should be a hash containing an input
+  138    # type as key and the wrapper that will be used for all inputs with specified type.
+  139    # config.wrapper_mappings = { string: :prepend }
+  140
+  141:   # Namespaces where SimpleForm should look for custom input classes that
+  142:   # override default inputs.
+  143    # config.custom_inputs_namespaces << "CustomInputs"
+  144
+  145:   # Default priority for time_zone inputs.
+  146    # config.time_zone_priority = nil
+  147
+  148:   # Default priority for country inputs.
+  149    # config.country_priority = nil
+  150
+  ...
+  158    # config.cache_discovery = !Rails.env.development?
+  159
+  160:   # Default class for inputs
+  161    # config.input_class = nil
+  162
+  163:   # Define the default class of the input wrapper of the boolean input.
+  164    config.boolean_label_class = 'checkbox'
+  165
+  166:   # Defines if the default input wrapper class should be included in radio
+  167    # collection wrappers.
+  168:   # config.include_default_input_wrapper_class = true
+  169
+  170    # Defines which i18n scope will be used in Simple Form.
+  171    # config.i18n_scope = 'simple_form'
+  172
+  173:   # Defines validation classes to the input_field. By default it's nil.
+  174    # config.input_field_valid_class = 'is-valid'
+  175    # config.input_field_error_class = 'is-invalid'
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/simple_form_bootstrap.rb:
+    4  # This generator is maintained by the community around simple_form-bootstrap:
+    5  # https://github.com/rafaelfranca/simple_form-bootstrap
+    6: # All future development, tests, and organization should happen there.
+    7  # Background history: https://github.com/plataformatec/simple_form/issues/1561
+    8
+    .
+   15  # Use this setup block to configure all options available in SimpleForm.
+   16  SimpleForm.setup do |config|
+   17:   # Default class for buttons
+   18    config.button_class = 'btn'
+   19
+   20:   # Define the default class of the input wrapper of the boolean input.
+   21    config.boolean_label_class = 'form-check-label'
+   22
+   23:   # How the label text should be generated altogether with the required text.
+   24    config.label_text = lambda { |label, required, explicit_label| "#{label} #{required}" }
+   25
+   ..
+   30    config.item_wrapper_tag = :div
+   31
+   32:   # Defines if the default input wrapper class should be included in radio
+   33    # collection wrappers.
+   34:   config.include_default_input_wrapper_class = false
+   35
+   36    # CSS class to add for error notification helper.
+   ..
+   49    # vertical forms
+   50    #
+   51:   # vertical default_wrapper
+   52    config.wrappers :vertical_form, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+   53      b.use :html5
+   ..
+   60      b.use :label
+   61      b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+   62:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+   63      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+   64    end
+   ..
+   71        bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+   72        bb.use :label, class: 'form-check-label'
+   73:       bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+   74        bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+   75      end
+   ..
+   84      end
+   85      b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+   86:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+   87      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+   88    end
+   ..
+   96      end
+   97      b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+   98:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+   99      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  100    end
+  ...
+  109      b.use :label
+  110      b.use :input, class: 'form-control-file', error_class: 'is-invalid', valid_class: 'is-valid'
+  111:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+  112      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  113    end
+  114
+  115:   # vertical multi select
+  116:   config.wrappers :vertical_multi_select, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  117      b.use :html5
+  118      b.optional :readonly
+  ...
+  121        ba.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+  122      end
+  123:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  124      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  125    end
+  ...
+  133      b.use :label
+  134      b.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
+  135:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  136      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  137    end
+  ...
+  140    # horizontal forms
+  141    #
+  142:   # horizontal default_wrapper
+  143    config.wrappers :horizontal_form, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  144      b.use :html5
+  ...
+  152      b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+  153        ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+  154:       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+  155        ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  156      end
+  ...
+  168          bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+  169          bb.use :label, class: 'form-check-label'
+  170:         bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  171          bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  172        end
+  ...
+  181      b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+  182        ba.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+  183:       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  184        ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  185      end
+  ...
+  193      b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+  194        ba.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+  195:       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  196        ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  197      end
+  ...
+  208      b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+  209        ba.use :input, error_class: 'is-invalid', valid_class: 'is-valid'
+  210:       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  211        ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  212      end
+  213    end
+  214
+  215:   # horizontal multi select
+  216:   config.wrappers :horizontal_multi_select, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  217      b.use :html5
+  218      b.optional :readonly
+  ...
+  222          bb.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+  223        end
+  224:       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  225        ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  226      end
+  ...
+  236      b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+  237        ba.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
+  238:       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  239        ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  240      end
+  ...
+  244    # inline forms
+  245    #
+  246:   # inline default_wrapper
+  247    config.wrappers :inline_form, tag: 'span', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  248      b.use :html5
+  ...
+  280        bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+  281        bb.use :label, class: 'custom-control-label'
+  282:       bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+  283        bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  284      end
+  ...
+  292        bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+  293        bb.use :label, class: 'custom-control-label'
+  294:       bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+  295        bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  296      end
+  ...
+  305      end
+  306      b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+  307:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  308      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  309    end
+  ...
+  317      end
+  318      b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+  319:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  320      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  321    end
+  ...
+  332        ba.use :input, class: 'custom-file-input', error_class: 'is-invalid', valid_class: 'is-valid'
+  333        ba.use :label, class: 'custom-file-label'
+  334:       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+  335      end
+  336      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  337    end
+  338
+  339:   # custom multi select
+  340:   config.wrappers :custom_multi_select, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  341      b.use :html5
+  342      b.optional :readonly
+  ...
+  345        ba.use :input, class: 'custom-select mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+  346      end
+  347:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  348      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  349    end
+  ...
+  357      b.use :label
+  358      b.use :input, class: 'custom-range', error_class: 'is-invalid', valid_class: 'is-valid'
+  359:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  360      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  361    end
+  ...
+  378    #     ba.optional :append
+  379    #   end
+  380:   #   b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  381    #   b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  382    # end
+  ...
+  385    # Floating Labels form
+  386    #
+  387:   # floating labels default_wrapper
+  388    config.wrappers :floating_labels_form, tag: 'div', class: 'form-label-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  389      b.use :html5
+  ...
+  396      b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+  397      b.use :label
+  398:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+  399      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  400    end
+  401
+  402:   # custom multi select
+  403    config.wrappers :floating_labels_select, tag: 'div', class: 'form-label-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  404      b.use :html5
+  ...
+  406      b.use :input, class: 'custom-select', error_class: 'is-invalid', valid_class: 'is-valid'
+  407      b.use :label
+  408:     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+  409      b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  410    end
+  411
+  412
+  413:   # The default wrapper to be used by the FormBuilder.
+  414:   config.default_wrapper = :vertical_form
+  415
+  416:   # Custom wrappers for input types. This should be a hash containing an input
+  417    # type as key and the wrapper that will be used for all inputs with specified type.
+  418    config.wrapper_mappings = {
+  419      boolean:       :vertical_boolean,
+  420      check_boxes:   :vertical_collection,
+  421:     date:          :vertical_multi_select,
+  422:     datetime:      :vertical_multi_select,
+  423      file:          :vertical_file,
+  424      radio_buttons: :vertical_collection,
+  425      range:         :vertical_range,
+  426:     time:          :vertical_multi_select
+  427    }
+  428
+  ...
+  431    #   boolean:       :custom_boolean,
+  432    #   check_boxes:   :custom_collection,
+  433:   #   date:          :custom_multi_select,
+  434:   #   datetime:      :custom_multi_select,
+  435    #   file:          :custom_file,
+  436    #   radio_buttons: :custom_collection,
+  437    #   range:         :custom_range,
+  438:   #   time:          :custom_multi_select
+  439    # }
+  440  end
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/initializers/wrap_parameters.rb:
+    2
+    3  # This file contains settings for ActionController::ParamsWrapper which
+    4: # is enabled by default.
+    5
+    6  # Enable parameter wrapping for JSON. You can disable this by setting :format to an empty array.
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/locales/devise.en.yml:
+    4    devise:
+    5      confirmations:
+    6:       confirmed: "Your email address has been successfully confirmed."
+    7        send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+    8        send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+    .
+   29          subject: "Password Changed"
+   30      omniauth_callbacks:
+   31:       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+   32:       success: "Successfully authenticated from %{kind} account."
+   33      passwords:
+   34:       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+   35        send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+   36        send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+   37:       updated: "Your password has been changed successfully. You are now signed in."
+   38:       updated_not_active: "Your password has been changed successfully."
+   39      registrations:
+   40:       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+   41:       signed_up: "Welcome! You have signed up successfully."
+   42:       signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+   43:       signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+   44        signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+   45:       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
+   46:       updated: "Your account has been updated successfully."
+   47:       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
+   48      sessions:
+   49:       signed_in: "Signed in successfully."
+   50:       signed_out: "Signed out successfully."
+   51:       already_signed_out: "Signed out successfully."
+   52      unlocks:
+   53        send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+   54        send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+   55:       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+   56    errors:
+   57      messages:
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/locales/en.yml:
+   15  #     I18n.locale = :es
+   16  #
+   17: # This would use the information in config/locales/es.yml.
+   18  #
+   19  # The following keys must be escaped otherwise they will not be retrieved by
+   20: # the default I18n backend:
+   21  #
+   22  # true, false, on, off, yes, no
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/locales/simple_form.en.yml:
+   10        # html: '<abbr title="required">*</abbr>'
+   11      error_notification:
+   12:       default_message: "Please review the problems below:"
+   13      # Examples
+   14      # labels:
+   15:     #   defaults:
+   16      #     password: 'Password'
+   17      #   user:
+   ..
+   21      #       email: 'E-mail.'
+   22      # hints:
+   23:     #   defaults:
+   24      #     username: 'User name to sign in.'
+   25      #     password: 'No special characters, please.'
+   26      # include_blanks:
+   27:     #   defaults:
+   28      #     age: 'Rather not say'
+   29      # prompts:
+   30:     #   defaults:
+   31      #     age: 'Select your age'
+   32
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/webpack/development.js:
+    3  const environment = require('./environment')
+    4
+    5: module.exports = environment.toWebpackConfig()
+    6
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/webpack/environment.js:
+    3  const webpack = require('webpack')
+    4
+    5: // Preventing Babel from transpiling NodeModules packages
+    6: environment.loaders.delete('nodeModules');
+    7
+    8  // Bootstrap 4 has a dependency over jQuery & Popper.js:
+    .
+   11      $: 'jquery',
+   12      jQuery: 'jquery',
+   13:     Popper: ['popper.js', 'default']
+   14    })
+   15  )
+   16
+   17: module.exports = environment
+   18
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/webpack/production.js:
+    3  const environment = require('./environment')
+    4
+    5: module.exports = environment.toWebpackConfig()
+    6
+
+/Users/martin/code/TheSleeplessOne/fetysh/config/webpack/test.js:
+    3  const environment = require('./environment')
+    4
+    5: module.exports = environment.toWebpackConfig()
+    6
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/schema.rb:
+   17
+   18    create_table "action_text_rich_texts", force: :cascade do |t|
+   19:     t.string "name", null: false
+   20      t.text "body"
+   21:     t.string "record_type", null: false
+   22:     t.bigint "record_id", null: false
+   23:     t.datetime "created_at", precision: 6, null: false
+   24:     t.datetime "updated_at", precision: 6, null: false
+   25      t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+   26    end
+   27
+   28    create_table "active_storage_attachments", force: :cascade do |t|
+   29:     t.string "name", null: false
+   30:     t.string "record_type", null: false
+   31:     t.bigint "record_id", null: false
+   32:     t.bigint "blob_id", null: false
+   33:     t.datetime "created_at", null: false
+   34      t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+   35      t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+   ..
+   37
+   38    create_table "active_storage_blobs", force: :cascade do |t|
+   39:     t.string "key", null: false
+   40:     t.string "filename", null: false
+   41      t.string "content_type"
+   42      t.text "metadata"
+   43:     t.bigint "byte_size", null: false
+   44:     t.string "checksum", null: false
+   45:     t.datetime "created_at", null: false
+   46      t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+   47    end
+   ..
+   49    create_table "articles", force: :cascade do |t|
+   50      t.string "title"
+   51:     t.bigint "category_id", null: false
+   52      t.text "content"
+   53      t.string "source"
+   54:     t.bigint "user_id", null: false
+   55      t.string "img_url"
+   56:     t.datetime "created_at", precision: 6, null: false
+   57:     t.datetime "updated_at", precision: 6, null: false
+   58      t.index ["category_id"], name: "index_articles_on_category_id"
+   59      t.index ["user_id"], name: "index_articles_on_user_id"
+   ..
+   62    create_table "categories", force: :cascade do |t|
+   63      t.string "name"
+   64:     t.datetime "created_at", precision: 6, null: false
+   65:     t.datetime "updated_at", precision: 6, null: false
+   66    end
+   67
+   68    create_table "events", force: :cascade do |t|
+   69      t.string "address"
+   70:     t.bigint "user_id", null: false
+   71      t.string "title"
+   72      t.date "date"
+   73      t.decimal "price"
+   74      t.string "img_url"
+   75:     t.bigint "category_id", null: false
+   76      t.text "description"
+   77:     t.datetime "created_at", precision: 6, null: false
+   78:     t.datetime "updated_at", precision: 6, null: false
+   79      t.float "latitude"
+   80      t.float "longitude"
+   ..
+   84
+   85    create_table "reactions", force: :cascade do |t|
+   86:     t.bigint "user_id", null: false
+   87:     t.bigint "article_id", null: false
+   88      t.string "reaction"
+   89:     t.datetime "created_at", precision: 6, null: false
+   90:     t.datetime "updated_at", precision: 6, null: false
+   91      t.index ["article_id"], name: "index_reactions_on_article_id"
+   92      t.index ["user_id"], name: "index_reactions_on_user_id"
+   ..
+   94
+   95    create_table "reviews", force: :cascade do |t|
+   96:     t.bigint "user_id", null: false
+   97:     t.bigint "article_id", null: false
+   98      t.text "content"
+   99:     t.datetime "created_at", precision: 6, null: false
+  100:     t.datetime "updated_at", precision: 6, null: false
+  101      t.index ["article_id"], name: "index_reviews_on_article_id"
+  102      t.index ["user_id"], name: "index_reviews_on_user_id"
+  ...
+  104
+  105    create_table "user_categories", force: :cascade do |t|
+  106:     t.bigint "user_id", null: false
+  107:     t.datetime "created_at", precision: 6, null: false
+  108:     t.datetime "updated_at", precision: 6, null: false
+  109:     t.bigint "category_id", null: false
+  110      t.index ["category_id"], name: "index_user_categories_on_category_id"
+  111      t.index ["user_id"], name: "index_user_categories_on_user_id"
+  ...
+  113
+  114    create_table "users", force: :cascade do |t|
+  115:     t.string "email", default: "", null: false
+  116:     t.string "encrypted_password", default: "", null: false
+  117      t.string "reset_password_token"
+  118      t.datetime "reset_password_sent_at"
+  119      t.datetime "remember_created_at"
+  120:     t.datetime "created_at", precision: 6, null: false
+  121:     t.datetime "updated_at", precision: 6, null: false
+  122      t.string "name"
+  123      t.string "gender"
+  124      t.string "sex_orientation"
+  125      t.string "photo"
+  126:     t.boolean "premium", default: false
+  127      t.index ["email"], name: "index_users_on_email", unique: true
+  128      t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191125142756_devise_create_users.rb:
+    5      create_table :users do |t|
+    6        ## Database authenticatable
+    7:       t.string :email,              null: false, default: ""
+    8:       t.string :encrypted_password, null: false, default: ""
+    9
+   10        ## Recoverable
+   ..
+   16
+   17        ## Trackable
+   18:       # t.integer  :sign_in_count, default: 0, null: false
+   19        # t.datetime :current_sign_in_at
+   20        # t.datetime :last_sign_in_at
+   ..
+   29
+   30        ## Lockable
+   31:       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
+   32        # t.string   :unlock_token # Only if unlock strategy is :email or :both
+   33        # t.datetime :locked_at
+   34
+   35
+   36:       t.timestamps null: false
+   37      end
+   38
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191126102338_create_subcategories.rb:
+    3      create_table :subcategories do |t|
+    4        t.string :name
+    5:       t.references :category, null: false, foreign_key: true
+    6
+    7        t.timestamps
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191126102421_create_user_categories.rb:
+    2    def change
+    3      create_table :user_categories do |t|
+    4:       t.references :user, null: false, foreign_key: true
+    5:       t.references :subcategory, null: false, foreign_key: true
+    6
+    7        t.timestamps
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191126102537_create_articles.rb:
+    3      create_table :articles do |t|
+    4        t.string :title
+    5:       t.references :category, null: false, foreign_key: true
+    6        t.text :content
+    7        t.string :source
+    8:       t.references :user, null: false, foreign_key: true
+    9        t.string :img_url
+   10
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191126102626_create_reactions.rb:
+    2    def change
+    3      create_table :reactions do |t|
+    4:       t.references :user, null: false, foreign_key: true
+    5:       t.references :article, null: false, foreign_key: true
+    6        t.string :reaction
+    7
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191126102659_create_reviews.rb:
+    2    def change
+    3      create_table :reviews do |t|
+    4:       t.references :user, null: false, foreign_key: true
+    5:       t.references :article, null: false, foreign_key: true
+    6        t.text :content
+    7
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191126104329_add_name_to_users.rb:
+    5      add_column :users, :sex_orientation, :string
+    6      add_column :users, :photo, :string
+    7:     add_column :users, :premium, :boolean, default: false
+    8    end
+    9  end
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191127114429_add_category_to_user_category.rb:
+    1  class AddCategoryToUserCategory < ActiveRecord::Migration[6.0]
+    2    def change
+    3:     add_reference :user_categories, :category, null: false, foreign_key: true
+    4    end
+    5  end
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191127115928_create_events.rb:
+    3      create_table :events do |t|
+    4        t.string :address
+    5:       t.references :user, null: false, foreign_key: true
+    6        t.string :title
+    7        t.date :date
+    8        t.decimal :price
+    9        t.string :img_url
+   10:       t.references :category, null: false, foreign_key: true
+   11        t.text :description
+   12
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191127175312_create_active_storage_tables.active_storage.rb:
+    3    def change
+    4      create_table :active_storage_blobs do |t|
+    5:       t.string   :key,        null: false
+    6:       t.string   :filename,   null: false
+    7        t.string   :content_type
+    8        t.text     :metadata
+    9:       t.bigint   :byte_size,  null: false
+   10:       t.string   :checksum,   null: false
+   11:       t.datetime :created_at, null: false
+   12
+   13        t.index [ :key ], unique: true
+   ..
+   15
+   16      create_table :active_storage_attachments do |t|
+   17:       t.string     :name,     null: false
+   18:       t.references :record,   null: false, polymorphic: true, index: false
+   19:       t.references :blob,     null: false
+   20
+   21:       t.datetime :created_at, null: false
+   22
+   23        t.index [ :record_type, :record_id, :name, :blob_id ], name: "index_active_storage_attachments_uniqueness", unique: true
+
+/Users/martin/code/TheSleeplessOne/fetysh/db/migrate/20191127175313_create_action_text_tables.action_text.rb:
+    3    def change
+    4      create_table :action_text_rich_texts do |t|
+    5:       t.string     :name, null: false
+    6        t.text       :body, size: :long
+    7:       t.references :record, null: false, polymorphic: true, index: false
+    8
+    9        t.timestamps
+
+/Users/martin/code/TheSleeplessOne/fetysh/lib/templates/erb/scaffold/_form.html.erb:
+    1  <%# frozen_string_literal: true %>
+    2: <%%= simple_form_for(@<%= singular_table_name %>) do |f| %>
+    3    <%%= f.error_notification %>
+    4    <%%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+/Users/martin/code/TheSleeplessOne/fetysh/public/404.html:
+    5    <meta name="viewport" content="width=device-width,initial-scale=1">
+    6    <style>
+    7:   .rails-default-error-page {
+    8      background-color: #EFEFEF;
+    9      color: #2E2F30;
+   ..
+   13    }
+   14
+   15:   .rails-default-error-page div.dialog {
+   16      width: 95%;
+   17      max-width: 33em;
+   ..
+   19    }
+   20
+   21:   .rails-default-error-page div.dialog > div {
+   22      border: 1px solid #CCC;
+   23      border-right-color: #999;
+   ..
+   32    }
+   33
+   34:   .rails-default-error-page h1 {
+   35      font-size: 100%;
+   36      color: #730E15;
+   ..
+   38    }
+   39
+   40:   .rails-default-error-page div.dialog > p {
+   41      margin: 0 0 1em;
+   42      padding: 1em;
+   ..
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/404.html -->
+   59    <div class="dialog">
+
+/Users/martin/code/TheSleeplessOne/fetysh/public/422.html:
+    5    <meta name="viewport" content="width=device-width,initial-scale=1">
+    6    <style>
+    7:   .rails-default-error-page {
+    8      background-color: #EFEFEF;
+    9      color: #2E2F30;
+   ..
+   13    }
+   14
+   15:   .rails-default-error-page div.dialog {
+   16      width: 95%;
+   17      max-width: 33em;
+   ..
+   19    }
+   20
+   21:   .rails-default-error-page div.dialog > div {
+   22      border: 1px solid #CCC;
+   23      border-right-color: #999;
+   ..
+   32    }
+   33
+   34:   .rails-default-error-page h1 {
+   35      font-size: 100%;
+   36      color: #730E15;
+   ..
+   38    }
+   39
+   40:   .rails-default-error-page div.dialog > p {
+   41      margin: 0 0 1em;
+   42      padding: 1em;
+   ..
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/422.html -->
+   59    <div class="dialog">
+
+/Users/martin/code/TheSleeplessOne/fetysh/public/500.html:
+    5    <meta name="viewport" content="width=device-width,initial-scale=1">
+    6    <style>
+    7:   .rails-default-error-page {
+    8      background-color: #EFEFEF;
+    9      color: #2E2F30;
+   ..
+   13    }
+   14
+   15:   .rails-default-error-page div.dialog {
+   16      width: 95%;
+   17      max-width: 33em;
+   ..
+   19    }
+   20
+   21:   .rails-default-error-page div.dialog > div {
+   22      border: 1px solid #CCC;
+   23      border-right-color: #999;
+   ..
+   32    }
+   33
+   34:   .rails-default-error-page h1 {
+   35      font-size: 100%;
+   36      color: #730E15;
+   ..
+   38    }
+   39
+   40:   .rails-default-error-page div.dialog > p {
+   41      margin: 0 0 1em;
+   42      padding: 1em;
+   ..
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/500.html -->
+   59    <div class="dialog">
+
+/Users/martin/code/TheSleeplessOne/fetysh/test/controllers/user_controller_test.rb:
+    2
+    3  class UserControllerTest < ActionDispatch::IntegrationTest
+    4:   test "should get show" do
+    5      get user_show_url
+    6      assert_response :success
+
+582 matches across 69 files
+
+
+Searching 192 files for ""ul""
+
+0 matches
