@@ -32,6 +32,10 @@ ul {
 .head h1 {
   text-decoration: none;
 }
+.article {
+  margin: 0 auto;
+  width: 700px;
+}
 
 /* RELATED ARTICLES */
 .container-related-articles h1 {
@@ -143,3 +147,8 @@ ul {
   font-size: 48px;
   font-family: 'Norican', cursive;
 }
+.sticky-new a:hover {
+  color: black;
+  text-decoration: none;
+  }
+
