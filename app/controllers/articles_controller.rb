@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :destroy, :update]
+  # before_action :set_category, only: :create
 
   def index
     @articles = Article.all
@@ -20,8 +21,11 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user = current_user
+
+    @category = @article.category
+
     if @article.save
-      redirect_to article_path(@article), notice: 'The article was successfully created.'
+      redirect_to category_articles_path(@category), notice: 'The article was successfully created.'
     else
       render :new
     end
@@ -51,6 +55,10 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def set_category
+    @category = Category.find(params[:id])
   end
 end
 
