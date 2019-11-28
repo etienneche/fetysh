@@ -1,17 +1,17 @@
-<div class="bg-image pt-4">
-  <div class="col-4 offset-4" style="margin-top:100px">
-    <div class="card bg-white p-4">
-      <h2>Create your article</h2>
+<div class="bg-image">
+  <div id="box-simple-form" class="col-6">
+    <div id="simple-form-new" class="card bg-white">
+      <div class="typewriter">
+        <h2>Create your own article</h2>
+      </div>
         <div class="form-group">
           <%= simple_form_for @article do |f| %>
             <%= f.input   :title,
                           placeholder: "Article title",
                           label: false,
                           required: true %>
-            <%= f.input   :content,
-                          placeholder: "Content",
-                          label: false,
-                          required: true %>
+
+            <%= f.rich_text_area  :content %>
             <%= f.input   :category_id,
                           placeholder: "Article category",
                           :collection => @categories,
@@ -19,10 +19,10 @@
                           required: true %>
 
             <div class="form-actions btn-login">
-              <%= f.button :submit, "Create an Article" %>
+              <%= f.button :submit, "Create an Article",  id: "btn-new-form" %>
             </div>
           <% end %>
-        </div>
+      </div>
     </div>
   </div>
 </div>

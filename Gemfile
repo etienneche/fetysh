@@ -8,6 +8,8 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '6.0.1'
 gem 'redis'
+gem 'cloudinary', '~> 1.9.1'
+gem 'geocoder'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
@@ -18,7 +20,7 @@ gem 'webpacker'
 gem 'faker'
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.3.0y'
 end
 
 group :development, :test do
