@@ -10,7 +10,7 @@ puts 'Create user'
 User.create!(
   name:"Michael Jordan",
   password:"123456",
-  email:"test@test.com"
+  email:"t@t.com"
   )
 
 
@@ -44,6 +44,7 @@ puts 'Create 10 new articles'
     title: Faker::Restaurant.name,
     content: Faker::Lorem.paragraph,
     user_id: User.first.id,
+    source: 'O.school',
     category_id: Category.first.id,
     img_url: 'https://source.unsplash.com/featured/?sex'
     )
