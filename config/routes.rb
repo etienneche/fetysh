@@ -7,8 +7,8 @@ Rails.application.routes.draw do
       resources :reviews
       resources :reactions
     end
-    resources :events
   end
+  resources :events
   resources :articles, only: [:new, :create]
 
 end
