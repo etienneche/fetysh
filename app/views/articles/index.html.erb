@@ -11,9 +11,11 @@
       <p>
         <%= article.content %>
       </p>
+
       <p class="by-author">By
         <%= User.find(article.user.id).name %>
       </p>
+
       <%= link_to "Read more..",category_article_path(article.category,article) %>
 
     </div>
