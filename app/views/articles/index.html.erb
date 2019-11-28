@@ -1,7 +1,7 @@
 <h1> Title Index</h1>
 <div class="maxi-container">
   <% i = 1 %>
-  <% @articles.each do |article| %>
+  <% @articles.where("category_id = ?", params["category_id"]).each do |article| %>
   <div class="d-flex container-main-articles">
 
     <div class="head">
