@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :events
   end
   resources :articles, only: [:new, :create]
+
 end
