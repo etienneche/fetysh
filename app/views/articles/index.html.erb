@@ -17,16 +17,16 @@
       <%= link_to "Read more..",category_article_path(article.category,article) %>
 
     </div>
-<% if i.even? %>
-  <div class="image-article-right">
-  <% else %>
-    <div class="image-article">
-<% end %>
-     <img src="<%= article.img_url %>" alt="">
+    <% if i.even? %>
+    <div class="image-article-right">
+      <% else %>
+      <div class="image-article">
+        <% end %>
+        <img src="<%= article.img_url %>" alt="">
 
+      </div>
     </div>
-  </div>
-  <% i = i + 1 %>
+    <% i = i + 1 %>
     <% end %>
   </div>
 </div>
