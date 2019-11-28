@@ -2,20 +2,20 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="profile-card">
-        <img class="profile-img" src="/assets/avatar.jpg" alt="Avatar">
+        <img class="profile-img" src="/assets/profile-img.jpg" alt="Avatar">
         <br>
         <h3>First Name</h3>
         <button type="button" class="btn btn-sm btn-outline-secondary">Edit profile</button>
         <div>
 
-        <ul class="list-group list-group-horizontal">
-          <li class="">170 <span>Loved articles</span></li>
-          <li class="">200 <span>Want to try</span></li>
-          <li class="">320 <span>Saved articles</span></li>
-        </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="">170 <span>Loved articles</span></li>
+            <li class="">200 <span>Want to try</span></li>
+
+          </ul>
 
         </div>
-    </div>
+      </div>
 
 
     </div>
@@ -28,132 +28,141 @@
       <ul class="list-group list-group-horizontal">
 
         <li>
-        <div class="stats-circle">
-          <p>#orgasm<span>45%</span></p>
-        </div>
-        </li>
-
-<li>
-        <div class="stats-circle">
-          <p>#bondage<span>20%</span></p>
-        </div>
+          <div class="stats-circle">
+            <p>#orgasm<span>45%</span></p>
+          </div>
         </li>
 
         <li>
-        <div class="stats-circle">
-          <p>#oral<span>15%</span></p>
-        </div>
+          <div class="stats-circle">
+            <p>#bondage<span>20%</span></p>
+          </div>
         </li>
 
         <li>
-        <div class="stats-circle">
-          <p>#toys<span>10%</span></p>
-        </div>
+          <div class="stats-circle">
+            <p>#oral<span>15%</span></p>
+          </div>
         </li>
 
         <li>
-        <div class="stats-circle">
-          <p>#clit<span>10%</span></p>
-        </div>
+          <div class="stats-circle">
+            <p>#toys<span>10%</span></p>
+          </div>
         </li>
-</ul>
+
+        <li>
+          <div class="stats-circle">
+            <p>#clit<span>10%</span></p>
+          </div>
+        </li>
+      </ul>
 
 
+      <div class="reactions-history">
+        <div class="tabs">
+          <ul>
+            <li  id="link1"><p>Loved Articles<i class="fas fa-heart"></i></p></li>
+            <li  id="link2"><p>Want to try <i class="fas fa-bookmark"></i></p></li>
+          </ul>
 
-<div class="reactions-history">
-  <div class="tabs">
-    <p>Loved Articles <i class="fas fa-heart"></i></p>
-    <p>Want to try <i class="fas fa-bookmark"></i></p>
-  </div>
+        </div>
 
-  <div class="cards">
+        <div class="tab-content">
 
-<div class="card-product">
-  <img src="/assets/masturbation" />
-  <div class="card-product-infos">
-     <h6>#orgasm</h6>
-    <h2>Orgasm Troubleshooting</h2>
-    <p>Difficulty having orgasms? Coming too quickly? A lot of people....</p>
-  </div>
+          <div id="loved" data-tab-content>
+
+              <div class="card-product">
+                <img src="/assets/masturbation" />
+                <div class="card-product-infos">
+                 <h6>#orgasm</h6>
+                 <h2>Orgasm Troubleshooting</h2>
+                 <p>Difficulty having orgasms? Coming too quickly? A lot of people....</p>
+               </div>
+             </div>
+
+             <div class="card-product">
+              <img src="/assets/clit.png" />
+              <div class="card-product-infos">
+                <h6>#clit</h6>
+                <h2>Best Masturbation Techniques For Clitoral Orgasm</h2>
+                <p>Your guide to finding the clit, clit massage tips, and clitoral orgasm techniques.</p>
+              </div>
+            </div>
+
+            <div id="try" data-tab-content>
+
+              <p>This is the want to try articles</p>
+            </div>
+
+        </div>
+
+        <div class="cards">
+
+        <div class="card-product">
+          <img src="/assets/pussy.png" />
+          <div class="card-product-infos">
+           <h6>#oral</h6>
+           <h2>The Art Of Eating Pussy</h2>
+           <p>Eat pussy like you’d eat a gourmet meal to maximize pleasure for you and your lover.</p>
+         </div>
+       </div>
+
+       <div class="card-product">
+        <img src="/assets/blowjob.png" />
+        <div class="card-product-infos">
+          <h6>#blowjob</h6>
+          <h2>Three Secrets To An Incredible Blowjob</h2>
+          <p>The secrets have nothing to do with oral technique!</p>
+        </div>
+     </div>
+
+   </div>
+ </div>
+
 </div>
 
-<div class="card-product">
-  <img src="/assets/clit.png" />
-  <div class="card-product-infos">
-    <h6>#clit</h6>
-    <h2>Best Masturbation Techniques For Clitoral Orgasm</h2>
-    <p>Your guide to finding the clit, clit massage tips, and clitoral orgasm techniques.</p>
-  </div>
 </div>
-
-<div class="card-product">
-  <img src="/assets/pus.png" />
-  <div class="card-product-infos">
-     <h6>#oral</h6>
-    <h2>The Art Of Eating Pussy</h2>
-    <p>Eat pussy like you’d eat a gourmet meal to maximize pleasure for you and your lover.</p>
-  </div>
-</div>
-
-<div class="card-product">
-  <img src="/assets/oral.png" />
-  <div class="card-product-infos">
-     <h6>#blowjob</h6>
-    <h2>Three Secrets To An Incredible Blowjob</h2>
-    <p>The secrets have nothing to do with oral technique!</p>
-  </div>
-</div>
-
-  </div>
-</div>
-
-
-
-    </div>
-
-
-
-  </div>
 
 </div>
 
 
 
-  <% if false %>
+<% if false %>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+<%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+<div class="form-inputs">
+  <%= f.input :email, required: true, autofocus: true %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+  <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
   <% end %>
 
-  <h3>Cancel my account</h3>
+  <%= f.input :password,
+  hint: "leave it blank if you don't want to change it",
+  required: false,
+  input_html: { autocomplete: "new-password" } %>
+  <%= f.input :password_confirmation,
+  required: false,
+  input_html: { autocomplete: "new-password" } %>
+  <%= f.input :current_password,
+  hint: "we need your current password to confirm your changes",
+  required: true,
+  input_html: { autocomplete: "current-password" } %>
+</div>
 
-  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<div class="form-actions">
+  <%= f.button :submit, "Update" %>
+</div>
+<% end %>
 
-  <%= link_to "Back", :back %>
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>
 
 <% end %>

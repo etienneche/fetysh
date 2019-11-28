@@ -4,6 +4,7 @@ body {
 
 ul {
   list-style: none;
+  display: inline;
 }
 
 .profile-card{
@@ -20,6 +21,7 @@ ul {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .list-group {
@@ -57,21 +59,40 @@ ul {
 
 .tabs p {
   cursor: pointer;
-  display: inline;
+  display: inline-block;
   margin-right: 30px;
+
 }
 
 .tabs p:hover {
   color: #910722;
 }
 
+  .tabs p:first-child {
+    margin-left: 0;
+  }
+
 .tabs p:last-child {
   margin-right: 0;
+}
+
+#link1 {
+  display: inline-block;
+}
+
+#link2 {
+  display: inline-block;
 }
 
 .tabs p i {
   margin: 0 8px;
 }
+ [data-tab-content] {
+  display: none;
+ }
+ .active[data-tab-content] {
+  display: block;
+ }
 
 // Cards
 
