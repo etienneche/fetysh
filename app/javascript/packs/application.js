@@ -15,7 +15,7 @@ if (eventsindex){
   initMapbox();
 }
 
-const usersedit = document.getElementsByClassName('.users-edit')
+const useredit = document.getElementsByClassName('.registrations-edit')
 
 if (useredit){
   const tab1 = document.getElementById("link1")
