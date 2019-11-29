@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
     @article_wtt_count = @article.reactions.where(reaction: 'wtt').count
     @reviews = Review.where("article_id = ?", @article.id)
     @review = Review.new
+
   end
 
   def new
