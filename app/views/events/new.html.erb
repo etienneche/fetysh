@@ -1,0 +1,46 @@
+<div>
+  <div class="row">
+    <div class="col-6" style="height:100vh">
+      <div>
+        <div class="d-flex justify-content-center align-items-center flex-column" style="height:100vh;">
+          <h2 class="devise-heading">List Your Event</h2>
+          <div class="form-group">
+            <%= simple_form_for [@event] do |f| %>
+            <%= f.input   :title,
+            placeholder: "Event title",
+            label: false,
+            required: true %>
+            <%= f.input   :date,
+            placeholder: "Date",
+            label: false,
+            required: true %>
+            <%= f.input   :address,
+            placeholder: "Address",
+            label: false,
+            required: true %>
+            <%= f.input   :price,
+            placeholder: "Price",
+            label: false,
+            required: true %>
+
+            <%= f.rich_text_area  :description %>
+            <%= f.input   :category_id,
+            placeholder: "Event category",
+            :collection => @categories,
+            label: false,
+            required: true %>
+
+            <div class="form-actions btn-login">
+              <%= f.button :submit, "Create an Event",  id: "btn-new-form" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="new-event-bg"></div>
+    </div>
+  </div>
+</div>
+

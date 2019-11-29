@@ -1,9 +1,28 @@
-<div id="outer" class="d-flex justify-content-center align-items-center">
-  <div id="home-top-video" >
-    <%= video_tag "bg_video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute %>
-  </div>
-  <div>
-    <h2 class="landing-title">Join the sex revolution</h2>
-    <%= link_to "Login now", new_user_session_path, class:"btn btn-transp"%>
+<div>
+  <div class="row">
+    <div class="col-6" style="height:100vh">
+      <div class="landing-container">
+        <div class="d-flex justify-content-center align-items-center flex-column" style="height:100vh;">
+          <h1 class="landing-heading">Making Sex Great Again</h1>
+          <div class="landing-p">
+            <p>
+              We believe that great sex can be learned.
+              Sign up to learn state-of-the art sex knowledge and discover your <strong>fetysh</strong>.
+            </p>
+            <%= link_to "Login", new_user_session_path, class:"btn btn-lgn-landing" %>
+            <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-sign-landing" %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-6" style="height:100vh;">
+      <div id="outer">
+        <div class="video_contain" >
+          <%= video_tag "bg_video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+

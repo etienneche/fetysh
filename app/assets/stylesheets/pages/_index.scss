@@ -2,6 +2,7 @@
 @import "home";
 @import "new";
 @import "show";
+@import "review";
 
 // INDEX PAGE WITH ALL ARTICLES //
 
@@ -17,7 +18,6 @@ a {
 }
 h1 {
   font-size: 50px;
-  text-decoration: overline;
   display: flex;
   justify-content: center;
 }

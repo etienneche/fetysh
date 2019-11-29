@@ -1,12 +1,13 @@
+<% if user_signed_in? %>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
   <%= link_to "FETYSH", home_path, class:"navbar-brand"%>
   <div class="collapse navbar-collapse d-flex justify-content-end align-items-center" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Read</a>
+        <%= link_to "New Story", new_article_path, class:"nav-link" %>
       </li>
       <li class="nav-item">
-        <p><%= link_to "Write an article", new_article_path %></p>
+        <%= link_to "List Event", new_event_path, class:"nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to edit_user_registration_path do %>
@@ -16,3 +17,4 @@
     </ul>
   </div>
 </nav>
+<% end  %>

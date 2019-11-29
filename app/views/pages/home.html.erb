@@ -4,22 +4,23 @@
   </div>
 </div>
 
+<!-- ARTICLES -->
 <div class="full-section d-block p-4">
   <div class="container">
     <div class="section-landing">
       <h2 class="category-heading"><%= Category.first.name %></h2>
     </div>
 
-    <!-- ARTICLES -->
-
     <div class="stickyscroll">
-      <% @articles.where("category_id = ?", Category.first.id).sample(1).each do |article| %>
-      <%= link_to category_article_path(article.category_id, article.id) do %>
-      <div class="sticky-element align-items-center justify-content-center" style="background-image: url(<%= article.img_url %>)">
-        <h3 class="image-title-white"><%= article.title %></h3>
+      <div class="col">
+        <% @articles.where("category_id = ?", Category.first.id).sample(1).each do |article| %>
+        <%= link_to category_article_path(article.category_id, article.id) do %>
+        <div class="sticky-element align-items-center justify-content-center" style="background-image: url(<%= article.img_url %>)">
+          <h3 class="image-title-white"><%= article.title %></h3>
+        </div>
+        <% end  %>
+        <% end  %>
       </div>
-      <% end  %>
-      <% end  %>
       <div class="col">
         <% @articles.where("category_id = ?", Category.first.id).sample(2).each do |article| %>
         <%= link_to category_article_path(article.category_id, article.id) do %>
@@ -50,6 +51,7 @@
         <% end %>
       </div>
     </div>
+
 
     <!--         EVENTS -->
     <div class="section-landing mt-4">
@@ -64,13 +66,13 @@
           <div class="p-2">
             <p class="card-author-up">#<%= Category.find(event.category_id).name %></p>
             <h4 class="mb-4"><%= event.title %></h4>
-            <p class="card-author-up author-border"><%= User.find(event.user_id).name %></p>
+            <p class="card-author-up author-border"><%= event.address %></p>
           </div>
         </div>
         <% end %>
         <% end %>
       </div>
-      <h5><%= link_to "Show all experiences >","#", style:"text-decoration:none"%></h5>
+      <h5><%= link_to "Show all experiences >",events_path, style:"text-decoration:none"%></h5>
     </div>
   </div>
 </div>
