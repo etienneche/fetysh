@@ -8,12 +8,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // internal imports
 import { initMapbox } from '../plugins/init_mapbox';
 
+initMapbox();
 
-const eventsindex = document.getElementsByClassName('.events-index')
-
-if (eventsindex){
-  initMapbox();
-}
 
 // const useredit = document.getElementsByClassName('.registrations-edit')
 
