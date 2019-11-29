@@ -18,3 +18,28 @@
 .categories-nav-el:hover{
   color: rgba(191,17,6,0.6);
 }
+
+.navbar-custom {
+    background-color: white !important;
+    color: black;
+}
+
+.nav-link {
+  color: black !important;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.nav-link:hover {
+  font-weight: 400;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+
+.navbar-brand:hover{
+  color: black;
+}
