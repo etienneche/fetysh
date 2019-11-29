@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :destroy, :update]
-  # before_action :set_category, only: :create
+  before_action :set_category, only: [:show]
 
   def index
     @articles = Article.all
@@ -8,8 +8,10 @@ class ArticlesController < ApplicationController
 
   def show
     @user = current_user
-    @reviews = Review.all.where("article_id = ?", @article.id)
-
+    @article_love_count = @article.reactions.where(reaction: 'love').count
+    @article_save_count = @article.reactions.where(reaction: 'save').count
+    @article_wtt_count = @article.reactions.where(reaction: 'wtt').count
+    @reviews = Review.where("article_id = ?", @article.id)
     @review = Review.new
   end
 
@@ -58,7 +60,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_category
-    @category = Category.find(params[:id])
+    @category = Category.find(params[:category_id])
   end
 end
 

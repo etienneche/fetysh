@@ -5,9 +5,18 @@ Rails.application.routes.draw do
   resources :categories do
     resources :articles, except: [:new, :create] do
       resources :reviews
-      resources :reactions
+      member do
+         post 'love', to: 'reactions#love'
+         post 'wtt', to: 'reactions#wtt'
+         post 'save', to: 'reactions#save'
+       end
     end
   end
   resources :events
   resources :articles, only: [:new, :create]
 end
+
+
+
+# post article/53/love
+# post article/53/wtt
