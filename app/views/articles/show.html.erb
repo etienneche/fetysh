@@ -42,10 +42,14 @@
 </div>
 <!-- REVIEWS -->
 <div class="btn btn-review">
-  <%= link_to "Add new Review", new_category_article_review_path(:article_id, :category_id) %>
+  <%= link_to "Add new Review", new_category_article_review_path(params[:category_id],params[:id]) %>
+
 </div>
-
-
+<div class="d-flex rev">
+  <% @article.reviews.each do |review| %>
+  <p><%= review.content %></p>
+  <% end %>
+</div>
 <!-- ARTICLES RELATED -->
 
 

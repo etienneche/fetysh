@@ -8,9 +8,9 @@ class ArticlesController < ApplicationController
 
   def show
     @user = current_user
-    @reviews = Review.all.where("article_id = ?", @article.id)
 
     @review = Review.new
+
   end
 
   def new
