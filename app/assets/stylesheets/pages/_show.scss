@@ -29,9 +29,10 @@
 .article {
   margin: 0 auto;
   width: 700px;
-
 }
-
+.head:hover {
+  border:1px solid #91072240;
+}
 
 /* RELATED ARTICLES */
 .container-related-articles h1 {
