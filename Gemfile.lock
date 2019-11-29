@@ -65,6 +65,10 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
+    carrierwave (1.3.1)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     cloudinary (1.9.1)
       aws_cf_signer
       rest-client
@@ -90,7 +94,6 @@ GEM
     ffi (1.11.3)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
-    friendly_id (4.0.10)
     geocoder (1.5.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -230,12 +233,12 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  carrierwave (~> 1.2)
   cloudinary (~> 1.9.1)
   devise
   dotenv-rails
   faker
   font-awesome-sass (~> 5.6.1)
-  friendly_id (~> 4.0.0.beta8)
   geocoder
   jbuilder (~> 2.0)
   listen (~> 3.0.5)

@@ -4,6 +4,7 @@ class Article < ApplicationRecord
   has_many :reactions
   has_many :reviews
   has_rich_text :content
+  mount_uploader :photo, PhotoUploader
 
   validates :title, :content, presence: true
 end
