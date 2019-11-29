@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/home', to: 'pages#home', as: "home"
   resources :categories do
     resources :articles, except: [:new, :create] do
-      resources :reviews
+      resources :reviews, only: [:new, :create]
       resources :reactions
     end
   end
