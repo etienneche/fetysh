@@ -22,52 +22,52 @@
 
       <div class="taste-profile"><h4>My Taste Profile</h4>
 
-      <ul class="list-group list-group-horizontal list-no-bullets">
+        <ul class="list-group list-group-horizontal list-no-bullets">
 
-        <li>
-          <div class="stats-circle">
-            <p>#orgasm<span>45%</span></p>
+          <li>
+            <div class="stats-circle">
+              <p>#orgasm<span>45%</span></p>
+            </div>
+          </li>
+
+          <li>
+            <div class="stats-circle">
+              <p>#bondage<span>20%</span></p>
+            </div>
+          </li>
+
+          <li>
+            <div class="stats-circle">
+              <p>#oral<span>15%</span></p>
+            </div>
+          </li>
+
+          <li>
+            <div class="stats-circle">
+              <p>#toys<span>10%</span></p>
+            </div>
+          </li>
+
+          <li>
+            <div class="stats-circle">
+              <p>#clit<span>10%</span></p>
+            </div>
+          </li>
+        </ul>
+
+
+        <div class="reactions-history">
+          <div class="tabs">
+            <ul>
+              <li  id="link1"><p>Loved Articles<i class="fas fa-heart"></i></p></li>
+              <li  id="link2"><p>Want to try <i class="fas fa-bookmark"></i></p></li>
+            </ul>
+
           </div>
-        </li>
 
-        <li>
-          <div class="stats-circle">
-            <p>#bondage<span>20%</span></p>
-          </div>
-        </li>
+          <div class="tab-content">
 
-        <li>
-          <div class="stats-circle">
-            <p>#oral<span>15%</span></p>
-          </div>
-        </li>
-
-        <li>
-          <div class="stats-circle">
-            <p>#toys<span>10%</span></p>
-          </div>
-        </li>
-
-        <li>
-          <div class="stats-circle">
-            <p>#clit<span>10%</span></p>
-          </div>
-        </li>
-      </ul>
-
-
-      <div class="reactions-history">
-        <div class="tabs">
-          <ul>
-            <li  id="link1"><p>Loved Articles<i class="fas fa-heart"></i></p></li>
-            <li  id="link2"><p>Want to try <i class="fas fa-bookmark"></i></p></li>
-          </ul>
-
-        </div>
-
-        <div class="tab-content">
-
-          <div id="loved" data-tab-content>
+            <div id="loved" data-tab-content>
 
               <div class="card-product">
                 <img src="/assets/masturbation" />
@@ -92,34 +92,34 @@
               <p>This is the want to try articles</p>
             </div>
 
+          </div>
+
+          <div class="cards">
+
+            <div class="card-product">
+              <img src="/assets/pussy.png" />
+              <div class="card-product-infos">
+               <h6>#oral</h6>
+               <h2>The Art Of Eating Pussy</h2>
+               <p>Eat pussy like you’d eat a gourmet meal to maximize pleasure for you and your lover.</p>
+             </div>
+           </div>
+
+           <div class="card-product">
+            <img src="/assets/blowjob.png" />
+            <div class="card-product-infos">
+              <h6>#blowjob</h6>
+              <h2>Three Secrets To An Incredible Blowjob</h2>
+              <p>The secrets have nothing to do with oral technique!</p>
+            </div>
+          </div>
+
         </div>
+      </div>
 
-        <div class="cards">
+    </div>
 
-        <div class="card-product">
-          <img src="/assets/pussy.png" />
-          <div class="card-product-infos">
-           <h6>#oral</h6>
-           <h2>The Art Of Eating Pussy</h2>
-           <p>Eat pussy like you’d eat a gourmet meal to maximize pleasure for you and your lover.</p>
-         </div>
-       </div>
-
-       <div class="card-product">
-        <img src="/assets/blowjob.png" />
-        <div class="card-product-infos">
-          <h6>#blowjob</h6>
-          <h2>Three Secrets To An Incredible Blowjob</h2>
-          <p>The secrets have nothing to do with oral technique!</p>
-        </div>
-     </div>
-
-   </div>
- </div>
-
-</div>
-
-</div>
+  </div>
 
 </div>
 </div>
@@ -164,3 +164,19 @@
 <%= link_to "Back", :back %>
 
 <% end %>
+
+<script>
+  console.log("hey test")
+  const tab1 = document.getElementById("link1")
+  const tab2 = document.getElementById("link2")
+  tab1.addEventListener('click', () => {
+    document.getElementById("try").style.display = "none"
+    document.getElementById("loved").style.display = "block"
+  })
+
+  tab2.addEventListener('click', () => {
+// evento de clicar Want to Try - id = test2
+document.getElementById("loved").style.display = "none"
+document.getElementById("try").style.display = "block"
+})
+</script>
