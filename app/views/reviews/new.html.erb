@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Add a new Review</h1>
+
+  <%= simple_form_for [@category, @article, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.submit "add a review", class: "btn btn-primary" %>
+  <% end %>
+
+
+</div>
+

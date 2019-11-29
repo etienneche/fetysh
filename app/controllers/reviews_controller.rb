@@ -1,27 +1,32 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:create]
+  before_action :set_article
+
+
+  def new
+    @review = Review.new
+    @review.article = @article
+    @category = Category.find(params[:category_id])
+  end
 
   def create
     @review = Review.new(review_params)
     @review.user = current_user
     @review.article = @article
-
+    @category = Category.find(params[:category_id])
     if @review.save
-      redirect_to article_path(@article)
+      redirect_to category_articles_path
     else
-      redirect_to article_path(@article)
+      redirect_to articles_path(@article)
       flash[:alert] = "Minimum of 10 characteres."
     end
   end
 
-  def new
-    @review = Review.new
-  end
+
 
   private
 
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:content, :article_id, :category_id)
   end
 
   def set_review
@@ -29,8 +34,11 @@ class ReviewsController < ApplicationController
   end
 
   def set_article
-    @article = Article.find(params[:id])
+    @article = Article.find(params[:article_id])
   end
+  # def set_category
+  #   @category = Category.find(params[:category_id])
+  # end
 end
 
 

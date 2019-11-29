@@ -6,7 +6,7 @@
       <h1><%= @article.title %></h1>
       <h4>By <%= User.find(@article.user_id).name %></h4>
       <h6>#<%= Category.find(@article.category.id).name %></h6>
-
+      <p></p>
 
      <!-- <ul class="list-group-show list-group-horizontal list-no-bullets">
         <li class=""> 170 <span>Loved articles</span> </li>
@@ -39,9 +39,15 @@
       Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.
     </p>
   </div>
-
-  <!-- ARTICLES RELATED -->
 </div>
+<!-- REVIEWS -->
+<div class="btn btn-review">
+  <%= link_to "Add new Review", new_category_article_review_path(:article_id, :category_id) %>
+</div>
+
+
+<!-- ARTICLES RELATED -->
+
 
 <div class="container-related-articles border-top">
   <div class="container">
@@ -77,4 +83,4 @@
     </div>
   </div>
 </div>
-</div>
+

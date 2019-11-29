@@ -10,13 +10,14 @@
         placeholder: "Article title",
         label: false,
         required: true %>
-
         <%= f.rich_text_area  :content %>
         <%= f.input   :category_id,
         placeholder: "Article category",
         :collection => @categories,
         label: false,
         required: true %>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
 
         <div class="form-actions btn-login">
           <%= f.button :submit, "Create an Article",  id: "btn-new-form" %>
