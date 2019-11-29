@@ -40,17 +40,10 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.stickyscroll{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  height: 1000px;
-}
 
 .sticky-element {
-  position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 0px;
   height: 90vh;
   width: 500px;
   background-size: cover;

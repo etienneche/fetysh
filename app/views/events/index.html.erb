@@ -11,7 +11,7 @@
           <p class="card-author-up mb-1">#<%= Category.find(event.category_id).name %></p>
         </div>
         <h4> <%= link_to event.title, event_path(event.id), style:"text-decoration:none"%></h4>
-        <p class="card-author-up"><%= event.description %></p>
+        <p class="event-description"><%= event.description.split[0..30].join(" ") %>...</p>
       </div>
     </div>
     <% end %>

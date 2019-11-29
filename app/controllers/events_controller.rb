@@ -8,7 +8,8 @@ class EventsController < ApplicationController
       {
         lat: event.latitude,
         lng: event.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { event: event })      }
+        infoWindow: render_to_string(partial: "info_window", locals: { event: event })
+      }
     end
   end
 
@@ -17,9 +18,19 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @categories = Category.all
   end
 
   def create
+    @event = Event.new(event_params)
+    @event.user = current_user
+    @category = @article.category
+
+    if @event.save
+      redirect_to eventspath, notice: 'The event was successfully created.'
+    else
+      render :new
+    end
   end
 
   def edit
@@ -36,5 +47,9 @@ class EventsController < ApplicationController
 
   def set_event
     @event = Event.find(params[:id])
+  end
+
+  def event_params
+    params.require(:event).permit(:title, :date, :address, :price, :img_url, :description, :category_id)
   end
 end
