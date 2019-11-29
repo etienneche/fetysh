@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
   <%= link_to "FETYSH", home_path, class:"navbar-brand"%>
   <div class="collapse navbar-collapse d-flex justify-content-end align-items-center" id="navbarNavDropdown">
@@ -16,3 +17,4 @@
     </ul>
   </div>
 </nav>
+<% end  %>

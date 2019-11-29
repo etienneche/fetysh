@@ -1,7 +1,6 @@
 #outer {
   width: 100%;
   display: block;
-  text-align: center;
   position: relative;
   overflow: hidden;
   min-height: 100vh;
@@ -24,7 +23,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   z-index: -1;
 }
 
@@ -165,3 +164,13 @@
 .event-section > a {
   text-decoration: none;
 }
+
+
+.video_contain {
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+
+
