@@ -1,5 +1,7 @@
+<% if user_signed_in? %>
 <div class="d-flex justify-content-between align-items-center pl-4 pr-4 categories-nav">
   <% Category.all.first(8).each do |category|  %>
   <%= link_to category.name, category_articles_path(category), class:"categories-nav-el", style:"text-decoration: none;" %>
   <% end  %>
 </div>
+<% end  %>

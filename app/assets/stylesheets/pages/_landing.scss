@@ -1,0 +1,46 @@
+.landing-container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.landing-p {
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.landing-heading {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.btn-lgn-landing {
+  margin-top: 10px;
+  border: 1px solid #910722;
+  background-color: #910722;
+  color: white;
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.btn-lgn-landing:hover {
+  background-color: #520414;
+  color: white;
+  border: 1px solid #520414;
+}
+
+.btn-sign-landing {
+  margin-top: 10px;
+  border: 1px solid #910722;
+  color: #910722;
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.btn-sign-landing:hover{
+  background-color: #520414;
+  color: white;
+  border: 1px solid #520414;
+}
