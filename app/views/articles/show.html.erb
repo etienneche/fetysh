@@ -8,17 +8,18 @@
       <h6>#<%= Category.find(@article.category.id).name %></h6>
 
 
-      <ul class="list-group-show list-group-horizontal">
-        <li class="">170 <span>Loved articles</span></li>
+     <!-- <ul class="list-group-show list-group-horizontal list-no-bullets">
+        <li class=""> 170 <span>Loved articles</span> </li>
         <li class="">200 <span>Want to try</span></li>
-        <li class="">320 <span>Saved articles</span></li>
       </ul>
+-->
+
+
       <div class="tabs">
-        <p>Loved Articles <i class="fas fa-heart"></i></p>
-        <p>Want to try <i class="fas fa-bookmark"></i></p>
+        <p id="clickme">Love article: 0<i class="fas fa-heart"></i></p>
+        <p id="clickme2">Want to try: 0<i class="fas fa-bookmark"></i></p>
       </div>
     </div>
-
 
     <div class="image">
       <div class="box-red">
