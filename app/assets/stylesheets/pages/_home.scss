@@ -6,26 +6,6 @@
   min-height: 100vh;
 }
 
-#home-top-video:before {
-  content:"";
-  position: absolute;
-  top:0;
-  right:0;
-  left:0;
-  bottom:0;
-  z-index:1;
-  background:rgba(191,17,6,0.6);
-  filter: contrast(1.5);
-}
-
-#home-top-video {
-  top: 0%;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: -1;
-}
 
 #home-text {
   position: absolute;
@@ -172,5 +152,3 @@
     width: 200%;
     height: 200%;
 }
-
-
