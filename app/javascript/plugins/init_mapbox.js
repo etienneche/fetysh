@@ -6,15 +6,15 @@ const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
+    style: 'mapbox://styles/mapbox/dark-v10'
   });
 };
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .addTo(map);
+    .setLngLat([ marker.lng, marker.lat ])
+    .addTo(map);
   });
 };
 

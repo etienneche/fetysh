@@ -59,6 +59,20 @@
     </div>
     <div class="row section-pad">
       <div class="col-5">
+        <h2 class="weight-600">Where you'll be</h2>
+      </div>
+      <div class="col-7" style="height:400px;">
+        <div
+        id="map"
+        style="width: 100%;
+        height: 100%;"
+        data-markers="<%= @marker.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        ></div>
+      </div>
+    </div>
+    <div class="row section-pad">
+      <div class="col-5">
         <h2 class="weight-600">Reviews</h2>
       </div>
       <div class="col-7">

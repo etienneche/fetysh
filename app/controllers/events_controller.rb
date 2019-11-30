@@ -14,6 +14,10 @@ class EventsController < ApplicationController
   end
 
   def show
+    @markers = {
+      lat: @event.latitude,
+      lng: @event.longitude
+    }
   end
 
   def new
