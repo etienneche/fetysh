@@ -58,18 +58,38 @@ Category.create!(
 
 puts 'Done'
 
-puts 'Create 10 new articles'
+puts 'Create 2 real articles'
 
-10.times do
-  Article.create!(
-    title: Faker::Restaurant.name,
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ipsam, ipsa modi, asperiores est quam aliquam pariatur ut laudantium error velit rem ipsum ullam enim, commodi voluptatibus, illum cupiditate magnam.",
-    user_id: User.first.id,
-    source: 'O.school',
-    category_id: Category.first.id,
-    img_url: 'https://source.unsplash.com/featured/?sex'
-    )
-end
+Article.create!(
+  title: 'Best Masturbation Techniques For Clitoral Orgasm',
+  content: 'Masturbation techniques Furniture-humping, teddy bear-humping, even hanging from door knobs and door-humping —vulva-owners often get creative at a young age with masturbation, since portrayals of vulva masturbation are so sorely lacking in U.S. media. There is a vast variety of methods when it comes to masturbating the vulva!',
+  user_id: User.first.id,
+  source: 'O.school',
+  category_id: Category.find_by(name: "Masturbation").id,
+  img_url: 'https://assets-global.website-files.com/5b77332fd79b5242e29c647b/5cf5bba35b65b6d6d2995fc8_thumb_art_bestMasturbationTechniquesForClitoralOrgasm.jpg'
+  )
+
+Article.create!(
+  title: 'Is Masturbation Healthy?',
+  content: 'When it comes to masturbation, there are a ton of prominent, shame-laced myths that simply refuse to fade away. Not only are its benefits not well-understood, self-pleasure is often still the punchline of many jokes. The reality, however, is that masturbation is not only healthy, but an ideal way to get in touch with yourself and your sexual desires.',
+  user_id: User.first.id,
+  source: 'O.school',
+  category_id: Category.find_by(name: "Masturbation").id,
+  img_url: 'https://assets-global.website-files.com/5b77332fd79b5242e29c647b/5cf5bbc0c17093cf671ca2d5_thumb_art_isMasturbationHealthy.jpg'
+  )
+
+# puts 'Create 10 new articles'
+
+# 10.times do
+#   Article.create!(
+#     title: Faker::Restaurant.name,
+#     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ipsam, ipsa modi, asperiores est quam aliquam pariatur ut laudantium error velit rem ipsum ullam enim, commodi voluptatibus, illum cupiditate magnam.",
+#     user_id: User.first.id,
+#     source: 'O.school',
+#     category_id: Category.first.id,
+#     img_url: 'https://source.unsplash.com/featured/?sex'
+#     )
+# end
 
 puts 'Done'
 

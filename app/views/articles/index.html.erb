@@ -1,38 +1,30 @@
-<div class="pt-4">
-  <h2 class="category-head"><%= Category.find(params["category_id"]).name %></h2>
-  <div class="maxi-container">
-    <% i = 1 %>
-    <% @articles.where("category_id = ?", params["category_id"]).each do |article| %>
-    <div class="d-flex container-main-articles">
-
-      <div class="head">
-
-        <h2><%= article.title %></h2>
-
-        <h6><%= article.category.name %></h6>
-
-        <p>
-          blaaaaaaaaaaaaaaaaa
-        </p>
-
-        <p class="by-author">By
-          <%= User.find(article.user.id).name %>
-        </p>
-
-        <%= link_to "Read more..",category_article_path(article.category,article) %>
-
-      </div>
-      <% if i.even? %>
-      <div class="image-article-right">
-        <% else %>
-        <div class="image-article">
-          <% end %>
-          <img src="<%= article.img_url %>" alt="">
-
+<div class="container">
+  <div class="pt-4">
+    <h2 class="category-head"><%= Category.find(params["category_id"]).name %></h2>
+    <div class="maxi-container">
+      <% i = 1 %>
+      <% @articles.where("category_id = ?", params["category_id"]).each do |article| %>
+      <%= link_to category_article_path(article.category,article), class:"card-clean" do %>
+      <div class="d-flex container-main-articles">
+        <div class="head">
+          <h2><%= article.title %></h2>
+          <p class="card-author-up red-color">#<%= article.category.name %></p>
+          <p> <%= article.content.split[0..15].join(" ") %>... </p>
+          <p class="by-author">By <%= article.source %></p>
+          <p class="red-color"> Read more...</p>
         </div>
+        <% if i.even? %>
+        <div class="image-article-right">
+          <% else %>
+          <div class="image-article">
+            <% end %>
+            <img src="<%= article.img_url %>" alt="">
+          </div>
+        </div>
+        <% i = i + 1 %>
+        <% end %>
+        <% end %>
       </div>
-      <% i = i + 1 %>
-      <% end %>
     </div>
   </div>
 </div>
