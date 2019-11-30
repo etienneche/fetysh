@@ -57,7 +57,7 @@
         <% @events.sample(5).each do |event|%>
         <%= link_to event do %>
         <div class="event-card">
-          <div class="card-bg" style="background-image: url(<%= event.img_url %>);"></div>
+          <div class="card-bg" style="background-image: url(<%= event.photo %>);"></div>
           <div class="p-2">
             <p class="card-author-up">#<%= Category.find(event.category_id).name %></p>
             <h4 class="mb-4"><%= event.title %></h4>

@@ -25,8 +25,6 @@ window.addEventListener("scroll", function(event) {
 }, false);
 
 
-
-
 // const useredit = document.getElementsByClassName('.registrations-edit')
 
 // if (useredit){

@@ -4,7 +4,7 @@
     <% @events.each do |event| %>
     <div class="card-show border-top pt-3">
       <div class="img-card">
-        <%= cl_image_tag event.img_url, crop: :fill, class:"img-event" %>
+        <%= cl_image_tag event.photo, crop: :fill, class:"img-event" %>
       </div>
       <div class="card-body">
         <div class="card-tag d-flex justify-content-between">
