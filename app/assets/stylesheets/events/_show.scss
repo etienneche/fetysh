@@ -67,6 +67,19 @@
   }
 }
 
+.btn-book {
+  background-color: #910722;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 22px;
+  &:hover {
+    background-color: white;
+    color: #910722;
+    border: 1px solid #910722;
+  }
+}
+
 .font-14{
   color: #484848;
   font-size: 14px;
@@ -84,3 +97,24 @@
 .light-grey{
   color: #484848;
 }
+
+.sticky-bar{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px 3px !important;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+// /* these are the css code that add extra effects*/
+// .sticky-bar{
+//   opacity: 0;
+//   transition: opacity 0.3s linear;
+// }
+
+// .highlight{
+//   opacity: 1;
+// }
