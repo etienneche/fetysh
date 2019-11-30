@@ -25,7 +25,7 @@
 }
 
 .nav-link {
-  color: black !important;
+  color: black;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -44,3 +44,26 @@
   color: black;
 }
 
+
+// Hide navbar on landing when logged in
+.pages-landing > .navbar {
+ display: none !important;
+}
+
+.pages-landing > .categories-nav {
+ display: none !important;
+}
+
+.events-show > .navbar {
+  background-color: black !important;
+  & > .collapse .navbar-nav .nav-item a.nav-link {
+    color: white !important;
+  }
+}
+
+.events-show > .categories-nav {
+  background-color: black !important;
+  & > a.categories-nav-el {
+    color: white !important;
+  }
+}
