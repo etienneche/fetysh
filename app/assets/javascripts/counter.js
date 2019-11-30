@@ -14,9 +14,9 @@ button2.onclick = function() {
   // button2.innerHTML = "Want to try: " + count;
 };
 
-var button3 = document.getElementById("salva"),
-  count = 0;
-button3.onclick = function() {
-  count += 1;
-  //button2.innerHTML = "Saved to read later: " + count;
-};
+// var button3 = document.getElementById("salva"),
+//   count = 0;
+// button3.onclick = function() {
+//   count += 1;
+//   //button2.innerHTML = "Saved to read later: " + count;
+// };
