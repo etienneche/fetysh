@@ -127,7 +127,7 @@ Event.create!(
   Our political awareness efforts aren’t about praising EU as an institution, but to honor the idea of a united continent. We will move forward to propose a new form of UNION that will create a global identity, in opposition to nationalism and borders. At PORN UNION, you’ll be part of a symbolic fight against everything that separates us. We believe in the exploration of one’s uniqueness and giving an opportunity to feel what unification has to offer. We encourage you to present your differences and experience others shamelessly. Find the same kinks and discover new ones. Come, open your borders and show that we are stronger than ever!",
   user_id: User.find_by(name: "Pornceptual").id,
   category_id: Category.find_by(name: "Sex Positive").id,
-  img_url: 'https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
+  photo: 'https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
   price: rand(40..200)
   )
 
@@ -140,7 +140,7 @@ Event.create!(
   And we are all about party-cipation! The event is a fundraiser for the s+ community europe project (more infos sex-positive.com).",
   user_id: User.find_by(name: "Insomnia Berlin").id,
   category_id: Category.find_by(name: "Sex Positive").id,
-  img_url: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000057588.jpg',
+  photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000057588.jpg',
   price: rand(40..200)
   )
 
@@ -155,7 +155,7 @@ Event.create!(
   A hot idea being used by a horny couple for their dirty fantasy ... isn't it?",
   user_id: User.find_by(name: "Insomnia Berlin").id,
   category_id: Category.find_by(name: "Fetish").id,
-  img_url: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000042860.jpg',
+  photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000042860.jpg',
   price: rand(40..200)
   )
 
@@ -166,7 +166,7 @@ Event.create!(
   description: "During the Tantra Massage training you learn how to express respect and appreciation towards a person as a sexual being. For this you need to be willing to question your own behavioural patterns. We will discuss in great detail what Tantra means and how we can bring to life the tantric teachings in a massage. You will learn about the study of auras. With intensive exercises we increase our physical awareness.",
   user_id: User.first.id,
   category_id: Category.find_by(name: "Tantra").id,
-  img_url: 'https://images.unsplash.com/photo-1545183322-6da710083410?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
+  photo: 'https://images.unsplash.com/photo-1545183322-6da710083410?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
   price: rand(40..200)
   )
 
@@ -180,7 +180,7 @@ Event.create!(
   Our club of the nymphomaniacs is always haunted by such desires, which is why the most naughty of the ladies are especially looking forward to this date. They are craving for squirty games.",
   user_id: User.find_by(name: "Insomnia Berlin").id,
   category_id: Category.find_by(name: "Fetish").id,
-  img_url: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000054573.jpg',
+  photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000054573.jpg',
   price: rand(40..200)
   )
 
@@ -193,7 +193,7 @@ Event.create!(
   Hear from Kitty May, Director of Education at ‘Other Nature,’ an inclusive sex shop in Berlin, about the ‘sex-ed for grown-ups’ workshops they offer, such as ‘Demystifying orgasm,’ as well as some of the common questions she gets in this unique line of work. Kitty is also a practicing counsellor with a special focus on sexuality.",
   user_id: User.find_by(name: "Factory Berlin").id,
   category_id: Category.find_by(name: "Sex Ed").id,
-  img_url: 'https://images.unsplash.com/photo-1498843053639-170ff2122f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
+  photo: 'https://images.unsplash.com/photo-1498843053639-170ff2122f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
   price: rand(40..200)
   )
 
@@ -209,7 +209,7 @@ Event.create!(
   There is no nudity or sexual activities in this Tantra workshop. The workshop is suitable for singles, couples, multi orgasmic beings and for people that have never experienced any orgasm.",
   user_id: User.first.id,
   category_id: Category.find_by(name: "Tantra").id,
-  img_url: 'https://scontent.flis8-2.fna.fbcdn.net/v/t31.0-8/14362665_639659282875092_7117318554322478844_o.jpg?_nc_cat=100&_nc_ohc=uGYNN07uDZcAQk0_EJGrOMcqJTrXDcM2VO7sxEA5vzboMkHGysM5GURtg&_nc_ht=scontent.flis8-2.fna&oh=375b3ca497287c69fdafb4c4b01adde4&oe=5E427DE6',
+  photo: 'https://scontent.flis8-2.fna.fbcdn.net/v/t31.0-8/14362665_639659282875092_7117318554322478844_o.jpg?_nc_cat=100&_nc_ohc=uGYNN07uDZcAQk0_EJGrOMcqJTrXDcM2VO7sxEA5vzboMkHGysM5GURtg&_nc_ht=scontent.flis8-2.fna&oh=375b3ca497287c69fdafb4c4b01adde4&oe=5E427DE6',
   price: rand(40..200)
   )
 

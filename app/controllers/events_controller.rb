@@ -28,10 +28,9 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user = current_user
-    @category = @article.category
 
     if @event.save
-      redirect_to eventspath, notice: 'The event was successfully created.'
+      redirect_to events_path, notice: 'The event was successfully created.'
     else
       render :new
     end
@@ -54,6 +53,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :date, :address, :price, :img_url, :description, :category_id)
+    params.require(:event).permit(:title, :date, :address, :price, :photo, :description, :category_id)
   end
 end
