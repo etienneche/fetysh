@@ -2,7 +2,7 @@
 <div class="container">
   <div class="d-flex container-header">
 
-    <div class="head">
+    <div class="head head-card-margin" >
       <h6>#<%= @category.name %></h6>
       <h1><%= @article.title %></h1>
       <h4>By <%= @article.user.name %></h4>
@@ -26,12 +26,12 @@
 
         <% end %>
 
-        <%= (@article_save_count) %>
-        <% color = current_user.saved?(@article) ? "red" : "gray" %>
+        <%#= (@article_save_count) %>
+        <%# color = current_user.saved?(@article) ? "red" : "gray" %>
 
-        <%= link_to save_category_article_path(@category, @article), method: :post do %>
-          <i class="fas fa-save" id="salva"></i>
-        <% end %>
+        <%#= link_to save_category_article_path(@category, @article), method: :post do %>
+          <!-- <i class="fas fa-save" id="salva"></i> -->
+        <%# end %>
       </div>
     </div>
 

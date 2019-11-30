@@ -18,21 +18,30 @@
   opacity: 0.8;
   margin: -20px 0 0 155px;
 }
+
+.head-card-margin {
+  margin-left: 320px !important;
+}
 .head h4 {
-  border-top: 6px solid #D80700;
+  border-top: 5px solid #D80700;
   display: inline;
+  padding-top: 5px;
+  font-size: 1.2rem;
 
 }
 .head h1 {
   text-decoration: none;
   margin: 24px 0 !important;
-  font-size: 3.0rem;
+  font-size: 3.5rem;
+  font-weight: bold;
 
 }
 .head h6 {
   color:  #D80700;
   font-size: 1.0rem;
   margin: 0 0 8px;
+  text-transform: uppercase;
+
 }
 
 .head .tabs {
