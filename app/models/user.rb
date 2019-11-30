@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :reactions
   has_many :articles
   has_many :reviews
+  attribute :description, :text, default: 'This user has not yet provided a description.'
+  attribute :photo, :string, default: 'https://api.adorable.io/avatars/285/abott@adorable.png'
 
   def loved?(article)
     reactions.where(article: article, reaction: 'love').any?
