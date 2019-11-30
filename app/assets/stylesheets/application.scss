@@ -20,12 +20,16 @@
 @import "pages/landing";
 @import "pages/home";
 
-@import "events/index";
-@import "events/new";
 
-
+// ARTICLES
 @import "articles/show";
 @import "articles/index";
+
+
+// EVENTS
+@import "events/index";
+@import "events/new";
+@import "events/show";
 
 
 

@@ -1,1 +1,104 @@
-<h1>This is the event show page.</h1>
+<div class="black-bg">
+  <div class="container">
+    <p class="pt-4"> <%= @event.address %> / <%= @event.category.name %></p>
+    <img class="event-img-show" src=<%= @event.img_url %>>
+    <div class="row">
+      <div class="col-5">
+        <p class="upcase pt-4"><%= @event.category.name %></p>
+        <h2> <%= @event.title %></h2>
+        <p><%= @event.address %></p>
+        <p><strong>4.97</strong> <i class="fas fa-star"></i> (366)</p>
+        <%= link_to @event.category.name, events_path, class:"btn btn-event" %>
+      </div>
+      <div class="col-7">
+        <div class="d-flex justify-content-around pt-4 info-grey">
+          <div>
+            <p><i class="fas fa-clock"></i></p>
+            <p class="mb-0">Duration</p>
+            <p class="text-white"><strong>3 hours</strong></p>
+          </div>
+          <div>
+            <p><i class="fas fa-users"></i></p>
+            <p class="mb-0">Participants</p>
+            <p class="text-white"><strong>25</strong></p>
+          </div>
+          <div>
+            <p><i class="fas fa-comments"></i></p>
+            <p class="mb-0">Hosted In</p>
+            <p class="text-white"><strong>English</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class ="text-grey">
+  <div class="container">
+    <div class="row section-pad">
+      <div class="col-5">
+        <h2 class="weight-600">What you'll do</h2>
+      </div>
+      <div class="col-7">
+        <p class="font-18">
+          <%= @event.description %>
+        </p>
+      </div>
+    </div>
+    <div class="row section-pad">
+      <div class="col-5">
+        <h2 class="weight-600">Your host</h2>
+      </div>
+      <div class="col-7">
+        <div class="d-flex align-items-center">
+          <img class= "avatar-xl" src=<%= @event.user.photo %>>
+          <h3 class="font-24 weight-600 ml-4"><%= @event.user.name %></h3>
+        </div>
+        <p class="font-18 pt-4"><%= @event.user.description %></p>
+        <a href="" class="btn btn-red">Contact host</a>
+      </div>
+    </div>
+    <div class="row section-pad">
+      <div class="col-5">
+        <h2 class="weight-600">Reviews</h2>
+      </div>
+      <div class="col-7">
+        <div class="border-bottom">
+          <div class="d-flex">
+            <img class= "avatar" src=<%= @event.user.photo %>>
+            <div class="pl-4">
+              <p class="font-14 m-0"><span class="font-16">Name</span> · November 2019</p>
+              <p class="red"><i class="fas fa-star"></i></p>
+            </div>
+          </div>
+          <p class="font-18 light-grey">
+            Phelipe was amazing. We highly recommend him for anyone looking to capture their time in Lisbon. He took us to some beautiful spots that we would not have discovered on our own as tourists.
+          </p>
+        </div>
+        <div class="border-bottom mt-4">
+          <div class="d-flex">
+            <img class= "avatar" src=<%= @event.user.photo %>>
+            <div class="pl-4">
+              <p class="font-14 m-0"><span class="font-16">Name</span> · November 2019</p>
+              <p class="red"><i class="fas fa-star"></i></p>
+            </div>
+          </div>
+          <p class="font-18 light-grey">
+            Phelipe was amazing. We highly recommend him for anyone looking to capture their time in Lisbon. He took us to some beautiful spots that we would not have discovered on our own as tourists.
+          </p>
+        </div>
+        <div class="border-bottom mt-4">
+          <div class="d-flex">
+            <img class= "avatar" src=<%= @event.user.photo %>>
+            <div class="pl-4">
+              <p class="font-14 m-0"><span class="font-16">Name</span> · November 2019</p>
+              <p class="red"><i class="fas fa-star"></i></p>
+            </div>
+          </div>
+          <p class="font-18 light-grey">
+            Phelipe was amazing. We highly recommend him for anyone looking to capture their time in Lisbon. He took us to some beautiful spots that we would not have discovered on our own as tourists.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

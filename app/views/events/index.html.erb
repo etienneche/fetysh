@@ -8,7 +8,7 @@
       </div>
       <div class="card-body">
         <div class="card-tag d-flex justify-content-between">
-          <p class="card-author-up mb-1">#<%= Category.find(event.category_id).name %></p>
+          <p class="card-author-up mb-1">#<%= event.category.name %></p>
         </div>
         <h4> <%= link_to event.title, event_path(event.id), style:"text-decoration:none"%></h4>
         <p class="event-description"><%= event.description.split[0..30].join(" ") %>...</p>
