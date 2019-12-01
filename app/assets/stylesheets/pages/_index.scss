@@ -17,6 +17,10 @@ a {
   color: #910722;
 }
 
+a:hover {
+  color: inherit;
+}
+
 .container-main-articles {
   margin-top: 5px;
   position: relative;

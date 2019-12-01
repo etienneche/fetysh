@@ -21,7 +21,7 @@
         <%= link_to category_article_path(article.category_id, article.id) do %>
         <div>
           <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
-          <div class="p-2">
+          <div class="p-2 mb-3">
             <p class="card-author-up">#<%= Category.find(article.category_id).name %></p>
             <h4 class="mb-4"><%= article.title %></h4>
             <p class="card-author-up author-border"><%= article.source %></p>
@@ -36,7 +36,7 @@
         <%= link_to category_article_path(article.category_id, article.id) do %>
         <div>
           <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
-          <div class="p-2">
+          <div class="p-2 mb-3">
             <p class="card-author-up">#<%= Category.find(article.category_id).name %></p>
             <h4 class="mb-4"><%= article.title %></h4>
             <p class="card-author-up author-border"><%= article.source %></p>

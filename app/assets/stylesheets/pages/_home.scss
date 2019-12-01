@@ -29,8 +29,8 @@
 }
 
 .full-section {
-  border-bottom: 1px solid rgb(0, 0, 0);
-  border-top: 1px solid rgb(0, 0, 0);
+  // border-bottom: 1px solid rgb(0, 0, 0);
+  // border-top: 1px solid rgb(0, 0, 0);
   background-color: #fff
 }
 
@@ -38,12 +38,14 @@
 .section-landing {
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-left: 15px;
 }
 
 .category-heading {
   border-top-width: 10px;
   margin-bottom: 64px;
   font-size: 64px;
+  font-weight: 700;
   line-height: 64px;
   border-top: 8px solid rgb(0, 0, 0);
   display: inline;
@@ -53,14 +55,14 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  height: 100vh;
+  // height: 100vh;
 }
 
 .sticky-element {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 90vh;
+  height: 80vh;
   width: 500px;
   display: flex;
   background-size: cover;
@@ -146,8 +148,12 @@
 
 
 .video_contain {
-    position: absolute;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+  position: absolute;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+.sticky-top {
+  border-bottom: 1px solid #eee;
 }
