@@ -2,7 +2,7 @@
   <div id="box-simple-form" class="col-6">
     <div id="simple-form-new" class="card bg-white">
       <div class="typewriter">
-        <h2>Create your own article</h2>
+        <h2>Create Your Own Article</h2>
       </div>
       <div class="form-group">
         <%= simple_form_for [@article] do |f| %>
@@ -20,7 +20,7 @@
             <%= f.input :photo_cache, as: :hidden %>
 
         <div class="form-actions btn-login">
-          <%= f.button :submit, "Create an Article",  id: "btn-new-form" %>
+          <%= f.button :submit, "Create an Article",  id: "btn-new-form", class:"btn-red" %>
         </div>
         <% end %>
       </div>
