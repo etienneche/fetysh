@@ -163,12 +163,33 @@
   position: sticky;
   top: 250px;
 }
+
+.sticky-new {
+  padding: 0 40px 80px;
+}
+
 .sticky-new h6 {
-  font-size: 48px;
-  font-family: 'Norican', cursive;
+  // font-size: 48px;
+  // font-family: 'Norican', cursive;
+font-size: 2rem;
+font-weight: 700;
+
 }
 .sticky-new a:hover {
   color: black;
   text-decoration: none;
 }
 
+
+.add-review-section {
+  margin: 0 auto;
+  text-align: center;
+  padding:0 40px;
+}
+
+.btn-red a:hover{
+
+    color: white;
+text-decoration:none;
+
+}

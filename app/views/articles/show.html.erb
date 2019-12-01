@@ -53,17 +53,49 @@
       Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.
     </p>
   </div>
-</div>
 <!-- REVIEWS -->
-<div class="btn btn-review">
-  <%= link_to "Add new Review", new_category_article_review_path(params[:category_id],params[:id]) %>
 
-</div>
-<div class="d-flex rev">
-  <% @article.reviews.each do |review| %>
-  <p><%= review.content %></p>
-  <% end %>
-</div>
+
+<div class="row">
+
+
+  <!-- <div class="stickyscroll"> -->
+
+    <div class="col-6" id="sticky-write-new">
+     <div class="sticky-new">
+       <h6>Would you like to became
+        <br>an author?</h6>
+        <%= link_to 'Write your 1st Article>', new_article_path
+        %>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <div class="col-6">
+      <div class="add-review-section">
+
+        <div class="btn btn-red">
+          <%= link_to "Add new Review", new_category_article_review_path(params[:category_id],params[:id]) %>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="d-flex rev">
+      <% @article.reviews.each do |review| %>
+      <p><%= review.content %></p>
+      <% end %>
+    </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
 <!-- ARTICLES RELATED -->
 
 
@@ -87,18 +119,11 @@
       </div>
     </div>
 
-    <div class="stickyscroll">
 
-      <div class="col-4" id="sticky-write-new">
-       <div class="sticky-new">
-         <h6>Would you like to became
-          <br>an author?</h6>
-          <%= link_to 'Write your 1st Article.>', new_article_path
-          %>
-        </div>
-      </div>
 
-    </div>
+
+
+
   </div>
 </div>
 <script>
