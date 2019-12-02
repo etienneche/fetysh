@@ -51,11 +51,7 @@
 <div>
 
   <p class="content-article-justify article-layout">
-    Romy Schneider, Mireille Darc, Françoise Hardy... Ces party girls donnaient le ton dans les années 70 avec des silhouettes grand soir qui nous inspirent toujours aujourd'hui. Exemple probant : la toute dernière collection de Claudie Pierlot pour illuminer les fêtes. Baptisée "Neon Fantasy", cette capsule imaginée par le label parisien est ponctuée de teintes néon tel que le fuchsia, d'imprimés psychédéliques et d'un motif léopard. Dès la nuit tombée, le vestiaire se pare de noir et se sublime de sequins brodés sur de parfaites robes de soirée, d'un revers métallisé pour la veste de costume et d’un jupon de dentelle sur l'emblématique petite robe noire.
-
-    Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.Romy Schneider, Mireille Darc, Françoise Hardy... Ces party girls donnaient le ton dans les années 70 avec des silhouettes grand soir qui nous inspirent toujours aujourd'hui. Exemple probant : la toute dernière collection de Claudie Pierlot pour illuminer les fêtes. Baptisée "Neon Fantasy", cette capsule imaginée par le label parisien est ponctuée de teintes néon tel que le fuchsia, d'imprimés psychédéliques et d'un motif léopard. Dès la nuit tombée, le vestiaire se pare de noir et se sublime de sequins brodés sur de parfaites robes de soirée, d'un revers métallisé pour la veste de costume et d’un jupon de dentelle sur l'emblématique petite robe noire.
-
-    Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.
+    <%= @article.content %>
   </p>
 </div>
 <!-- REVIEWS -->
@@ -85,38 +81,22 @@
   <div class="border-bottom mt-4">
     <div class="d-flex">
       <img src="https://source.unsplash.com/featured/?face", class="avatar" />
-
     </div>
     <p class="review-content pt-2"><%= review.content %></p>
   </div>
   <% end %>
 </div>
-
-<!-- <div class="stickyscroll"> -->
-  <div class="row">
-
-
-    <div class="col-6" id="sticky-write-new">
-     <div class="sticky-new">
-       <h6>Would you like to
-        <br> became an author?</h6>
-        <%= link_to 'Write your 1st Article>', new_article_path
-        %>
-      </div>
+<div class="row">
+  <div class="col-6" id="sticky-write-new">
+   <div class="sticky-new">
+     <h6>Would you like to became
+      <br>an author?</h6>
+      <%= link_to 'Write your 1st Article>', new_article_path
+      %>
     </div>
-    <!-- </div> -->
-
-
-
-
   </div>
 </div>
-
-
-
-
-
-
+</div>
 <!-- ARTICLES RELATED -->
 
 
@@ -139,16 +119,10 @@
         <% end %>
       </div>
     </div>
-
-
-
-
-
-
   </div>
 </div>
+
 <script>
-  console.log("Hey there")
   var button = document.getElementById("coracao")
   count = 0;
   button.onclick = function() {
