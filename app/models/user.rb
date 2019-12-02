@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :user_categories
+  has_many :orders
   has_many :reactions
   has_many :articles
   has_many :reviews

@@ -1,15 +1,3 @@
-# This file is auto-generated from the current state of the database. Instead
-# of editing this file, please use the migrations feature of Active Record to
-# incrementally modify your database, and then regenerate this schema definition.
-#
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
-# be faster and is potentially less error prone than running all of your
-# migrations from scratch. Old migrations may fail to apply correctly if those
-# migrations use external dependencies or application code.
-#
-# It's strongly recommended that you check this file into your version control system.
-
 ActiveRecord::Schema.define(version: 2019_12_02_102128) do
 
   # These are extensions that must be enabled in order to support this database
@@ -71,7 +59,6 @@ ActiveRecord::Schema.define(version: 2019_12_02_102128) do
     t.bigint "user_id", null: false
     t.string "title"
     t.date "date"
-    t.decimal "price"
     t.string "photo"
     t.bigint "category_id", null: false
     t.text "description"
@@ -79,8 +66,22 @@ ActiveRecord::Schema.define(version: 2019_12_02_102128) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
+    t.integer "price_cents", default: 0, null: false
     t.index ["category_id"], name: "index_events_on_category_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.string "event_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_orders_on_event_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "reactions", force: :cascade do |t|
@@ -122,10 +123,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_102128) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
-    t.string "gender"
-    t.string "sex_orientation"
     t.string "photo"
-    t.boolean "premium", default: false
     t.text "description"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -136,6 +134,8 @@ ActiveRecord::Schema.define(version: 2019_12_02_102128) do
   add_foreign_key "articles", "users"
   add_foreign_key "events", "categories"
   add_foreign_key "events", "users"
+  add_foreign_key "orders", "events"
+  add_foreign_key "orders", "users"
   add_foreign_key "reactions", "articles"
   add_foreign_key "reactions", "users"
   add_foreign_key "reviews", "articles"
