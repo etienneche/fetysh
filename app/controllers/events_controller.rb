@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+
   before_action :set_event, only: [:show, :edit, :destroy, :update]
 
   def index

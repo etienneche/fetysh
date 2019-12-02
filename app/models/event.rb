@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  include PgSearch::Model
+  multisearchable against: [:title, :description]
   belongs_to :user
   belongs_to :category
   monetize :price_cents
