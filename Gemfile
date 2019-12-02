@@ -4,6 +4,7 @@ ruby '2.6.3'
 gem 'bootsnap', require: false
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
+gem 'pg_search', '~> 2.3.0'
 gem 'devise'
 gem 'geocoder'
 gem 'jbuilder', '~> 2.0'
