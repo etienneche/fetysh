@@ -249,6 +249,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  byebug
   carrierwave (~> 1.2)
   cloudinary (~> 1.9.1)
   devise
@@ -259,6 +260,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   money-rails
+  nokogiri
   pg (~> 0.21)
   pg_search (~> 2.3.0)
   pry-byebug
