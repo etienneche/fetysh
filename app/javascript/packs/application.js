@@ -16,6 +16,9 @@ window.addEventListener("scroll", function(event) {
   var top = this.scrollY;
   console.log("hello");
   var sLink = document.getElementsByClassName("sticky-bar")[0];
+  if (!sLink) {
+    return;
+  }
   if(top > 200){
    sLink.classList.add("highlight");
  }
@@ -24,6 +27,21 @@ window.addEventListener("scroll", function(event) {
 }
 }, false);
 
+// ELEVATOR //
+//import { Elevator } from '../plugins/elevator';
+window.onload = function() {
+  var elevator = new Elevator({
+    element: document.querySelector('.elevator-button')
+  });
+
+  const scrollTop = document.getElementById("scroll-to-top-button");
+  if (scrollTop) {
+    scrollTop.addEventListener("click", event => {
+      event.preventDefault();
+      elevator.elevate();
+    });
+  }
+}
 
 // const useredit = document.getElementsByClassName('.registrations-edit')
 
