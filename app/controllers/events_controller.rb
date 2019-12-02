@@ -16,10 +16,10 @@ class EventsController < ApplicationController
 
   def show
     @user = current_user
-    @markers = {
+    @marker = [{
       lat: @event.latitude,
       lng: @event.longitude
-    }
+    }]
     @ratings = Rating.where("event_id = ?", @event.id)
     @rating = Rating.new
   end
