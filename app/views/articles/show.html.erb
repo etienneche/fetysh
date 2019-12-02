@@ -8,58 +8,88 @@
       <h4>By <%= @article.user.name %></h4>
 
       <div class="tabs">
-         <%= (@article_love_count) %>
-        <% color = current_user.loved?(@article) ? "red" : "gray" %>
+       <%= (@article_love_count) %>
+       <% color = current_user.loved?(@article) ? "red" : "gray" %>
 
-        <%= link_to love_category_article_path(@category, @article), method: :post do %>
+       <%= link_to love_category_article_path(@category, @article), method: :post do %>
 
-          <i class="fas fa-heart" id="coracao"></i>
+       <i class="fas fa-heart" id="coracao"></i>
 
-        <% end %>
+       <% end %>
 
-        <%= (@article_wtt_count) %>
-        <% color = current_user.wtted?(@article) ? "red" : "gray" %>
+       <%= (@article_wtt_count) %>
+       <% color = current_user.wtted?(@article) ? "red" : "gray" %>
 
-        <%= link_to wtt_category_article_path(@category, @article), method: :post do %>
+       <%= link_to wtt_category_article_path(@category, @article), method: :post do %>
 
-          <i class="fas fa-bookmark" id="marca"></i>
+       <i class="fas fa-bookmark" id="marca"></i>
 
-        <% end %>
+       <% end %>
 
-        <%#= (@article_save_count) %>
-        <%# color = current_user.saved?(@article) ? "red" : "gray" %>
+       <%#= (@article_save_count) %>
+       <%# color = current_user.saved?(@article) ? "red" : "gray" %>
 
-        <%#= link_to save_category_article_path(@category, @article), method: :post do %>
-          <!-- <i class="fas fa-save" id="salva"></i> -->
-        <%# end %>
-      </div>
+       <%#= link_to save_category_article_path(@category, @article), method: :post do %>
+       <!-- <i class="fas fa-save" id="salva"></i> -->
+       <%# end %>
+     </div>
+   </div>
+
+   <div class="image">
+    <div class="box-red">
+
     </div>
-
-    <div class="image">
-      <div class="box-red">
-
-      </div>
-      <img src="https://images.unsplash.com/photo-1440367850806-da68da359421?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="">
-    </div>
+    <img src="https://images.unsplash.com/photo-1440367850806-da68da359421?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="">
   </div>
+</div>
 
-  <div>
+<div>
 
-    <p class="content-article-justify article-layout">
-      Romy Schneider, Mireille Darc, Françoise Hardy... Ces party girls donnaient le ton dans les années 70 avec des silhouettes grand soir qui nous inspirent toujours aujourd'hui. Exemple probant : la toute dernière collection de Claudie Pierlot pour illuminer les fêtes. Baptisée "Neon Fantasy", cette capsule imaginée par le label parisien est ponctuée de teintes néon tel que le fuchsia, d'imprimés psychédéliques et d'un motif léopard. Dès la nuit tombée, le vestiaire se pare de noir et se sublime de sequins brodés sur de parfaites robes de soirée, d'un revers métallisé pour la veste de costume et d’un jupon de dentelle sur l'emblématique petite robe noire.
+  <p class="content-article-justify article-layout">
+    Romy Schneider, Mireille Darc, Françoise Hardy... Ces party girls donnaient le ton dans les années 70 avec des silhouettes grand soir qui nous inspirent toujours aujourd'hui. Exemple probant : la toute dernière collection de Claudie Pierlot pour illuminer les fêtes. Baptisée "Neon Fantasy", cette capsule imaginée par le label parisien est ponctuée de teintes néon tel que le fuchsia, d'imprimés psychédéliques et d'un motif léopard. Dès la nuit tombée, le vestiaire se pare de noir et se sublime de sequins brodés sur de parfaites robes de soirée, d'un revers métallisé pour la veste de costume et d’un jupon de dentelle sur l'emblématique petite robe noire.
 
-      Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.Romy Schneider, Mireille Darc, Françoise Hardy... Ces party girls donnaient le ton dans les années 70 avec des silhouettes grand soir qui nous inspirent toujours aujourd'hui. Exemple probant : la toute dernière collection de Claudie Pierlot pour illuminer les fêtes. Baptisée "Neon Fantasy", cette capsule imaginée par le label parisien est ponctuée de teintes néon tel que le fuchsia, d'imprimés psychédéliques et d'un motif léopard. Dès la nuit tombée, le vestiaire se pare de noir et se sublime de sequins brodés sur de parfaites robes de soirée, d'un revers métallisé pour la veste de costume et d’un jupon de dentelle sur l'emblématique petite robe noire.
+    Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.Romy Schneider, Mireille Darc, Françoise Hardy... Ces party girls donnaient le ton dans les années 70 avec des silhouettes grand soir qui nous inspirent toujours aujourd'hui. Exemple probant : la toute dernière collection de Claudie Pierlot pour illuminer les fêtes. Baptisée "Neon Fantasy", cette capsule imaginée par le label parisien est ponctuée de teintes néon tel que le fuchsia, d'imprimés psychédéliques et d'un motif léopard. Dès la nuit tombée, le vestiaire se pare de noir et se sublime de sequins brodés sur de parfaites robes de soirée, d'un revers métallisé pour la veste de costume et d’un jupon de dentelle sur l'emblématique petite robe noire.
 
-      Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.
-    </p>
-  </div>
+    Véritable ode aux fêtes de fin d'année, la collection capsule "Neon Fantasy" est à retrouver dès aujourd'hui dans les boutiques Claudie Pierlot et sur Claudie Pierlot.com.
+  </p>
+</div>
 <!-- REVIEWS -->
+<div class="border-bottom border-top pt-4 pl-2">
+  <p>
+    <button class="form-actions btn-red" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Add a New Review
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <div class="form-group ">
+        <%= simple_form_for [@category, @article, @review] do |f| %>
 
 
-<div class="row">
+        <%= f.input   :content,
+        label: "Description review",
+        required: true %>
+        <div class="form-actions btn-login">
+          <%= f.button :submit, "Post review" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <% @reviews.each do |review| %>
+  <div class="border-bottom mt-4">
+    <div class="d-flex">
+      <img src="https://source.unsplash.com/featured/?face", class="avatar" />
 
+    </div>
+    <p class="review-content pt-2"><%= review.content %></p>
+  </div>
+  <% end %>
+</div>
 
-  <!-- <div class="stickyscroll"> -->
+<!-- <div class="stickyscroll"> -->
+  <div class="row">
+
 
     <div class="col-6" id="sticky-write-new">
      <div class="sticky-new">
@@ -71,25 +101,11 @@
     </div>
     <!-- </div> -->
 
-    <div class="col-6">
-      <div class="add-review-section">
-
-        <div class="btn btn-red">
-          <%= link_to "Add new Review", new_category_article_review_path(params[:category_id],params[:id]) %>
-
-        </div>
-      </div>
-    </div>
 
 
-    <div class="d-flex rev">
-      <% @article.reviews.each do |review| %>
-      <p><%= review.content %></p>
-      <% end %>
-    </div>
 
-    </div>
   </div>
+</div>
 
 
 
