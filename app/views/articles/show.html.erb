@@ -5,8 +5,9 @@
     <div class="head head-card-margin" >
       <h6>#<%= @category.name %></h6>
       <h1><%= @article.title %></h1>
-      <h4>By <%= @article.user.name %></h4>
-      <p>Post <%= @article.created_at.strftime("%Y-%m-%d") %></p>
+      <h4>By <%= @article.author %></h4>
+      <p>Post <%= @article.created_at.strftime("%d.%B %Y") %></p>
+
 
       <div class="tabs">
        <%= (@article_love_count) %>

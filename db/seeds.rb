@@ -54,21 +54,79 @@ User.create!(
 
 puts 'Done'
 
+# CREATE CATEGORIES FOR EVENTS
+Category.create!(
+  name: 'Fetish')
+
+Category.create!(
+  name: 'Sex Positive')
+
+Category.create!(
+  name: 'Tantra')
+
+Category.create!(
+  name: 'Sex Ed')
+
 # CREATE ARTICLES --------------------------------------------------------------
 
+# SCRAPER TABU -----------------------------------------------------------------
+# SCRAPE LINKS TO ARTICLES
+url = "https://talktabu.com/zine"
+html_file = open(url).read
+html_doc = Nokogiri::HTML(html_file)
 
+links = html_doc.search('.Blog-header-content-link').map do |element|
+  element.attributes["href"].value
+end
 
+# SCRAPE INDIVIDUAL ARTICLES
+results = []
+links.each do |link|
+  begin
+    puts "Parsing link into nokogiri"
+    url = "https://talktabu.com#{link}"
+    html_file = open(url).read
+    html_doc = Nokogiri::HTML(html_file)
+    content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
+    results << {
+      category: html_doc.search('.Blog-meta-item-category').first.text,
+      author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
+      title: html_doc.search('.Blog-title.Blog-title--item').text,
+      content: content_all[0..content_all.index("Header image") - 1],
+      img_url: html_doc.search('img')[2].attributes["data-src"].value,
+      source: 'tabú'
+    }
+  rescue => e
+    puts link
+    puts e
+  end
+end
 
-Article.create!(
-  title: 'Is Masturbation Healthy?',
-  content: 'When it comes to masturbation, there are a ton of prominent, shame-laced myths that simply refuse to fade away. Not only are its benefits not well-understood, self-pleasure is often still the punchline of many jokes. The reality, however, is that masturbation is not only healthy, but an ideal way to get in touch with yourself and your sexual desires.',
-  user_id: User.find_by(name: 'Scraper').id,
-  source: 'O.school',
-  category_id: Category.find_by(name: 'Masturbation').id,
-  img_url: 'https://assets-global.website-files.com/5b77332fd79b5242e29c647b/5cf5bbc0c17093cf671ca2d5_thumb_art_isMasturbationHealthy.jpg'
-  )
+# CREATE CATEGORIES FROM SCRAPE
+puts 'Creating categories from Scrape'
+results.each do |result|
+  if Category.find_by(name: result[:category]).nil?
+    Category.create!(
+      name: result[:category]
+      )
+  end
+end
 
-puts 'Done'
+# CREATE ARTICLES FROM SCRAPE
+puts 'Creating articles from scrape'
+results.each do |result|
+  Article.create!(
+    title: result[:title],
+    content: result[:content],
+    author: result[:author],
+    user_id: User.find_by(name: 'Scraper').id,
+    source: result[:source],
+    category_id: Category.find_by(name: result[:category]).id,
+    img_url: result[:img_url]
+    )
+end
+
+puts 'Articles are created'
 
 puts 'Create 1 Reaction'
 
@@ -91,7 +149,7 @@ Event.create!(
   category_id: Category.find_by(name: "Sex Positive").id,
   photo: 'https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
   price: rand(40..200)
-)
+  )
 
 Event.create!(
   title: "1st Sex-positive Ball",
