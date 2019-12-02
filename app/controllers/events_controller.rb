@@ -15,10 +15,13 @@ class EventsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @markers = {
       lat: @event.latitude,
       lng: @event.longitude
     }
+    @ratings = Rating.where("event_id = ?", @event.id)
+    @rating = Rating.new
   end
 
   def new
@@ -54,6 +57,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :date, :address, :price, :photo, :description, :category_id)
+    params.require(:event).permit(:title, :date, :address, :price, :photo, :description)
   end
 end
