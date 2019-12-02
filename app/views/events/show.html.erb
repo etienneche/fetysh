@@ -32,6 +32,8 @@
     </div>
   </div>
 </div>
+
+<!-- TEXT SECTIONS -->
 <div class ="text-grey">
   <div class="container">
     <div class="row section-pad">
@@ -135,7 +137,7 @@
         <p class ="m-0 pr-2"> From <%= humanized_money_with_symbol(@event.price)%> /person</p>
         <%= form_tag orders_path do %>
         <%= hidden_field_tag 'event_id', @event.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-book' %>
+        <%= submit_tag 'Book', class: 'btn btn-book' %>
         <% end %>
       </div>
     </div>
