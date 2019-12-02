@@ -90,7 +90,7 @@ links.each do |link|
     html_doc = Nokogiri::HTML(html_file)
     content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
     results << {
-      category: html_doc.search('.Blog-meta-item-category').first.text,
+      category: html_doc.search('.Blog-meta-item-category').first.text.downcase,
       author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
       title: html_doc.search('.Blog-title.Blog-title--item').text,
       content: content_all[0..content_all.index("Header image") - 1],
@@ -169,7 +169,7 @@ topics.each do |topic|
       html_file = open(url).read
       html_doc = Nokogiri::HTML(html_file)
       results << {
-        category: html_doc.search('.current-topic').first.text,
+        category: html_doc.search('.current-topic').first.text.downcase,
         title: html_doc.search('.article-heading').text,
         content: html_doc.search('.article-rich-text.w-richtext').text,
         img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
