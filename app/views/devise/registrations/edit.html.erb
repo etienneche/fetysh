@@ -13,23 +13,15 @@
           </ul>
         </div>
       </div>
-
-
     </div>
-
-
     <div class="col-sm-8">
-
       <div class="taste-profile"><h4>My Taste Profile</h4>
-
         <ul class="list-group list-group-horizontal list-no-bullets">
-
           <li>
             <div class="stats-circle">
               <p>#orgasm<span>45%</span></p>
             </div>
           </li>
-
           <li>
             <div class="stats-circle">
               <p>#bondage<span>20%</span></p>
@@ -95,33 +87,30 @@
           </div>
 
           <div class="cards">
-
-            <div class="card-product">
-              <img src="/assets/pussy.png" />
-              <div class="card-product-infos">
-               <h6>#oral</h6>
-               <h2>The Art Of Eating Pussy</h2>
-               <p>Eat pussy like you’d eat a gourmet meal to maximize pleasure for you and your lover.</p>
-             </div>
-           </div>
-
-           <div class="card-product">
-            <img src="/assets/blowjob.png" />
-            <div class="card-product-infos">
-              <h6>#blowjob</h6>
-              <h2>Three Secrets To An Incredible Blowjob</h2>
-              <p>The secrets have nothing to do with oral technique!</p>
+            <div class="col">
+              <% current_user.reactions.each do |reaction| %>
+                <%# link_to category_article_path(article.category_id, article.id) do %>
+                <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
+                </div>
+                <div class="p-2 mb-3">
+                  <p class="card-author-up">#
+                    <%= reaction.article.category.name%>
+                  </p>
+                  <h4 class="mb-4">
+                    <%= reaction.article.title %>
+                  </h4>
+                  <p class="card-author-up author-border">
+                    <%= reaction.article.source %>
+                  </p>
+                </div>
+                <%# end %>
+              <% end %>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
-
   </div>
-
-</div>
 </div>
 </div>
 

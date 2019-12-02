@@ -8,10 +8,12 @@
   text-align: center;
   padding: 10%;
   margin-top: 40px;
+  border: 1px solid #91072280;
 }
 .profile-card h3{
   font-weight: 700;
   margin: 15px 0;
+
 }
 
 .profile-img {
@@ -41,15 +43,22 @@
 .stats-circle {
   width: 100px;
   height :100px;
-  background-color: grey;
+  background-color: white;
   border-radius: 50%;
+  border: 1px solid #91072280;
+}
+.stats-circle:hover {
+  background-color: #910722;
+  border: 1px solid black;
 }
 
 .stats-circle p {
-  color: white;
+  color: #910722;
   padding-top: 30px;
 }
-
+.stats-circle:hover p {
+  color: white;
+}
 .reactions-history {
   padding: 10% 5%;
 }
@@ -113,7 +122,9 @@
   align-items: center;
   border-radius: 3px;
 }
-
+.card-product:hover {
+  border: 1px solid #91072280;
+}
 
 .card-product img {
   height: 100%;
