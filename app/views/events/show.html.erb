@@ -119,16 +119,19 @@
 
 <div class="sticky-bar light-grey">
   <div class="container">
-  <div class="d-flex justify-content-between">
-    <div class="d-flex align-items-center">
-    <img class= "avatar" src=<%= @event.user.photo %>>
-    <p class ="m-0 pl-2 font-14"> <strong><%= @event.title %></strong> </p>
+    <div class="d-flex justify-content-between">
+      <div class="d-flex align-items-center">
+        <img class= "avatar" src=<%= @event.user.photo %>>
+        <p class ="m-0 pl-2 font-14"> <strong><%= @event.title %></strong> </p>
+      </div>
+      <div class="d-flex align-items-center">
+        <p class ="m-0 pr-2"> From <%= humanized_money_with_symbol(@event.price)%> /person</p>
+        <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'event_id', @event.id %>
+        <%= submit_tag 'Purchase', class: 'btn btn-book' %>
+        <% end %>
+      </div>
     </div>
-    <div class="d-flex align-items-center">
-      <p class ="m-0 pr-2"> From <%= @event.price.to_i %>€/person</p>
-      <a href="" class="btn btn-book">Book now</a>
-    </div>
-  </div>
   </div>
 
 </div>
