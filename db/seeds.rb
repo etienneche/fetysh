@@ -8,12 +8,12 @@ Article.destroy_all
 User.destroy_all
 Category.destroy_all
 
-
 puts 'Done'
 
+# CREATE USERS -----------------------------------------------------------------
 puts 'Create user'
 User.create!(
-  name: 'Michael Jordan',
+  name: 'Scraper',
   password: '123456',
   email: 't@t.com'
   )
@@ -52,64 +52,17 @@ User.create!(
   photo: 'https://dr0wv9n0kx6h5.cloudfront.net/2754b559c5e6a1fd71093232df57dcf70462c5e7/content/03-blog/80-factory-berlin-a-new-place-for-us-to-call-home/01@2x.jpg'
   )
 
-puts 'Create 8 categories'
-Category.create!(
-  name: 'Masturbation'
-  )
-
-Category.create!(
-  name: 'Consent'
-  )
-
-Category.create!(
-  name: 'Oral'
-  )
-
-Category.create!(
-  name: 'Orgasm'
-  )
-
-Category.create!(
-  name: 'Sex Toys'
-  )
-
-Category.create!(
-  name: 'Anal'
-  )
-
-Category.create!(
-  name: 'Sex Positive'
-  )
-
-Category.create!(
-  name: 'Tantra'
-  )
-
-Category.create!(
-  name: 'Fetish'
-  )
-
-Category.create!(
-  name: 'Sex Ed'
-  )
-
 puts 'Done'
 
-puts 'Create 2 real articles'
+# CREATE ARTICLES --------------------------------------------------------------
 
-Article.create!(
-  title: 'Best Masturbation Techniques For Clitoral Orgasm',
-  content: 'Masturbation techniques Furniture-humping, teddy bear-humping, even hanging from door knobs and door-humping —vulva-owners often get creative at a young age with masturbation, since portrayals of vulva masturbation are so sorely lacking in U.S. media. There is a vast variety of methods when it comes to masturbating the vulva!',
-  user_id: User.first.id,
-  source: 'O.school',
-  category_id: Category.find_by(name: 'Masturbation').id,
-  img_url: 'https://assets-global.website-files.com/5b77332fd79b5242e29c647b/5cf5bba35b65b6d6d2995fc8_thumb_art_bestMasturbationTechniquesForClitoralOrgasm.jpg'
-  )
+
+
 
 Article.create!(
   title: 'Is Masturbation Healthy?',
   content: 'When it comes to masturbation, there are a ton of prominent, shame-laced myths that simply refuse to fade away. Not only are its benefits not well-understood, self-pleasure is often still the punchline of many jokes. The reality, however, is that masturbation is not only healthy, but an ideal way to get in touch with yourself and your sexual desires.',
-  user_id: User.first.id,
+  user_id: User.find_by(name: 'Scraper').id,
   source: 'O.school',
   category_id: Category.find_by(name: 'Masturbation').id,
   img_url: 'https://assets-global.website-files.com/5b77332fd79b5242e29c647b/5cf5bbc0c17093cf671ca2d5_thumb_art_isMasturbationHealthy.jpg'
@@ -125,6 +78,7 @@ Reaction.create!(
   reaction: 'love'
   )
 
+# ------------------- EVENTS SEED ----------------------------------------------
 puts 'Create 5 real events'
 
 Event.create!(
@@ -137,7 +91,7 @@ Event.create!(
   category_id: Category.find_by(name: "Sex Positive").id,
   photo: 'https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
   price: rand(40..200)
-  )
+)
 
 Event.create!(
   title: "1st Sex-positive Ball",
