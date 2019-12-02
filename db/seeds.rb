@@ -1,10 +1,13 @@
 puts 'Delete everything'
 Reaction.destroy_all
 Review.destroy_all
+Rating.destroy_all
+Order.destroy_all
 Event.destroy_all
 Article.destroy_all
 User.destroy_all
 Category.destroy_all
+
 
 puts 'Done'
 
@@ -13,6 +16,13 @@ User.create!(
   name: 'Michael Jordan',
   password: '123456',
   email: 't@t.com'
+  )
+
+User.create!(
+  name: 'Kashima Berlin',
+  password: '123456',
+  email: 'c@d.com',
+  photo: 'https://www.kashima.de/fileadmin/template/images/logo.png'
   )
 
 User.create!(
@@ -29,20 +39,17 @@ User.create!(
   email: 'b@b.com',
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000057589.jpg',
   description: 'INSOMNIA is a club in which cosmopolitan freaks, urban night birds, polymorphic party people, creatives and travellers from all over the world celebrate together to the pulsating beat of the night.
-
   INSOMNIA is much more than just a mixture of party, fetish and swinging clubs - it is a hedonistic parallel universe with parties that are sex-positive, full of casual intimacy and sensuality for all forms of love or relationships: whether vanilla, swinger, gender fluid, bizarre, fetish or BDSM.
-
   INSOMNIA is a temple where you can experiment with non-traditional relationship structures, sexual experiences, self-exploration, and polysexuality. We offer a clean, safe sexual escapade infrastructure that is sexpositive & bodypositive, openminded, heteroflexible & clandestine - Newcomers are very welcome!
-
   Get into your most eager role, your naughtiest costume, your breath-taking lingerie, your most daring outfits or your stylish fetish robe and make INSOMNIA what it is - with your intoxicating aura, your dazzling flair and your grandezza!
-
   Be libidinous!'
   )
 
 User.create!(
   name: 'Factory Berlin',
   password: '123456',
-  email: 'c@c.com'
+  email: 'c@c.com',
+  photo: 'https://dr0wv9n0kx6h5.cloudfront.net/2754b559c5e6a1fd71093232df57dcf70462c5e7/content/03-blog/80-factory-berlin-a-new-place-for-us-to-call-home/01@2x.jpg'
   )
 
 puts 'Create 8 categories'
