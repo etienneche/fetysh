@@ -7,10 +7,13 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'devise'
 gem 'geocoder'
 gem 'jbuilder', '~> 2.0'
+gem 'money-rails'
 gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '6.0.1'
 gem 'redis'
+gem 'stripe'
+gem 'stripe_event'
 
 # gem "friendly_id", "~> 4.0.0.beta8"
 

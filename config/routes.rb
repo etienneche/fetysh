@@ -6,17 +6,19 @@ Rails.application.routes.draw do
     resources :articles, except: [:new, :create] do
       resources :reviews
       member do
-         post 'love', to: 'reactions#love'
-         post 'wtt', to: 'reactions#wtt'
-         post 'save', to: 'reactions#save'
-       end
-    end
-  end
-  resources :events
-  resources :articles, only: [:new, :create]
+       post 'love', to: 'reactions#love'
+       post 'wtt', to: 'reactions#wtt'
+       post 'save', to: 'reactions#save'
+     end
+   end
+ end
+ resources :events
+ resources :articles, only: [:new, :create]
+ resources :orders, only: [:show, :create] do
+  resources :payments, only: :new
 end
-
-
+mount StripeEvent::Engine, at: 'https://fetysh.club/stripe-webhooks'
+end
 
 # post article/53/love
 # post article/53/wtt

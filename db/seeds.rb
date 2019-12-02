@@ -1,5 +1,6 @@
 puts 'Delete everything'
 Reaction.destroy_all
+Review.destroy_all
 Event.destroy_all
 Article.destroy_all
 User.destroy_all
