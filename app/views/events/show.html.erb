@@ -7,7 +7,7 @@
         <p class="upcase pt-4"><%= @event.category.name %></p>
         <h2> <%= @event.title %></h2>
         <p><%= @event.address %></p>
-        <p><strong>4.97</strong> <i class="fas fa-star"></i> (366)</p>
+        <p><strong><%= @ratings.average(:stars).to_s.to_f.round(2)%></strong> <i class="fas fa-star"></i> (<%= @ratings.length %>)</p>
         <%= link_to @event.category.name, events_path, class:"btn btn-event" %>
       </div>
       <div class="col-7">
