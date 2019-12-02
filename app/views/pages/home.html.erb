@@ -7,7 +7,7 @@
     </div>
 
     <div class="stickyscroll" style="margin-bottom: 120px;">
-      <div class="col">
+      <div class="col" id="stickymove">
         <% @articles.where("category_id = ?", Category.first.id).sample(1).each do |article| %>
         <%= link_to category_article_path(article.category_id, article.id), class:"hover-cards" do %>
         <div class="sticky-element align-items-center justify-content-center" style="background-image: url(<%= article.img_url %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.img_url %>) center center;">

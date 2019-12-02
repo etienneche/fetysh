@@ -50,7 +50,10 @@
   border-top: 8px solid rgb(0, 0, 0);
   display: inline;
 }
-
+#stickymove {
+  position: sticky;
+  top: 50px;
+}
 .stickyscroll{
   display: flex;
   justify-content: space-around;
@@ -59,9 +62,7 @@
 }
 
 .sticky-element {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+
   height: 80vh;
   width: 500px;
   display: flex;
