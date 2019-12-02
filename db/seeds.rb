@@ -71,6 +71,7 @@ Category.create!(
 
 # SCRAPER TABU -----------------------------------------------------------------
 # SCRAPE LINKS TO ARTICLES
+puts "Starting to scrape tabu"
 url = "https://talktabu.com/zine"
 html_file = open(url).read
 html_doc = Nokogiri::HTML(html_file)
@@ -83,7 +84,7 @@ end
 results = []
 links.each do |link|
   begin
-    puts "Parsing link into nokogiri"
+    puts "Parsing #{link} into nokogiri"
     url = "https://talktabu.com#{link}"
     html_file = open(url).read
     html_doc = Nokogiri::HTML(html_file)
@@ -103,7 +104,7 @@ links.each do |link|
 end
 
 # CREATE CATEGORIES FROM SCRAPE
-puts 'Creating categories from Scrape'
+puts 'Creating categories from Tabu Scrape'
 results.each do |result|
   if Category.find_by(name: result[:category]).nil?
     Category.create!(
@@ -111,9 +112,10 @@ results.each do |result|
       )
   end
 end
+puts "Done"
 
 # CREATE ARTICLES FROM SCRAPE
-puts 'Creating articles from scrape'
+puts 'Creating articles from tabu scrape'
 results.each do |result|
   Article.create!(
     title: result[:title],
@@ -125,8 +127,83 @@ results.each do |result|
     img_url: result[:img_url]
     )
 end
+puts "Done"
 
-puts 'Articles are created'
+puts 'Scraping Tabu is done'
+
+# SCRAPER O.SCHOOL------------------------------------------------------------
+# SCRAPE LINKS TO ARTICLES
+puts 'Start the O.School Scraper'
+topics = [
+  'anal-sex',
+  'culture',
+  'first-time-sex',
+  'orgasm',
+  'sex-toys',
+  'communication',
+  'dating-and-relationships',
+  'kinky',
+  'penis',
+  'consent',
+  'eating-pussy',
+  'masturbation',
+  'porn',
+  'vagina-vulva'
+]
+
+results = []
+topics.each do |topic|
+  puts "Search for topic #{topic.upcase}"
+  url = "https://www.o.school/topic/#{topic}"
+  html_file = open(url).read
+  html_doc = Nokogiri::HTML(html_file)
+  links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
+    element.attributes["href"].value
+  end
+
+  # SCRAPE INDIVIDUAL ARTICLES
+  links.each do |link|
+    begin
+      puts "Putting #{link} into Nokogiri"
+      url = "https://www.o.school#{link}"
+      html_file = open(url).read
+      html_doc = Nokogiri::HTML(html_file)
+      results << {
+        category: html_doc.search('.current-topic').first.text,
+        title: html_doc.search('.article-heading').text,
+        content: html_doc.search('.article-rich-text.w-richtext').text,
+        img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
+        source: 'O.School'
+      }
+    rescue => e
+      puts link
+      puts e
+    end
+  end
+end
+
+# CREATE CATEGORIES FROM SCRAPE
+puts 'Creating categories from O.school Scrape'
+results.each do |result|
+  if Category.find_by(name: result[:category]).nil?
+    Category.create!(
+      name: result[:category]
+      )
+  end
+end
+
+puts 'Creating articles from o.school scrape'
+results.each do |result|
+  Article.create!(
+    title: result[:title],
+    content: result[:content],
+    user_id: User.find_by(name: 'Scraper').id,
+    source: result[:source],
+    category_id: Category.find_by(name: result[:category]).id,
+    img_url: result[:img_url]
+    )
+end
+puts 'Scraping O.School is done'
 
 puts 'Create 1 Reaction'
 
