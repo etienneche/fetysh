@@ -2,6 +2,9 @@ import "bootstrap";
 
 require("trix")
 require("@rails/actiontext")
+// NAVBAR DROPDOWN
+
+import { myFunction } from '../plugins/navbar_dropdown';
 
 // CSS
 import 'mapbox-gl/dist/mapbox-gl.css';
