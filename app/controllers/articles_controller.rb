@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+
   before_action :set_article, only: [:show, :edit, :destroy, :update]
   before_action :set_category, only: [:show]
 
