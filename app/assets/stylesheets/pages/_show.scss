@@ -62,8 +62,15 @@
 }
 
 .article-layout {
-  line-height: 32px;
+  line-height: 27px;
+  margin-bottom: 25px;
+
 }
+
+.article-layout-padding {
+  padding: 10px 117px 10px;
+}
+
 
 /* RELATED ARTICLES */
 .container-related-articles h1 {
@@ -160,13 +167,15 @@
 }
 /* WRITE NEW STICKY */
 #sticky-write-new {
-
+  margin: 46px 0;
   position: sticky;
   top: 250px;
 }
 
 .sticky-new {
   padding: 0 40px 80px;
+  text-align: center;
+
 }
 
 .sticky-new h6 {
@@ -190,7 +199,7 @@
 
 .btn-red a:hover{
 
-    color: white;
-text-decoration:none;
+  color: white;
+  text-decoration:none;
 
 }
