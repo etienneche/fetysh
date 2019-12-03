@@ -10,9 +10,11 @@ results = []
 url = "https://www.insomnia-berlin.de/partys.html"
 html_file = open(url).read
 html_doc = Nokogiri::HTML(html_file)
-byebug
+
 links = html_doc.search('.aktuellePartysTeas').map do |element|
-  element.attributes["href"].value
+  element
+
+  byebug
 end
 
   # SCRAPE INDIVIDUAL ARTICLES
