@@ -151,3 +151,20 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+.card-body {
+  border: 1px solid #91072280;
+}
+.btn-red {
+  background-color: white;
+  border: 1px solid #910722;
+  color: #910722;
+  border-radius: 5px;
+  padding: 10px 22px;
+  margin-left: 60px;
+}
+.btn-red:hover {
+  background-color: #910722;
+  color: white;
+  border: 1px solid #910722;
+  text-decoration: none;
+}

@@ -17,11 +17,7 @@ class User < ApplicationRecord
     reactions.where(article: article, reaction: 'love').any?
   end
 
-  def saved?(article)
-    reactions.where(article: article, reaction: 'save').any?
-  end
-
   def wtted?(article)
-    reactions.where(article: article, reaction: 'wtt').any?
+    reactions.where(article: article, reaction: 'want_to_try').any?
   end
 end

@@ -50,68 +50,73 @@
 
         <div class="reactions-history">
           <div class="tabs">
-            <ul>
-              <li  id="link1"><p>Loved Articles<i class="fas fa-heart"></i></p></li>
-              <li  id="link2"><p>Want to try <i class="fas fa-bookmark"></i></p></li>
-            </ul>
-
+            <p>
+              <a class="btn-outline-secondary btn-red" data-toggle="collapse" href="#love" role="button" aria-expanded="false" aria-controls="love">
+                Loved articles
+              </a>
+              <a class="btn-outline-secondary btn-red" data-toggle="collapse" href="#want_to_try" role="button" aria-expanded="false" aria-controls="want_to_try">
+                Want to try articles
+              </a>
+            </p>
           </div>
-
           <div class="tab-content">
+            <div class="collapse" id="love">
+              <div class="card card-body">
+                <div class="cards">
+                  <div class="col">
 
-            <div id="loved" data-tab-content>
-
-              <div class="card-product">
-                <img src="/assets/masturbation" />
-                <div class="card-product-infos">
-                 <h6>#orgasm</h6>
-                 <h2>Orgasm Troubleshooting</h2>
-                 <p>Difficulty having orgasms? Coming too quickly? A lot of people....</p>
-               </div>
-             </div>
-
-             <div class="card-product">
-              <img src="/assets/clit.png" />
-              <div class="card-product-infos">
-                <h6>#clit</h6>
-                <h2>Best Masturbation Techniques For Clitoral Orgasm</h2>
-                <p>Your guide to finding the clit, clit massage tips, and clitoral orgasm techniques.</p>
+                  <% current_user.reactions.where(reaction:"love").each do |reaction| %>
+                  <%# link_to category_article_path(article.category_id, article.id) do %>
+                    <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
+                    </div>
+                    <div class="p-2 mb-3">
+                      <p class="card-author-up">#
+                        <%= reaction.article.category.name%>
+                      </p>
+                      <h4 class="mb-4">
+                        <%= reaction.article.title %>
+                      </h4>
+                      <p class="card-author-up author-border">
+                        <%= reaction.article.source %>
+                      </p>
+                    </div>
+                    <%# end %>
+                    <% end %>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="collapse" id="want_to_try">
+              <div class="card card-body">
+                <div class="cards">
+                  <div class="col">
 
-            <div id="try" data-tab-content>
-
-              <p>This is the want to try articles</p>
-            </div>
-
-          </div>
-
-          <div class="cards">
-            <div class="col">
-              <% current_user.reactions.each do |reaction| %>
-                <%# link_to category_article_path(article.category_id, article.id) do %>
-                <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
+                  <% current_user.reactions.where(reaction:"want_to_try").each do |reaction| %>
+                  <%# link_to category_article_path(article.category_id, article.id) do %>
+                    <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
+                    </div>
+                    <div class="p-2 mb-3">
+                      <p class="card-author-up">#
+                        <%= reaction.article.category.name%>
+                      </p>
+                      <h4 class="mb-4">
+                        <%= reaction.article.title %>
+                      </h4>
+                      <p class="card-author-up author-border">
+                        <%= reaction.article.source %>
+                      </p>
+                    </div>
+                    <%# end %>
+                    <% end %>
+                  </div>
                 </div>
-                <div class="p-2 mb-3">
-                  <p class="card-author-up">#
-                    <%= reaction.article.category.name%>
-                  </p>
-                  <h4 class="mb-4">
-                    <%= reaction.article.title %>
-                  </h4>
-                  <p class="card-author-up author-border">
-                    <%= reaction.article.source %>
-                  </p>
-                </div>
-                <%# end %>
-              <% end %>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 

@@ -30,7 +30,7 @@ class ReactionsController < ApplicationController
 
   def love
     if current_user.loved?(@article)
-      @reaction = @article.reactions.find_by(user: current_user)
+      @reaction = @article.reactions.find_by(user: current_user,reaction:"love")
       @reaction.destroy
       redirect_to category_article_path(@category, @article)
     else
@@ -38,40 +38,23 @@ class ReactionsController < ApplicationController
       @reaction.user = current_user
       @reaction.article = @article
       @reaction.save
-      flash[:success] = "Upvoted Comment!"
+      flash[:success] = "Loved Article!"
       redirect_to category_article_path(@category, @article)
     end
   end
 
-
-  def save
-    if current_user.saved?(@article)
-    @reaction = @article.reactions.find_by(user: current_user)
-    @reaction.destroy
-    redirect_to category_article_path(@category, @article)
-  else
-    @reaction = Reaction.new(reaction: "save")
-    @reaction.user = current_user
-    @reaction.article = @article
-    @reaction.save
-    flash[:success] = "Upvoted Comment!"
-    redirect_to category_article_path(@category, @article)
-    end
-  end
-
-
   def wtt
     if current_user.wtted?(@article)
-    @reaction = @article.redirect_find_by(user: current_user)
-    @reaction.destroy
-    redirect_to category_article_path(@category, @article)
-  else
-    @reaction = Reaction.new(reaction: "want_to_try")
-    @reaction.user = current_user
-    @reaction.article = @article
-    @reaction.save
-    flash[:success] = "Upvoted Comment!"
-    redirect_to category_article_path(@category, @article)
+      @reaction = @article.reactions.find_by(user: current_user, reaction:"want_to_try")
+      @reaction.destroy
+      redirect_to category_article_path(@category, @article)
+    else
+      @reaction = Reaction.new(reaction: "want_to_try")
+      @reaction.user = current_user
+      @reaction.article = @article
+      @reaction.save
+      flash[:success] = "Want to try Comment!"
+      redirect_to category_article_path(@category, @article)
     end
   end
 

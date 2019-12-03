@@ -10,8 +10,7 @@ class ArticlesController < ApplicationController
   def show
     @user = current_user
     @article_love_count = @article.reactions.where(reaction: 'love').count
-    @article_save_count = @article.reactions.where(reaction: 'save').count
-    @article_wtt_count = @article.reactions.where(reaction: 'wtt').count
+    @article_wtt_count = @article.reactions.where(reaction: 'want_to_try').count
     @reviews = Review.where("article_id = ?", @article.id)
     @review = Review.new
   end
