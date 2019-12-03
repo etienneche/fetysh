@@ -1,7 +1,19 @@
-<div class="container">
-  <div class="section-landing">
-    <h2 class="category-heading">Articles</h2>
+<div class= "d-flex pl-4">
+  <div class="bg-white pt-4" style="height: 100vh; overflow:scroll; display:absolute; width: 50%;">
+    <h3>More than <%= @results.size %> results</h3>
+    <% @results.each do |result| %>
+    <div class="card-show border-top pt-3">
+      <div class="img-card">
+        <%= cl_image_tag event.photo, crop: :fill, class:"img-event" %>
+      </div>
+      <div class="card-body">
+        <div class="card-tag d-flex justify-content-between">
+          <p class="card-author-up mb-1">#<%= event.category.name %></p>
+        </div>
+        <h4> <%= link_to event.title, event_path(event.id), style:"text-decoration:none"%></h4>
+        <p class="event-description"><%= event.description.split[0..30].join(" ") %>...</p>
+      </div>
+    </div>
+    <% end %>
   </div>
-  <div class="section-landing">
-    <h2 class="category-heading">Experiences</h2>
   </div>
