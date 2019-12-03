@@ -1,3 +1,5 @@
+require 'byebug'
+
 puts 'Delete everything'
 Reaction.destroy_all
 Review.destroy_all
@@ -89,11 +91,18 @@ links.each do |link|
     html_file = open(url).read
     html_doc = Nokogiri::HTML(html_file)
     content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
+    if content_all.index("Header image").nil?
+      if !content_all.index("Sources:http").nil?
+        content = content_all[0..content_all.index("Sources:http") - 1]
+      end
+    else
+      content = content_all[0..content_all.index("Header image") - 1]
+    end
     results << {
       category: html_doc.search('.Blog-meta-item-category').first.text.downcase,
       author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
       title: html_doc.search('.Blog-title.Blog-title--item').text,
-      content: content_all[0..content_all.index("Header image") - 1],
+      content: content,
       img_url: html_doc.search('img')[2].attributes["data-src"].value,
       source: 'tabú'
     }
@@ -112,20 +121,22 @@ results.each do |result|
       )
   end
 end
-puts "Done"
+puts 'Done'
 
 # CREATE ARTICLES FROM SCRAPE
 puts 'Creating articles from tabu scrape'
 results.each do |result|
-  Article.create!(
-    title: result[:title],
-    content: result[:content],
-    author: result[:author],
-    user_id: User.find_by(name: 'Scraper').id,
-    source: result[:source],
-    category_id: Category.find_by(name: result[:category]).id,
-    img_url: result[:img_url]
-    )
+  if !result[:content].nil?
+    Article.create!(
+      title: result[:title],
+      content: result[:content],
+      author: result[:author],
+      user_id: User.find_by(name: 'Scraper').id,
+      source: result[:source],
+      category_id: Category.find_by(name: result[:category]).id,
+      img_url: result[:img_url]
+      )
+  end
 end
 puts "Done"
 
@@ -168,10 +179,16 @@ topics.each do |topic|
       url = "https://www.o.school#{link}"
       html_file = open(url).read
       html_doc = Nokogiri::HTML(html_file)
+      content_all = html_doc.search('.article-rich-text.w-richtext').text
+      if content_all.index("Related Articles:‍").nil?
+        content = content_all
+      else
+        content = content_all[0..content_all.index("Related Articles:‍") - 1]
+      end
       results << {
         category: html_doc.search('.current-topic').first.text.downcase,
         title: html_doc.search('.article-heading').text,
-        content: html_doc.search('.article-rich-text.w-richtext').text,
+        content: content,
         img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
         source: 'O.School'
       }
@@ -239,7 +256,7 @@ locations.each do |location|
         organizer: html_doc.search('.js-d-scroll-to.listing-organizer-name.text-default').text.gsub!("\n",'').gsub!("\t",'').gsub!("by ",''),
         description: content_all[0..content_all.index("atUse EventbritePlan") - 1],
         photo: html_doc.search("picture").first.attributes["content"].value,
-        price_cents: html_doc.search('.js-display-price').text.gsub!("\n",'').gsub!("\t",'')[1..],
+        price_cents: html_doc.search('.js-display-price').text.gsub!("\n",'').gsub!("\t",'')[1..].to_i,
         date: html_doc.search('.event-details__data').first.search("meta").first.attributes["content"].value
       }
     rescue => e
