@@ -18,6 +18,7 @@ gem 'redis'
 gem 'stripe'
 gem 'stripe_event'
 
+
 # gem "friendly_id", "~> 4.0.0.beta8"
 
 gem 'autoprefixer-rails'

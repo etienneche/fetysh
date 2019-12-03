@@ -1,18 +1,9 @@
 <% if user_signed_in? %>
 <nav class="navbar sticky-top navbar-expand-lg bg-light navbar-custom">
   <%= link_to image_tag("fetysh-logo.svg", :class => "navbar-brand"), "/home" %>
-    <%= form_tag home_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find an article or an event"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-
+  <%= form_tag results_path, method: :get do %>
+  <%= text_field_tag :query, params[:query], class: "form-control search-form", placeholder: "Search Fetysh" %>
   <% end %>
-
-
-
 
   <div class="collapse navbar-collapse d-flex justify-content-end align-items-center" id="navbarNavDropdown">
     <ul class="navbar-nav">
