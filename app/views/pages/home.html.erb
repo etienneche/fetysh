@@ -59,7 +59,8 @@
           <div class="p-2">
             <p class="card-author-up">#<%= Category.find(event.category_id).name %></p>
             <h4 class="mb-4"><%= event.title %></h4>
-            <p class="card-author-up author-border"><%= event.address %></p>
+            <p class="card-author-up author-border"><%= event.organizer.split[0..1].join(" ")%></p>
+            <p class="card-author-up"> <%= event.date.strftime("%d. %B %Y") %></p>
           </div>
         </div>
         <% end %>
