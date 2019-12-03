@@ -7,21 +7,26 @@ require 'open-uri'
 puts 'start the scraper'
 results = []
 
-url = "https://www.insomnia-berlin.de/partys.html"
-html_file = open(url).read
-html_doc = Nokogiri::HTML(html_file)
+locations = [
+  'united-kingdom',
+  'germany'
+  ''
+]
 
-links = html_doc.search('.aktuellePartysTeas').map do |element|
-  element
+locations.each do |location|
+  url = "https://www.eventbrite.com/d/#{location}/orgasm/"
+  html_file = open(url).read
+  html_doc = Nokogiri::HTML(html_file)
 
+  links = html_doc.search('.aktuellePartysTeas').map do |element|
+    element.search("a").attribute("href").value
+  end
   byebug
-end
-
   # SCRAPE INDIVIDUAL ARTICLES
   links.each do |link|
     begin
       puts "Putting #{link} into Nokogiri"
-      url = "https://www.cosmopolitan.com/#{link}"
+      url = "https://www.insomnia-berlin.de/#{link}"
       html_file = open(url).read
       html_doc = Nokogiri::HTML(html_file)
       byebug
@@ -37,3 +42,4 @@ end
       puts e
     end
   end
+end
