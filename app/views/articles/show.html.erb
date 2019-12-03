@@ -48,7 +48,7 @@
 
 <div>
 
-  <p class="content-article-justify article-layout"><%= article.content.split(".").join(".\n")%></p>
+  <p class="content-article-justify article-layout"><%= @article.content.split[0..66].join(" ") %></p>
 </div>
 <!-- REVIEWS -->
 <div class="border-bottom border-top pt-4 pl-2">
