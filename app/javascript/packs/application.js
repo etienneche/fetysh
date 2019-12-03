@@ -45,6 +45,9 @@ window.onload = function() {
     });
   }
 }
+// Date picker
+import "../plugins/flatpickr"
+
 
 // const useredit = document.getElementsByClassName('.registrations-edit')
 
