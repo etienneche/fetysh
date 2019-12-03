@@ -1,3 +1,19 @@
+.navbar form {
+  padding-left: 155px;
+    display: flex;
+}
+.navbar input.btn {
+  margin-left: 25px;
+  color: #910722;
+  border: 1px solid #910722;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color:white;
+}
+.navbar input.btn:hover {
+  background-color:#910722;
+  color: white;
+}
 .categories-nav{
   padding-left: 50px;
   padding-right: 50px;
