@@ -9,8 +9,8 @@ results = []
 
 locations = [
   'united-kingdom',
-  'germany'
-  ''
+  'australia',
+  'united-states'
 ]
 
 locations.each do |location|
@@ -18,24 +18,27 @@ locations.each do |location|
   html_file = open(url).read
   html_doc = Nokogiri::HTML(html_file)
 
-  links = html_doc.search('.aktuellePartysTeas').map do |element|
-    element.search("a").attribute("href").value
+  links = html_doc.search('.eds-media-card-content__action-link').map do |element|
+    element.attributes["href"].value
   end
-  byebug
+
   # SCRAPE INDIVIDUAL ARTICLES
   links.each do |link|
     begin
       puts "Putting #{link} into Nokogiri"
-      url = "https://www.insomnia-berlin.de/#{link}"
+      url = "#{link}"
       html_file = open(url).read
       html_doc = Nokogiri::HTML(html_file)
-      byebug
+      content_all = html_doc.search('.text-body-medium').text.gsub!("\n",'').gsub!("\t",'')
       results << {
-        category: html_doc.search('.content-hed.standard-hed').first.text,
-        title: html_doc.search('.content-hed.standard-hed').first.text,
-        content: html_doc.search('.article-rich-text.w-richtext').text,
-        img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
-        source: 'O.School'
+        title: html_doc.search('.listing-hero-title').text,
+        address: html_doc.search('.listing-map-card-street-address.text-default').text.gsub!("\n",'').gsub!("\t",''),
+        organizer: html_doc.search('.js-d-scroll-to.listing-organizer-name.text-default').text.gsub!("\n",'').gsub!("\t",'').gsub!("by ",''),
+        description: content_all[0..content_all.index("atUse EventbritePlan") - 1],
+        photo: html_doc.search("picture").first.attributes["content"].value,
+        price_cents: html_doc.search('.js-display-price').text.gsub!("\n",'').gsub!("\t",'')[1..],
+        date: html_doc.search('.event-details__data').first.search("meta").first.attributes["content"].value,
+        category: 'sex'
       }
     rescue => e
       puts link
