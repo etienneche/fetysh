@@ -20,5 +20,12 @@ class PagesController < ApplicationController
   end
 
   def results
+    if params[:query]
+      @articles = Article.where("title ILIKE ? OR content ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+      @events =  Event.where("title ILIKE ? OR description ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+else
+      @articles = Article.all
+      @events = Event.all
+    end
   end
 end
