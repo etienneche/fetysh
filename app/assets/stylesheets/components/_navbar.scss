@@ -89,6 +89,70 @@ a.dropdown-item {
   color: black;
 }
 
+// Search animation
+
+.searchBox {
+    position: relative;
+    top: -18px;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: white;
+    height: 40px;
+    border-radius: 40px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 250px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: #910722;
+  color :white;
+}
+
+.searchButton {
+    color: #910722;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #910722;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+  }
+
+.searchInput::placeholder{
+  padding-left:10px;
+}
+
+.searchInput {
+    border:none;
+    background-color: #f6f6f6;
+    border-radius:40px;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    margin-right: 10px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
 
 // Hide navbar on landing when logged in
 .pages-landing > .navbar {

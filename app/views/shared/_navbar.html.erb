@@ -1,9 +1,15 @@
 <% if user_signed_in? %>
 <nav class="navbar sticky-top navbar-expand-lg bg-light navbar-custom">
   <%= link_to image_tag("fetysh-logo.svg", :class => "navbar-brand"), "/home" %>
+
   <%= form_tag results_path, method: :get do %>
-  <%= text_field_tag :query, params[:query], class: "form-control search-form", placeholder: "Search Fetysh" %>
+  <div class="searchBox">
+  <%= text_field_tag :query, params[:query], class: "searchInput", placeholder: "Search Fetysh" %>
+  <button class="searchButton" href="pages#results">
+    <i class="fas fa-search"></i>
+  </button>
   <% end %>
+  </div>
 
   <div class="collapse navbar-collapse d-flex justify-content-end align-items-center" id="navbarNavDropdown">
     <ul class="navbar-nav">
