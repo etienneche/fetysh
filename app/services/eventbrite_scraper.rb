@@ -30,13 +30,14 @@ locations.each do |location|
       html_file = open(url).read
       html_doc = Nokogiri::HTML(html_file)
       content_all = html_doc.search('.text-body-medium').text.gsub!("\n",'').gsub!("\t",'')
+      byebug
       results << {
         title: html_doc.search('.listing-hero-title').text,
         address: html_doc.search('.listing-map-card-street-address.text-default').text.gsub!("\n",'').gsub!("\t",''),
         organizer: html_doc.search('.js-d-scroll-to.listing-organizer-name.text-default').text.gsub!("\n",'').gsub!("\t",'').gsub!("by ",''),
         description: content_all[0..content_all.index("atUse EventbritePlan") - 1],
         photo: html_doc.search("picture").first.attributes["content"].value,
-        price_cents: html_doc.search('.js-display-price').text.gsub!("\n",'').gsub!("\t",'')[1..],
+        price_cents: html_doc.search('.js-display-price').text.gsub!("\n",'').gsub!("\t",'')[1..].to_i,
         date: html_doc.search('.event-details__data').first.search("meta").first.attributes["content"].value,
         category: 'sex'
       }
