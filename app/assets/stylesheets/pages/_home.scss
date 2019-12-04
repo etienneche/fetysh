@@ -49,6 +49,7 @@
   line-height: 64px;
   border-top: 8px solid rgb(0, 0, 0);
   display: inline;
+  text-transform: capitalize;
 }
 #stickymove {
   position: sticky;
@@ -61,7 +62,7 @@
 }
 
 .sticky-element {
-  height: 80vh;
+  height: 100vh;
   width: 500px;
   display: flex;
   background-size: cover;
@@ -70,7 +71,7 @@
 
 .sticky-element:hover {
   box-shadow:inset 0 0 0 2000px rgba(191,17,6,0.6);
-  filter: contrast(1.5);
+  filter: contrast(2);
 }
 
 .image-title-white {
@@ -129,7 +130,7 @@
 
 .card-bg:hover {
   box-shadow:inset 0 0 0 2000px rgba(191,17,6,0.6);
-  filter: contrast(1.5);
+  filter: contrast(2);
 }
 
 .col > a {
