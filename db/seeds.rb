@@ -302,7 +302,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "sex").id,
   photo: 'https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -316,7 +316,7 @@ Event.create!(
   organizer: "Insomnia Berlin",
   category_id: Category.find_by(name: "sex").id,
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000057588.jpg',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -332,7 +332,7 @@ Event.create!(
   organizer: 'Insomnia Berlin',
   category_id: Category.find_by(name: "pleasure").id,
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000042860.jpg',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -344,7 +344,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "pleasure").id,
   photo: 'https://images.unsplash.com/photo-1545183322-6da710083410?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -359,7 +359,7 @@ Event.create!(
   organizer: 'Insomnia Berlin',
   category_id: Category.find_by(name: "pleasure").id,
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000054573.jpg',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -373,7 +373,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "sex").id,
   photo: 'https://images.unsplash.com/photo-1498843053639-170ff2122f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -390,7 +390,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "wellness").id,
   photo: 'https://scontent.flis8-2.fna.fbcdn.net/v/t31.0-8/14362665_639659282875092_7117318554322478844_o.jpg?_nc_cat=100&_nc_ohc=uGYNN07uDZcAQk0_EJGrOMcqJTrXDcM2VO7sxEA5vzboMkHGysM5GURtg&_nc_ht=scontent.flis8-2.fna&oh=375b3ca497287c69fdafb4c4b01adde4&oe=5E427DE6',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 
@@ -405,7 +405,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "pleasure").id,
   photo: 'https://images.unsplash.com/photo-1569979274099-f351a7ea19a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -420,7 +420,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "pleasure").id,
   photo: 'https://images.unsplash.com/photo-1555489401-79c274997434?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -434,7 +434,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "wellness").id,
   photo: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -448,7 +448,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   photo: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
   category_id: Category.find_by(name: "pleasure").id,
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -461,7 +461,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "pleasure").id,
   photo: 'https://images.unsplash.com/photo-1564518440696-ef272968778e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 Event.create!(
@@ -474,7 +474,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "pleasure").id,
   photo: 'https://images.unsplash.com/photo-1545128485-c400e7702796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-  price_cents: rand(40..200)
+  price: rand(40..200)
   )
 
 puts 'Done'
