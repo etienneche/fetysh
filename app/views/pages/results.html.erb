@@ -1,7 +1,8 @@
 <div class="results-container">
   <div class="d-flex justify-content-between">
     <div class="bg-white pr-4" style="display:absolute; height: 100vh; width:50%; overflow:scroll;">
-      <h3>More than <%= @articles.size %> Articles</h3>
+      <% if @articles.size > 0 %>
+      <h3 class="results-heading"><%= @articles.size %> articles matching <span class="search-tag"><%= params[:query] %></span></h3>
       <% @articles.each do |article| %>
       <% article = article.searchable %>
       <div class="card-show border-top pt-3">
@@ -17,9 +18,16 @@
         </div>
       </div>
       <% end %>
+      <% else %>
+      <h3 class="results-heading"> No articles found for <span class="search-tag"><%= params[:query] %></span></h3>
+      <div class="border-top pt-3">
+        <%= link_to "Publish an article", new_article_path, class:"btn btn-red" %>
+      </div>
+      <% end %>
     </div>
     <div class="bg-white pl-4" style="display:absolute; height: 100vh; width:50%; overflow:scroll;">
-      <h3>More than <%= @events.size %> Events</h3>
+      <% if @events.size > 0 %>
+      <h3 class="results-heading"><%= @events.size %> events matching <span class="search-tag"><%= params[:query] %></span></h3>
       <% @events.each do |event| %>
       <% event = event.searchable %>
       <div class="card-show border-top pt-3">
@@ -33,6 +41,12 @@
           <h4> <%= link_to event.title, event, style:"text-decoration:none"%></h4>
           <p class="event-description"><%= event.description.split[0..20].join(" ") %>...</p>
         </div>
+      </div>
+      <% end %>
+      <% else %>
+      <h3 class="results-heading"> No Events found for <span class="search-tag"><%= params[:query] %></span></h3>
+      <div class="border-top pt-3">
+        <%= link_to "List an event", new_event_path, class:"btn btn-red" %>
       </div>
       <% end %>
     </div>

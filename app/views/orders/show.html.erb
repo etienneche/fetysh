@@ -11,7 +11,7 @@
           </tr>
           <tr>
             <td>Issued On:</td>
-            <td><%= @order.created_at.to_date %></td>
+            <td><%= @order.created_at.to_date.strftime("%d. %B %Y") %></td>
           </tr>
           <tr>
             <td>Total:</td>
@@ -19,6 +19,7 @@
           </tr>
         </tbody>
       </table>
+      <%= link_to "See my orders", edit_user_registration_path, class:"btn  btn-red"%>
     </div>
   </div>
 </div>
