@@ -63,4 +63,3 @@ class ArticlesController < ApplicationController
     @category = Category.find(params[:category_id])
   end
 end
-

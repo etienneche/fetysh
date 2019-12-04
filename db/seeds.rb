@@ -17,7 +17,8 @@ puts 'Create user'
 User.create!(
   name: 'Scraper',
   password: '123456',
-  email: 't@t.com'
+  email: 't@t.com',
+  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
   )
 
 puts 'Done'
@@ -196,6 +197,7 @@ puts 'Scraping O.School is done'
 # WILDFLOWER SEX----------------------------------------------------------------
 puts 'Start to scrape wildflower sex'
 
+results = []
 url = "https://wildflowersex.com/blogs/blog"
 html_file = open(url).read
 html_doc = Nokogiri::HTML(html_file)

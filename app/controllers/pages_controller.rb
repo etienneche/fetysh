@@ -16,7 +16,7 @@ class PagesController < ApplicationController
 
       @results = PgSearch.multisearch(params[:query])
       @articles = @results.where(searchable_type: "Article")
-      @events =  @results.where(searchable_type: "Event")
+      @events = @results.where(searchable_type: "Event")
     else
       @articles = Article.all
       @events = Event.all
