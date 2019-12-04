@@ -392,7 +392,7 @@ Event.create!(
   title: "Orgasmic Flowing - Sacred Tantra Workshop Berlin",
   address: 'Diamond Lotus Berlin',
   organizer: 'Diamond Lotus Berlin',
-  date: DateTime.parse("30/01/2020 18:00"),
+  date: DateTime.parse("18/12/2019 18:00"),
   description: "How much do you embrace your ORGASMIC being?
   How much are you breathing in LIFE and BLISS into all your cells? Do you reall say YES to your joy?
   Do you allow yourself to vibrate from PLEASURE?
@@ -410,7 +410,7 @@ Event.create!(
   title: "Pompoir Workshop",
   address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
-  date: DateTime.parse("30/01/2020 18:00"),
+  date: DateTime.parse("17/12/2019 18:00"),
   description: " The ancient skill of the vaginal muscles management respected throughout the ages and was integrated into cultures for its betterment for women in a great many traditions.
   Techniques, which mostly came from Tantra, Tao and Kama Sutra heritage and known in Europe as Pompoir, in South Asia as Kabazah, in Hinduism as Sahajoli, in Russia as Vumbuilding (from abbreviation “ВУМ” (“вагинальные управляемые мышцы” – “vaginal controllable muscles”) become increasingly more popular in modern culture.
   Nowadays, many specialists (sexologists, gynecologists, psychologists) recommend these methods and successfully use it in the sexual healing",
@@ -424,7 +424,7 @@ Event.create!(
   title: "Love Dance Workshop",
   address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
-  date: DateTime.parse("30/01/2020 18:00"),
+  date: DateTime.parse("22/12/2019 18:00"),
   description: "Tantra Yoga considers the universe as a consequence of the divine fusion, the sacred dance of the loving couple of Shiva and Shakti.
   These are the two halves of the single whole, the fusion, and harmony of the male and female energies that give birth to Life. It is the divine creative power in the Universe, perfect unity, supreme bliss.
   The highest experience of the divine couple is merging their energies thus cease to be separate and become one.
@@ -439,7 +439,7 @@ Event.create!(
   address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
   date: DateTime.parse("15/01/2020 17:00"),
-  description: "In sexual healing Sanskrit word "yoni" symbolizes the female genitalia: both the uterus and the vulva.
+  description: "In sexual healing Sanskrit word yoni symbolizes the female genitalia: both the uterus and the vulva.
   Ancient teachings such as Tantra and Tao believe that a lot of trauma, negative emotions related to relationship, and sexuality are stored in the yoni in the form of energy blocks manifesting in pain and numbness, lack of sensitivity and inability to climax.
   Learn healing techniques (sometimes called yoni massage) to bring awareness to energetic blocks and transmute them. Find out how to revive sensuality, increase pleasure and frequency and strength of orgasms, bring your relationship on a whole different level",
   user_id: User.find_by(name: "Scraper").id,
