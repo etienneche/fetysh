@@ -63,6 +63,7 @@
             <div class="collapse" id="love">
               <div class="card card-body-pro">
                 <div class="cards">
+                  <h4>Loved Articles</h4>
                   <div class="col">
 
                   <% current_user.reactions.where(reaction:"love").each do |reaction| %>
@@ -90,7 +91,7 @@
               <div class="card card-body">
                 <div class="cards">
                   <div class="col">
-
+                  <h4>Want to try Articles</h4>
                   <% current_user.reactions.where(reaction:"want_to_try").each do |reaction| %>
                   <%# link_to category_article_path(article.category_id, article.id) do %>
                     <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">

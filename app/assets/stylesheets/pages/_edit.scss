@@ -113,6 +113,10 @@
 
 // Cards
 
+.cards {
+  margin-top: 10px;
+}
+
 .card-product {
   overflow: hidden;
   margin: 20px 0;
@@ -164,6 +168,10 @@
   border-radius: 5px;
   padding: 10px 22px;
   margin-left: 60px;
+}
+.cards h4 {
+  text-decoration: overline;
+  margin-left: 395px;
 }
 .btn-red:hover {
   background-color: #910722;
