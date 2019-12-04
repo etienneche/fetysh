@@ -9,6 +9,7 @@ class Article < ApplicationRecord
   has_many :reactions
   has_many :reviews
   mount_uploader :photo, PhotoUploader
+  attribute :photo, :string, default: 'https://images.unsplash.com/photo-1518208940245-41bdd9dab228?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=871&q=80'
 
   validates :title, :content, presence: true
 end

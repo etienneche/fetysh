@@ -11,7 +11,8 @@
         <div class="col" id="stickymove">
           <% article = Article.all.where(category: cat)[0] %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.img_url %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.img_url %>); background-size: cover;">
+          <div class="d-flex flex-column sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.img_url %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.img_url %>); background-size: cover;">
+            <p class="cat-img-white pl-4 pr-4">#<%= article.category.name %></p>
             <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
           </div>
           <% end %>
@@ -23,7 +24,7 @@
           <div>
             <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
             <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= Category.find(article.category_id).name %></p>
+              <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
               <p class="card-author-up author-border"><%= article.source %></p>
             </div>
@@ -38,13 +39,37 @@
           <div>
             <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
             <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= Category.find(article.category_id).name %></p>
+              <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
               <p class="card-author-up author-border"><%= article.source %></p>
             </div>
           </div>
           <% end %>
           <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="trendy">
+      <div class="section-landing mt-4">
+        <h2 class="category-heading">Trendy</h2>
+      </div>
+      <div>
+        <div class="container">
+          <div class="d-flex justify-content-between event-section">
+            <% @articles.sample(5).each do |article|%>
+            <%= link_to category_article_path(article.category_id, article.id) do %>
+            <div class="event-card">
+              <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
+              <div class="p-2">
+                <p class="card-author-up">#<%= article.category.name %></p>
+                <h4 class="mb-4"><%= article.title %></h4>
+                <p class="card-author-up author-border"><%= article.source.split[0..1].join(" ")%></p>
+              </div>
+            </div>
+            <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
@@ -71,7 +96,7 @@
           <div>
             <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
             <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= Category.find(article.category_id).name %></p>
+              <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
               <p class="card-author-up author-border"><%= article.source %></p>
             </div>
@@ -86,58 +111,7 @@
           <div>
             <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
             <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= Category.find(article.category_id).name %></p>
-              <h4 class="mb-4"><%= article.title %></h4>
-              <p class="card-author-up author-border"><%= article.source %></p>
-            </div>
-          </div>
-          <% end %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <div class="sex-toys">
-      <div class="section-landing">
-        <% cat = Category.find_by(name: "sex toys")  %>
-        <h2 class="category-heading"><%= cat.name %></h2>
-      </div>
-
-      <div class="stickyscroll" style="margin-bottom: 120px;">
-        <div class="col" id="stickymove">
-          <% article = Article.all.where(category: cat)[0] %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.img_url %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.img_url %>); background-size: cover;">
-            <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
-          </div>
-          <% end %>
-        </div>
-
-        <div class="col">
-          <% @articles.where(category: cat)[1..3].each do |article, index| %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div>
-            <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
-            <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= Category.find(article.category_id).name %></p>
-              <h4 class="mb-4"><%= article.title %></h4>
-              <p class="card-author-up author-border"><%= article.source %></p>
-            </div>
-          </div>
-          <% end %>
-          <% end %>
-        </div>
-
-        <div class="col">
-          <% @articles.where(category: cat)[4..6].each do |article, index| %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div>
-            <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
-            <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= Category.find(article.category_id).name %></p>
+              <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
               <p class="card-author-up author-border"><%= article.source %></p>
             </div>
@@ -171,6 +145,54 @@
             <% end %>
           </div>
           <h5><%= link_to "Show all experiences >",events_path, style:"text-decoration:none"%></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="sex">
+      <div class="section-landing">
+        <% cat = Category.find_by(name: "sex")  %>
+        <h2 class="category-heading"><%= cat.name %></h2>
+      </div>
+
+      <div class="stickyscroll" style="margin-bottom: 120px;">
+        <div class="col" id="stickymove">
+          <% article = Article.all.where(category: cat)[0] %>
+          <%= link_to category_article_path(article.category_id, article.id) do %>
+          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.img_url %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.img_url %>); background-size: cover;">
+            <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
+          </div>
+          <% end %>
+        </div>
+
+        <div class="col">
+          <% @articles.where(category: cat)[1..3].each do |article, index| %>
+          <%= link_to category_article_path(article.category_id, article.id) do %>
+          <div>
+            <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
+            <div class="p-2 mb-3">
+              <p class="card-author-up">#<%= article.category.name %></p>
+              <h4 class="mb-4"><%= article.title %></h4>
+              <p class="card-author-up author-border"><%= article.source %></p>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+
+        <div class="col">
+          <% @articles.where(category: cat)[4..6].each do |article, index| %>
+          <%= link_to category_article_path(article.category_id, article.id) do %>
+          <div>
+            <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
+            <div class="p-2 mb-3">
+              <p class="card-author-up">#<%= article.category.name %></p>
+              <h4 class="mb-4"><%= article.title %></h4>
+              <p class="card-author-up author-border"><%= article.source %></p>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
         </div>
       </div>
     </div>

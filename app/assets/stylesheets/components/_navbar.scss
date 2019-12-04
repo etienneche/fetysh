@@ -21,7 +21,7 @@
   border-bottom: 1px solid #f2f2f2;
   border-top: 1px solid #f2f2f2;
   height: 40px;
-  background-color: #910722;
+  background-color: black;
 }
 #navbarDropdown {
   text-transform: uppercase;
@@ -33,7 +33,7 @@
 
 }
 .dropdown-menu {
-  background-color: #910722;
+  background-color: black;
   left: -60px !important;
   text-transform: uppercase;
   text-decoration: none;
@@ -161,6 +161,20 @@ a.dropdown-item {
 
 .pages-landing > .categories-nav {
  display: none !important;
+}
+
+.events-index > .navbar {
+  background-color: black !important;
+  & > .collapse .navbar-nav .nav-item a.nav-link {
+    color: white !important;
+  }
+}
+
+.events-index > .categories-nav {
+  background-color: black !important;
+  & > a.categories-nav-el {
+    color: white !important;
+  }
 }
 
 .events-show > .navbar {
