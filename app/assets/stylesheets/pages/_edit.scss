@@ -115,6 +115,7 @@
 
 .cards {
   margin-top: 10px;
+
 }
 
 .card-product {
@@ -155,23 +156,29 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
-
+.card {
+  border: 1px solid #91072280;
+}
 .card-body_pro {
   border: 1px solid #91072280;
   margin-top: 50px;
 }
 
-.reactions-history a {
-  background-color: white;
-  border: 1px solid #910722;
-  color: #910722;
-  border-radius: 5px;
-  padding: 10px 22px;
-  margin-left: 60px;
-}
-.cards h4 {
+// .reactions-history a {
+//   background-color: white;
+//   border: 1px solid #910722;
+//   color: #910722;
+//   border-radius: 5px;
+//   padding: 10px 22px;
+//   margin-left: 60px;
+// }
+.cards h3 {
   text-decoration: overline;
-  margin-left: 395px;
+  margin-left: 340px;
+
+}
+#wtt-btn {
+  margin-left: 30px;
 }
 .btn-red:hover {
   background-color: #910722;
