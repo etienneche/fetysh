@@ -17,6 +17,7 @@ gem 'rails', '6.0.1'
 gem 'redis'
 gem 'stripe'
 gem 'stripe_event'
+gem 'shareable'
 
 
 # gem "friendly_id", "~> 4.0.0.beta8"
