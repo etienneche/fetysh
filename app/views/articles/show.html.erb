@@ -5,96 +5,88 @@
       <h6>#<%= @category.name %></h6>
       <h1><%= @article.title %></h1>
       <h4>By <%= @article.source %></h4>
-
       <p class="card-article-parag"><%= @article.created_at.strftime("%d. %B %Y") %></p>
-
-
       <div class="tabs">
-       <%= (@article_love_count) %>
-       <% color = current_user.loved?(@article) ? "red" : "gray" %>
-
-       <%= link_to love_category_article_path(@category, @article), method: :post do %>
-
-       <i class="fas fa-heart" id="coracao"></i>
-
-       <% end %>
-
-       <%= (@article_wtt_count) %>
-       <% color = current_user.wtted?(@article) ? "red" : "gray" %>
-
-       <%= link_to wtt_category_article_path(@category, @article), method: :post do %>
-
-       <i class="fas fa-bookmark" id="marca"></i>
-
-       <% end %>
-
-       <%#= (@article_save_count) %>
-       <%# color = current_user.saved?(@article) ? "red" : "gray" %>
-
-       <%#= link_to save_category_article_path(@category, @article), method: :post do %>
-       <!-- <i class="fas fa-save" id="salva"></i> -->
-       <%# end %>
-     </div>
-   </div>
-
-   <div class="image">
-    <div class="box-red"></div>
-    <img src="<%= @article.img_url %>" alt="">
-  </div>
-</div>
-
-<div class="article-layout-padding">
-
-
-  <% sentences = @article.content.split(/(?<=[?.!])/) %>
-  <% x = 0 %>
-  <% y = 4 %>
-  <% until y > sentences.length  %>
-  <p class="content-article-justify article-layout"> <%= sentences[x..y].join(" ")%></p>
-  <% x = y+1 %>
-  <% y+= 5 %>
-  <% end %>
-</div>
-<!-- REVIEWS -->
-<div class="border-bottom border-top pt-4 review-btn-layout article-layout-padding" >
-  <p>
-    <button class="form-actions btn-red" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Add a New Review
-    </button>
-  </p>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
-      <div class="form-group ">
-        <%= simple_form_for [@category, @article, @review] do |f| %>
-        <%= f.input   :content,
-        label: "Description review",
-        required: true %>
-        <div class="form-actions btn-login">
-          <%= f.button :submit, "Post review" %>
-        </div>
+        <% if current_user.loved?(@article) %>
+        <%= link_to love_category_article_path(@category, @article), method: :post do %>
+        <p style="color:#910722; font-size: 24px;"><i class="fas fa-heart"></i></p>
         <% end %>
+        <% else  %>
+        <%= link_to love_category_article_path(@category, @article), method: :post do %>
+        <p style="color:gray;font-size: 24px;"><i class="far fa-heart"></i></p>
+        <% end %>
+        <% end %>
+
+        <% if current_user.wtted?(@article) %>
+        <%= link_to wtt_category_article_path(@category, @article), method: :post do %>
+        <p style="color:#910722; font-size: 24px;"><i class="fas fa-bookmark"></i></p>
+        <% end %>
+        <% else  %>
+        <%= link_to wtt_category_article_path(@category, @article), method: :post do %>
+        <p style="color:gray;font-size: 24px;"><i class="far fa-bookmark"></i></p>
+        <% end %>
+        <% end %>
+      </div>
+       <div class="fb-share-button" data-href="<%= request.fullpath %>" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2Fcategories%2F132%2Farticles%2F565&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    </div>
+
+    <div class="image">
+      <div class="box-red"></div>
+      <img src="<%= @article.img_url %>" alt="">
+    </div>
+  </div>
+
+  <div class="article-layout-padding">
+
+    <% sentences = @article.content.split(/(?<=[?.!])/) %>
+    <% x = 0 %>
+    <% y = 4 %>
+    <% until y > sentences.length  %>
+    <p class="content-article-justify article-layout"> <%= sentences[x..y].join(" ")%></p>
+    <% x = y+1 %>
+    <% y+= 5 %>
+    <% end %>
+  </div>
+  <!-- REVIEWS -->
+  <div class="border-bottom border-top pt-4 review-btn-layout article-layout-padding" >
+    <p>
+      <button class="form-actions btn-red" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Add a New Review
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <div class="form-group ">
+          <%= simple_form_for [@category, @article, @review] do |f| %>
+          <%= f.input   :content,
+          label: "Description review",
+          required: true %>
+          <div class="form-actions btn-login">
+            <%= f.button :submit, "Post review" %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% @reviews.each do |review| %>
+    <div class="border-bottom mt-4">
+      <div class="d-flex">
+        <img src="https://source.unsplash.com/featured/?face", class="avatar" />
+      </div>
+      <p class="review-content pt-2"><%= review.content %></p>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-12" id="sticky-write-new">
+     <div class="sticky-new">
+       <h6>Would you like to became
+        <br>an author?</h6>
+        <%= link_to 'Write your 1st Article>', new_article_path
+        %>
       </div>
     </div>
   </div>
-  <% @reviews.each do |review| %>
-  <div class="border-bottom mt-4">
-    <div class="d-flex">
-      <img src="https://source.unsplash.com/featured/?face", class="avatar" />
-    </div>
-    <p class="review-content pt-2"><%= review.content %></p>
-  </div>
-  <% end %>
-</div>
-<div class="row">
-  <div class="col-12" id="sticky-write-new">
-   <div class="sticky-new">
-     <h6>Would you like to became
-      <br>an author?</h6>
-      <%= link_to 'Write your 1st Article>', new_article_path
-      %>
-    </div>
-  </div>
-</div>
 </div>
 <!-- ARTICLES RELATED -->
 
@@ -121,6 +113,7 @@
   </div>
 </div>
 
+
 <script>
   var button = document.getElementById("coracao")
   count = 0;
@@ -139,5 +132,7 @@
   button2.onclick = function() {
     count += 1;
   }
+
 </script>
+
 

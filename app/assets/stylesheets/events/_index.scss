@@ -26,6 +26,7 @@
   color: $gray;
 }
 
+
 .desc-card{
   color: rgb(113, 113, 113);
   font-weight: 400 !important;
@@ -37,6 +38,8 @@
 .img-event {
   height: 200px;
   width: 300px;
+  background-size: cover;
+  background-position: center;
 }
 
 a {

@@ -21,7 +21,7 @@
       </li>
       <li class="nav-item">
         <%= link_to edit_user_registration_path do %>
-        <img src="https://images.unsplash.com/photo-1542080681-b52d382432af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" class="avatar">
+        <img src=<%= current_user.photo %> class="avatar">
         <% end %>
       </li>
     </ul>
