@@ -1,5 +1,10 @@
 import "bootstrap";
 
+// Star rating
+import { initStarRating } from '../plugins/init_star_rating';
+
+initStarRating();
+
 require("trix")
 require("@rails/actiontext")
 // NAVBAR DROPDOWN
@@ -47,6 +52,8 @@ window.onload = function() {
 }
 // Date picker
 import "../plugins/flatpickr"
+
+
 
 
 // const useredit = document.getElementsByClassName('.registrations-edit')
