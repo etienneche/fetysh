@@ -405,4 +405,84 @@ Event.create!(
   price_cents: rand(40..200)
   )
 
+
+Event.create!(
+  title: "Pompoir Workshop",
+  address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
+  organizer: 'Mystic Techniques',
+  date: DateTime.parse("30/01/2020 18:00"),
+  description: " The ancient skill of the vaginal muscles management respected throughout the ages and was integrated into cultures for its betterment for women in a great many traditions.
+  Techniques, which mostly came from Tantra, Tao and Kama Sutra heritage and known in Europe as Pompoir, in South Asia as Kabazah, in Hinduism as Sahajoli, in Russia as Vumbuilding (from abbreviation “ВУМ” (“вагинальные управляемые мышцы” – “vaginal controllable muscles”) become increasingly more popular in modern culture.
+  Nowadays, many specialists (sexologists, gynecologists, psychologists) recommend these methods and successfully use it in the sexual healing",
+  user_id: User.find_by(name: "Scraper").id,
+  category_id: Category.find_by(name: "tantra").id,
+  photo: 'https://images.unsplash.com/photo-1569979274099-f351a7ea19a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
+  price_cents: rand(40..200)
+  )
+
+Event.create!(
+  title: "Love Dance Workshop",
+  address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
+  organizer: 'Mystic Techniques',
+  date: DateTime.parse("30/01/2020 18:00"),
+  description: "Tantra Yoga considers the universe as a consequence of the divine fusion, the sacred dance of the loving couple of Shiva and Shakti.
+  These are the two halves of the single whole, the fusion, and harmony of the male and female energies that give birth to Life. It is the divine creative power in the Universe, perfect unity, supreme bliss.
+  The highest experience of the divine couple is merging their energies thus cease to be separate and become one.
+  For loving couples, we offer a myriad of powerful of Tantric and Taoist techniques for understanding this sacred unity for all its admiration and joy..",
+  user_id: User.find_by(name: "Scraper").id,
+  category_id: 'https://images.unsplash.com/photo-1555489401-79c274997434?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+  price_cents: rand(40..200)
+  )
+
+Event.create!(
+  title: "Yoni Massage",
+  address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
+  organizer: 'Mystic Techniques',
+  date: DateTime.parse("15/01/2020 17:00"),
+  description: "In sexual healing Sanskrit word "yoni" symbolizes the female genitalia: both the uterus and the vulva.
+  Ancient teachings such as Tantra and Tao believe that a lot of trauma, negative emotions related to relationship, and sexuality are stored in the yoni in the form of energy blocks manifesting in pain and numbness, lack of sensitivity and inability to climax.
+  Learn healing techniques (sometimes called yoni massage) to bring awareness to energetic blocks and transmute them. Find out how to revive sensuality, increase pleasure and frequency and strength of orgasms, bring your relationship on a whole different level",
+  user_id: User.find_by(name: "Scraper").id,
+  category_id: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
+  price_cents: rand(40..200)
+  )
+
+Event.create!(
+  title: "Female Orgasms",
+  address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
+  organizer: 'Mystic Techniques',
+  date: DateTime.parse("22/12/2029 11:00"),
+  description: "Would you like to experience more than 24 types of orgasms? Maybe you don't experience any orgasm at all? Are you cumming only from a vibrator? Do you have to fake your orgasm to please your partner?
+  Your orgasms are not as frequent as you would like? Do you want your orgasms to be more powerful? Do you want to cum at the same time as your partner? Do you only cum from masturbation? Do you want to experience multiple orgasms?
+  Do you want to know the beauty of female ejaculation? If you answered “yes” to one or more of these questions, then this workshop is for you.",
+  user_id: User.find_by(name: "Scraper").id,
+  category_id: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
+  price_cents: rand(40..200)
+  )
+
+Event.create!(
+  title: "Naked Ping-Pong Tournament",
+  address: 'Rua do Conde de Redondo 91B, 1150-103 Lisboa',
+  organizer: 'Le Wagon Lisbon',
+  date: DateTime.parse("13/12/2019 18:00"),
+  description: "Do you like ping pong? So, come to participate in the first international Naked Ping Pong Tournament in Lisbon.
+  An amazing opportunity to play hard.",
+  user_id: User.find_by(name: "Scraper").id,
+  category_id: 'https://images.unsplash.com/photo-1564518440696-ef272968778e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+  price_cents: rand(40..200)
+  )
+
+Event.create!(
+  title: "ByeBug Orgy Party",
+  address: 'Rua do Conde de Redondo 91B, 1150-103 Lisboa',
+  organizer: 'Le Wagon Lisbon',
+  date: DateTime.parse("06/12/2029 23:00"),
+  description: "Are you looking for a group of fun and new exciting experience? You are welcome to join our group and experience the wild and unforgettable party.
+  Come rake with us! Please note that computers are not allowed!",
+  user_id: User.find_by(name: "Scraper").id,
+  category_id: 'https://images.unsplash.com/photo-1545128485-c400e7702796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+  price_cents: rand(40..200)
+  )
+
 puts 'Done'
+
