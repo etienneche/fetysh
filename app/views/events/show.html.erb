@@ -20,7 +20,7 @@
           <div>
             <p><i class="fas fa-users"></i></p>
             <p class="mb-0">Participants</p>
-            <p class="text-white"><strong>25</strong></p>
+            <p class="text-white"><strong><%= rand(20..150) %></strong></p>
           </div>
           <div>
             <p><i class="fas fa-comments"></i></p>
@@ -52,8 +52,8 @@
       </div>
       <div class="col-7">
         <div class="d-flex align-items-center">
-          <img class= "avatar-xl" src=<%= @event.user.photo %>>
-          <h3 class="font-24 weight-600 ml-4"><%= @event.user.name %></h3>
+          <img class= "avatar-xl" src=<%= @event.photo %>>
+          <h3 class="font-24 weight-600 ml-4"><%= @event.organizer %></h3>
         </div>
         <p class="font-18 pt-4"><%= @event.user.description %></p>
         <a href="" class="btn btn-red">Contact host</a>

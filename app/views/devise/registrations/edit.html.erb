@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="profile-card">
-        <img class="profile-img" src="/assets/profile-img.jpg" alt="Avatar">
+        <img class="profile-img" src=<%= current_user.photo %>, alt="Avatar">
         <br>
-        <h3>First Name</h3>
+        <h3><%= current_user.name %></h3>
         <button type="button" class="btn-outline-secondary btn-red">Edit Profile</button>
         <div>
           <ul class="list-group list-group-horizontal list-no-bullets">
