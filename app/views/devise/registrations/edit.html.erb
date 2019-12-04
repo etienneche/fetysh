@@ -125,22 +125,23 @@
                 <div class="cards">
                   <div class="col">
                     <h3>My Events</h3>
-                    <% Order.all.where(user_id:38).each do |order| %>
-                    <%# link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
-
-                    <div class="p-2 mb-3">
-                      <p class="card-author-up">#
-                        <%= order.event.title %>
-                      </p>
-                      <h4 class="mb-4">
-                        <%= order.event.address %>
-                      </h4>
-                      <p class="card-author-up author-border">
-                        <%= order.event.date %>
-                      </p>
-                    </div>
+                    <% Order.all.where(user_id:current_user).each do |order| %>
+                      <%= link_to event_path(order.event.id) do %>
+                      <div class="card-bg" style="background-image: url(<%= order.event.photo %>);">
+                      </div>
+                      <div class="p-2 mb-3">
+                        <p class="card-author-up">#
+                          <%= order.event.title %>
+                        </p>
+                        <h4 class="mb-4">
+                          <%= order.event.address %>
+                        </h4>
+                        <p class="card-author-up author-border">
+                          <%= order.event.date %>
+                        </p>
+                      </div>
+                      <% end %>
                     <% end %>
-                    <%# end %>
                   </div>
                 </div>
               </div>
