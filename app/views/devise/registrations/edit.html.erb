@@ -60,7 +60,7 @@
               <a class="btn-outline-secondary btn-red" data-toggle="collapse" href="#love" role="button" aria-expanded="false" aria-controls="love">
                 Loved articles
               </a>
-              <a class="btn-outline-secondary btn-red" data-toggle="collapse" href="#want_to_try" role="button" aria-expanded="false" aria-controls="want_to_try">
+              <a id="wtt-btn" class="btn-outline-secondary btn-red" data-toggle="collapse" href="#want_to_try" role="button" aria-expanded="false" aria-controls="want_to_try">
                 Want to try articles
               </a>
             </p>
@@ -69,15 +69,18 @@
             <div class="collapse" id="love">
               <div class="card card-body-pro">
                 <div class="cards">
-                  <h4>Loved Articles</h4>
+                  <h3>Loved Articles</h3>
                   <div class="col">
 
-                  <% current_user.reactions.where(reaction:"love").each do |reaction| %>
-                  <%# link_to category_article_path(article.category_id, article.id) do %>
+                    <% current_user.reactions.where(reaction:"love").each do |reaction| %>
+                    <%= link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
+
                     <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
                     </div>
+
                     <div class="p-2 mb-3">
                       <p class="card-author-up">#
+
                         <%= reaction.article.category.name%>
                       </p>
                       <h4 class="mb-4">
@@ -87,8 +90,9 @@
                         <%= reaction.article.source %>
                       </p>
                     </div>
-                    <%# end %>
                     <% end %>
+                    <% end %>
+
                   </div>
                 </div>
               </div>
@@ -97,9 +101,9 @@
               <div class="card card-body">
                 <div class="cards">
                   <div class="col">
-                  <h4>Want to try Articles</h4>
-                  <% current_user.reactions.where(reaction:"want_to_try").each do |reaction| %>
-                  <%# link_to category_article_path(article.category_id, article.id) do %>
+                    <h3>Want to try Articles</h3>
+                    <% current_user.reactions.where(reaction:"want_to_try").each do |reaction| %>
+                    <%# link_to category_article_path(article.category_id, article.id) do %>
                     <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
                     </div>
                     <div class="p-2 mb-3">
@@ -113,8 +117,8 @@
                         <%= reaction.article.source %>
                       </p>
                     </div>
-                    <%# end %>
                     <% end %>
+                    <%# end %>
                   </div>
                 </div>
               </div>
