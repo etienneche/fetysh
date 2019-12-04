@@ -57,6 +57,9 @@
               <a id="wtt-btn" class="btn-outline-secondary btn-red" data-toggle="collapse" href="#want_to_try" role="button" aria-expanded="false" aria-controls="want_to_try">
                 Want to try articles
               </a>
+              <a id="wtt-btn" class="btn-outline-secondary btn-red" data-toggle="collapse" href="#my-events" role="button" aria-expanded="false" aria-controls="want_to_try">
+                My events
+              </a>
             </p>
           </div>
           <div class="tab-content">
@@ -97,7 +100,7 @@
                   <div class="col">
                     <h3>Want to try Articles</h3>
                     <% current_user.reactions.where(reaction:"want_to_try").each do |reaction| %>
-                    <%# link_to category_article_path(article.category_id, article.id) do %>
+                    <%= link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
                     <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
                     </div>
                     <div class="p-2 mb-3">
@@ -112,11 +115,38 @@
                       </p>
                     </div>
                     <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="my-events">
+              <div class="card card-body">
+                <div class="cards">
+                  <div class="col">
+                    <h3>My Events</h3>
+                    <% Order.all.where(user_id:38).each do |order| %>
+                    <%# link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
+
+                    <div class="p-2 mb-3">
+                      <p class="card-author-up">#
+                        <%= order.event.title %>
+                      </p>
+                      <h4 class="mb-4">
+                        <%= order.event.address %>
+                      </h4>
+                      <p class="card-author-up author-border">
+                        <%= order.event.date %>
+                      </p>
+                    </div>
+                    <% end %>
                     <%# end %>
                   </div>
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
