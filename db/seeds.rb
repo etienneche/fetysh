@@ -396,7 +396,7 @@ Event.create!(
 
 Event.create!(
   title: "Pompoir Workshop",
-  address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
+  address: 'Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
   date: DateTime.parse("17/12/2019 18:00"),
   description: " The ancient skill of the vaginal muscles management respected throughout the ages and was integrated into cultures for its betterment for women in a great many traditions.
@@ -410,7 +410,7 @@ Event.create!(
 
 Event.create!(
   title: "Love Dance Workshop",
-  address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
+  address: 'Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
   date: DateTime.parse("22/12/2019 18:00"),
   description: "Tantra Yoga considers the universe as a consequence of the divine fusion, the sacred dance of the loving couple of Shiva and Shakti.
@@ -424,7 +424,7 @@ Event.create!(
 
 Event.create!(
   title: "Yoni Massage",
-  address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
+  address: 'Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
   date: DateTime.parse("15/01/2020 17:00"),
   description: "In sexual healing Sanskrit word yoni symbolizes the female genitalia: both the uterus and the vulva.
@@ -437,7 +437,7 @@ Event.create!(
 
 Event.create!(
   title: "Female Orgasms",
-  address: 'Overhoeksplein 2, 1031 KS Amsterdam, Netherlands',
+  address: 'Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
   date: DateTime.parse("22/12/2029 11:00"),
   description: "Would you like to experience more than 24 types of orgasms? Maybe you don't experience any orgasm at all? Are you cumming only from a vibrator? Do you have to fake your orgasm to please your partner?
@@ -450,7 +450,7 @@ Event.create!(
 
 Event.create!(
   title: "Naked Ping-Pong Tournament",
-  address: 'Rua do Conde de Redondo 91B, 1150-103 Lisboa',
+  address: 'Lisbon',
   organizer: 'Le Wagon Lisbon',
   date: DateTime.parse("13/12/2019 18:00"),
   description: "Do you like ping pong? So, come to participate in the first international Naked Ping Pong Tournament in Lisbon.
@@ -462,7 +462,7 @@ Event.create!(
 
 Event.create!(
   title: "ByeBug Orgy Party",
-  address: 'Rua do Conde de Redondo 91B, 1150-103 Lisboa',
+  address: 'Lisbon',
   organizer: 'Le Wagon Lisbon',
   date: DateTime.parse("06/12/2029 23:00"),
   description: "Are you looking for a group of fun and new exciting experience? You are welcome to join our group and experience the wild and unforgettable party.
