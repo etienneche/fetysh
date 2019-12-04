@@ -91,8 +91,7 @@
           <div class="card card-body">
             <div class="form-group ">
               <%= simple_form_for [@event, @rating] do |f| %>
-              <%= f.input   :stars,
-              label: "Stars",
+              <%= f.input   :stars, collection: (1..5).to_a, label: "Stars",
               required: true %>
               <%= f.input   :content,
               label: "Description",
