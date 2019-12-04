@@ -36,11 +36,13 @@ window.addEventListener("scroll", function(event) {
 }, false);
 
 // ELEVATOR //
-//import { Elevator } from '../plugins/elevator';
+import { Elevator } from '../plugins/elevator';
 window.onload = function() {
   var elevator = new Elevator({
+    mainAudio: 'https://freesound.org/people/chriskt715/sounds/399877/download/399877__chriskt715__sensationbaby.wav',
+    endAudio: 'http://tholman.com/elevator.js/music/ding.mp3',
     element: document.querySelector('.elevator-button')
-  });
+    });
 
   const scrollTop = document.getElementById("scroll-to-top-button");
   if (scrollTop) {
@@ -50,6 +52,7 @@ window.onload = function() {
     });
   }
 }
+
 // Date picker
 import "../plugins/flatpickr"
 
