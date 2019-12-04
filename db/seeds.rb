@@ -6,227 +6,227 @@ Review.destroy_all
 Rating.destroy_all
 Order.destroy_all
 Event.destroy_all
-Article.destroy_all
-Category.destroy_all
-User.destroy_all
+# Article.destroy_all
+# Category.destroy_all
+# User.destroy_all
 
 puts 'Done'
 
 # # CREATE USERS -----------------------------------------------------------------
-puts 'Create user'
-User.create!(
-  name: 'Scraper',
-  password: '123456',
-  email: 't@t.com',
-  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-  )
+# puts 'Create user'
+# User.create!(
+#   name: 'Scraper',
+#   password: '123456',
+#   email: 't@t.com',
+#   photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+#   )
 
-puts 'Done'
+# puts 'Done'
 
 # CREATE CATEGORIES FOR EVENTS
-Category.create!(
-  name: 'sex')
+# Category.create!(
+#   name: 'sex')
 
 # # CREATE ARTICLES --------------------------------------------------------------
 
-# # SCRAPER TABU -----------------------------------------------------------------
-# # SCRAPE LINKS TO ARTICLES
-puts "Starting to scrape tabu"
-url = "https://talktabu.com/zine"
-html_file = open(url).read
-html_doc = Nokogiri::HTML(html_file)
+# # # SCRAPER TABU -----------------------------------------------------------------
+# # # SCRAPE LINKS TO ARTICLES
+# puts "Starting to scrape tabu"
+# url = "https://talktabu.com/zine"
+# html_file = open(url).read
+# html_doc = Nokogiri::HTML(html_file)
 
-links = html_doc.search('.Blog-header-content-link').map do |element|
-  element.attributes["href"].value
-end
+# links = html_doc.search('.Blog-header-content-link').map do |element|
+#   element.attributes["href"].value
+# end
 
-# SCRAPE INDIVIDUAL ARTICLES
-results = []
-links.each do |link|
-  begin
-    puts "Parsing #{link} into nokogiri"
-    url = "https://talktabu.com#{link}"
-    html_file = open(url).read
-    html_doc = Nokogiri::HTML(html_file)
-    content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
-    if content_all.index("Header image").nil?
-      if !content_all.index("Sources:http").nil?
-        content = content_all[0..content_all.index("Sources:http") - 1]
-      end
-    else
-      content = content_all[0..content_all.index("Header image") - 1]
-    end
-    results << {
-      category: html_doc.search('.Blog-meta-item-category').first.text.downcase,
-      author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
-      title: html_doc.search('.Blog-title.Blog-title--item').text,
-      content: content,
-      img_url: html_doc.search('img')[2].attributes["data-src"].value,
-      source: 'tabú'
-    }
-  rescue => e
-    puts link
-    puts e
-  end
-end
+# # SCRAPE INDIVIDUAL ARTICLES
+# results = []
+# links.each do |link|
+#   begin
+#     puts "Parsing #{link} into nokogiri"
+#     url = "https://talktabu.com#{link}"
+#     html_file = open(url).read
+#     html_doc = Nokogiri::HTML(html_file)
+#     content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
+#     if content_all.index("Header image").nil?
+#       if !content_all.index("Sources:http").nil?
+#         content = content_all[0..content_all.index("Sources:http") - 1]
+#       end
+#     else
+#       content = content_all[0..content_all.index("Header image") - 1]
+#     end
+#     results << {
+#       category: html_doc.search('.Blog-meta-item-category').first.text.downcase,
+#       author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
+#       title: html_doc.search('.Blog-title.Blog-title--item').text,
+#       content: content,
+#       img_url: html_doc.search('img')[2].attributes["data-src"].value,
+#       source: 'tabú'
+#     }
+#   rescue => e
+#     puts link
+#     puts e
+#   end
+# end
 
-# CREATE CATEGORIES FROM SCRAPE
-puts 'Creating categories from Tabu Scrape'
-results.each do |result|
-  if Category.find_by(name: result[:category]).nil?
-    Category.create!(
-      name: result[:category]
-      )
-  end
-end
-puts 'Categories done'
+# # CREATE CATEGORIES FROM SCRAPE
+# puts 'Creating categories from Tabu Scrape'
+# results.each do |result|
+#   if Category.find_by(name: result[:category]).nil?
+#     Category.create!(
+#       name: result[:category]
+#       )
+#   end
+# end
+# puts 'Categories done'
 
-# CREATE ARTICLES FROM SCRAPE
-puts 'Creating articles from tabu scrape'
-results.each do |result|
-  if !result[:content].nil?
-    Article.create!(
-      title: result[:title],
-      content: result[:content],
-      author: result[:author],
-      user_id: User.find_by(name: 'Scraper').id,
-      source: result[:source],
-      category_id: Category.find_by(name: result[:category]).id,
-      img_url: result[:img_url]
-      )
-  end
-end
-puts "Done"
+# # CREATE ARTICLES FROM SCRAPE
+# puts 'Creating articles from tabu scrape'
+# results.each do |result|
+#   if !result[:content].nil?
+#     Article.create!(
+#       title: result[:title],
+#       content: result[:content],
+#       author: result[:author],
+#       user_id: User.find_by(name: 'Scraper').id,
+#       source: result[:source],
+#       category_id: Category.find_by(name: result[:category]).id,
+#       img_url: result[:img_url]
+#       )
+#   end
+# end
+# puts "Done"
 
-puts 'Scraping Tabu is done'
+# puts 'Scraping Tabu is done'
 
-# # SCRAPER O.SCHOOL------------------------------------------------------------
-# # SCRAPE LINKS TO ARTICLES
-puts 'Start the O.School Scraper'
-topics = [
-  'anal-sex',
-  'culture',
-  'first-time-sex',
-  'orgasm',
-  'sex-toys',
-  'communication',
-  'dating-and-relationships',
-  'kinky',
-  'penis',
-  'consent',
-  'eating-pussy',
-  'masturbation',
-  'porn',
-  'vagina-vulva'
-]
+# # # SCRAPER O.SCHOOL------------------------------------------------------------
+# # # SCRAPE LINKS TO ARTICLES
+# puts 'Start the O.School Scraper'
+# topics = [
+#   'anal-sex',
+#   'culture',
+#   'first-time-sex',
+#   'orgasm',
+#   'sex-toys',
+#   'communication',
+#   'dating-and-relationships',
+#   'kinky',
+#   'penis',
+#   'consent',
+#   'eating-pussy',
+#   'masturbation',
+#   'porn',
+#   'vagina-vulva'
+# ]
 
-results = []
-topics.each do |topic|
-  puts "Search for topic #{topic.upcase}"
-  url = "https://www.o.school/topic/#{topic}"
-  html_file = open(url).read
-  html_doc = Nokogiri::HTML(html_file)
-  links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
-    element.attributes["href"].value
-  end
+# results = []
+# topics.each do |topic|
+#   puts "Search for topic #{topic.upcase}"
+#   url = "https://www.o.school/topic/#{topic}"
+#   html_file = open(url).read
+#   html_doc = Nokogiri::HTML(html_file)
+#   links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
+#     element.attributes["href"].value
+#   end
 
-  # SCRAPE INDIVIDUAL ARTICLES
-  links.each do |link|
-    begin
-      puts "Putting #{link} into Nokogiri"
-      url = "https://www.o.school#{link}"
-      html_file = open(url).read
-      html_doc = Nokogiri::HTML(html_file)
-      content_all = html_doc.search('.article-rich-text.w-richtext').text
-      if content_all.index("Related Articles").nil?
-        content = content_all
-      else
-        content = content_all[0..(content_all.index("Related Articles") - 2)]
-      end
+#   # SCRAPE INDIVIDUAL ARTICLES
+#   links.each do |link|
+#     begin
+#       puts "Putting #{link} into Nokogiri"
+#       url = "https://www.o.school#{link}"
+#       html_file = open(url).read
+#       html_doc = Nokogiri::HTML(html_file)
+#       content_all = html_doc.search('.article-rich-text.w-richtext').text
+#       if content_all.index("Related Articles").nil?
+#         content = content_all
+#       else
+#         content = content_all[0..(content_all.index("Related Articles") - 2)]
+#       end
 
-      results << {
-        category: html_doc.search('.current-topic').first.text.downcase,
-        title: html_doc.search('.article-heading').text,
-        content: content,
-        img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
-        source: 'O.School'
-      }
-    rescue => e
-      puts link
-      puts e
-    end
-  end
-end
+#       results << {
+#         category: html_doc.search('.current-topic').first.text.downcase,
+#         title: html_doc.search('.article-heading').text,
+#         content: content,
+#         img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
+#         source: 'O.School'
+#       }
+#     rescue => e
+#       puts link
+#       puts e
+#     end
+#   end
+# end
 
-# CREATE CATEGORIES FROM SCRAPE
-puts 'Creating categories from O.school Scrape'
-results.each do |result|
-  if Category.find_by(name: result[:category]).nil?
-    Category.create!(
-      name: result[:category]
-      )
-  end
-end
+# # CREATE CATEGORIES FROM SCRAPE
+# puts 'Creating categories from O.school Scrape'
+# results.each do |result|
+#   if Category.find_by(name: result[:category]).nil?
+#     Category.create!(
+#       name: result[:category]
+#       )
+#   end
+# end
 
-puts 'Creating articles from o.school scrape'
-results.each do |result|
-  Article.create!(
-    title: result[:title],
-    content: result[:content],
-    user_id: User.find_by(name: 'Scraper').id,
-    source: result[:source],
-    category_id: Category.find_by(name: result[:category]).id,
-    img_url: result[:img_url]
-    )
-end
-puts 'Scraping O.School is done'
+# puts 'Creating articles from o.school scrape'
+# results.each do |result|
+#   Article.create!(
+#     title: result[:title],
+#     content: result[:content],
+#     user_id: User.find_by(name: 'Scraper').id,
+#     source: result[:source],
+#     category_id: Category.find_by(name: result[:category]).id,
+#     img_url: result[:img_url]
+#     )
+# end
+# puts 'Scraping O.School is done'
 
-# SCRAPE ARTICLES---------------------------------------------------------------
-# WILDFLOWER SEX----------------------------------------------------------------
-puts 'Start to scrape wildflower sex'
+# # SCRAPE ARTICLES---------------------------------------------------------------
+# # WILDFLOWER SEX----------------------------------------------------------------
+# puts 'Start to scrape wildflower sex'
 
-results = []
-url = "https://wildflowersex.com/blogs/blog"
-html_file = open(url).read
-html_doc = Nokogiri::HTML(html_file)
+# results = []
+# url = "https://wildflowersex.com/blogs/blog"
+# html_file = open(url).read
+# html_doc = Nokogiri::HTML(html_file)
 
-links = html_doc.search('.article-content').search("a").map do |element|
-  element.attributes["href"].value
-end
+# links = html_doc.search('.article-content').search("a").map do |element|
+#   element.attributes["href"].value
+# end
 
-# SCRAPE INDIVIDUAL ARTICLES
-links.each do |link|
-  begin
-    puts "Putting #{link} into Nokogiri"
-    url = "https://wildflowersex.com/#{link}"
-    html_file = open(url).read
-    html_doc = Nokogiri::HTML(html_file)
-    results << {
-      category: 'sex',
-      title: html_doc.search('.desktop-10.mobile-3').text,
-      content: html_doc.search('.rte').search("p").text,
-      img_url: html_doc.search('img')[2].attributes["src"].value,
-      source: 'Wildflower Sex'
-    }
-  rescue => e
-    puts link
-    puts e
-  end
-end
+# # SCRAPE INDIVIDUAL ARTICLES
+# links.each do |link|
+#   begin
+#     puts "Putting #{link} into Nokogiri"
+#     url = "https://wildflowersex.com/#{link}"
+#     html_file = open(url).read
+#     html_doc = Nokogiri::HTML(html_file)
+#     results << {
+#       category: 'sex',
+#       title: html_doc.search('.desktop-10.mobile-3').text,
+#       content: html_doc.search('.rte').search("p").text,
+#       img_url: html_doc.search('img')[2].attributes["src"].value,
+#       source: 'Wildflower Sex'
+#     }
+#   rescue => e
+#     puts link
+#     puts e
+#   end
+# end
 
-puts 'Creating articles from wildflower scrape'
-results.each do |result|
-  Article.create!(
-    title: result[:title],
-    content: result[:content],
-    user_id: User.find_by(name: 'Scraper').id,
-    source: result[:source],
-    category_id: Category.find_by(name: result[:category]).id,
-    img_url: result[:img_url]
-    )
-  puts "Created article: #{result[:title]}"
-end
-puts 'Scraping Wildflower is done'
+# puts 'Creating articles from wildflower scrape'
+# results.each do |result|
+#   Article.create!(
+#     title: result[:title],
+#     content: result[:content],
+#     user_id: User.find_by(name: 'Scraper').id,
+#     source: result[:source],
+#     category_id: Category.find_by(name: result[:category]).id,
+#     img_url: result[:img_url]
+#     )
+#   puts "Created article: #{result[:title]}"
+# end
+# puts 'Scraping Wildflower is done'
 
 # SCRAPER EVENTBRITE -------------------------------------------------------------
 # SCRAPE LINKS TO ARTICLES
@@ -388,7 +388,7 @@ Event.create!(
   We will share a unique and specific orgasmic meditation with you that is also part of the Mastery Retreat Free your Soul!
   There is no nudity or sexual activities in this Tantra workshop. The workshop is suitable for singles, couples, multi orgasmic beings and for people that have never experienced any orgasm.",
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "wellness").id,
   photo: 'https://scontent.flis8-2.fna.fbcdn.net/v/t31.0-8/14362665_639659282875092_7117318554322478844_o.jpg?_nc_cat=100&_nc_ohc=uGYNN07uDZcAQk0_EJGrOMcqJTrXDcM2VO7sxEA5vzboMkHGysM5GURtg&_nc_ht=scontent.flis8-2.fna&oh=375b3ca497287c69fdafb4c4b01adde4&oe=5E427DE6',
   price_cents: rand(40..200)
   )
@@ -403,7 +403,7 @@ Event.create!(
   Techniques, which mostly came from Tantra, Tao and Kama Sutra heritage and known in Europe as Pompoir, in South Asia as Kabazah, in Hinduism as Sahajoli, in Russia as Vumbuilding (from abbreviation “ВУМ” (“вагинальные управляемые мышцы” – “vaginal controllable muscles”) become increasingly more popular in modern culture.
   Nowadays, many specialists (sexologists, gynecologists, psychologists) recommend these methods and successfully use it in the sexual healing",
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "tantra").id,
+  category_id: Category.find_by(name: "pleasure").id,
   photo: 'https://images.unsplash.com/photo-1569979274099-f351a7ea19a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
   price_cents: rand(40..200)
   )
@@ -418,7 +418,8 @@ Event.create!(
   The highest experience of the divine couple is merging their energies thus cease to be separate and become one.
   For loving couples, we offer a myriad of powerful of Tantric and Taoist techniques for understanding this sacred unity for all its admiration and joy..",
   user_id: User.find_by(name: "Scraper").id,
-  category_id: 'https://images.unsplash.com/photo-1555489401-79c274997434?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+  category_id: Category.find_by(name: "pleasure").id,
+  photo: 'https://images.unsplash.com/photo-1555489401-79c274997434?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   price_cents: rand(40..200)
   )
 
@@ -431,7 +432,8 @@ Event.create!(
   Ancient teachings such as Tantra and Tao believe that a lot of trauma, negative emotions related to relationship, and sexuality are stored in the yoni in the form of energy blocks manifesting in pain and numbness, lack of sensitivity and inability to climax.
   Learn healing techniques (sometimes called yoni massage) to bring awareness to energetic blocks and transmute them. Find out how to revive sensuality, increase pleasure and frequency and strength of orgasms, bring your relationship on a whole different level",
   user_id: User.find_by(name: "Scraper").id,
-  category_id: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
+  category_id: Category.find_by(name: "wellness").id,
+  photo: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
   price_cents: rand(40..200)
   )
 
@@ -444,7 +446,8 @@ Event.create!(
   Your orgasms are not as frequent as you would like? Do you want your orgasms to be more powerful? Do you want to cum at the same time as your partner? Do you only cum from masturbation? Do you want to experience multiple orgasms?
   Do you want to know the beauty of female ejaculation? If you answered “yes” to one or more of these questions, then this workshop is for you.",
   user_id: User.find_by(name: "Scraper").id,
-  category_id: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
+  photo: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
+  category_id: Category.find_by(name: "pleasure").id,
   price_cents: rand(40..200)
   )
 
@@ -456,7 +459,8 @@ Event.create!(
   description: "Do you like ping pong? So, come to participate in the first international Naked Ping Pong Tournament in Lisbon.
   An amazing opportunity to play hard.",
   user_id: User.find_by(name: "Scraper").id,
-  category_id: 'https://images.unsplash.com/photo-1564518440696-ef272968778e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+  category_id: Category.find_by(name: "pleasure").id,
+  photo: 'https://images.unsplash.com/photo-1564518440696-ef272968778e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
   price_cents: rand(40..200)
   )
 
@@ -468,7 +472,8 @@ Event.create!(
   description: "Are you looking for a group of fun and new exciting experience? You are welcome to join our group and experience the wild and unforgettable party.
   Come rake with us! Please note that computers are not allowed!",
   user_id: User.find_by(name: "Scraper").id,
-  category_id: 'https://images.unsplash.com/photo-1545128485-c400e7702796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+  category_id: Category.find_by(name: "pleasure").id,
+  photo: 'https://images.unsplash.com/photo-1545128485-c400e7702796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
   price_cents: rand(40..200)
   )
 
