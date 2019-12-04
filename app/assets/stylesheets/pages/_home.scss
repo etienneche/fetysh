@@ -51,6 +51,12 @@
   display: inline;
   text-transform: capitalize;
 }
+
+.category-heading:hover {
+  color: black;
+}
+
+
 #stickymove {
   position: sticky;
   top: 50px;
@@ -59,6 +65,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  margin-bottom: 50px;
 }
 
 .sticky-element {
@@ -109,7 +116,16 @@
   font-weight: 200;
   text-transform: uppercase;
   color: #2d2e2f;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+ a:hover {
+  color:#6d6e70;
 }
 
 .exp-details {

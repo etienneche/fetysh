@@ -4,10 +4,10 @@
     <div class="orgasm">
       <div class="section-landing">
         <% cat = Category.find_by(name: "orgasm")  %>
-        <h2 class="category-heading"><%= cat.name %></h2>
+        <h2><%= link_to cat.name, category_articles_path(cat), class:"category-heading" %></h2>
       </div>
 
-      <div class="stickyscroll" style="margin-bottom: 120px;">
+      <div class="stickyscroll">
         <div class="col" id="stickymove">
           <% article = Article.all.where(category: cat)[0] %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
@@ -77,10 +77,10 @@
     <div class="anal-sex">
       <div class="section-landing">
         <% cat = Category.find_by(name: "anal sex")  %>
-        <h2 class="category-heading"><%= cat.name %></h2>
+        <h2><%= link_to cat.name, category_articles_path(cat), class:"category-heading" %></h2>
       </div>
 
-      <div class="stickyscroll" style="margin-bottom: 120px;">
+      <div class="stickyscroll">
         <div class="col" id="stickymove">
           <% article = Article.all.where(category: cat)[0] %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
@@ -125,7 +125,7 @@
     <!--         EVENTS -->
     <div class="events">
       <div class="section-landing mt-4">
-        <h2 class="category-heading">Experiences</h2>
+        <h2><%= link_to "Experiences", events_path, class:"category-heading" %></h2>
       </div>
       <div>
         <div class="container">
@@ -152,10 +152,10 @@
     <div class="sex">
       <div class="section-landing">
         <% cat = Category.find_by(name: "sex")  %>
-        <h2 class="category-heading"><%= cat.name %></h2>
+        <h2><%= link_to cat.name, category_articles_path(cat), class:"category-heading" %></h2>
       </div>
 
-      <div class="stickyscroll" style="margin-bottom: 120px;">
+      <div class="stickyscroll">
         <div class="col" id="stickymove">
           <% article = Article.all.where(category: cat)[0] %>
           <%= link_to category_article_path(article.category_id, article.id) do %>

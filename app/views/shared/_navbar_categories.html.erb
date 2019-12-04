@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
-<div class="d-flex justify-content-between align-items-center pl-4 pr-4 categories-nav">
+<div class="d-flex justify-content-between align-items-center categories-nav">
   <% Category.order(:name).first(7).each do |category|  %>
-    <%= link_to category.name, category_articles_path(category), class:"categories-nav-el", style:"text-decoration: none;" %>
+  <%= link_to category.name, category_articles_path(category), class:"categories-nav-el", style:"text-decoration: none;" %>
   <% end  %>
   <div class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -9,7 +9,7 @@
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       <% Category.order(:name).offset(7).each do |category|  %>
-        <%= link_to category.name, category_articles_path(category), class:"dropdown-item" %>
+      <%= link_to category.name, category_articles_path(category), class:"dropdown-item" %>
       <% end %>
     </div>
   </div>
