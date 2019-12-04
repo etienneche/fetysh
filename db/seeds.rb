@@ -35,6 +35,9 @@ Category.create!(
 Category.create!(
   name: 'sex ed')
 
+Category.create!(
+  name: 'sex')
+
 # # CREATE ARTICLES --------------------------------------------------------------
 
 # # SCRAPER TABU -----------------------------------------------------------------
@@ -87,7 +90,7 @@ results.each do |result|
       )
   end
 end
-puts 'Done'
+puts 'Categories done'
 
 # CREATE ARTICLES FROM SCRAPE
 puts 'Creating articles from tabu scrape'
@@ -189,6 +192,52 @@ results.each do |result|
 end
 puts 'Scraping O.School is done'
 
+# SCRAPE ARTICLES---------------------------------------------------------------
+# WILDFLOWER SEX----------------------------------------------------------------
+puts 'Start to scrape wildflower sex'
+
+url = "https://wildflowersex.com/blogs/blog"
+html_file = open(url).read
+html_doc = Nokogiri::HTML(html_file)
+
+links = html_doc.search('.article-content').search("a").map do |element|
+  element.attributes["href"].value
+end
+
+# SCRAPE INDIVIDUAL ARTICLES
+links.each do |link|
+  begin
+    puts "Putting #{link} into Nokogiri"
+    url = "https://wildflowersex.com/#{link}"
+    html_file = open(url).read
+    html_doc = Nokogiri::HTML(html_file)
+    results << {
+      category: 'sex',
+      title: html_doc.search('.desktop-10.mobile-3').text,
+      content: html_doc.search('.rte').search("p").text,
+      img_url: html_doc.search('img')[2].attributes["src"].value,
+      source: 'Wildflower Sex'
+    }
+  rescue => e
+    puts link
+    puts e
+  end
+end
+
+puts 'Creating articles from wildflower scrape'
+results.each do |result|
+  Article.create!(
+    title: result[:title],
+    content: result[:content],
+    user_id: User.find_by(name: 'Scraper').id,
+    source: result[:source],
+    category_id: Category.find_by(name: result[:category]).id,
+    img_url: result[:img_url]
+    )
+  puts "Created article: #{result[:title]}"
+end
+puts 'Scraping Wildflower is done'
+
 # SCRAPER EVENTBRITE -------------------------------------------------------------
 # SCRAPE LINKS TO ARTICLES
 # puts 'start the scraper'
@@ -263,7 +312,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "sex positive").id,
   photo: 'https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-  price: rand(40..200)
+  price_cents: rand(40..200)
   )
 
 Event.create!(
@@ -277,7 +326,7 @@ Event.create!(
   organizer: "Insomnia Berlin",
   category_id: Category.find_by(name: "sex positive").id,
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000057588.jpg',
-  price: rand(40..200)
+  price_cents: rand(40..200)
   )
 
 Event.create!(
@@ -293,7 +342,7 @@ Event.create!(
   organizer: 'Insomnia Berlin',
   category_id: Category.find_by(name: "fetish").id,
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000042860.jpg',
-  price: rand(40..200)
+  price_cents: rand(40..200)
   )
 
 Event.create!(
@@ -305,7 +354,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "tantra").id,
   photo: 'https://images.unsplash.com/photo-1545183322-6da710083410?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-  price: rand(40..200)
+  price_cents: rand(40..200)
   )
 
 Event.create!(
@@ -320,7 +369,7 @@ Event.create!(
   organizer: 'Insomnia Berlin',
   category_id: Category.find_by(name: "fetish").id,
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000054573.jpg',
-  price: rand(40..200)
+  price_cents: rand(40..200)
   )
 
 Event.create!(
@@ -334,7 +383,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "sex ed").id,
   photo: 'https://images.unsplash.com/photo-1498843053639-170ff2122f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-  price: rand(40..200)
+  price_cents: rand(40..200)
   )
 
 Event.create!(
@@ -351,7 +400,7 @@ Event.create!(
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "tantra").id,
   photo: 'https://scontent.flis8-2.fna.fbcdn.net/v/t31.0-8/14362665_639659282875092_7117318554322478844_o.jpg?_nc_cat=100&_nc_ohc=uGYNN07uDZcAQk0_EJGrOMcqJTrXDcM2VO7sxEA5vzboMkHGysM5GURtg&_nc_ht=scontent.flis8-2.fna&oh=375b3ca497287c69fdafb4c4b01adde4&oe=5E427DE6',
-  price: rand(40..200)
+  price_cents: rand(40..200)
   )
 
 puts 'Done'
