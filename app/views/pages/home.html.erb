@@ -11,7 +11,7 @@
         <div class="col" id="stickymove">
           <% article = Article.all.where(category: cat)[0] %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div class="d-flex flex-column sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.photo %>); background-size: cover;">
+          <div class="d-flex flex-column sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.photor %>); background-size: cover;">
             <p class="cat-img-white pl-4 pr-4">#<%= article.category.name %></p>
             <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
           </div>
@@ -22,7 +22,7 @@
           <% @articles.where(category: cat)[1..3].each do |article, index| %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
           <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+            <div class="card-bg" style="background-image: url(<%= article.photor %>);"></div>
             <div class="p-2 mb-3">
               <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
@@ -60,7 +60,7 @@
             <% @articles.sample(5).each do |article|%>
             <%= link_to category_article_path(article.category_id, article.id) do %>
             <div class="event-card">
-              <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+              <div class="card-bg" style="background-image: url(<%= articler.photo %>);"></div>
               <div class="p-2">
                 <p class="card-author-up">#<%= article.category.name %></p>
                 <h4 class="mb-4"><%= article.title %></h4>
@@ -84,7 +84,7 @@
         <div class="col" id="stickymove">
           <% article = Article.all.where(category: cat)[0] %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.photo %>); background-size: cover;">
+          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= articler.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= articler.photo %>); background-size: cover;">
             <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
           </div>
           <% end %>
@@ -94,7 +94,7 @@
           <% @articles.where(category: cat)[1..3].each do |article, index| %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
           <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+            <div class="card-bg" style="background-image: url(<%= articler.photo %>);"></div>
             <div class="p-2 mb-3">
               <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
@@ -109,7 +109,7 @@
           <% @articles.where(category: cat)[4..6].each do |article, index| %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
           <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+            <div class="card-bg" style="background-image: url(<%= articler.photo %>);"></div>
             <div class="p-2 mb-3">
               <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
@@ -159,7 +159,7 @@
         <div class="col" id="stickymove">
           <% article = Article.all.where(category: cat)[0] %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.photo %>); background-size: cover;">
+          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= articler.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= articler.photo %>); background-size: cover;">
             <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
           </div>
           <% end %>
@@ -169,7 +169,7 @@
           <% @articles.where(category: cat)[1..3].each do |article, index| %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
           <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+            <div class="card-bg" style="background-image: url(<%= articler.photo %>);"></div>
             <div class="p-2 mb-3">
               <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
@@ -184,7 +184,7 @@
           <% @articles.where(category: cat)[4..6].each do |article, index| %>
           <%= link_to category_article_path(article.category_id, article.id) do %>
           <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+            <div class="card-bg" style="background-image: url(<%= articler.photo %>);"></div>
             <div class="p-2 mb-3">
               <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
