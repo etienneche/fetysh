@@ -177,6 +177,14 @@ a.dropdown-item {
   }
 }
 
+.events-index > .categories-nav > .nav-item > #navbarDropdown {
+  color: white!important;
+}
+
+.events-show > .categories-nav > .nav-item > #navbarDropdown {
+  color: white!important;
+}
+
 .events-show > .navbar {
   background-color: black !important;
   & > .collapse .navbar-nav .nav-item a.nav-link {
