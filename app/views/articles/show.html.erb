@@ -12,7 +12,7 @@
       <div class="tabs">
         <% if current_user.loved?(@article) %>
         <%= link_to love_category_article_path(@category, @article), method: :post do %>
-        <p style="color:#910722; font-size: 24px;"><i class="fas fa-heart"></i></p>
+        <p style="color:#ff0039; font-size: 24px;"><i class="fas fa-heart"></i></p>
         <% end %>
         <% else  %>
         <%= link_to love_category_article_path(@category, @article), method: :post do %>
@@ -22,7 +22,7 @@
 
         <% if current_user.wtted?(@article) %>
         <%= link_to wtt_category_article_path(@category, @article), method: :post do %>
-        <p style="color:#910722; font-size: 24px;"><i class="fas fa-bookmark"></i></p>
+        <p style="color:#ff0039; font-size: 24px;"><i class="fas fa-bookmark"></i></p>
         <% end %>
         <% else  %>
         <%= link_to wtt_category_article_path(@category, @article), method: :post do %>
