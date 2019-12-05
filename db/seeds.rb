@@ -1,238 +1,238 @@
-puts 'Delete everything'
-Reaction.destroy_all
-Review.destroy_all
-Rating.destroy_all
+# puts 'Delete everything'
+# Reaction.destroy_all
+# Review.destroy_all
+# Rating.destroy_all
 Order.destroy_all
 Event.destroy_all
-Article.destroy_all
-Category.destroy_all
-User.destroy_all
+# Article.destroy_all
+# Category.destroy_all
+# User.destroy_all
 
 puts 'Done'
 
-# # CREATE USERS ---------------------------------------------------------------
-puts 'Create user'
-User.create!(
-  name: 'Scraper',
-  password: '123456',
-  email: 'a@a.com'
-  )
+# # # CREATE USERS ---------------------------------------------------------------
+# puts 'Create user'
+# User.create!(
+#   name: 'Scraper',
+#   password: '123456',
+#   email: 'a@a.com'
+#   )
 
-puts 'Create presented user'
-User.create!(
-  name: 'Becky Willington',
-  password: '123456',
-  email: 't@t.com',
-  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-  )
+# puts 'Create presented user'
+# User.create!(
+#   name: 'Becky Willington',
+#   password: '123456',
+#   email: 't@t.com',
+#   photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+#   )
 
-puts 'Done'
+# puts 'Done'
 
-Category.create!(
-  name: 'sex'
-)
+# Category.create!(
+#   name: 'sex'
+# )
 
-# CREATE ARTICLES --------------------------------------------------------------
+# # CREATE ARTICLES --------------------------------------------------------------
 
-# # TABU ---------------------------------------------------------------
-puts "Starting to scrape tabu"
-url = "https://talktabu.com/zine"
-html_file = open(url).read
-html_doc = Nokogiri::HTML(html_file)
+# # # TABU ---------------------------------------------------------------
+# puts "Starting to scrape tabu"
+# url = "https://talktabu.com/zine"
+# html_file = open(url).read
+# html_doc = Nokogiri::HTML(html_file)
 
-links = html_doc.search('.Blog-header-content-link').map do |element|
-  element.attributes["href"].value
-end
+# links = html_doc.search('.Blog-header-content-link').map do |element|
+#   element.attributes["href"].value
+# end
 
-# SCRAPE INDIVIDUAL ARTICLES
-results = []
-links.each do |link|
-  begin
-    puts "Parsing #{link} into nokogiri"
-    url = "https://talktabu.com#{link}"
-    html_file = open(url).read
-    html_doc = Nokogiri::HTML(html_file)
-    content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
-    if content_all.index("Header image").nil?
-      if !content_all.index("Sources:http").nil?
-        content = content_all[0..content_all.index("Sources:http") - 1]
-      end
-    else
-      content = content_all[0..content_all.index("Header image") - 1]
-    end
-    results << {
-      category: html_doc.search('.Blog-meta-item-category').first.text.downcase,
-      author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
-      title: html_doc.search('.Blog-title.Blog-title--item').text,
-      content: content,
-      photo: html_doc.search('img')[2].attributes["data-src"].value,
-      source: 'tabú'
-    }
-  rescue => e
-    puts link
-    puts e
-  end
-end
+# # SCRAPE INDIVIDUAL ARTICLES
+# results = []
+# links.each do |link|
+#   begin
+#     puts "Parsing #{link} into nokogiri"
+#     url = "https://talktabu.com#{link}"
+#     html_file = open(url).read
+#     html_doc = Nokogiri::HTML(html_file)
+#     content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
+#     if content_all.index("Header image").nil?
+#       if !content_all.index("Sources:http").nil?
+#         content = content_all[0..content_all.index("Sources:http") - 1]
+#       end
+#     else
+#       content = content_all[0..content_all.index("Header image") - 1]
+#     end
+#     results << {
+#       category: html_doc.search('.Blog-meta-item-category').first.text.downcase,
+#       author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
+#       title: html_doc.search('.Blog-title.Blog-title--item').text,
+#       content: content,
+#       photo: html_doc.search('img')[2].attributes["data-src"].value,
+#       source: 'tabú'
+#     }
+#   rescue => e
+#     puts link
+#     puts e
+#   end
+# end
 
-# CREATE CATEGORIES FROM SCRAPE
-puts 'Creating categories from Tabu Scrape'
-results.each do |result|
-  if Category.find_by(name: result[:category]).nil?
-    Category.create!(
-      name: result[:category]
-      )
-  end
-end
-puts 'Categories done'
+# # CREATE CATEGORIES FROM SCRAPE
+# puts 'Creating categories from Tabu Scrape'
+# results.each do |result|
+#   if Category.find_by(name: result[:category]).nil?
+#     Category.create!(
+#       name: result[:category]
+#       )
+#   end
+# end
+# puts 'Categories done'
 
-# CREATE ARTICLES FROM SCRAPE
-puts 'Creating articles from tabu scrape'
-results.each do |result|
-  if !result[:content].nil?
-    Article.create!(
-      title: result[:title],
-      content: result[:content],
-      author: result[:author],
-      user_id: User.find_by(name: 'Scraper').id,
-      source: result[:source],
-      category_id: Category.find_by(name: result[:category]).id,
-      photo: result[:photo]
-      )
-  end
-end
-puts "Done"
+# # CREATE ARTICLES FROM SCRAPE
+# puts 'Creating articles from tabu scrape'
+# results.each do |result|
+#   if !result[:content].nil?
+#     Article.create!(
+#       title: result[:title],
+#       content: result[:content],
+#       author: result[:author],
+#       user_id: User.find_by(name: 'Scraper').id,
+#       source: result[:source],
+#       category_id: Category.find_by(name: result[:category]).id,
+#       photo: result[:photo]
+#       )
+#   end
+# end
+# puts "Done"
 
-puts 'Scraping Tabu is done'
+# puts 'Scraping Tabu is done'
 
-# # SCRAPER O.SCHOOL------------------------------------------------------------
-puts 'Start the O.School Scraper'
-topics = [
-  'anal-sex',
-  'culture',
-  'first-time-sex',
-  'orgasm',
-  'sex-toys',
-  'communication',
-  'dating-and-relationships',
-  'kinky',
-  'penis',
-  'consent',
-  'eating-pussy',
-  'masturbation',
-  'porn',
-  'vagina-vulva'
-]
+# # # SCRAPER O.SCHOOL------------------------------------------------------------
+# puts 'Start the O.School Scraper'
+# topics = [
+#   'anal-sex',
+#   'culture',
+#   'first-time-sex',
+#   'orgasm',
+#   'sex-toys',
+#   'communication',
+#   'dating-and-relationships',
+#   'kinky',
+#   'penis',
+#   'consent',
+#   'eating-pussy',
+#   'masturbation',
+#   'porn',
+#   'vagina-vulva'
+# ]
 
-results = []
-topics.each do |topic|
-  puts "Search for topic #{topic.upcase}"
-  url = "https://www.o.school/topic/#{topic}"
-  html_file = open(url).read
-  html_doc = Nokogiri::HTML(html_file)
-  links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
-    element.attributes["href"].value
-  end
+# results = []
+# topics.each do |topic|
+#   puts "Search for topic #{topic.upcase}"
+#   url = "https://www.o.school/topic/#{topic}"
+#   html_file = open(url).read
+#   html_doc = Nokogiri::HTML(html_file)
+#   links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
+#     element.attributes["href"].value
+#   end
 
-  # SCRAPE INDIVIDUAL ARTICLES
-  links.each do |link|
-    begin
-      puts "Putting #{link} into Nokogiri"
-      url = "https://www.o.school#{link}"
-      html_file = open(url).read
-      html_doc = Nokogiri::HTML(html_file)
-      content_all = html_doc.search('.article-rich-text.w-richtext').text
-      if content_all.index("Related Articles").nil?
-        content = content_all
-      else
-        content = content_all[0..(content_all.index("Related Articles") - 2)]
-      end
+#   # SCRAPE INDIVIDUAL ARTICLES
+#   links.each do |link|
+#     begin
+#       puts "Putting #{link} into Nokogiri"
+#       url = "https://www.o.school#{link}"
+#       html_file = open(url).read
+#       html_doc = Nokogiri::HTML(html_file)
+#       content_all = html_doc.search('.article-rich-text.w-richtext').text
+#       if content_all.index("Related Articles").nil?
+#         content = content_all
+#       else
+#         content = content_all[0..(content_all.index("Related Articles") - 2)]
+#       end
 
-      results << {
-        category: html_doc.search('.current-topic').first.text.downcase,
-        title: html_doc.search('.article-heading').text,
-        content: content,
-        photo: html_doc.search('.object-fit---cover').first.attributes["src"].value,
-        source: 'O.School'
-      }
-    rescue => e
-      puts link
-      puts e
-    end
-  end
-end
+#       results << {
+#         category: html_doc.search('.current-topic').first.text.downcase,
+#         title: html_doc.search('.article-heading').text,
+#         content: content,
+#         photo: html_doc.search('.object-fit---cover').first.attributes["src"].value,
+#         source: 'O.School'
+#       }
+#     rescue => e
+#       puts link
+#       puts e
+#     end
+#   end
+# end
 
-# CREATE CATEGORIES FROM SCRAPE
-puts 'Creating categories from O.school Scrape'
-results.each do |result|
-  if Category.find_by(name: result[:category]).nil?
-    Category.create!(
-      name: result[:category]
-      )
-  end
-end
+# # CREATE CATEGORIES FROM SCRAPE
+# puts 'Creating categories from O.school Scrape'
+# results.each do |result|
+#   if Category.find_by(name: result[:category]).nil?
+#     Category.create!(
+#       name: result[:category]
+#       )
+#   end
+# end
 
-puts 'Creating articles from o.school scrape'
-results.each do |result|
-  Article.create!(
-    title: result[:title],
-    content: result[:content],
-    user_id: User.find_by(name: 'Scraper').id,
-    source: result[:source],
-    category_id: Category.find_by(name: result[:category]).id,
-    photo: result[:photo]
-    )
-end
-puts 'Scraping O.School is done'
+# puts 'Creating articles from o.school scrape'
+# results.each do |result|
+#   Article.create!(
+#     title: result[:title],
+#     content: result[:content],
+#     user_id: User.find_by(name: 'Scraper').id,
+#     source: result[:source],
+#     category_id: Category.find_by(name: result[:category]).id,
+#     photo: result[:photo]
+#     )
+# end
+# puts 'Scraping O.School is done'
 
-#-------------------------------------------------------------------------------
-# WILDFLOWER SEX----------------------------------------------------------------
-#-------------------------------------------------------------------------------
-puts 'Start to scrape WILDFLOWER sex'
+# #-------------------------------------------------------------------------------
+# # WILDFLOWER SEX----------------------------------------------------------------
+# #-------------------------------------------------------------------------------
+# puts 'Start to scrape WILDFLOWER sex'
 
-results = []
-url = "https://wildflowersex.com/blogs/blog"
-html_file = open(url).read
-html_doc = Nokogiri::HTML(html_file)
+# results = []
+# url = "https://wildflowersex.com/blogs/blog"
+# html_file = open(url).read
+# html_doc = Nokogiri::HTML(html_file)
 
-links = html_doc.search('.article-content').search("a").map do |element|
-  element.attributes["href"].value
-end
+# links = html_doc.search('.article-content').search("a").map do |element|
+#   element.attributes["href"].value
+# end
 
-# SCRAPE INDIVIDUAL ARTICLES
-links.each do |link|
-  begin
-    puts "Putting #{link} into Nokogiri"
-    url = "https://wildflowersex.com/#{link}"
-    html_file = open(url).read
-    html_doc = Nokogiri::HTML(html_file)
-    results << {
-      category: 'sex',
-      title: html_doc.search('.desktop-10.mobile-3').text,
-      content: html_doc.search('.rte').search("p").text,
-      photo: html_doc.search('img')[2].attributes["src"].value,
-      source: 'Wildflower Sex'
-    }
-  rescue => e
-    puts link
-    puts e
-  end
-end
+# # SCRAPE INDIVIDUAL ARTICLES
+# links.each do |link|
+#   begin
+#     puts "Putting #{link} into Nokogiri"
+#     url = "https://wildflowersex.com/#{link}"
+#     html_file = open(url).read
+#     html_doc = Nokogiri::HTML(html_file)
+#     results << {
+#       category: 'sex',
+#       title: html_doc.search('.desktop-10.mobile-3').text,
+#       content: html_doc.search('.rte').search("p").text,
+#       photo: html_doc.search('img')[2].attributes["src"].value,
+#       source: 'Wildflower Sex'
+#     }
+#   rescue => e
+#     puts link
+#     puts e
+#   end
+# end
 
-puts 'Creating articles from wildflower scrape'
-results.each do |result|
-  Article.create!(
-    title: result[:title],
-    content: result[:content],
-    user_id: User.find_by(name: 'Scraper').id,
-    source: result[:source],
-    category_id: Category.find_by(name: result[:category]).id,
-    photo: result[:photo]
-    )
-  puts "Created article: #{result[:title]}"
-end
-puts 'Scraping Wildflower is done'
+# puts 'Creating articles from wildflower scrape'
+# results.each do |result|
+#   Article.create!(
+#     title: result[:title],
+#     content: result[:content],
+#     user_id: User.find_by(name: 'Scraper').id,
+#     source: result[:source],
+#     category_id: Category.find_by(name: result[:category]).id,
+#     photo: result[:photo]
+#     )
+#   puts "Created article: #{result[:title]}"
+# end
+# puts 'Scraping Wildflower is done'
 
-puts 'Done'
+# puts 'Done'
 
 # ------------------- EVENTS SEED ----------------------------------------------
 puts 'Create real events'
@@ -479,4 +479,3 @@ Event.create!(
   price: rand(40..200)
   )
 puts 'Done'
-

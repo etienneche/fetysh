@@ -28,7 +28,7 @@
             as: :string,
             required: false,
             input_html: {class: "datepicker"} %>
-            <%= f.rich_text_area  :description %>
+            <%= f.input  :description %>
             <%= f.input   :category_id,
             placeholder: "Event category",
             :collection => @categories,
