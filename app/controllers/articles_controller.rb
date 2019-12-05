@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_action :set_category, only: [:show]
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(created_at: :desc)
   end
 
   def show

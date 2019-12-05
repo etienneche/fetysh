@@ -1,5 +1,3 @@
-#require 'byebug'
-
 puts 'Delete everything'
 Reaction.destroy_all
 Review.destroy_all
@@ -12,14 +10,12 @@ User.destroy_all
 
 puts 'Done'
 
-
-# CREATE USERS -----------------------------------------------------------------
+# # CREATE USERS ---------------------------------------------------------------
 puts 'Create user'
 User.create!(
   name: 'Scraper',
   password: '123456',
-  email: 'a@a.com',
-  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+  email: 'a@a.com'
   )
 
 puts 'Create presented user'
@@ -30,288 +26,15 @@ User.create!(
   photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
   )
 
-
-# puts 'Done'
-
-# CREATE CATEGORIES FOR EVENTS
-# Category.create!(
-#   name: 'sex')
-
-# # CREATE ARTICLES --------------------------------------------------------------
-
-# # # SCRAPER TABU -----------------------------------------------------------------
-# # # SCRAPE LINKS TO ARTICLES
-# puts "Starting to scrape tabu"
-# url = "https://talktabu.com/zine"
-# html_file = open(url).read
-# html_doc = Nokogiri::HTML(html_file)
-
-# links = html_doc.search('.Blog-header-content-link').map do |element|
-#   element.attributes["href"].value
-# end
-
-# # SCRAPE INDIVIDUAL ARTICLES
-# results = []
-# links.each do |link|
-#   begin
-#     puts "Parsing #{link} into nokogiri"
-#     url = "https://talktabu.com#{link}"
-#     html_file = open(url).read
-#     html_doc = Nokogiri::HTML(html_file)
-#     content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
-#     if content_all.index("Header image").nil?
-#       if !content_all.index("Sources:http").nil?
-#         content = content_all[0..content_all.index("Sources:http") - 1]
-#       end
-#     else
-#       content = content_all[0..content_all.index("Header image") - 1]
-#     end
-#     results << {
-#       category: html_doc.search('.Blog-meta-item-category').first.text.downcase,
-#       author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
-#       title: html_doc.search('.Blog-title.Blog-title--item').text,
-#       content: content,
-#       img_url: html_doc.search('img')[2].attributes["data-src"].value,
-#       source: 'tabú'
-#     }
-#   rescue => e
-#     puts link
-#     puts e
-#   end
-# end
-
-# # CREATE CATEGORIES FROM SCRAPE
-# puts 'Creating categories from Tabu Scrape'
-# results.each do |result|
-#   if Category.find_by(name: result[:category]).nil?
-#     Category.create!(
-#       name: result[:category]
-#       )
-#   end
-# end
-# puts 'Categories done'
-
-# # CREATE ARTICLES FROM SCRAPE
-# puts 'Creating articles from tabu scrape'
-# results.each do |result|
-#   if !result[:content].nil?
-#     Article.create!(
-#       title: result[:title],
-#       content: result[:content],
-#       author: result[:author],
-#       user_id: User.find_by(name: 'Scraper').id,
-#       source: result[:source],
-#       category_id: Category.find_by(name: result[:category]).id,
-#       img_url: result[:img_url]
-#       )
-#   end
-# end
-# puts "Done"
-
-# puts 'Scraping Tabu is done'
-
-# # # SCRAPER O.SCHOOL------------------------------------------------------------
-# # # SCRAPE LINKS TO ARTICLES
-# puts 'Start the O.School Scraper'
-# topics = [
-#   'anal-sex',
-#   'culture',
-#   'first-time-sex',
-#   'orgasm',
-#   'sex-toys',
-#   'communication',
-#   'dating-and-relationships',
-#   'kinky',
-#   'penis',
-#   'consent',
-#   'eating-pussy',
-#   'masturbation',
-#   'porn',
-#   'vagina-vulva'
-# ]
-
-# results = []
-# topics.each do |topic|
-#   puts "Search for topic #{topic.upcase}"
-#   url = "https://www.o.school/topic/#{topic}"
-#   html_file = open(url).read
-#   html_doc = Nokogiri::HTML(html_file)
-#   links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
-#     element.attributes["href"].value
-#   end
-
-#   # SCRAPE INDIVIDUAL ARTICLES
-#   links.each do |link|
-#     begin
-#       puts "Putting #{link} into Nokogiri"
-#       url = "https://www.o.school#{link}"
-#       html_file = open(url).read
-#       html_doc = Nokogiri::HTML(html_file)
-#       content_all = html_doc.search('.article-rich-text.w-richtext').text
-#       if content_all.index("Related Articles").nil?
-#         content = content_all
-#       else
-#         content = content_all[0..(content_all.index("Related Articles") - 2)]
-#       end
-
-#       results << {
-#         category: html_doc.search('.current-topic').first.text.downcase,
-#         title: html_doc.search('.article-heading').text,
-#         content: content,
-#         img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
-#         source: 'O.School'
-#       }
-#     rescue => e
-#       puts link
-#       puts e
-#     end
-#   end
-# end
-
-# # CREATE CATEGORIES FROM SCRAPE
-# puts 'Creating categories from O.school Scrape'
-# results.each do |result|
-#   if Category.find_by(name: result[:category]).nil?
-#     Category.create!(
-#       name: result[:category]
-#       )
-#   end
-# end
-
-# puts 'Creating articles from o.school scrape'
-# results.each do |result|
-#   Article.create!(
-#     title: result[:title],
-#     content: result[:content],
-#     user_id: User.find_by(name: 'Scraper').id,
-#     source: result[:source],
-#     category_id: Category.find_by(name: result[:category]).id,
-#     img_url: result[:img_url]
-#     )
-# end
-# puts 'Scraping O.School is done'
-
-# # SCRAPE ARTICLES---------------------------------------------------------------
-# # WILDFLOWER SEX----------------------------------------------------------------
-# puts 'Start to scrape wildflower sex'
-
-# results = []
-# url = "https://wildflowersex.com/blogs/blog"
-# html_file = open(url).read
-# html_doc = Nokogiri::HTML(html_file)
-
-# links = html_doc.search('.article-content').search("a").map do |element|
-#   element.attributes["href"].value
-# end
-
-# # SCRAPE INDIVIDUAL ARTICLES
-# links.each do |link|
-#   begin
-#     puts "Putting #{link} into Nokogiri"
-#     url = "https://wildflowersex.com/#{link}"
-#     html_file = open(url).read
-#     html_doc = Nokogiri::HTML(html_file)
-#     results << {
-#       category: 'sex',
-#       title: html_doc.search('.desktop-10.mobile-3').text,
-#       content: html_doc.search('.rte').search("p").text,
-#       img_url: html_doc.search('img')[2].attributes["src"].value,
-#       source: 'Wildflower Sex'
-#     }
-#   rescue => e
-#     puts link
-#     puts e
-#   end
-# end
-
-# puts 'Creating articles from wildflower scrape'
-# results.each do |result|
-#   Article.create!(
-#     title: result[:title],
-#     content: result[:content],
-#     user_id: User.find_by(name: 'Scraper').id,
-#     source: result[:source],
-#     category_id: Category.find_by(name: result[:category]).id,
-#     img_url: result[:img_url]
-#     )
-#   puts "Created article: #{result[:title]}"
-# end
-# puts 'Scraping Wildflower is done'
-
-# SCRAPER EVENTBRITE -------------------------------------------------------------
-# SCRAPE LINKS TO ARTICLES
-# puts 'start the scraper'
-# results = []
-
-# locations = [
-#   'united-kingdom',
-#   'australia',
-#   'united-states'
-# ]
-
-# locations.each do |location|
-#   url = "https://www.eventbrite.com/d/#{location}/orgasm/"
-#   html_file = open(url).read
-#   html_doc = Nokogiri::HTML(html_file)
-
-#   links = html_doc.search('.eds-media-card-content__action-link').map do |element|
-#     element.attributes["href"].value
-#   end
-
-#   # SCRAPE INDIVIDUAL ARTICLES
-#   links.each do |link|
-#     begin
-#       puts "Putting #{link} into Nokogiri"
-#       url = "#{link}"
-#       html_file = open(url).read
-#       html_doc = Nokogiri::HTML(html_file)
-#       content_all = html_doc.search('.text-body-medium').text.gsub!("\n",'').gsub!("\t",'')
-#       results << {
-#         title: html_doc.search('.listing-hero-title').text,
-#         address: html_doc.search('.listing-map-card-street-address.text-default').text.gsub!("\n",'').gsub!("\t",''),
-#         organizer: html_doc.search('.js-d-scroll-to.listing-organizer-name.text-default').text.gsub!("\n",'').gsub!("\t",'').gsub!("by ",''),
-#         description: content_all[0..content_all.index("atUse EventbritePlan") - 1],
-#         photo: html_doc.search("picture").first.attributes["content"].value,
-#         price_cents: html_doc.search('.js-display-price').text.gsub!("\n",'').gsub!("\t",'')[1..].to_i,
-#         date: html_doc.search('.event-details__data').first.search("meta").first.attributes["content"].value
-#       }
-#     rescue => e
-#       puts link
-#       puts e
-#     end
-#   end
-# end
-
-# puts 'Creating events from eventbrite scrape'
-# results.each do |result|
-#   Event.create!(
-#     title: result[:title],
-#     description: result[:description],
-#     organizer: result[:organizer],
-#     address: result[:address],
-#     price_cents: result[:price_cents],
-#     date: DateTime.parse(result[:date]),
-#     user_id: User.find_by(name: 'Scraper').id,
-#     category_id: Category.find_by(name: 'sex ed').id,
-#     photo: result[:photo]
-#     )
-# end
-# puts 'Scraping O.School is done'
-=======
-  email: 'tt2@t.com',
-  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-  )
-
 puts 'Done'
 
-##CREATE CATEGORIES FOR EVENTS
 Category.create!(
-  name: 'sex')
+  name: 'sex'
+)
 
 # CREATE ARTICLES --------------------------------------------------------------
 
-# # SCRAPER TABU -----------------------------------------------------------------
-# # SCRAPE LINKS TO ARTICLES
+# # TABU ---------------------------------------------------------------
 puts "Starting to scrape tabu"
 url = "https://talktabu.com/zine"
 html_file = open(url).read
@@ -342,7 +65,7 @@ links.each do |link|
       author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
       title: html_doc.search('.Blog-title.Blog-title--item').text,
       content: content,
-      img_url: html_doc.search('img')[2].attributes["data-src"].value,
+      photo: html_doc.search('img')[2].attributes["data-src"].value,
       source: 'tabú'
     }
   rescue => e
@@ -373,7 +96,7 @@ results.each do |result|
       user_id: User.find_by(name: 'Scraper').id,
       source: result[:source],
       category_id: Category.find_by(name: result[:category]).id,
-      img_url: result[:img_url]
+      photo: result[:photo]
       )
   end
 end
@@ -382,7 +105,6 @@ puts "Done"
 puts 'Scraping Tabu is done'
 
 # # SCRAPER O.SCHOOL------------------------------------------------------------
-# # SCRAPE LINKS TO ARTICLES
 puts 'Start the O.School Scraper'
 topics = [
   'anal-sex',
@@ -429,7 +151,7 @@ topics.each do |topic|
         category: html_doc.search('.current-topic').first.text.downcase,
         title: html_doc.search('.article-heading').text,
         content: content,
-        img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
+        photo: html_doc.search('.object-fit---cover').first.attributes["src"].value,
         source: 'O.School'
       }
     rescue => e
@@ -457,14 +179,15 @@ results.each do |result|
     user_id: User.find_by(name: 'Scraper').id,
     source: result[:source],
     category_id: Category.find_by(name: result[:category]).id,
-    img_url: result[:img_url]
+    photo: result[:photo]
     )
 end
 puts 'Scraping O.School is done'
 
-# SCRAPE ARTICLES---------------------------------------------------------------
+#-------------------------------------------------------------------------------
 # WILDFLOWER SEX----------------------------------------------------------------
-puts 'Start to scrape wildflower sex'
+#-------------------------------------------------------------------------------
+puts 'Start to scrape WILDFLOWER sex'
 
 results = []
 url = "https://wildflowersex.com/blogs/blog"
@@ -486,7 +209,7 @@ links.each do |link|
       category: 'sex',
       title: html_doc.search('.desktop-10.mobile-3').text,
       content: html_doc.search('.rte').search("p").text,
-      img_url: html_doc.search('img')[2].attributes["src"].value,
+      photo: html_doc.search('img')[2].attributes["src"].value,
       source: 'Wildflower Sex'
     }
   rescue => e
@@ -503,76 +226,16 @@ results.each do |result|
     user_id: User.find_by(name: 'Scraper').id,
     source: result[:source],
     category_id: Category.find_by(name: result[:category]).id,
-    img_url: result[:img_url]
+    photo: result[:photo]
     )
   puts "Created article: #{result[:title]}"
 end
 puts 'Scraping Wildflower is done'
 
-#SCRAPER EVENTBRITE -------------------------------------------------------------
-#SCRAPE LINKS TO ARTICLES
-puts 'start the scraper'
-results = []
-
-locations = [
-  'united-kingdom',
-  'australia',
-  'united-states'
-]
-
-locations.each do |location|
-  url = "https://www.eventbrite.com/d/#{location}/orgasm/"
-  html_file = open(url).read
-  html_doc = Nokogiri::HTML(html_file)
-
-  links = html_doc.search('.eds-media-card-content__action-link').map do |element|
-    element.attributes["href"].value
-  end
-
-  # SCRAPE INDIVIDUAL ARTICLES
-  links.each do |link|
-    begin
-      puts "Putting #{link} into Nokogiri"
-      url = "#{link}"
-      html_file = open(url).read
-      html_doc = Nokogiri::HTML(html_file)
-      content_all = html_doc.search('.text-body-medium').text.gsub!("\n",'').gsub!("\t",'')
-      results << {
-        title: html_doc.search('.listing-hero-title').text,
-        address: html_doc.search('.listing-map-card-street-address.text-default').text.gsub!("\n",'').gsub!("\t",''),
-        organizer: html_doc.search('.js-d-scroll-to.listing-organizer-name.text-default').text.gsub!("\n",'').gsub!("\t",'').gsub!("by ",''),
-        description: content_all[0..content_all.index("atUse EventbritePlan") - 1],
-        photo: html_doc.search("picture").first.attributes["content"].value,
-        price_cents: html_doc.search('.js-display-price').text.gsub!("\n",'').gsub!("\t",'')[1..].to_i,
-        date: html_doc.search('.event-details__data').first.search("meta").first.attributes["content"].value
-      }
-    rescue => e
-      puts link
-      puts e
-    end
-  end
-end
-
-puts 'Creating events from eventbrite scrape'
-results.each do |result|
-  Event.create!(
-    title: result[:title],
-    description: result[:description],
-    organizer: result[:organizer],
-    address: result[:address],
-    price_cents: result[:price_cents],
-    date: DateTime.parse(result[:date]),
-    user_id: User.find_by(name: 'Scraper').id,
-    category: Category.all.sample,
-    photo: result[:photo]
-    )
-end
-puts 'Scraping O.School is done'
-
-
+puts 'Done'
 
 # ------------------- EVENTS SEED ----------------------------------------------
-puts 'Create 5 real events'
+puts 'Create real events'
 
 Event.create!(
   title: "PORN UNION by Pornceptual",
@@ -590,7 +253,7 @@ Event.create!(
 Event.create!(
   title: "1st Sex-positive Ball",
   address: 'Insomnia Berlin',
-  date: DateTime.parse("30/01/2019 20:00"),
+  date: DateTime.parse("30/01/2020 20:00"),
   description: "The European Sex-positive Community launches its first sex-positive Ball this November at the Insomnia Berlin!
   This is more than just an evening but a whole weekend dedicated to sex-positivity with talks, workshops, a kinky auction and, as grand finale, the costume ball !!
   And we are all about party-cipation! The event is a fundraiser for the s+ community europe project (more infos sex-positive.com).",
@@ -604,7 +267,7 @@ Event.create!(
 Event.create!(
   title: 'Orgies De Luxe',
   address: 'Insomnia Berlin',
-  date: DateTime.parse('05/12/2019 20:00'),
+  date: DateTime.parse('12/12/2019'),
   description: "A sexparty where not only nymphomaniac women are fulfilling their wildest fantasies, but are also joined by a lot of couples in the horny game with the herd effect.
   Orgies - lecherous ladies - spicy fantasies - experimenting couples - Cuckold - Wifesharing
   The naughty Thursday at INSOMNIA! We start up early in the afternoon when the men-craving ladies from the Club of nymphomaniacs pursue their insatiable instincts and preferably get satisfied by a pack of men.
@@ -621,7 +284,7 @@ Event.create!(
   title: "Tantra Massage Training",
   address: 'Kashima Berlin',
   organizer: 'Kashima Berlin',
-  date: DateTime.parse("30/03/2020 10:00"),
+  date: DateTime.parse("30/03/2020"),
   description: "During the Tantra Massage training you learn how to express respect and appreciation towards a person as a sexual being. For this you need to be willing to question your own behavioural patterns. We will discuss in great detail what Tantra means and how we can bring to life the tantric teachings in a massage. You will learn about the study of auras. With intensive exercises we increase our physical awareness.",
   user_id: User.find_by(name: "Scraper").id,
   category_id: Category.find_by(name: "pleasure").id,
@@ -632,7 +295,7 @@ Event.create!(
 Event.create!(
   title: "Wednesday's Wildest Fetish presents: The Squirtinator",
   address: 'Insomnia Berlin',
-  date: DateTime.parse("09/12/2019 18:00"),
+  date: DateTime.parse("09/12/2019"),
   description: "Fetish Orgy - Slavegirls Demonstration & Condemnation - Bizarresex - BDSM Playparty in the Catacombs in the Basement
   Also for Swingers, Wifesharers & Cuckoldfriends who want to extend their sexual horizons. Welcome to the Insomnia Sex Lab!
   The Squirtinator shows the ladies and their partners where the G spot lies and which sparkling pleasures one can trigger with it.
@@ -647,7 +310,7 @@ Event.create!(
 Event.create!(
   title: "Sex-Ed For Grown Ups",
   address: 'Factory Görlitzer Park',
-  date: DateTime.parse("30/01/2020 18:00"),
+  date: DateTime.parse("30/01/2020"),
   description: "Join us for an evening exploring what the future of sex education could be, how our own sex-ed shaped our view of sex, and what questions were we left with.
   We’ll have a look at the anatomy lesson we probably didn’t get at school, and why the textbooks we had weren’t great, with Alakina Mann of Anatomyofpleasure.org.
   Hear from Kitty May, Director of Education at ‘Other Nature,’ an inclusive sex shop in Berlin, about the ‘sex-ed for grown-ups’ workshops they offer, such as ‘Demystifying orgasm,’ as well as some of the common questions she gets in this unique line of work. Kitty is also a practicing counsellor with a special focus on sexuality.",
@@ -662,7 +325,7 @@ Event.create!(
   title: "Orgasmic Flowing - Sacred Tantra Workshop Berlin",
   address: 'Diamond Lotus Berlin',
   organizer: 'Diamond Lotus Berlin',
-  date: DateTime.parse("18/12/2019 18:00"),
+  date: DateTime.parse("18/12/2019"),
   description: "How much do you embrace your ORGASMIC being?
   How much are you breathing in LIFE and BLISS into all your cells? Do you reall say YES to your joy?
   Do you allow yourself to vibrate from PLEASURE?
@@ -680,7 +343,7 @@ Event.create!(
   title: "Pompoir Workshop",
   address: 'Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
-  date: DateTime.parse("17/12/2019 18:00"),
+  date: DateTime.parse("17/12/2019"),
   description: " The ancient skill of the vaginal muscles management respected throughout the ages and was integrated into cultures for its betterment for women in a great many traditions.
   Techniques, which mostly came from Tantra, Tao and Kama Sutra heritage and known in Europe as Pompoir, in South Asia as Kabazah, in Hinduism as Sahajoli, in Russia as Vumbuilding (from abbreviation “ВУМ” (“вагинальные управляемые мышцы” – “vaginal controllable muscles”) become increasingly more popular in modern culture.
   Nowadays, many specialists (sexologists, gynecologists, psychologists) recommend these methods and successfully use it in the sexual healing",
@@ -694,7 +357,7 @@ Event.create!(
   title: "Love Dance Workshop",
   address: 'Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
-  date: DateTime.parse("22/12/2019 18:00"),
+  date: DateTime.parse("22/12/2019"),
   description: "Tantra Yoga considers the universe as a consequence of the divine fusion, the sacred dance of the loving couple of Shiva and Shakti.
   These are the two halves of the single whole, the fusion, and harmony of the male and female energies that give birth to Life. It is the divine creative power in the Universe, perfect unity, supreme bliss.
   The highest experience of the divine couple is merging their energies thus cease to be separate and become one.
@@ -709,7 +372,7 @@ Event.create!(
   title: "Yoni Massage",
   address: 'Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
-  date: DateTime.parse("15/01/2020 17:00"),
+  date: DateTime.parse("15/01/2020"),
   description: "In sexual healing Sanskrit word yoni symbolizes the female genitalia: both the uterus and the vulva.
   Ancient teachings such as Tantra and Tao believe that a lot of trauma, negative emotions related to relationship, and sexuality are stored in the yoni in the form of energy blocks manifesting in pain and numbness, lack of sensitivity and inability to climax.
   Learn healing techniques (sometimes called yoni massage) to bring awareness to energetic blocks and transmute them. Find out how to revive sensuality, increase pleasure and frequency and strength of orgasms, bring your relationship on a whole different level",
@@ -723,7 +386,7 @@ Event.create!(
   title: "Female Orgasms",
   address: 'Amsterdam, Netherlands',
   organizer: 'Mystic Techniques',
-  date: DateTime.parse("22/12/2029 11:00"),
+  date: DateTime.parse("22/12/2029"),
   description: "Would you like to experience more than 24 types of orgasms? Maybe you don't experience any orgasm at all? Are you cumming only from a vibrator? Do you have to fake your orgasm to please your partner?
   Your orgasms are not as frequent as you would like? Do you want your orgasms to be more powerful? Do you want to cum at the same time as your partner? Do you only cum from masturbation? Do you want to experience multiple orgasms?
   Do you want to know the beauty of female ejaculation? If you answered “yes” to one or more of these questions, then this workshop is for you.",
@@ -737,7 +400,7 @@ Event.create!(
   title: "Naked Ping-Pong Tournament",
   address: 'Lisbon',
   organizer: 'Le Wagon Lisbon',
-  date: DateTime.parse("13/12/2019 18:00"),
+  date: DateTime.parse("13/12/2019"),
   description: "Do you like ping pong? So, come to participate in the first international Naked Ping Pong Tournament in Lisbon.
   An amazing opportunity to play hard.",
   user_id: User.find_by(name: "Scraper").id,
@@ -750,7 +413,7 @@ Event.create!(
   title: "ByeBug Orgy Party",
   address: 'Lisbon',
   organizer: 'Le Wagon Lisbon',
-  date: DateTime.parse("06/12/2029 23:00"),
+  date: DateTime.parse("06/12/2019"),
   description: "Are you looking for a group of fun and new exciting experience? You are welcome to join our group and experience the wild and unforgettable party.
   Come rake with us! Please note that computers are not allowed!",
   user_id: User.find_by(name: "Scraper").id,
