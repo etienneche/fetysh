@@ -2,6 +2,7 @@
 <div class="container">
   <div class="d-flex container-header">
     <div class="head head-card-margin" >
+
       <h6>#<%= @category.name %></h6>
       <h2 class="mb-3"><%= @article.title %></h2>
       <h4>By <%= @article.source %></h4>
@@ -135,4 +136,6 @@
 
 </script>
 
-
+<% content_for :meta_title, "#{@article.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @article.description %>
+<% content_for :meta_image, cl_image_path(@article.photo.path) %>
