@@ -119,7 +119,7 @@
                       <%= order.event.address %>
                     </h4>
                     <p class="card-author-up author-border">
-                      <%= order.event.date %>
+                      <%= order.event.date.strftime("%d. %B %Y") %>
                     </p>
                   </div>
                   <% end %>
