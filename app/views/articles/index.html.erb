@@ -1,6 +1,6 @@
 <div class="container">
   <div class="pt-4">
-    <h2 class="category-head"><%= Category.find(params["category_id"]).name %></h2>
+    <h1 class="category-head"><%= Category.find(params["category_id"]).name %></h1>
     <div class="maxi-container">
       <% i = 1 %>
       <% @articles.where("category_id = ?", params["category_id"]).each do |article| %>
@@ -8,7 +8,7 @@
       <div class="d-flex container-main-articles">
         <div class="head">
           <h6 class="card-author-up red-color">#<%= article.category.name %></h6>
-          <h1><%= article.title %></h1>
+          <h2><%= article.title %></h2>
 
           <p> <%= article.content.split[0..15].join(" ") %>... </p>
           <p class="by-author">By <%= article.source %></p>
