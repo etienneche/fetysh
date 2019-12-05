@@ -41,6 +41,7 @@ window.onload = function() {
   var elevator = new Elevator({
     mainAudio: 'https://freesound.org/people/chriskt715/sounds/399877/download/399877__chriskt715__sensationbaby.wav',
     endAudio: 'http://tholman.com/elevator.js/music/ding.mp3',
+    duration: 5700,
     element: document.querySelector('.elevator-button')
     });
 
