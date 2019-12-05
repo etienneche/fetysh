@@ -282,7 +282,7 @@ results.each do |result|
     price_cents: result[:price_cents],
     date: DateTime.parse(result[:date]),
     user_id: User.find_by(name: 'Scraper').id,
-    category: Category.find_by(name: 'sex ed'),
+    category: Category.all.sample,
     photo: result[:photo]
     )
 end
