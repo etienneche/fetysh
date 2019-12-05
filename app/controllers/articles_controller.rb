@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to reviews_path, notice: 'The article was successfully destroyed.'
+    redirect_to edit_user_registration_path, notice: 'The article was successfully destroyed.'
   end
 
   private

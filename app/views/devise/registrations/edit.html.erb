@@ -129,12 +129,10 @@
                   <%= link_to category_article_path(article.category_id,article.id) do %>
                   <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
                   <div class="p-2 mb-3">
-                    <p class="card-author-up">#
-                      <%= article.category.name%>
-                    </p>
-                    <h4 class="mb-4">
-                      <%= article.title %>
-                    </h4>
+                    <p class="card-author-up">#<%= article.category.name%></p>
+                    <div class="row">
+                      <h4 class="mb-4"><%= article.title %></h4>
+                    </div>
                     <p class="card-author-up author-border">
                       By <%= article.source.nil? ? article.user.name : article.source %>
                     </p>
