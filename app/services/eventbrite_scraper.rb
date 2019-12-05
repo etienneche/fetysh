@@ -1,4 +1,4 @@
-require 'byebug'
+#require 'byebug'
 require 'nokogiri'
 require 'open-uri'
 
@@ -30,7 +30,7 @@ locations.each do |location|
       html_file = open(url).read
       html_doc = Nokogiri::HTML(html_file)
       content_all = html_doc.search('.text-body-medium').text.gsub!("\n",'').gsub!("\t",'')
-      byebug
+#      byebug
       results << {
         title: html_doc.search('.listing-hero-title').text,
         address: html_doc.search('.listing-map-card-street-address.text-default').text.gsub!("\n",'').gsub!("\t",''),

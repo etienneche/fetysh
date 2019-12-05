@@ -1,4 +1,4 @@
-require 'byebug'
+#require 'byebug'
 require 'nokogiri'
 require 'open-uri'
 
@@ -20,7 +20,7 @@ links.each do |link|
     url = "https://talktabu.com#{link}"
     html_file = open(url).read
     html_doc = Nokogiri::HTML(html_file)
-    byebug
+    #byebug
     content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
     if content_all.index("Header image").nil?
       if !content_all.index("Sources:http").nil?

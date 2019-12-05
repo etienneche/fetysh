@@ -1,4 +1,4 @@
-require 'byebug'
+#require 'byebug'
 require 'nokogiri'
 require 'open-uri'
 
@@ -39,7 +39,7 @@ topics.each do |topic|
       url = "https://www.o.school#{link}"
       html_file = open(url).read
       html_doc = Nokogiri::HTML(html_file)
-      byebug
+#      byebug
       content_all = html_doc.search('.article-rich-text.w-richtext').text
       if content_all.index("Related Articles").nil?
         content = content_all
