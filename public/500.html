@@ -4,7 +4,7 @@
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
+  /*.rails-default-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
     text-align: center;
@@ -50,17 +50,54 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  }*/
+
+  @import "lesshat";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html {
+  background:  url(https://media.giphy.com/media/l0NhXWFmzC9aB8uXK/giphy.gif) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+
+}
+h1{
+  font-size: 16em;
+  margin: .2em .5em;
+  color: rgba(255,255,255, 0.7);
+  margin-bottom:0px;
+}
+h2{
+  font-size: 3.7em;
+  margin: .2em .5em;
+  color: rgba(255,255,255, 1.6);
+  .material-icons {
+    font-size: 1.5em;
+    position: relative;
+    top: 10px;
   }
+}
+div.error{
+  position:absolute;
+  top:30%;
+  margin-top:-8em;
+  width:100%;
+  text-align:center;
+}
   </style>
 </head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
+  <!-- <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1>Not supported, try again! </h1>
     </div>
     <p>If you are the application owner check the logs for more information.</p>
   </div>
-</body>
+</body> -->
+
+<div class="error">
+  <h1>500</h1>
+  <h2>Not supported, try again! <i class="far fa-sad-tear"></i></i></h2>
+</div>
 </html>
