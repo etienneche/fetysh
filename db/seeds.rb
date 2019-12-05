@@ -6,9 +6,9 @@ Review.destroy_all
 Rating.destroy_all
 Order.destroy_all
 Event.destroy_all
-# Article.destroy_all
-# Category.destroy_all
-# User.destroy_all
+Article.destroy_all
+Category.destroy_all
+User.destroy_all
 
 puts 'Done'
 
