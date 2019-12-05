@@ -23,7 +23,6 @@
 @import "pages/index";
 @import "pages/landing";
 @import "pages/home";
-@import "pages/edit";
 @import "pages/results";
 
 
@@ -31,11 +30,15 @@
 @import "articles/show";
 @import "articles/index";
 
+// DEVISE
+@import "devise/edit";
 
 // EVENTS
 @import "events/index";
 @import "events/new";
 @import "events/show";
+
+
 
 
 

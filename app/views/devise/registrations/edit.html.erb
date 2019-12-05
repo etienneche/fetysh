@@ -1,4 +1,4 @@
-<div class="container">
+<div class="profile-container">
   <div class="row">
     <div class="col-sm-4">
       <div class="profile-card">
@@ -6,153 +6,167 @@
         <br>
         <h3><%= current_user.name %></h3>
         <button type="button" class="btn-outline-secondary btn-red">Edit Profile</button>
-        <div>
-          <ul class="list-group list-group-horizontal list-no-bullets">
-            <li class="">170 <span>Loved articles</span></li>
-            <li class="">200 <span>Want to try</span></li>
-          </ul>
+        <div class="d-flex justify-content-between stats-overview">
+          <div>
+            <p class="stats-name">Loved</p>
+            <p>31</p>
+          </div>
+          <div>
+            <p class="stats-name">Want to try</p>
+            <p>24</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-8">
-      <div class="taste-profile"><h4>My Taste Profile</h4>
+    <div class="col-8">
+      <div class="taste-profile">
+        <h4>My Taste Profile</h4>
         <ul class="list-group list-group-horizontal list-no-bullets">
           <li>
-            <div class="stats-circle">
-              <p>#orgasm<span>45%</span></p>
+            <div class="stats-circle" style="background-color:#e23e57">
+              <p>orgasm<span class="stats-content">45</span></p>
             </div>
           </li>
           <li>
-            <div class="stats-circle">
-              <p>#bondage<span>20%</span></p>
+            <div class="stats-circle" style="background-color:#88304e">
+              <p>dating<span>20</span></p>
             </div>
           </li>
-
           <li>
-            <div class="stats-circle">
-              <p>#oral<span>15%</span></p>
+            <div class="stats-circle" style="background-color:#522546">
+              <p>oral<span>15</span></p>
             </div>
           </li>
-
           <li>
-            <div class="stats-circle">
-              <p>#toys<span>10%</span></p>
-            </div>
-          </li>
-
-          <li>
-            <div class="stats-circle">
-              <p>#clit<span>10%</span></p>
+            <div class="stats-circle" style="background-color:#311d3f">
+              <p>toys<span>10</span></p>
             </div>
           </li>
         </ul>
+      </div>
 
+      <div class="reactions-history">
+        <div class="tabs d-flex">
+          <p>
+            <a class="btn-outline-secondary btn-red" data-toggle="collapse" href="#love" role="button" aria-expanded="false" aria-controls="love">
+              Loved <i class="fas fa-heart"></i>
+            </a>
+            <a id="wtt-btn" class="btn-outline-secondary btn-red" data-toggle="collapse" href="#want_to_try" role="button" aria-expanded="false" aria-controls="want_to_try">
+              Want to try <i class="fas fa-bookmark"></i>
+            </a>
+            <a id="wtt-btn" class="btn-outline-secondary btn-red" data-toggle="collapse" href="#my-events" role="button" aria-expanded="false" aria-controls="my-events">
+              Events <i class="fas fa-calendar"></i>
+            </a>
+            <a id="wtt-btn" class="btn-outline-secondary btn-red" data-toggle="collapse" href="#my-articles" role="button" aria-expanded="false" aria-controls="my-articles">
+              Articles <i class="fas fa-book-open"></i>
+            </a>
+          </p>
+        </div>
+        <div class="tab-content">
+          <div class="collapse" id="love">
+            <div class="card card-body-pro">
+              <div class="cards">
+                <div class="col">
+                  <% current_user.reactions.where(reaction:"love").each do |reaction| %>
+                  <%= link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
+                  <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);"></div>
+                  <div class="p-2 mb-3">
+                    <p class="card-author-up">#
+                      <%= reaction.article.category.name%>
+                    </p>
+                    <h4 class="mb-4">
+                      <%= reaction.article.title %>
+                    </h4>
+                    <p class="card-author-up author-border">
+                      <%= reaction.article.source %>
+                    </p>
+                  </div>
+                  <% end %>
+                  <% end %>
 
-        <div class="reactions-history">
-          <div class="tabs">
-            <p>
-              <a class="btn-outline-secondary btn-red" data-toggle="collapse" href="#love" role="button" aria-expanded="false" aria-controls="love">
-                Loved articles
-              </a>
-              <a id="wtt-btn" class="btn-outline-secondary btn-red" data-toggle="collapse" href="#want_to_try" role="button" aria-expanded="false" aria-controls="want_to_try">
-                Want to try articles
-              </a>
-              <a id="wtt-btn" class="btn-outline-secondary btn-red" data-toggle="collapse" href="#my-events" role="button" aria-expanded="false" aria-controls="want_to_try">
-                My events
-              </a>
-            </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="tab-content">
-            <div class="collapse" id="love">
-              <div class="card card-body-pro">
-                <div class="cards">
-                  <h3>Loved Articles</h3>
-                  <div class="col">
-
-                    <% current_user.reactions.where(reaction:"love").each do |reaction| %>
-                    <%= link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
-
-                    <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
-                    </div>
-
-                    <div class="p-2 mb-3">
-                      <p class="card-author-up">#
-
-                        <%= reaction.article.category.name%>
-                      </p>
-                      <h4 class="mb-4">
-                        <%= reaction.article.title %>
-                      </h4>
-                      <p class="card-author-up author-border">
-                        <%= reaction.article.source %>
-                      </p>
-                    </div>
-                    <% end %>
-                    <% end %>
-
+          <div class="collapse" id="want_to_try">
+            <div class="card card-body">
+              <div class="cards">
+                <div class="col">
+                  <% current_user.reactions.where(reaction:"want_to_try").each do |reaction| %>
+                  <%= link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
+                  <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
                   </div>
+                  <div class="p-2 mb-3">
+                    <p class="card-author-up">#
+                      <%= reaction.article.category.name%>
+                    </p>
+                    <h4 class="mb-4">
+                      <%= reaction.article.title %>
+                    </h4>
+                    <p class="card-author-up author-border">
+                      <%= reaction.article.source %>
+                    </p>
+                  </div>
+                  <% end %>
+                  <% end %>
                 </div>
               </div>
             </div>
-            <div class="collapse" id="want_to_try">
-              <div class="card card-body">
-                <div class="cards">
-                  <div class="col">
-                    <h3>Want to try Articles</h3>
-                    <% current_user.reactions.where(reaction:"want_to_try").each do |reaction| %>
-                    <%= link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
-                    <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
-                    </div>
-                    <div class="p-2 mb-3">
-                      <p class="card-author-up">#
-                        <%= reaction.article.category.name%>
-                      </p>
-                      <h4 class="mb-4">
-                        <%= reaction.article.title %>
-                      </h4>
-                      <p class="card-author-up author-border">
-                        <%= reaction.article.source %>
-                      </p>
-                    </div>
-                    <% end %>
-                    <% end %>
+          </div>
+          <div class="collapse" id="my-events">
+            <div class="card card-body">
+              <div class="cards">
+                <div class="col">
+                  <% Order.all.where(user_id:current_user).each do |order| %>
+                  <%= link_to event_path(order.event.id) do %>
+                  <div class="card-bg" style="background-image: url(<%= order.event.photo %>);">
                   </div>
+                  <div class="p-2 mb-3">
+                    <p class="card-author-up">#
+                      <%= order.event.title %>
+                    </p>
+                    <h4 class="mb-4">
+                      <%= order.event.address %>
+                    </h4>
+                    <p class="card-author-up author-border">
+                      <%= order.event.date %>
+                    </p>
+                  </div>
+                  <% end %>
+                  <% end %>
                 </div>
               </div>
             </div>
-            <div class="collapse" id="my-events">
-              <div class="card card-body">
-                <div class="cards">
-                  <div class="col">
-                    <h3>My Events</h3>
-                    <% Order.all.where(user_id:current_user).each do |order| %>
-                      <%= link_to event_path(order.event.id) do %>
-                      <div class="card-bg" style="background-image: url(<%= order.event.photo %>);">
-                      </div>
-                      <div class="p-2 mb-3">
-                        <p class="card-author-up">#
-                          <%= order.event.title %>
-                        </p>
-                        <h4 class="mb-4">
-                          <%= order.event.address %>
-                        </h4>
-                        <p class="card-author-up author-border">
-                          <%= order.event.date %>
-                        </p>
-                      </div>
-                      <% end %>
-                    <% end %>
+          </div>
+          <div class="collapse" id="my-articles">
+            <div class="card card-body-pro">
+              <div class="cards">
+                <div class="col">
+                  <% Article.all.where(user_id:current_user).each do |article| %>
+                  <%= link_to category_article_path(article.category_id,article.id) do %>
+                  <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
+                  <div class="p-2 mb-3">
+                    <p class="card-author-up">#
+                      <%= article.category.name%>
+                    </p>
+                    <h4 class="mb-4">
+                      <%= article.title %>
+                    </h4>
+                    <p class="card-author-up author-border">
+                      <%= article.source %>
+                    </p>
                   </div>
+                  <% end %>
+                  <% end %>
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 
