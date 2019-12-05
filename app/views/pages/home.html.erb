@@ -26,7 +26,7 @@
             <div class="p-2 mb-3">
               <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
-              <p class="card-author-up author-border"><%= article.source %></p>
+              <p class="card-author-up author-border"><%= article.source.nil? ? article.user.name : article.source %></p>
             </div>
           </div>
           <% end %>
@@ -41,7 +41,7 @@
             <div class="p-2 mb-3">
               <p class="card-author-up">#<%= article.category.name %></p>
               <h4 class="mb-4"><%= article.title %></h4>
-              <p class="card-author-up author-border"><%= article.source %></p>
+              <p class="card-author-up author-border"><%= article.source.nil? ? article.user.name : article.source %></p>
             </div>
           </div>
           <% end %>
@@ -74,127 +74,157 @@
       </div>
     </div>
 
-    <div class="anal-sex">
-      <div class="section-landing">
-        <% cat = Category.find_by(name: "anal sex")  %>
-        <h2><%= link_to cat.name, category_articles_path(cat), class:"category-heading" %></h2>
-      </div>
-
-      <div class="stickyscroll">
-        <div class="col" id="stickymove">
-          <% article = Article.all.where(category: cat)[0] %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.photo %>); background-size: cover;">
-            <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
-          </div>
-          <% end %>
-        </div>
-
-        <div class="col">
-          <% @articles.where(category: cat)[1..3].each do |article, index| %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
-            <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= article.category.name %></p>
-              <h4 class="mb-4"><%= article.title %></h4>
-              <p class="card-author-up author-border"><%= article.source %></p>
-            </div>
-          </div>
-          <% end %>
-          <% end %>
-        </div>
-
-        <div class="col">
-          <% @articles.where(category: cat)[4..6].each do |article, index| %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
-            <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= article.category.name %></p>
-              <h4 class="mb-4"><%= article.title %></h4>
-              <p class="card-author-up author-border"><%= article.source %></p>
-            </div>
-          </div>
-          <% end %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-    <!--         EVENTS -->
-    <div class="events">
+    <div class="editor-pick">
       <div class="section-landing mt-4">
-        <h2><%= link_to "Experiences", events_path, class:"category-heading" %></h2>
+        <h2 class="category-heading">Editor's Pick</h2>
       </div>
       <div>
-        <div class="container">
-          <div class="d-flex justify-content-between event-section">
-            <% @events.sample(5).each do |event|%>
-            <%= link_to event do %>
-            <div class="event-card">
-              <div class="card-bg" style="background-image: url(<%= event.photo %>);"></div>
-              <div class="p-2">
-                <p class="card-author-up">#<%= Category.find(event.category_id).name %></p>
-                <h4 class="mb-4"><%= event.title %></h4>
-                <p class="card-author-up author-border"><%= event.organizer.split[0..1].join(" ")%></p>
-                <p class="card-author-up"> <%= event.date.strftime("%d. %B %Y") %></p>
-              </div>
+        <div class="d-flex justify-content-between event-section">
+          <div class="col-6">
+            <div class="h_iframe">
+              <iframe src="https://www.youtube.com/embed/R6-8RzfcgJ8" frameBorder="0"></iframe>
             </div>
-            <% end %>
-            <% end %>
-          </div>
-          <h5><%= link_to "Show all experiences >",events_path, style:"text-decoration:none"%></h5>
-        </div>
-      </div>
-    </div>
-
-    <div class="sex">
-      <div class="section-landing">
-        <% cat = Category.find_by(name: "sex")  %>
-        <h2><%= link_to cat.name, category_articles_path(cat), class:"category-heading" %></h2>
-      </div>
-
-      <div class="stickyscroll">
-        <div class="col" id="stickymove">
-          <% article = Article.all.where(category: cat)[0] %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.photo %>); background-size: cover;">
-            <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
-          </div>
-          <% end %>
-        </div>
-
-        <div class="col">
-          <% @articles.where(category: cat)[1..3].each do |article, index| %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
-            <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= article.category.name %></p>
-              <h4 class="mb-4"><%= article.title %></h4>
-              <p class="card-author-up author-border"><%= article.source %></p>
+            <div class="p-2">
+              <p class="card-author-up">#masturbation</p>
+              <h4 class="mb-4">How to give the BEST fingering!</h4>
+              <p class="card-author-up author-border">Come Curious</p>
             </div>
           </div>
-          <% end %>
-          <% end %>
-        </div>
-
-        <div class="col">
-          <% @articles.where(category: cat)[4..6].each do |article, index| %>
-          <%= link_to category_article_path(article.category_id, article.id) do %>
-          <div>
-            <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
-            <div class="p-2 mb-3">
-              <p class="card-author-up">#<%= article.category.name %></p>
-              <h4 class="mb-4"><%= article.title %></h4>
-              <p class="card-author-up author-border"><%= article.source %></p>
+          <div class="col-6">
+            <div class="h_iframe">
+              <iframe src="https://www.youtube.com/embed/RGN1OorWJnk" frameBorder="0"></iframe>
             </div>
+          <div class="p-2">
+            <p class="card-author-up">#sex</p>
+            <h4 class="mb-4">We demonstrate the most EPIC sex positions</h4>
+            <p class="card-author-up author-border">Come Curious</p>
           </div>
-          <% end %>
-          <% end %>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="anal-sex" style="margin-top: 150px;">
+    <div class="section-landing">
+      <% cat = Category.find_by(name: "anal sex")  %>
+      <h2><%= link_to cat.name, category_articles_path(cat), class:"category-heading" %></h2>
+    </div>
+
+    <div class="stickyscroll">
+      <div class="col" id="stickymove">
+        <% article = Article.all.where(category: cat)[0] %>
+        <%= link_to category_article_path(article.category_id, article.id) do %>
+        <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.photo %>); background-size: cover;">
+          <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
+        </div>
+        <% end %>
+      </div>
+
+      <div class="col">
+        <% @articles.where(category: cat)[1..3].each do |article, index| %>
+        <%= link_to category_article_path(article.category_id, article.id) do %>
+        <div>
+          <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+          <div class="p-2 mb-3">
+            <p class="card-author-up">#<%= article.category.name %></p>
+            <h4 class="mb-4"><%= article.title %></h4>
+            <p class="card-author-up author-border"><%= article.source.nil? ? article.user.name : article.source %></p>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+
+      <div class="col">
+        <% @articles.where(category: cat)[4..6].each do |article, index| %>
+        <%= link_to category_article_path(article.category_id, article.id) do %>
+        <div>
+          <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+          <div class="p-2 mb-3">
+            <p class="card-author-up">#<%= article.category.name %></p>
+            <h4 class="mb-4"><%= article.title %></h4>
+            <p class="card-author-up author-border"><%= article.source.nil? ? article.user.name : article.source %></p>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <!--         EVENTS -->
+  <div class="events">
+    <div class="section-landing mt-4">
+      <h2><%= link_to "Experiences", events_path, class:"category-heading" %></h2>
+    </div>
+    <div>
+      <div class="container">
+        <div class="d-flex justify-content-between event-section">
+          <% @events.sample(5).each do |event|%>
+          <%= link_to event do %>
+          <div class="event-card">
+            <div class="card-bg" style="background-image: url(<%= event.photo %>);"></div>
+            <div class="p-2">
+              <p class="card-author-up">#<%= Category.find(event.category_id).name %></p>
+              <h4 class="mb-4"><%= event.title %></h4>
+              <p class="card-author-up author-border"><%= event.organizer.split[0..1].join(" ")%></p>
+              <p class="card-author-up"> <%= event.date.strftime("%d. %B %Y") %></p>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+        <h5><%= link_to "Show all experiences >",events_path, style:"text-decoration:none"%></h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="sex">
+    <div class="section-landing">
+      <% cat = Category.find_by(name: "sex")  %>
+      <h2><%= link_to cat.name, category_articles_path(cat), class:"category-heading" %></h2>
+    </div>
+
+    <div class="stickyscroll">
+      <div class="col" id="stickymove">
+        <% article = Article.all.where(category: cat)[0] %>
+        <%= link_to category_article_path(article.category_id, article.id) do %>
+        <div class="sticky-element align-items-center justify-content-center" style="height: 100vh, background-image: url(<%= article.photo %>); background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)) , url(<%= article.photo %>); background-size: cover;">
+          <h3 class="image-title-white pl-4 pr-4"><%= article.title %></h3>
+        </div>
+        <% end %>
+      </div>
+
+      <div class="col">
+        <% @articles.where(category: cat)[1..3].each do |article, index| %>
+        <%= link_to category_article_path(article.category_id, article.id) do %>
+        <div>
+          <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+          <div class="p-2 mb-3">
+            <p class="card-author-up">#<%= article.category.name %></p>
+            <h4 class="mb-4"><%= article.title %></h4>
+            <p class="card-author-up author-border"><%= article.source.nil? ? article.user.name : article.source %></p>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+
+      <div class="col">
+        <% @articles.where(category: cat)[4..6].each do |article, index| %>
+        <%= link_to category_article_path(article.category_id, article.id) do %>
+        <div>
+          <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
+          <div class="p-2 mb-3">
+            <p class="card-author-up">#<%= article.category.name %></p>
+            <h4 class="mb-4"><%= article.title %></h4>
+            <p class="card-author-up author-border"><%= article.source.nil? ? article.user.name : article.source %></p>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
