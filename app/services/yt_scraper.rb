@@ -7,7 +7,7 @@ url = "https://www.youtube.com/channel/UCIRoo9Lsz1DOXRIvEo-UARQ/videos"
 html_file = open(url).read
 html_doc = Nokogiri::HTML(html_file)
 
-byebug
+#byebug
 links = html_doc.search('.Blog-header-content-link').map do |element|
   element.attributes["href"].value
 end
