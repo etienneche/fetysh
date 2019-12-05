@@ -11,7 +11,7 @@
           <h2><%= article.title %></h2>
 
           <p> <%= article.content.split[0..15].join(" ") %>... </p>
-          <p class="by-author">By <%= article.source %></p>
+          <p class="by-author">By <%= article.source.nil? ? article.user.name : article.source %></p>
           <p class="red-color"> Read more...</p>
         </div>
         <% if i.even? %>
@@ -19,7 +19,7 @@
           <% else %>
           <div class="image-article">
             <% end %>
-            <img src="<%= article.img_url %>" alt="">
+            <img src="<%= article.photo %>" alt="">
           </div>
         </div>
         <% i = i + 1 %>

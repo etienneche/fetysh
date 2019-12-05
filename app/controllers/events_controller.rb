@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :destroy, :update]
 
   def index
-    @events = Event.geocoded
+    @events = Event.geocoded.order(date: :asc)
 
     @markers = @events.map do |event|
       {

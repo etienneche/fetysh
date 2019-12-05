@@ -1,24 +1,14 @@
 <div class="profile-container">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-3">
       <div class="profile-card">
         <img class="profile-img" src=<%= current_user.photo %>, alt="Avatar">
         <br>
         <h3><%= current_user.name %></h3>
         <button type="button" class="btn-outline-secondary btn-red">Edit Profile</button>
-        <div class="d-flex justify-content-between stats-overview">
-          <div>
-            <p class="stats-name">Loved</p>
-            <p>31</p>
-          </div>
-          <div>
-            <p class="stats-name">Want to try</p>
-            <p>24</p>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="col-8">
+    <div class="col-9">
       <div class="taste-profile">
         <h4>My Taste Profile</h4>
         <ul class="list-group list-group-horizontal list-no-bullets">
@@ -69,7 +59,7 @@
                 <div class="col">
                   <% current_user.reactions.where(reaction:"love").each do |reaction| %>
                   <%= link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
-                  <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);"></div>
+                  <div class="card-bg" style="background-image: url(<%= reaction.article.photo %>);"></div>
                   <div class="p-2 mb-3">
                     <p class="card-author-up">#
                       <%= reaction.article.category.name%>
@@ -94,7 +84,7 @@
                 <div class="col">
                   <% current_user.reactions.where(reaction:"want_to_try").each do |reaction| %>
                   <%= link_to category_article_path(reaction.article.category_id, reaction.article.id) do %>
-                  <div class="card-bg" style="background-image: url(<%= reaction.article.img_url %>);">
+                  <div class="card-bg" style="background-image: url(<%= reaction.article.photo %>);">
                   </div>
                   <div class="p-2 mb-3">
                     <p class="card-author-up">#
@@ -144,7 +134,7 @@
                 <div class="col">
                   <% Article.all.where(user_id:current_user).each do |article| %>
                   <%= link_to category_article_path(article.category_id,article.id) do %>
-                  <div class="card-bg" style="background-image: url(<%= article.img_url %>);"></div>
+                  <div class="card-bg" style="background-image: url(<%= article.photo %>);"></div>
                   <div class="p-2 mb-3">
                     <p class="card-author-up">#
                       <%= article.category.name%>
@@ -153,7 +143,7 @@
                       <%= article.title %>
                     </h4>
                     <p class="card-author-up author-border">
-                      <%= article.source %>
+                      By <%= article.source.nil? ? article.user.name : article.source %>
                     </p>
                   </div>
                   <% end %>
