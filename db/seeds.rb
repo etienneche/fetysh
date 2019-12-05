@@ -13,13 +13,22 @@ Event.destroy_all
 puts 'Done'
 
 # # CREATE USERS -----------------------------------------------------------------
-# puts 'Create user'
-# User.create!(
-#   name: 'Scraper',
-#   password: '123456',
-#   email: 't@t.com',
-#   photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-#   )
+puts 'Create user'
+User.create!(
+  name: 'Scraper',
+  password: '123456',
+  email: 'a@a.com',
+  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+  )
+
+puts 'Create presented user'
+User.create!(
+  name: 'Becky Willington',
+  password: '123456',
+  email: 't@t.com',
+  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+  )
+
 
 # puts 'Done'
 
