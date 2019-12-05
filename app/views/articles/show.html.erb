@@ -2,7 +2,9 @@
 <div class="container">
   <div class="d-flex container-header">
     <div class="head head-card-margin" >
-
+<% content_for :meta_title, "#{@article.title} is on #{DEFAULT_META["fetysh_club"]}" %>
+<% content_for :meta_description, @article.content %>
+<% content_for :meta_image, cl_image_path(@article.photo) %>
       <h6>#<%= @category.name %></h6>
       <h2 class="mb-3"><%= @article.title %></h2>
       <h4>By <%= @article.source.nil? ? @article.user.name : @article.source %></h4>
