@@ -10,7 +10,7 @@
           <h6 class="card-author-up red-color">#<%= article.category.name %></h6>
           <h2><%= article.title %></h2>
 
-          <p> <%= article.content.split[0..15].join(" ") %>... </p>
+          <p> <%= article.content.split[0..21].join(" ") %>... </p>
           <p class="by-author">By <%= article.source.nil? ? article.user.name : article.source %></p>
           <p class="red-color"> Read more...</p>
         </div>

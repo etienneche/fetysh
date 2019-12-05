@@ -478,4 +478,6 @@ Event.create!(
   photo: 'https://images.unsplash.com/photo-1524706088418-1b1ce0a23b20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1488&q=80',
   price: rand(40..200)
   )
+
+
 puts 'Done'

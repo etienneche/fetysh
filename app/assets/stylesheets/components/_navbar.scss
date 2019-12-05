@@ -5,14 +5,14 @@
 }
 .navbar input.btn {
   margin-left: 25px;
-  color: #910722;
-  border: 1px solid #910722;
+  color: #ff0039;
+  border: 1px solid #ff0039;
   border-radius: 5px;
   font-size: 15px;
   background-color:white;
 }
 .navbar input.btn:hover {
-  background-color:#910722;
+  background-color:#ff0039;
   color: white;
 }
 .categories-nav{
@@ -55,7 +55,7 @@ a.dropdown-item {
 }
 
 .categories-nav-el:hover{
-  color: #910722;
+  color: #ff0039;
 }
 
 .navbar-custom {
@@ -108,18 +108,18 @@ a.dropdown-item {
 }
 
 .searchBox:hover > .searchButton {
-  background: #910722;
+  background: #ff0039;
   color :white;
 }
 
 .searchButton {
-  color: #910722;
+  color: #ff0039;
   float: right;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: white;
-  border: 1px solid #910722;
+  border: 1px solid #ff0039;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,13 +173,17 @@ a.dropdown-item {
 .events-index > .categories-nav {
   background-color: black !important;
   & > a.categories-nav-el {
-    color: white !important;
+    color: white;
+  }
+  & > a.categories-nav-el:hover {
+    color: #ff0039;
   }
 }
 
 .events-index > .categories-nav > .nav-item > #navbarDropdown {
   color: white!important;
 }
+
 
 .events-show > .categories-nav > .nav-item > #navbarDropdown {
   color: white!important;
@@ -195,7 +199,10 @@ a.dropdown-item {
 .events-show > .categories-nav {
   background-color: black !important;
   & > a.categories-nav-el {
-    color: white !important;
+    color: white;
+  }
+  & > a.categories-nav-el:hover {
+    color: #ff0039;
   }
 }
 
