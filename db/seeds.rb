@@ -1,4 +1,4 @@
-require 'byebug'
+#require 'byebug'
 
 puts 'Delete everything'
 Reaction.destroy_all
@@ -6,13 +6,14 @@ Review.destroy_all
 Rating.destroy_all
 Order.destroy_all
 Event.destroy_all
-# Article.destroy_all
-# Category.destroy_all
-# User.destroy_all
+Article.destroy_all
+Category.destroy_all
+User.destroy_all
 
 puts 'Done'
 
-# # CREATE USERS -----------------------------------------------------------------
+
+# CREATE USERS -----------------------------------------------------------------
 puts 'Create user'
 User.create!(
   name: 'Scraper',
@@ -296,6 +297,278 @@ User.create!(
 #     )
 # end
 # puts 'Scraping O.School is done'
+=======
+  email: 'tt2@t.com',
+  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+  )
+
+puts 'Done'
+
+##CREATE CATEGORIES FOR EVENTS
+Category.create!(
+  name: 'sex')
+
+# CREATE ARTICLES --------------------------------------------------------------
+
+# # SCRAPER TABU -----------------------------------------------------------------
+# # SCRAPE LINKS TO ARTICLES
+puts "Starting to scrape tabu"
+url = "https://talktabu.com/zine"
+html_file = open(url).read
+html_doc = Nokogiri::HTML(html_file)
+
+links = html_doc.search('.Blog-header-content-link').map do |element|
+  element.attributes["href"].value
+end
+
+# SCRAPE INDIVIDUAL ARTICLES
+results = []
+links.each do |link|
+  begin
+    puts "Parsing #{link} into nokogiri"
+    url = "https://talktabu.com#{link}"
+    html_file = open(url).read
+    html_doc = Nokogiri::HTML(html_file)
+    content_all = html_doc.search('.sqs-block.html-block.sqs-block-html').text
+    if content_all.index("Header image").nil?
+      if !content_all.index("Sources:http").nil?
+        content = content_all[0..content_all.index("Sources:http") - 1]
+      end
+    else
+      content = content_all[0..content_all.index("Header image") - 1]
+    end
+    results << {
+      category: html_doc.search('.Blog-meta-item-category').first.text.downcase,
+      author: html_doc.search('.Blog-meta-item.Blog-meta-item--author').first.text,
+      title: html_doc.search('.Blog-title.Blog-title--item').text,
+      content: content,
+      img_url: html_doc.search('img')[2].attributes["data-src"].value,
+      source: 'tabú'
+    }
+  rescue => e
+    puts link
+    puts e
+  end
+end
+
+# CREATE CATEGORIES FROM SCRAPE
+puts 'Creating categories from Tabu Scrape'
+results.each do |result|
+  if Category.find_by(name: result[:category]).nil?
+    Category.create!(
+      name: result[:category]
+      )
+  end
+end
+puts 'Categories done'
+
+# CREATE ARTICLES FROM SCRAPE
+puts 'Creating articles from tabu scrape'
+results.each do |result|
+  if !result[:content].nil?
+    Article.create!(
+      title: result[:title],
+      content: result[:content],
+      author: result[:author],
+      user_id: User.find_by(name: 'Scraper').id,
+      source: result[:source],
+      category_id: Category.find_by(name: result[:category]).id,
+      img_url: result[:img_url]
+      )
+  end
+end
+puts "Done"
+
+puts 'Scraping Tabu is done'
+
+# # SCRAPER O.SCHOOL------------------------------------------------------------
+# # SCRAPE LINKS TO ARTICLES
+puts 'Start the O.School Scraper'
+topics = [
+  'anal-sex',
+  'culture',
+  'first-time-sex',
+  'orgasm',
+  'sex-toys',
+  'communication',
+  'dating-and-relationships',
+  'kinky',
+  'penis',
+  'consent',
+  'eating-pussy',
+  'masturbation',
+  'porn',
+  'vagina-vulva'
+]
+
+results = []
+topics.each do |topic|
+  puts "Search for topic #{topic.upcase}"
+  url = "https://www.o.school/topic/#{topic}"
+  html_file = open(url).read
+  html_doc = Nokogiri::HTML(html_file)
+  links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
+    element.attributes["href"].value
+  end
+
+  # SCRAPE INDIVIDUAL ARTICLES
+  links.each do |link|
+    begin
+      puts "Putting #{link} into Nokogiri"
+      url = "https://www.o.school#{link}"
+      html_file = open(url).read
+      html_doc = Nokogiri::HTML(html_file)
+      content_all = html_doc.search('.article-rich-text.w-richtext').text
+      if content_all.index("Related Articles").nil?
+        content = content_all
+      else
+        content = content_all[0..(content_all.index("Related Articles") - 2)]
+      end
+
+      results << {
+        category: html_doc.search('.current-topic').first.text.downcase,
+        title: html_doc.search('.article-heading').text,
+        content: content,
+        img_url: html_doc.search('.object-fit---cover').first.attributes["src"].value,
+        source: 'O.School'
+      }
+    rescue => e
+      puts link
+      puts e
+    end
+  end
+end
+
+# CREATE CATEGORIES FROM SCRAPE
+puts 'Creating categories from O.school Scrape'
+results.each do |result|
+  if Category.find_by(name: result[:category]).nil?
+    Category.create!(
+      name: result[:category]
+      )
+  end
+end
+
+puts 'Creating articles from o.school scrape'
+results.each do |result|
+  Article.create!(
+    title: result[:title],
+    content: result[:content],
+    user_id: User.find_by(name: 'Scraper').id,
+    source: result[:source],
+    category_id: Category.find_by(name: result[:category]).id,
+    img_url: result[:img_url]
+    )
+end
+puts 'Scraping O.School is done'
+
+# SCRAPE ARTICLES---------------------------------------------------------------
+# WILDFLOWER SEX----------------------------------------------------------------
+puts 'Start to scrape wildflower sex'
+
+results = []
+url = "https://wildflowersex.com/blogs/blog"
+html_file = open(url).read
+html_doc = Nokogiri::HTML(html_file)
+
+links = html_doc.search('.article-content').search("a").map do |element|
+  element.attributes["href"].value
+end
+
+# SCRAPE INDIVIDUAL ARTICLES
+links.each do |link|
+  begin
+    puts "Putting #{link} into Nokogiri"
+    url = "https://wildflowersex.com/#{link}"
+    html_file = open(url).read
+    html_doc = Nokogiri::HTML(html_file)
+    results << {
+      category: 'sex',
+      title: html_doc.search('.desktop-10.mobile-3').text,
+      content: html_doc.search('.rte').search("p").text,
+      img_url: html_doc.search('img')[2].attributes["src"].value,
+      source: 'Wildflower Sex'
+    }
+  rescue => e
+    puts link
+    puts e
+  end
+end
+
+puts 'Creating articles from wildflower scrape'
+results.each do |result|
+  Article.create!(
+    title: result[:title],
+    content: result[:content],
+    user_id: User.find_by(name: 'Scraper').id,
+    source: result[:source],
+    category_id: Category.find_by(name: result[:category]).id,
+    img_url: result[:img_url]
+    )
+  puts "Created article: #{result[:title]}"
+end
+puts 'Scraping Wildflower is done'
+
+#SCRAPER EVENTBRITE -------------------------------------------------------------
+#SCRAPE LINKS TO ARTICLES
+puts 'start the scraper'
+results = []
+
+locations = [
+  'united-kingdom',
+  'australia',
+  'united-states'
+]
+
+locations.each do |location|
+  url = "https://www.eventbrite.com/d/#{location}/orgasm/"
+  html_file = open(url).read
+  html_doc = Nokogiri::HTML(html_file)
+
+  links = html_doc.search('.eds-media-card-content__action-link').map do |element|
+    element.attributes["href"].value
+  end
+
+  # SCRAPE INDIVIDUAL ARTICLES
+  links.each do |link|
+    begin
+      puts "Putting #{link} into Nokogiri"
+      url = "#{link}"
+      html_file = open(url).read
+      html_doc = Nokogiri::HTML(html_file)
+      content_all = html_doc.search('.text-body-medium').text.gsub!("\n",'').gsub!("\t",'')
+      results << {
+        title: html_doc.search('.listing-hero-title').text,
+        address: html_doc.search('.listing-map-card-street-address.text-default').text.gsub!("\n",'').gsub!("\t",''),
+        organizer: html_doc.search('.js-d-scroll-to.listing-organizer-name.text-default').text.gsub!("\n",'').gsub!("\t",'').gsub!("by ",''),
+        description: content_all[0..content_all.index("atUse EventbritePlan") - 1],
+        photo: html_doc.search("picture").first.attributes["content"].value,
+        price_cents: html_doc.search('.js-display-price').text.gsub!("\n",'').gsub!("\t",'')[1..].to_i,
+        date: html_doc.search('.event-details__data').first.search("meta").first.attributes["content"].value
+      }
+    rescue => e
+      puts link
+      puts e
+    end
+  end
+end
+
+puts 'Creating events from eventbrite scrape'
+results.each do |result|
+  Event.create!(
+    title: result[:title],
+    description: result[:description],
+    organizer: result[:organizer],
+    address: result[:address],
+    price_cents: result[:price_cents],
+    date: DateTime.parse(result[:date]),
+    user_id: User.find_by(name: 'Scraper').id,
+    category: Category.all.sample,
+    photo: result[:photo]
+    )
+end
+puts 'Scraping O.School is done'
+
 
 
 # ------------------- EVENTS SEED ----------------------------------------------
