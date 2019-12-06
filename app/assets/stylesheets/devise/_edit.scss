@@ -4,7 +4,7 @@
 }
 
 .profile-card{
-  background-color: #910722;
+  background-color: black;
   color:white;
   text-align: center;
   padding: 10%;
@@ -180,9 +180,9 @@
   margin-left: 30px;
 }
 .btn-red:hover {
-  background-color: #910722;
+  background-color: #ff0039;
   color: white;
-  border: 1px solid #910722;
+  border: 1px solid #ff0039;
   text-decoration: none;
 }
 .sharing-links {
@@ -217,4 +217,13 @@
 .stats-name {
   font-size: 16px;
   margin-bottom: 5px;
+}
+
+.btn-profile {
+  background-color: #ff0039;
+  color: white;
+  border: 1px solid #ff0039;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 22px;
 }
