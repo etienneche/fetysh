@@ -74,7 +74,7 @@ Category.create!(
 #   end
 # end
 
-# # CREATE CATEGORIES FROM SCRAPE
+# # # CREATE CATEGORIES FROM SCRAPE
 # puts 'Creating categories from Tabu Scrape'
 # results.each do |result|
 #   if Category.find_by(name: result[:category]).nil?
