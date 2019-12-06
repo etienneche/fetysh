@@ -5,7 +5,7 @@
         <img class="profile-img" src=<%= current_user.photo %>, alt="Avatar">
         <br>
         <h3><%= current_user.name %></h3>
-        <button type="button" class="btn-outline-secondary btn-red">Edit Profile</button>
+        <button type="button" class="btn-outline-secondary btn-profile">Edit Profile</button>
       </div>
     </div>
     <div class="col-9">
@@ -16,7 +16,7 @@
           <% if category.reactions.where(user: current_user).count.positive? %>
           <li>
             <div class="stats-circle" style="background-color:<%= ['#e23e57', '#88304e', '#522546','#311d3f'].sample%>">
-              <p><%= category.name %>
+              <p style="font-size: 15px;"><%= category.name %>
                 <span class="stats-content">
                   <%= category.reactions.where(user: current_user).count %>
                 </span>

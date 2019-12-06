@@ -1,36 +1,36 @@
-# puts 'Delete everything'
-# Reaction.destroy_all
-# Review.destroy_all
-# Rating.destroy_all
+puts 'Delete everything'
+Reaction.destroy_all
+Review.destroy_all
+Rating.destroy_all
 Order.destroy_all
 Event.destroy_all
-# Article.destroy_all
-# Category.destroy_all
-# User.destroy_all
+Article.destroy_all
+Category.destroy_all
+User.destroy_all
 
 puts 'Done'
 
-# # # CREATE USERS ---------------------------------------------------------------
-# puts 'Create user'
-# User.create!(
-#   name: 'Scraper',
-#   password: '123456',
-#   email: 'a@a.com'
-#   )
+# # CREATE USERS ---------------------------------------------------------------
+puts 'Create user'
+User.create!(
+  name: 'Scraper',
+  password: '123456',
+  email: 'a@a.com'
+  )
 
-# puts 'Create presented user'
-# User.create!(
-#   name: 'Becky Willington',
-#   password: '123456',
-#   email: 't@t.com',
-#   photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-#   )
+puts 'Create presented user'
+User.create!(
+  name: 'Becky Willington',
+  password: '123456',
+  email: 't@t.com',
+  photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+  )
 
-# puts 'Done'
+puts 'Done'
 
-# Category.create!(
-#   name: 'sex'
-# )
+Category.create!(
+  name: 'sex'
+)
 
 # # CREATE ARTICLES --------------------------------------------------------------
 
@@ -105,134 +105,134 @@ puts 'Done'
 # puts 'Scraping Tabu is done'
 
 # # # SCRAPER O.SCHOOL------------------------------------------------------------
-# puts 'Start the O.School Scraper'
-# topics = [
-#   'anal-sex',
-#   'culture',
-#   'first-time-sex',
-#   'orgasm',
-#   'sex-toys',
-#   'communication',
-#   'dating-and-relationships',
-#   'kinky',
-#   'penis',
-#   'consent',
-#   'eating-pussy',
-#   'masturbation',
-#   'porn',
-#   'vagina-vulva'
-# ]
+puts 'Start the O.School Scraper'
+topics = [
+  'anal-sex',
+  'culture',
+  'first-time-sex',
+  'orgasm',
+  'sex-toys',
+  'communication',
+  'dating-and-relationships',
+  'kinky',
+  'penis',
+  'consent',
+  'eating-pussy',
+  'masturbation',
+  'porn',
+  'vagina-vulva'
+]
 
-# results = []
-# topics.each do |topic|
-#   puts "Search for topic #{topic.upcase}"
-#   url = "https://www.o.school/topic/#{topic}"
-#   html_file = open(url).read
-#   html_doc = Nokogiri::HTML(html_file)
-#   links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
-#     element.attributes["href"].value
-#   end
+results = []
+topics.each do |topic|
+  puts "Search for topic #{topic.upcase}"
+  url = "https://www.o.school/topic/#{topic}"
+  html_file = open(url).read
+  html_doc = Nokogiri::HTML(html_file)
+  links = html_doc.search('.topic-card.inside.w-inline-block').map do |element|
+    element.attributes["href"].value
+  end
 
-#   # SCRAPE INDIVIDUAL ARTICLES
-#   links.each do |link|
-#     begin
-#       puts "Putting #{link} into Nokogiri"
-#       url = "https://www.o.school#{link}"
-#       html_file = open(url).read
-#       html_doc = Nokogiri::HTML(html_file)
-#       content_all = html_doc.search('.article-rich-text.w-richtext').text
-#       if content_all.index("Related Articles").nil?
-#         content = content_all
-#       else
-#         content = content_all[0..(content_all.index("Related Articles") - 2)]
-#       end
+  # SCRAPE INDIVIDUAL ARTICLES
+  links.each do |link|
+    begin
+      puts "Putting #{link} into Nokogiri"
+      url = "https://www.o.school#{link}"
+      html_file = open(url).read
+      html_doc = Nokogiri::HTML(html_file)
+      content_all = html_doc.search('.article-rich-text.w-richtext').text
+      if content_all.index("Related Articles").nil?
+        content = content_all
+      else
+        content = content_all[0..(content_all.index("Related Articles") - 2)]
+      end
 
-#       results << {
-#         category: html_doc.search('.current-topic').first.text.downcase,
-#         title: html_doc.search('.article-heading').text,
-#         content: content,
-#         photo: html_doc.search('.object-fit---cover').first.attributes["src"].value,
-#         source: 'O.School'
-#       }
-#     rescue => e
-#       puts link
-#       puts e
-#     end
-#   end
-# end
+      results << {
+        category: html_doc.search('.current-topic').first.text.downcase,
+        title: html_doc.search('.article-heading').text,
+        content: content,
+        photo: html_doc.search('.object-fit---cover').first.attributes["src"].value,
+        source: 'O.School'
+      }
+    rescue => e
+      puts link
+      puts e
+    end
+  end
+end
 
-# # CREATE CATEGORIES FROM SCRAPE
-# puts 'Creating categories from O.school Scrape'
-# results.each do |result|
-#   if Category.find_by(name: result[:category]).nil?
-#     Category.create!(
-#       name: result[:category]
-#       )
-#   end
-# end
+# CREATE CATEGORIES FROM SCRAPE
+puts 'Creating categories from O.school Scrape'
+results.each do |result|
+  if Category.find_by(name: result[:category]).nil?
+    Category.create!(
+      name: result[:category]
+      )
+  end
+end
 
-# puts 'Creating articles from o.school scrape'
-# results.each do |result|
-#   Article.create!(
-#     title: result[:title],
-#     content: result[:content],
-#     user_id: User.find_by(name: 'Scraper').id,
-#     source: result[:source],
-#     category_id: Category.find_by(name: result[:category]).id,
-#     photo: result[:photo]
-#     )
-# end
-# puts 'Scraping O.School is done'
+puts 'Creating articles from o.school scrape'
+results.each do |result|
+  Article.create!(
+    title: result[:title],
+    content: result[:content],
+    user_id: User.find_by(name: 'Scraper').id,
+    source: result[:source],
+    category_id: Category.find_by(name: result[:category]).id,
+    photo: result[:photo]
+    )
+end
+puts 'Scraping O.School is done'
 
 # #-------------------------------------------------------------------------------
 # # WILDFLOWER SEX----------------------------------------------------------------
 # #-------------------------------------------------------------------------------
-# puts 'Start to scrape WILDFLOWER sex'
+puts 'Start to scrape WILDFLOWER sex'
 
-# results = []
-# url = "https://wildflowersex.com/blogs/blog"
-# html_file = open(url).read
-# html_doc = Nokogiri::HTML(html_file)
+results = []
+url = "https://wildflowersex.com/blogs/blog"
+html_file = open(url).read
+html_doc = Nokogiri::HTML(html_file)
 
-# links = html_doc.search('.article-content').search("a").map do |element|
-#   element.attributes["href"].value
-# end
+links = html_doc.search('.article-content').search("a").map do |element|
+  element.attributes["href"].value
+end
 
-# # SCRAPE INDIVIDUAL ARTICLES
-# links.each do |link|
-#   begin
-#     puts "Putting #{link} into Nokogiri"
-#     url = "https://wildflowersex.com/#{link}"
-#     html_file = open(url).read
-#     html_doc = Nokogiri::HTML(html_file)
-#     results << {
-#       category: 'sex',
-#       title: html_doc.search('.desktop-10.mobile-3').text,
-#       content: html_doc.search('.rte').search("p").text,
-#       photo: html_doc.search('img')[2].attributes["src"].value,
-#       source: 'Wildflower Sex'
-#     }
-#   rescue => e
-#     puts link
-#     puts e
-#   end
-# end
+# SCRAPE INDIVIDUAL ARTICLES
+links.each do |link|
+  begin
+    puts "Putting #{link} into Nokogiri"
+    url = "https://wildflowersex.com/#{link}"
+    html_file = open(url).read
+    html_doc = Nokogiri::HTML(html_file)
+    results << {
+      category: 'sex',
+      title: html_doc.search('.desktop-10.mobile-3').text,
+      content: html_doc.search('.rte').search("p").text,
+      photo: html_doc.search('img')[2].attributes["src"].value,
+      source: 'Wildflower Sex'
+    }
+  rescue => e
+    puts link
+    puts e
+  end
+end
 
-# puts 'Creating articles from wildflower scrape'
-# results.each do |result|
-#   Article.create!(
-#     title: result[:title],
-#     content: result[:content],
-#     user_id: User.find_by(name: 'Scraper').id,
-#     source: result[:source],
-#     category_id: Category.find_by(name: result[:category]).id,
-#     photo: result[:photo]
-#     )
-#   puts "Created article: #{result[:title]}"
-# end
-# puts 'Scraping Wildflower is done'
+puts 'Creating articles from wildflower scrape'
+results.each do |result|
+  Article.create!(
+    title: result[:title],
+    content: result[:content],
+    user_id: User.find_by(name: 'Scraper').id,
+    source: result[:source],
+    category_id: Category.find_by(name: result[:category]).id,
+    photo: result[:photo]
+    )
+  puts "Created article: #{result[:title]}"
+end
+puts 'Scraping Wildflower is done'
 
-# puts 'Done'
+puts 'Done'
 
 # ------------------- EVENTS SEED ----------------------------------------------
 puts 'Create real events'
@@ -280,7 +280,7 @@ Event.create!(
   A hot idea being used by a horny couple for their dirty fantasy ... isn't it?",
   user_id: User.find_by(name: "Scraper").id,
   organizer: 'Insomnia Berlin',
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000042860.jpg',
   price: rand(40..200)
   )
@@ -292,7 +292,7 @@ Event.create!(
   description: "During the Tantra Massage training you learn how to express respect and appreciation towards a person as a sexual being. For this you need to be willing to question your own behavioural patterns. We will discuss in great detail what Tantra means and how we can bring to life the tantric teachings in a massage. You will learn about the study of auras. With intensive exercises we increase our physical awareness.",
   user_id: User.find_by(name: "Scraper").id,
   organizer: 'Kashima Lisbon',
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://images.unsplash.com/photo-1545183322-6da710083410?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
   price: rand(40..200)
   )
@@ -307,7 +307,7 @@ Event.create!(
   Our club of the nymphomaniacs is always haunted by such desires, which is why the most naughty of the ladies are especially looking forward to this date. They are craving for squirty games.",
   user_id: User.find_by(name: "Scraper").id,
   organizer: 'Insomnia Lisbon',
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://www.insomnia-berlin.de/galpics/galleries/eventflyer/large/0000054573.jpg',
   price: rand(40..200)
   )
@@ -338,7 +338,7 @@ Event.create!(
   There is no nudity or sexual activities in this Tantra workshop. The workshop is suitable for singles, couples, multi orgasmic beings and for people that have never experienced any orgasm.",
   organizer: 'Diamond Lotus',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "wellness").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://scontent.flis8-2.fna.fbcdn.net/v/t31.0-8/14362665_639659282875092_7117318554322478844_o.jpg?_nc_cat=100&_nc_ohc=uGYNN07uDZcAQk0_EJGrOMcqJTrXDcM2VO7sxEA5vzboMkHGysM5GURtg&_nc_ht=scontent.flis8-2.fna&oh=375b3ca497287c69fdafb4c4b01adde4&oe=5E427DE6',
   price: rand(40..200)
   )
@@ -353,7 +353,7 @@ Event.create!(
   Nowadays, many specialists (sexologists, gynecologists, psychologists) recommend these methods and successfully use it in the sexual healing",
   organizer: 'Mystic Techniques',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://images.unsplash.com/photo-1569979274099-f351a7ea19a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
   price: rand(40..200)
   )
@@ -368,13 +368,13 @@ Event.create!(
   For loving couples, we offer a myriad of powerful of Tantric and Taoist techniques for understanding this sacred unity for all its admiration and joy..",
   organizer: 'Mystic Techniques',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "sex").id,
   photo: 'https://images.unsplash.com/photo-1555489401-79c274997434?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   price: rand(40..200)
   )
 
 Event.create!(
-  title: "Yoni Massage",
+  title: "Yoni Pleasure Massage",
   address: 'Cascais, Portugal',
   date: DateTime.parse("15/01/2020"),
   description: "In sexual healing Sanskrit word yoni symbolizes the female genitalia: both the uterus and the vulva.
@@ -382,7 +382,7 @@ Event.create!(
   Learn healing techniques (sometimes called yoni massage) to bring awareness to energetic blocks and transmute them. Find out how to revive sensuality, increase pleasure and frequency and strength of orgasms, bring your relationship on a whole different level",
   organizer: 'Mystic Techniques',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "wellness").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://images.unsplash.com/photo-1545183322-6da710083410?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   price: rand(40..200)
   )
@@ -397,7 +397,7 @@ Event.create!(
   organizer: 'Mystic Techniques',
   user_id: User.find_by(name: "Scraper").id,
   photo: 'https://mystictechniques.com/wp-content/uploads/2019/10/CYEKY3gWcAEk9Fh.jpg',
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "orgasm").id,
   price: rand(40..200)
   )
 
@@ -409,7 +409,7 @@ Event.create!(
   An amazing opportunity to play hard.",
   organizer: 'Le Wagon Lisbon',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "sex").id,
   photo: 'https://images.unsplash.com/photo-1564518440696-ef272968778e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
   price: rand(40..200)
   )
@@ -422,7 +422,7 @@ Event.create!(
   Come rake with us! Please note that computers are not allowed!",
   organizer: 'Le Wagon Lisbon',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://images.unsplash.com/photo-1545128485-c400e7702796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
   price: rand(40..200)
   )
@@ -435,7 +435,7 @@ Event.create!(
   Come meet us and show your talents.",
   organizer: 'Le Wagon Lisbon',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://images.unsplash.com/photo-1534774251706-35764d143b56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80',
   price: rand(40..200)
   )
@@ -448,20 +448,20 @@ Event.create!(
   Come meet us and show your talents.",
   organizer: 'Le Wagon Lisbon',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "sex").id,
   photo: 'https://images.unsplash.com/photo-1526509569184-2fe126e71cd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   price: rand(40..200)
   )
 
 Event.create!(
-  title: "Carnival - All inclusive ",
+  title: "Carnival of Pleasure - All inclusive ",
   address: 'MAAT, Lisbon',
   date: DateTime.parse("12/02/2020"),
   description: "Are you ready for the best days of your life?
   The only Carnival in the world with Alcohol, drugs and sex included.",
   organizer: 'Le Wagon',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "culture").id,
   photo: 'https://images.unsplash.com/photo-1573676047757-905630d8e3ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
   price: rand(40..200)
   )
@@ -474,7 +474,7 @@ Event.create!(
   Enjoy us to learn more about animal biology.",
   organizer: 'Le Wagon Torres Vedras',
   user_id: User.find_by(name: "Scraper").id,
-  category_id: Category.find_by(name: "pleasure").id,
+  category_id: Category.find_by(name: "orgasm").id,
   photo: 'https://images.unsplash.com/photo-1524706088418-1b1ce0a23b20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1488&q=80',
   price: rand(40..200)
   )
